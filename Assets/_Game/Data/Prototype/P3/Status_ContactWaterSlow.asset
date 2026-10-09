@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98773910a71387740921151b9ff3a52c, type: 3}
+  m_Name: Status_ContactWaterSlow
+  m_EditorClassIdentifier: 
+  Id: status.contact.water_slow
+  ElementTag: 0
+  IsReactionInput: 0
+  IsReactionDamage: 0
+  DurationSeconds: 1.5
+  TickIntervalSeconds: 1
+  MaxStacks: 1
+  RefreshPolicy: 0
+  MoveSlowPerStack: 0.15
+  AttackSlowPerStack: 0
+  ArmorBreakPerStack: 0
+  ResistanceBreakPerStack:
+    Water: 0
+    Fire: 0
+    Earth: 0
+    Wood: 0
+    Wind: 0
+    Thunder: 0
+  PreventMovement: 0
+  PreventAttack: 0
+  DotPhysicalPerStack: 0
+  DotElementPerStack:
+    Water: 0
+    Fire: 0
+    Earth: 0
+    Wood: 0
+    Wind: 0
+    Thunder: 0

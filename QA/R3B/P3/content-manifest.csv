@@ -1,0 +1,5 @@
+Owner,TaskId,AssetPath,AssetType,DefinitionId,PrefabKey,DependsOn,RegistrationStatus
+P3,R3B-T01,Assets/_Game/Data/Prototype/P3/Status_ContactBurn.asset,StatusEffectDefinitionSO,status.contact.burn,N/A,N/A,未登记
+P3,R3B-T01,Assets/_Game/Data/Prototype/P3/Status_ContactWaterSlow.asset,StatusEffectDefinitionSO,status.contact.water_slow,N/A,N/A,未登记
+P3,R3B-T01,Assets/_Game/Data/Prototype/P2/Element_fire.asset,ElementDefinition,elm.fire,N/A,status.contact.burn,已存在-本次修改
+P3,R3B-T01,Assets/_Game/Data/Prototype/P2/Element_water.asset,ElementDefinition,elm.water,N/A,status.contact.water_slow,已存在-本次修改

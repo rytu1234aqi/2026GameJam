@@ -37,5 +37,57 @@ MonoBehaviour:
       Thunder: 0
     DamageMultiplier: 1
     SpeedMultiplier: 1
-  ContactEffects: []
+  ContactEffects:
+  - Id: 
+    Kind: 0
+    TargetPolicy: 0
+    ReferenceId: 
+    ResourceBucket: 0
+    ResourceAmount: 0
+    PhysicalDamage: 0
+    ElementDamage:
+      Water: 0
+      Fire: 10
+      Earth: 0
+      Wood: 0
+      Wind: 0
+      Thunder: 0
+    Gauge:
+      Water: 0
+      Fire: 0
+      Earth: 0
+      Wood: 0
+      Wind: 0
+      Thunder: 0
+    Amount: 0
+    Stacks: 0
+    DurationOverride: 0
+    DamageMultiplier: 1
+    SpeedMultiplier: 1
+  - Id: 
+    Kind: 3
+    TargetPolicy: 0
+    ReferenceId: status.contact.burn
+    ResourceBucket: 0
+    ResourceAmount: 0
+    PhysicalDamage: 0
+    ElementDamage:
+      Water: 0
+      Fire: 0
+      Earth: 0
+      Wood: 0
+      Wind: 0
+      Thunder: 0
+    Gauge:
+      Water: 0
+      Fire: 0
+      Earth: 0
+      Wood: 0
+      Wind: 0
+      Thunder: 0
+    Amount: 0
+    Stacks: 1
+    DurationOverride: 0
+    DamageMultiplier: 1
+    SpeedMultiplier: 1
   ContactIntervalSeconds: 1
