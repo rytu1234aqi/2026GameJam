@@ -1,0 +1,15 @@
+TaskId,CaseId,Commit,ConfigVersion,Seed,Time,Mode,Day,Input,Expected,Actual,Result,Evidence
+R3B-T01,T01,待主程登记,待定,,,,,,火/水接触,待联调,待登记,待截图
+
+TaskId,CaseId,Commit,ConfigVersion,Seed,Time,Mode,Day,Input,Expected,Actual,Result,Evidence
+R3B-T02,CW01,,,,,,,"同一敌人两层水附着","消耗2层水→产出寒流1层","待登记后验证","待验证","待截图"
+R3B-T02,CW02,,,,,,,"反复触发寒流","最多3层，到期恢复","待登记后验证","待验证","待截图"
+R3B-T02,CW03,,,,,,,"寒流不循环","寒流输出不能再次作为水输入","待登记后验证","待验证","待截图"
+
+R3B-T03,HF01,,,,,,,"编译检查","无报错脚本正常加载","通过","通过","N/A"
+R3B-T03,HF02,,,,,,,"接口签名检查","PlayHit/ApplyVisualTime/ResetVisual 签名与文档一致","通过","通过","N/A"
+R3B-T03,HF03,,,,,,,"不依赖检查","无Time.time/Coroutine/事件订阅","通过","通过","N/A"
+R3B-T03,HF04,,,,,,,"手动调用PlayHit","闪色正常，连续受击刷新结束时间","通过","通过","N/A"
+R3B-T03,HF05,,,,,,,"手动调用ApplyVisualTime","到期恢复原始颜色","通过","通过","N/A"
+R3B-T03,HF06,,,,,,,"Duration<=0立即恢复","设Duration=0调用PlayHit立即恢复","通过","通过","N/A"
+R3B-T03,HF07,,,,,,,"主程接入后验证","待H04接入DamageAppliedEvent后补正式验证","待主程接入","待接入","待截图"

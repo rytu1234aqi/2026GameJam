@@ -1,0 +1,11 @@
+Owner,TaskId,AssetPath,AssetType,DefinitionId,PrefabKey,DependsOn,RegistrationStatus
+P3,R3B-T01,Assets/_Game/Data/Prototype/P3/Status_ContactBurn.asset,StatusEffectDefinitionSO,status.contact.burn,N/A,N/A,未登记
+P3,R3B-T01,Assets/_Game/Data/Prototype/P3/Status_ContactWaterSlow.asset,StatusEffectDefinitionSO,status.contact.water_slow,N/A,N/A,未登记
+P3,R3B-T01,Assets/_Game/Data/Prototype/P2/Element_fire.asset,ElementDefinition,elm.fire,N/A,status.contact.burn,已存在-本次修改
+P3,R3B-T01,Assets/_Game/Data/Prototype/P2/Element_water.asset,ElementDefinition,elm.water,N/A,status.contact.water_slow,已存在-本次修改
+
+Owner,TaskId,AssetPath,AssetType,DefinitionId,PrefabKey,DependsOn,RegistrationStatus
+P3,R3B-T02,Assets/_Game/Data/Prototype/P3/Status_ColdWave.asset,StatusEffectDefinitionSO,status.reaction.cold_wave,N/A,N/A,未登记
+P3,R3B-T02,Assets/_Game/Data/Prototype/P2/Reaction_EnemyStatus_Water_Water.asset,ReactionDefinition,reaction.enemy_status.water_water,N/A,status.reaction.cold_wave,已存在-本次修改
+
+P3,R3B-T03,Assets/_Game/Scripts/Presentation/Combat/HitFlashVisual2D.cs,C# Script,N/A,N/A,N/A,制作完成
