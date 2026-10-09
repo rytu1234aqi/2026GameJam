@@ -1,0 +1,2 @@
+TaskId,CaseId,Commit,ConfigVersion,Seed,Time,Mode,Day,Input,Expected,Actual,Result,Evidence
+R3B-U01,U01-Preview,N/A,N/A,N/A,2026/10/9,Sandbox,0,人工检查Inspector引用,所有引用挂载正确且OnClick为空,所有引用挂载正确,通过,Screenshots/U01_主菜单_配置检查.png
