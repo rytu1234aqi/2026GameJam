@@ -13,11 +13,37 @@ MonoBehaviour:
   m_Name: Reaction_EnemyStatus_Water_Water
   m_EditorClassIdentifier: 
   Id: reaction.EnemyStatus.Water.Water
-  Enabled: 0
+  Enabled: 1
   Context: 1
   A: 1
   B: 1
   ConsumeA: 1
   ConsumeB: 1
   Priority: 100
-  Effects: []
+  Effects:
+  - Id: 
+    Kind: 3
+    TargetPolicy: 0
+    ReferenceId: status.reaction.cold_wave
+    ResourceBucket: 0
+    ResourceAmount: 0
+    PhysicalDamage: 0
+    ElementDamage:
+      Water: 0
+      Fire: 0
+      Earth: 0
+      Wood: 0
+      Wind: 0
+      Thunder: 0
+    Gauge:
+      Water: 0
+      Fire: 0
+      Earth: 0
+      Wood: 0
+      Wind: 0
+      Thunder: 0
+    Amount: 0
+    Stacks: 1
+    DurationOverride: 0
+    DamageMultiplier: 1
+    SpeedMultiplier: 1

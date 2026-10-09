@@ -1,0 +1,7 @@
+TaskId,CaseId,Commit,ConfigVersion,Seed,Time,Mode,Day,Input,Expected,Actual,Result,Evidence
+R3B-T01,T01,待主程登记,待定,,,,,,火/水接触,待联调,待登记,待截图
+
+TaskId,CaseId,Commit,ConfigVersion,Seed,Time,Mode,Day,Input,Expected,Actual,Result,Evidence
+R3B-T02,CW01,,,,,,,"同一敌人两层水附着","消耗2层水→产出寒流1层","待登记后验证","待验证","待截图"
+R3B-T02,CW02,,,,,,,"反复触发寒流","最多3层，到期恢复","待登记后验证","待验证","待截图"
+R3B-T02,CW03,,,,,,,"寒流不循环","寒流输出不能再次作为水输入","待登记后验证","待验证","待截图"
