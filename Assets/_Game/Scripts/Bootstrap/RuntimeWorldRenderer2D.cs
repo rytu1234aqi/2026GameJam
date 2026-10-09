@@ -119,6 +119,9 @@ namespace Spotlight.Bootstrap
                         HealthBar = view.GetComponent<EnemyHealthBar2D>(),
                         Facing = view.GetComponent<EnemyFacingVisual2D>()
                     };
+                    // Enemy bodies live below the positioning root; never select the health bar.
+                    if (entry.Facing != null && entry.Facing.BodyRenderer != null)
+                        entry.Renderer = entry.Facing.BodyRenderer;
                     views.Add(key, entry);
                 }
                 catch (Exception exception)

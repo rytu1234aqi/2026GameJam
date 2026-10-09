@@ -1,0 +1,256 @@
+{
+    "night": 5,
+    "scope": "Isolated EnemyServices SpawnAndBoss scheduler with real SO assets and transactions. Test-only enemy registration and Flying path sharing ground Cells. No movement, combat balance, drops, rendering or public-scene acceptance. N05 drops are present; H02 public integration remains.",
+    "passed": true,
+    "publicCatalogErrors": [
+        "wave.story.3: unknown enemy",
+        "wave.story.3: unknown enemy",
+        "wave.story.4: unknown enemy",
+        "wave.story.4: unknown enemy",
+        "wave.story.4: unknown enemy",
+        "wave.story.5: unknown enemy",
+        "wave.story.5: unknown enemy",
+        "wave.story.5: unknown enemy",
+        "wave.story.5: unknown enemy",
+        "wave.story.5: unknown enemy",
+        "wave.story.6: unknown enemy",
+        "wave.story.6: unknown enemy",
+        "wave.story.6: unknown enemy",
+        "wave.story.6: unknown enemy",
+        "wave.story.6: unknown enemy",
+        "wave.story.6: unknown enemy",
+        "wave.story.7: unknown enemy",
+        "wave.story.7: unknown enemy",
+        "wave.story.7: unknown enemy",
+        "wave.story.7: unknown enemy",
+        "wave.story.7: unknown enemy",
+        "wave.story.7: unknown enemy"
+    ],
+    "births": [
+        {
+            "actor": 2,
+            "enemy": "enemy.goblin.melee",
+            "path": "path.ground",
+            "seconds": 0.0,
+            "maxHp": 60.0,
+            "summon": false
+        },
+        {
+            "actor": 3,
+            "enemy": "enemy.goblin.melee",
+            "path": "path.ground",
+            "seconds": 1.0,
+            "maxHp": 60.0,
+            "summon": false
+        },
+        {
+            "actor": 4,
+            "enemy": "enemy.goblin.melee",
+            "path": "path.ground",
+            "seconds": 2.0,
+            "maxHp": 60.0,
+            "summon": false
+        },
+        {
+            "actor": 5,
+            "enemy": "enemy.goblin.melee",
+            "path": "path.ground",
+            "seconds": 3.0,
+            "maxHp": 60.0,
+            "summon": false
+        },
+        {
+            "actor": 6,
+            "enemy": "enemy.goblin.melee",
+            "path": "path.ground",
+            "seconds": 4.0,
+            "maxHp": 60.0,
+            "summon": false
+        },
+        {
+            "actor": 7,
+            "enemy": "enemy.goblin.ranged",
+            "path": "path.ground",
+            "seconds": 4.0,
+            "maxHp": 60.0,
+            "summon": false
+        },
+        {
+            "actor": 8,
+            "enemy": "enemy.goblin.melee",
+            "path": "path.ground",
+            "seconds": 5.0,
+            "maxHp": 60.0,
+            "summon": false
+        },
+        {
+            "actor": 9,
+            "enemy": "enemy.goblin.ranged",
+            "path": "path.ground",
+            "seconds": 5.0,
+            "maxHp": 60.0,
+            "summon": false
+        },
+        {
+            "actor": 10,
+            "enemy": "enemy.goblin.ranged",
+            "path": "path.ground",
+            "seconds": 6.0,
+            "maxHp": 60.0,
+            "summon": false
+        },
+        {
+            "actor": 11,
+            "enemy": "enemy.goblin.ranged",
+            "path": "path.ground",
+            "seconds": 7.0,
+            "maxHp": 60.0,
+            "summon": false
+        },
+        {
+            "actor": 12,
+            "enemy": "enemy.slime.water",
+            "path": "path.ground",
+            "seconds": 8.0,
+            "maxHp": 40.0,
+            "summon": false
+        },
+        {
+            "actor": 13,
+            "enemy": "enemy.slime.water",
+            "path": "path.ground",
+            "seconds": 9.0,
+            "maxHp": 40.0,
+            "summon": false
+        },
+        {
+            "actor": 14,
+            "enemy": "enemy.slime.fire",
+            "path": "path.ground",
+            "seconds": 12.0,
+            "maxHp": 40.0,
+            "summon": false
+        },
+        {
+            "actor": 15,
+            "enemy": "enemy.slime.fire",
+            "path": "path.ground",
+            "seconds": 13.0,
+            "maxHp": 40.0,
+            "summon": false
+        },
+        {
+            "actor": 16,
+            "enemy": "enemy.slime.thunder",
+            "path": "path.ground",
+            "seconds": 16.0,
+            "maxHp": 40.0,
+            "summon": false
+        },
+        {
+            "actor": 17,
+            "enemy": "enemy.sandworm",
+            "path": "path.ground",
+            "seconds": 20.0,
+            "maxHp": 80.0,
+            "summon": false
+        },
+        {
+            "actor": 18,
+            "enemy": "enemy.sandworm",
+            "path": "path.ground",
+            "seconds": 21.0,
+            "maxHp": 80.0,
+            "summon": false
+        },
+        {
+            "actor": 19,
+            "enemy": "enemy.gargoyle",
+            "path": "path.ground",
+            "seconds": 24.0,
+            "maxHp": 160.0,
+            "summon": false
+        }
+    ],
+    "samples": [
+        {
+            "seconds": 5.0,
+            "alive": 8,
+            "waveBirths": 8,
+            "summonBirths": 0,
+            "pendingWave": 10,
+            "pendingSummon": 0
+        },
+        {
+            "seconds": 30.0,
+            "alive": 18,
+            "waveBirths": 18,
+            "summonBirths": 0,
+            "pendingWave": 0,
+            "pendingSummon": 0
+        },
+        {
+            "seconds": 50.0,
+            "alive": 18,
+            "waveBirths": 18,
+            "summonBirths": 0,
+            "pendingWave": 0,
+            "pendingSummon": 0
+        },
+        {
+            "seconds": 50.0,
+            "alive": 0,
+            "waveBirths": 18,
+            "summonBirths": 0,
+            "pendingWave": 0,
+            "pendingSummon": 0
+        }
+    ],
+    "byType": [
+        {
+            "enemy": "enemy.goblin.melee",
+            "waveBirths": 6,
+            "summonBirths": 0
+        },
+        {
+            "enemy": "enemy.goblin.ranged",
+            "waveBirths": 4,
+            "summonBirths": 0
+        },
+        {
+            "enemy": "enemy.slime.water",
+            "waveBirths": 2,
+            "summonBirths": 0
+        },
+        {
+            "enemy": "enemy.slime.fire",
+            "waveBirths": 2,
+            "summonBirths": 0
+        },
+        {
+            "enemy": "enemy.slime.thunder",
+            "waveBirths": 1,
+            "summonBirths": 0
+        },
+        {
+            "enemy": "enemy.sandworm",
+            "waveBirths": 2,
+            "summonBirths": 0
+        },
+        {
+            "enemy": "enemy.gargoyle",
+            "waveBirths": 1,
+            "summonBirths": 0
+        },
+        {
+            "enemy": "enemy.falcon",
+            "waveBirths": 0,
+            "summonBirths": 0
+        },
+        {
+            "enemy": "enemy.soulking",
+            "waveBirths": 0,
+            "summonBirths": 0
+        }
+    ]
+}

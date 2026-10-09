@@ -1,0 +1,41 @@
+{
+    "test": "PauseAndBossCleanupStopSkillsAndPendingSummons",
+    "scope": "Actual Boss SOs and EnemyServices, delegated real projectile/effect services, real damage and transactions. Boss manually spawned at t=0 with active night7 scheduler, no base-wave scheduling while boss remains alive. H02 enemy/flight registration is test-only; no production definitions changed.",
+    "passed": true,
+    "casts": [
+        {
+            "skill": "boss.shot",
+            "result": "Committed",
+            "seconds": 5.0,
+            "baseDamage": 15.0,
+            "source": 2,
+            "target": 1
+        },
+        {
+            "skill": "boss.shot",
+            "result": "Committed",
+            "seconds": 10.0,
+            "baseDamage": 15.0,
+            "source": 2,
+            "target": 1
+        },
+        {
+            "skill": "boss.shot",
+            "result": "Committed",
+            "seconds": 15.0,
+            "baseDamage": 15.0,
+            "source": 2,
+            "target": 1
+        },
+        {
+            "skill": "boss.shot",
+            "result": "Committed",
+            "seconds": 20.0,
+            "baseDamage": 15.0,
+            "source": 2,
+            "target": 1
+        }
+    ],
+    "summons": [],
+    "hits": []
+}

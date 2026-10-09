@@ -19,7 +19,7 @@ MonoBehaviour:
   Groups:
   - Id: melee
     EnemyId: enemy.goblin.melee
-    Count: 7
+    Count: 6
     SpawnPointId: spawn.ground
     PathId: path.ground
     StartDelaySeconds: 0
@@ -29,10 +29,60 @@ MonoBehaviour:
     DamageMultiplier: 1
   - Id: ranged
     EnemyId: enemy.goblin.ranged
-    Count: 2
+    Count: 4
     SpawnPointId: spawn.ground
     PathId: path.ground
     StartDelaySeconds: 4
+    SpawnIntervalSeconds: 1
+    ApplyDayGrowth: 1
+    HpMultiplier: 1
+    DamageMultiplier: 1
+  - Id: slime_water
+    EnemyId: enemy.slime.water
+    Count: 2
+    SpawnPointId: spawn.ground
+    PathId: path.ground
+    StartDelaySeconds: 8
+    SpawnIntervalSeconds: 1
+    ApplyDayGrowth: 1
+    HpMultiplier: 1
+    DamageMultiplier: 1
+  - Id: slime_fire
+    EnemyId: enemy.slime.fire
+    Count: 2
+    SpawnPointId: spawn.ground
+    PathId: path.ground
+    StartDelaySeconds: 12
+    SpawnIntervalSeconds: 1
+    ApplyDayGrowth: 1
+    HpMultiplier: 1
+    DamageMultiplier: 1
+  - Id: slime_thunder
+    EnemyId: enemy.slime.thunder
+    Count: 1
+    SpawnPointId: spawn.ground
+    PathId: path.ground
+    StartDelaySeconds: 16
+    SpawnIntervalSeconds: 1
+    ApplyDayGrowth: 1
+    HpMultiplier: 1
+    DamageMultiplier: 1
+  - Id: sandworm
+    EnemyId: enemy.sandworm
+    Count: 2
+    SpawnPointId: spawn.ground
+    PathId: path.ground
+    StartDelaySeconds: 20
+    SpawnIntervalSeconds: 1
+    ApplyDayGrowth: 1
+    HpMultiplier: 1
+    DamageMultiplier: 1
+  - Id: gargoyle
+    EnemyId: enemy.gargoyle
+    Count: 1
+    SpawnPointId: spawn.ground
+    PathId: path.ground
+    StartDelaySeconds: 24
     SpawnIntervalSeconds: 1
     ApplyDayGrowth: 1
     HpMultiplier: 1

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="3" result="Passed" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-08 12:48:26Z" end-time="2026-10-08 12:48:27Z" duration="0.8428882">
+  <test-suite type="TestSuite" id="1000" name="2026GameJam" fullname="2026GameJam" runstate="Runnable" testcasecount="72" result="Passed" start-time="2026-10-08 12:48:26Z" end-time="2026-10-08 12:48:27Z" duration="0.842888" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties />
+    <test-suite type="Assembly" id="1103" name="Spotlight.Integration.Tests.dll" fullname="C:/Users/Lenovo/Desktop/2026GameJam/Temp/N02ValidationProject/Library/ScriptAssemblies/Spotlight.Integration.Tests.dll" runstate="Runnable" testcasecount="51" result="Passed" start-time="2026-10-08 12:48:27Z" end-time="2026-10-08 12:48:27Z" duration="0.463164" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="55092" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+      </properties>
+      <test-suite type="TestSuite" id="1104" name="Spotlight" fullname="Spotlight" runstate="Runnable" testcasecount="51" result="Passed" start-time="2026-10-08 12:48:27Z" end-time="2026-10-08 12:48:27Z" duration="0.462502" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1105" name="Tests" fullname="Spotlight.Tests" runstate="Runnable" testcasecount="51" result="Passed" start-time="2026-10-08 12:48:27Z" end-time="2026-10-08 12:48:27Z" duration="0.462058" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1106" name="Integration" fullname="Spotlight.Tests.Integration" runstate="Runnable" testcasecount="46" result="Passed" start-time="2026-10-08 12:48:27Z" end-time="2026-10-08 12:48:27Z" duration="0.461428" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1076" name="ThirdRoundPresentationTests" fullname="Spotlight.Tests.Integration.ThirdRoundPresentationTests" classname="Spotlight.Tests.Integration.ThirdRoundPresentationTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-08 12:48:27Z" end-time="2026-10-08 12:48:27Z" duration="0.459973" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1078" name="PooledProjectilesAndEnemyBodiesResetBeforeAnyDisplayUpdate" fullname="Spotlight.Tests.Integration.ThirdRoundPresentationTests.PooledProjectilesAndEnemyBodiesResetBeforeAnyDisplayUpdate" methodname="PooledProjectilesAndEnemyBodiesResetBeforeAnyDisplayUpdate" classname="Spotlight.Tests.Integration.ThirdRoundPresentationTests" runstate="Runnable" seed="1373243988" result="Passed" start-time="2026-10-08 12:48:23Z" end-time="2026-10-08 12:48:25Z" duration="2.031348" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                </properties>
+              </test-case>
+              <test-case id="1077" name="ProjectileDirectionsAndOverlaysAreUnlitAndHaveDistinctSorting" fullname="Spotlight.Tests.Integration.ThirdRoundPresentationTests.ProjectileDirectionsAndOverlaysAreUnlitAndHaveDistinctSorting" methodname="ProjectileDirectionsAndOverlaysAreUnlitAndHaveDistinctSorting" classname="Spotlight.Tests.Integration.ThirdRoundPresentationTests" runstate="Runnable" seed="1472876472" result="Passed" start-time="2026-10-08 12:48:25Z" end-time="2026-10-08 12:48:25Z" duration="0.006993" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1079" name="RendererUsesRealSnapshotsClockMotionAndClearsLeasesAcrossRunsAndRebind" fullname="Spotlight.Tests.Integration.ThirdRoundPresentationTests.RendererUsesRealSnapshotsClockMotionAndClearsLeasesAcrossRunsAndRebind" methodname="RendererUsesRealSnapshotsClockMotionAndClearsLeasesAcrossRunsAndRebind" classname="Spotlight.Tests.Integration.ThirdRoundPresentationTests" runstate="Runnable" seed="1790930729" result="Passed" start-time="2026-10-08 12:48:25Z" end-time="2026-10-08 12:48:27Z" duration="2.256624" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                </properties>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

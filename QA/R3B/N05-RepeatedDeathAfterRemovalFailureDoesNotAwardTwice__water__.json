@@ -1,0 +1,47 @@
+{
+    "test": "RepeatedDeathAfterRemovalFailureDoesNotAwardTwice(\"water\")",
+    "scope": "Real assets, ModuleComposition, damage/death/loot transactions and dawn production. H02 enemy/flight registration only is supplied in memory by R3BTestCatalog; no production assets, HP, damage or drop results are altered.",
+    "passed": true,
+    "rewards": [
+        {
+            "source": "kill.drop",
+            "enemy": 2,
+            "quantities": [
+                {
+                    "bucket": "Hand",
+                    "resource": "elm.water",
+                    "amount": 1
+                }
+            ]
+        }
+    ],
+    "samples": [
+        {
+            "stage": "before.retry.kill",
+            "water": 3,
+            "fire": 3,
+            "thunder": 3,
+            "gold": 100,
+            "lootEvents": 0,
+            "productionEvents": 0
+        },
+        {
+            "stage": "loot.committed.removal.rejected",
+            "water": 4,
+            "fire": 3,
+            "thunder": 3,
+            "gold": 100,
+            "lootEvents": 1,
+            "productionEvents": 0
+        },
+        {
+            "stage": "repeated.death.removal.succeeded.no.extra.loot",
+            "water": 4,
+            "fire": 3,
+            "thunder": 3,
+            "gold": 100,
+            "lootEvents": 1,
+            "productionEvents": 0
+        }
+    ]
+}

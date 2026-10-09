@@ -145,6 +145,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 940db75377bd76a46b6b5566c99212dd, type: 2}
   DropTables:
   - {fileID: 11400000, guid: a24b982035935a44184f11c5a2aba375, type: 2}
+  - {fileID: 11400000, guid: 82a15c126a5f4b07a66f787f984cee9c, type: 2}
+  - {fileID: 11400000, guid: 31d68e5cb56943a89e1bc520cccd45c9, type: 2}
+  - {fileID: 11400000, guid: 72ca19c88406417ab47b995857247ce6, type: 2}
   Items:
   - {fileID: 11400000, guid: 7e7f4e66fc77630478e5aa7d1d5c203c, type: 2}
   - {fileID: 11400000, guid: 5512d35a21a07d6488f3b35dafec70b6, type: 2}

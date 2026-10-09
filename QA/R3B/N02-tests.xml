@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Passed" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-08 12:47:26Z" end-time="2026-10-08 12:47:26Z" duration="0.7050813">
+  <test-suite type="TestSuite" id="1000" name="2026GameJam" fullname="2026GameJam" runstate="Runnable" testcasecount="72" result="Passed" start-time="2026-10-08 12:47:26Z" end-time="2026-10-08 12:47:26Z" duration="0.705081" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties />
+    <test-suite type="Assembly" id="1103" name="Spotlight.Integration.Tests.dll" fullname="C:/Users/Lenovo/Desktop/2026GameJam/Temp/N02ValidationProject/Library/ScriptAssemblies/Spotlight.Integration.Tests.dll" runstate="Runnable" testcasecount="51" result="Passed" start-time="2026-10-08 12:47:26Z" end-time="2026-10-08 12:47:26Z" duration="0.329917" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="57064" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+      </properties>
+      <test-suite type="TestSuite" id="1104" name="Spotlight" fullname="Spotlight" runstate="Runnable" testcasecount="51" result="Passed" start-time="2026-10-08 12:47:26Z" end-time="2026-10-08 12:47:26Z" duration="0.329249" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1105" name="Tests" fullname="Spotlight.Tests" runstate="Runnable" testcasecount="51" result="Passed" start-time="2026-10-08 12:47:26Z" end-time="2026-10-08 12:47:26Z" duration="0.328859" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1106" name="Integration" fullname="Spotlight.Tests.Integration" runstate="Runnable" testcasecount="46" result="Passed" start-time="2026-10-08 12:47:26Z" end-time="2026-10-08 12:47:26Z" duration="0.328317" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1069" name="R3BEnemyPrefabTests" fullname="Spotlight.Tests.Integration.R3BEnemyPrefabTests" classname="Spotlight.Tests.Integration.R3BEnemyPrefabTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-08 12:47:26Z" end-time="2026-10-08 12:47:26Z" duration="0.326776" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1070" name="SevenEnemiesRenderRealHealthAndResetOnReuse" fullname="Spotlight.Tests.Integration.R3BEnemyPrefabTests.SevenEnemiesRenderRealHealthAndResetOnReuse" methodname="SevenEnemiesRenderRealHealthAndResetOnReuse" classname="Spotlight.Tests.Integration.R3BEnemyPrefabTests" runstate="Runnable" seed="1133374958" result="Passed" start-time="2026-10-08 12:47:24Z" end-time="2026-10-08 12:47:26Z" duration="2.157101" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                </properties>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

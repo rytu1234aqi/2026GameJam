@@ -1,0 +1,261 @@
+{
+    "test": "ThreeSkillsKeepExistingPeriodsDamageAndFixedSummons",
+    "scope": "Actual Boss SOs and EnemyServices, delegated real projectile/effect services, real damage and transactions. Boss manually spawned at t=0 with active night7 scheduler, no base-wave scheduling while boss remains alive. H02 enemy/flight registration is test-only; no production definitions changed.",
+    "passed": true,
+    "casts": [
+        {
+            "skill": "boss.shot",
+            "result": "Committed",
+            "seconds": 5.0,
+            "baseDamage": 15.0,
+            "source": 2,
+            "target": 1
+        },
+        {
+            "skill": "boss.shot",
+            "result": "Committed",
+            "seconds": 10.0,
+            "baseDamage": 15.0,
+            "source": 2,
+            "target": 1
+        },
+        {
+            "skill": "boss.shot",
+            "result": "Committed",
+            "seconds": 15.0,
+            "baseDamage": 15.0,
+            "source": 2,
+            "target": 1
+        },
+        {
+            "skill": "boss.shot",
+            "result": "Committed",
+            "seconds": 20.0,
+            "baseDamage": 15.0,
+            "source": 2,
+            "target": 1
+        },
+        {
+            "skill": "boss.shot",
+            "result": "Committed",
+            "seconds": 25.0,
+            "baseDamage": 15.0,
+            "source": 2,
+            "target": 1
+        },
+        {
+            "skill": "boss.shot",
+            "result": "Committed",
+            "seconds": 30.0,
+            "baseDamage": 15.0,
+            "source": 2,
+            "target": 1
+        },
+        {
+            "skill": "boss.shot",
+            "result": "Committed",
+            "seconds": 35.0,
+            "baseDamage": 15.0,
+            "source": 2,
+            "target": 1
+        },
+        {
+            "skill": "boss.shot",
+            "result": "Committed",
+            "seconds": 40.0,
+            "baseDamage": 15.0,
+            "source": 2,
+            "target": 1
+        },
+        {
+            "skill": "boss.curse",
+            "result": "Committed",
+            "seconds": 40.0,
+            "baseDamage": 10.0,
+            "source": 2,
+            "target": 1
+        },
+        {
+            "skill": "boss.shot",
+            "result": "Committed",
+            "seconds": 45.0,
+            "baseDamage": 15.0,
+            "source": 2,
+            "target": 1
+        },
+        {
+            "skill": "boss.shot",
+            "result": "Committed",
+            "seconds": 50.0,
+            "baseDamage": 15.0,
+            "source": 2,
+            "target": 1
+        },
+        {
+            "skill": "boss.shot",
+            "result": "Committed",
+            "seconds": 55.0,
+            "baseDamage": 15.0,
+            "source": 2,
+            "target": 1
+        },
+        {
+            "skill": "boss.shot",
+            "result": "Committed",
+            "seconds": 60.0,
+            "baseDamage": 15.0,
+            "source": 2,
+            "target": 1
+        },
+        {
+            "skill": "boss.shot",
+            "result": "Committed",
+            "seconds": 65.0,
+            "baseDamage": 15.0,
+            "source": 2,
+            "target": 1
+        },
+        {
+            "skill": "boss.shot",
+            "result": "Committed",
+            "seconds": 70.0,
+            "baseDamage": 15.0,
+            "source": 2,
+            "target": 1
+        },
+        {
+            "skill": "boss.shot",
+            "result": "Committed",
+            "seconds": 75.0,
+            "baseDamage": 15.0,
+            "source": 2,
+            "target": 1
+        },
+        {
+            "skill": "boss.shot",
+            "result": "Committed",
+            "seconds": 80.0,
+            "baseDamage": 15.0,
+            "source": 2,
+            "target": 1
+        },
+        {
+            "skill": "boss.curse",
+            "result": "Committed",
+            "seconds": 80.0,
+            "baseDamage": 10.0,
+            "source": 2,
+            "target": 1
+        },
+        {
+            "skill": "boss.shot",
+            "result": "Committed",
+            "seconds": 85.0,
+            "baseDamage": 15.0,
+            "source": 2,
+            "target": 1
+        }
+    ],
+    "summons": [
+        {
+            "actor": 3,
+            "enemy": "enemy.goblin.melee",
+            "path": "path.ground",
+            "seconds": 20.25,
+            "hp": 30.0
+        },
+        {
+            "actor": 4,
+            "enemy": "enemy.goblin.melee",
+            "path": "path.ground",
+            "seconds": 21.0,
+            "hp": 30.0
+        },
+        {
+            "actor": 5,
+            "enemy": "enemy.goblin.melee",
+            "path": "path.ground",
+            "seconds": 22.0,
+            "hp": 30.0
+        },
+        {
+            "actor": 6,
+            "enemy": "enemy.goblin.melee",
+            "path": "path.ground",
+            "seconds": 40.25,
+            "hp": 30.0
+        },
+        {
+            "actor": 7,
+            "enemy": "enemy.goblin.melee",
+            "path": "path.ground",
+            "seconds": 41.0,
+            "hp": 30.0
+        },
+        {
+            "actor": 8,
+            "enemy": "enemy.goblin.melee",
+            "path": "path.ground",
+            "seconds": 42.0,
+            "hp": 30.0
+        },
+        {
+            "actor": 9,
+            "enemy": "enemy.goblin.melee",
+            "path": "path.ground",
+            "seconds": 60.25,
+            "hp": 30.0
+        },
+        {
+            "actor": 10,
+            "enemy": "enemy.goblin.melee",
+            "path": "path.ground",
+            "seconds": 61.0,
+            "hp": 30.0
+        },
+        {
+            "actor": 11,
+            "enemy": "enemy.goblin.melee",
+            "path": "path.ground",
+            "seconds": 62.0,
+            "hp": 30.0
+        },
+        {
+            "actor": 12,
+            "enemy": "enemy.goblin.melee",
+            "path": "path.ground",
+            "seconds": 80.25,
+            "hp": 30.0
+        },
+        {
+            "actor": 13,
+            "enemy": "enemy.goblin.melee",
+            "path": "path.ground",
+            "seconds": 81.0,
+            "hp": 30.0
+        },
+        {
+            "actor": 14,
+            "enemy": "enemy.goblin.melee",
+            "path": "path.ground",
+            "seconds": 82.0,
+            "hp": 30.0
+        }
+    ],
+    "hits": [
+        {
+            "seconds": 40.0,
+            "damage": 10.0,
+            "hp": 90.0,
+            "source": 2,
+            "target": 1
+        },
+        {
+            "seconds": 80.0,
+            "damage": 10.0,
+            "hp": 80.0,
+            "source": 2,
+            "target": 1
+        }
+    ]
+}

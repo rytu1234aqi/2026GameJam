@@ -1,0 +1,26 @@
+{
+    "test": "CleanupDoesNotReward(\"water\",SessionReset)",
+    "scope": "Real assets, ModuleComposition, damage/death/loot transactions and dawn production. H02 enemy/flight registration only is supplied in memory by R3BTestCatalog; no production assets, HP, damage or drop results are altered.",
+    "passed": true,
+    "rewards": [],
+    "samples": [
+        {
+            "stage": "before.cleanup",
+            "water": 3,
+            "fire": 3,
+            "thunder": 3,
+            "gold": 100,
+            "lootEvents": 0,
+            "productionEvents": 0
+        },
+        {
+            "stage": "after.cleanup.twice",
+            "water": 3,
+            "fire": 3,
+            "thunder": 3,
+            "gold": 100,
+            "lootEvents": 0,
+            "productionEvents": 0
+        }
+    ]
+}

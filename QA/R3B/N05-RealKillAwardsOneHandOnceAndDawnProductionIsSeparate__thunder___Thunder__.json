@@ -1,0 +1,120 @@
+{
+    "test": "RealKillAwardsOneHandOnceAndDawnProductionIsSeparate(\"thunder\",\"Thunder\")",
+    "scope": "Real assets, ModuleComposition, damage/death/loot transactions and dawn production. H02 enemy/flight registration only is supplied in memory by R3BTestCatalog; no production assets, HP, damage or drop results are altered.",
+    "passed": true,
+    "rewards": [
+        {
+            "source": "kill.drop",
+            "enemy": 3,
+            "quantities": [
+                {
+                    "bucket": "Hand",
+                    "resource": "elm.thunder",
+                    "amount": 1
+                }
+            ]
+        },
+        {
+            "source": "kill.drop",
+            "enemy": 4,
+            "quantities": [
+                {
+                    "bucket": "Inventory",
+                    "resource": "res.gold",
+                    "amount": 8
+                }
+            ]
+        },
+        {
+            "source": "kill.drop",
+            "enemy": 5,
+            "quantities": [
+                {
+                    "bucket": "Inventory",
+                    "resource": "res.gold",
+                    "amount": 5
+                }
+            ]
+        },
+        {
+            "source": "kill.drop",
+            "enemy": 6,
+            "quantities": [
+                {
+                    "bucket": "Inventory",
+                    "resource": "res.gold",
+                    "amount": 5
+                }
+            ]
+        },
+        {
+            "source": "kill.drop",
+            "enemy": 7,
+            "quantities": [
+                {
+                    "bucket": "Inventory",
+                    "resource": "res.gold",
+                    "amount": 9
+                }
+            ]
+        },
+        {
+            "source": "night.production",
+            "enemy": 0,
+            "quantities": [
+                {
+                    "bucket": "Hand",
+                    "resource": "elm.thunder",
+                    "amount": 1
+                }
+            ]
+        }
+    ],
+    "samples": [
+        {
+            "stage": "before.kill",
+            "water": 3,
+            "fire": 3,
+            "thunder": 2,
+            "gold": 100,
+            "lootEvents": 0,
+            "productionEvents": 0
+        },
+        {
+            "stage": "after.kill.drop.only",
+            "water": 3,
+            "fire": 3,
+            "thunder": 3,
+            "gold": 100,
+            "lootEvents": 1,
+            "productionEvents": 0
+        },
+        {
+            "stage": "after.repeated.death.processing",
+            "water": 3,
+            "fire": 3,
+            "thunder": 3,
+            "gold": 100,
+            "lootEvents": 1,
+            "productionEvents": 0
+        },
+        {
+            "stage": "before.dawn",
+            "water": 3,
+            "fire": 3,
+            "thunder": 3,
+            "gold": 127,
+            "lootEvents": 5,
+            "productionEvents": 0
+        },
+        {
+            "stage": "after.dawn.production.only",
+            "water": 3,
+            "fire": 3,
+            "thunder": 4,
+            "gold": 127,
+            "lootEvents": 5,
+            "productionEvents": 1
+        }
+    ]
+}
