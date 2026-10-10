@@ -1,0 +1,6 @@
+TaskId,CaseId,Commit,ConfigVersion,Seed,Time,Mode,Day,Input,Expected,Actual,Result,Evidence
+R3B-U01,U01-Preview,Sandbox,0,检查UI_MainMenu预制体,引用完整且无Canvas,检查通过,待接入,Screenshots/U01_U02_面板汇总.png
+R3B-U02,U02-Preview,Sandbox,0,检查UI_NightResult与UI_RunEnd预制体,含滚动区域且无Canvas,检查通过,待接入,Screenshots/U01_U02_面板汇总.png
+R3B-U03,U03-Preview,Sandbox,0,检查UI_Game上的ProductionSummaryText,节点存在且无遮挡,检查通过,待接入,Screenshots/U03_HUD_操作状态.png
+R3B-U04,U04-EventConfig,检查3个事件的Inspector配置,Id/Cost/Effects均正确,配置正确等待登记,待接入,Screenshots/U04_事件配置.png
+R3B-U07,U07-Resolution,N/A,N/A,N/A,2026/10/10 22:00,N/A,N/A,"切换960x540、1280x720、1920x1080","文字与按钮不遮挡，可滚动查看",调整锚点后通过,待接入,Screenshots/U07_分辨率_960x540.png
