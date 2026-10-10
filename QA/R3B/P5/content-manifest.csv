@@ -1,0 +1,11 @@
+Owner,TaskId,AssetPath,AssetType,DefinitionId,PrefabKey,DependsOn,RegistrationStatus
+P5,R3B-U01,Assets/_Game/Prefabs/UI/Panels/UI_MainMenu.prefab,Prefab,N/A,UI_MainMenu,N/A,未登记
+P5,R3B-U01,Assets/_Game/Scripts/Presentation/UI/MainMenuPanelReferences.cs,Script,N/A,N/A,N/A,未登记
+P5,R3B-U02,Assets/_Game/Prefabs/UI/Panels/UI_NightResult.prefab,Prefab,N/A,UI_NightResult,N/A,未登记
+P5,R3B-U02,Assets/_Game/Prefabs/UI/Panels/UI_RunEnd.prefab,Prefab,N/A,UI_RunEnd,N/A,未登记
+P5,R3B-U02,Assets/_Game/Scripts/Presentation/UI/NightResultPanelReferences.cs,Script,N/A,N/A,N/A,未登记
+P5,R3B-U02,Assets/_Game/Scripts/Presentation/UI/RunEndPanelReferences.cs,Script,N/A,N/A,N/A,未登记
+P5,R3B-U03,Assets/_Game/Prefabs/UI/UI_Game.prefab,Prefab,N/A,UI_Game,N/A,未登记
+P5,R3B-U04,Assets/_Game/Data/Prototype/P5/Event_ElementTrade.asset,ScriptableObject,event.element_trade,N/A,R3B-H01,未登记
+P5,R3B-U04,Assets/_Game/Data/Prototype/P5/Event_SpringBlessing.asset,ScriptableObject,event.spring_blessing,N/A,R3B-H01,未登记
+P5,R3B-U04,Assets/_Game/Data/Prototype/P5/Event_SupplyMerchant.asset,ScriptableObject,event.supply_merchant,N/A,R3B-H01,未登记

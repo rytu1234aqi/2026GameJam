@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbb36fc2f685a054483451b22a482601, type: 3}
+  m_Name: Event_ElementTrade
+  m_EditorClassIdentifier: 
+  Id: event.element_trade
+  MinDayInclusive: 2
+  MaxDayInclusive: 7
+  Modes: 0000000001000000
+  Weight: 1
+  Text: "\u672C\u8F6E\u6D4B\u8BD5\u4E8B\u4EF6"
+  Options:
+  - Id: buy_wood
+    Text: "\u8D2D\u4E70\u6728\u6750"
+    Cost:
+    - Bucket: 1
+      DefinitionId: res.gold
+      Amount: 10
+    Effects:
+    - Id: 
+      Kind: 4
+      TargetPolicy: 4
+      ReferenceId: elm.wood
+      ResourceBucket: 0
+      ResourceAmount: 2
+      PhysicalDamage: 0
+      ElementDamage:
+        Water: 0
+        Fire: 0
+        Earth: 0
+        Wood: 0
+        Wind: 0
+        Thunder: 0
+      Gauge:
+        Water: 0
+        Fire: 0
+        Earth: 0
+        Wood: 0
+        Wind: 0
+        Thunder: 0
+      Amount: 0
+      Stacks: 0
+      DurationOverride: 0
+      DamageMultiplier: 0
+      SpeedMultiplier: 0
+  - Id: leave
+    Text: "\u79BB\u5F00"
+    Cost: []
+    Effects: []
