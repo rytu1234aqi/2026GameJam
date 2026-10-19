@@ -2,3 +2,12 @@
 "R3B-P3","status-registration","working-tree","prototype.1","","2026-10-09T14:03:40.2948690Z","static","","status-registration","contact burn; contact water slow; cold wave registered","Formal asset Unity checks passed; 132/132 total","Passed","QA/R3B/Integration/editmode-tests.xml;QA/R3B/Integration/result-summary.json"
 "R3B-P3","cold-wave-id","working-tree","prototype.1","","2026-10-09T14:03:40.2948690Z","static","","cold-wave-id","reaction.EnemyStatus.Water.Water","Formal asset Unity checks passed; 132/132 total","Passed","QA/R3B/Integration/editmode-tests.xml;QA/R3B/Integration/result-summary.json"
 "R3B-T03","T03-PR15-Integration","working-tree PR15+PR16","prototype.1","special fixtures; smoke 456","2026-10-11T05:28:17.9643026Z","Story and component","1","Run production Unity integration verification","Positive actual damage only; body only; zero time; invalid input; pause; double; pool reset","HitFlashIntegrationTests 2/2; full suite 166/166","Passed","QA/R3B/PR15-16/editmode-tests.xml;QA/R3B/PR15-16/result-summary.json"
+
+R3B-T06,TV01,<commit>,<configVer>,<seed>,"Day1 00:00","Story",Day1,"TWR_Basic.prefab 显示层编辑，新增塔Sprite到现有Renderer","预期:塔显示新外观，根节点/碰撞/坐标不变，无Missing引用","实际:待填","待验证","QA/R3B/P3/Screenshots/TV01_tower_visual.png"
+R3B-T06,TV02,<commit>,<configVer>,<seed>,"Day1 00:00","Story",Day1,"观察塔外观尺寸，确认最宽时不遮挡旁格、子弹和敌人血条","预期:塔素材不超出地块范围，不遮挡相邻格子","实际:待填","待验证","QA/R3B/P3/Screenshots/TV02_tower_size.png"
+R3B-T06,TV03,<commit>,<configVer>,<seed>,"Day1 00:00","Story",Day1,"灵泉素材放Art/World/Spring/，交主程接入现有Spring Prefab","预期:素材路径正确，等待主程接入","实际:素材已放置，待主程接入","待接入","QA/R3B/P3/Screenshots/TV03_spring_art.png"
+R3B-T06,TV04,<commit>,<configVer>,<seed>,"Day1 00:00","Story",Day1,"确认未删除根Renderer，碰撞和真实坐标保持","预期:根节点Renderer存在，碰撞体和坐标未变","实际:待填","待验证","QA/R3B/P3/Screenshots/TV04_root_renderer.png"
+R3B-T06,TV05,<commit>,<configVer>,<seed>,"Day1 00:00","Story",Day1,"未添加自主开火/扣血组件，仅显示层","预期:Prefab内无新增开火/扣血脚本","实际:待填","待验证","N/A"
+R3B-T06,TR01,<commit>,<configVer>,<seed>,"Day1 00:00","Story",Day1,"发射单元素子弹(mask=1水)，观察尾迹特效","预期:尾迹显示水元素颜色/特效","实际:待填","待验证","QA/R3B/P3/Screenshots/TR01_trail_single.png"
+R3B-T06,TR02,<commit>,<configVer>,<seed>,"Day1 00:00","Story",Day1,"发射多元素子弹(mask=3水+火)，观察尾迹按首个元素显示","预期:尾迹按首个元素(水)显示，与ProjectileVisual2D规则一致，不显示两个图标","实际:待填","待验证","QA/R3B/P3/Screenshots/TR02_trail_first.png"
+R3B-T06,TR03,<commit>,<configVer>,<seed>,"Day1 00:00","Story",Day1,"发射无元素子弹(mask=0)，观察尾迹","预期:无尾迹特效","实际:待填","待验证","QA/R3B/P3/Screenshots/TR03_trail_none.png"
