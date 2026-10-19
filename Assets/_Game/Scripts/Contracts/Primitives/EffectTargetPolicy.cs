@@ -4,6 +4,6 @@ using System.Collections.Generic;
 
 namespace Spotlight.Contracts
 {
-    public enum EffectTargetPolicy { SelectedActor = 0, Spring = 1, AllEnemies = 2, AllTowers = 3, Resources = 4, CurrentProjectile = 5 }
+    public enum EffectTargetPolicy { SelectedActor = 0, Spring = 1, AllEnemies = 2, AllTowers = 3, Resources = 4, CurrentProjectile = 5, SourceActor = 6 }
 }
 

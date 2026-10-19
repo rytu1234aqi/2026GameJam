@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-14",
+  "contractVersion": "2.2.0",
+  "designDocument": "元素组合完整设计与策划配表.md",
+  "rules": {
+    "baseModifierOncePerElement": true,
+    "reactionInputOncePerDistinctBlock": true,
+    "ruleOncePerProjectile": true,
+    "consumedInputsNotReused": true,
+    "hasteTargetsSourceTower": true,
+    "missSkipsHitEffects": true,
+    "naturalFreezeNotExtendedByArea": true,
+    "noTemporaryTerrain": true
+  },
+  "combinations": {
+    "unorderedPairs": 21,
+    "enabledCombatRecipes": 19,
+    "enabledEnemyStatusRecipes": 16,
+    "enabledProjectileRecipes": 3,
+    "productionRules": 10,
+    "earthEarth": "Disabled placeholder; no wall",
+    "earthWood": "Existing production rule only",
+    "sandboxSucceeded": true,
+    "sandboxReport": "sandbox-report.json"
+  },
+  "tests": {
+    "result": "Passed",
+    "total": 249,
+    "passed": 249,
+    "failed": 0,
+    "skipped": 0,
+    "report": "editmode-tests.xml",
+    "earlierFailures": "Resolved test constructor typo and outdated hard-coded production rule count; attempts retained"
+  },
+  "build": {
+    "succeeded": true,
+    "errors": 0,
+    "warnings": 1,
+    "output": "E:\\PersonalProgram\\2026GameJam\\Builds\\WindowsCombinations\\Spotlight.exe"
+  },
+  "player": {
+    "succeeded": true,
+    "seed": 456,
+    "verifiedNights": 2,
+    "report": "player-smoke.json",
+    "isolatedSave": true
+  },
+  "probability": "Stable hash from per-night existing Wave seed and stable attack/effect identities; no random stream or cursor mutation during preview",
+  "legacySave": "Existing explicit 2.1.0-to-2.2.0 in-memory migration retained; all legacy save tests pass",
+  "metaGuidCount": 623,
+  "duplicateMetaGuids": 0,
+  "limitations": [
+    "Seven-night ordinary gameplay victory and final balance are not proven",
+    "Unspecified durations/radii remain marked prototype values",
+    "Existing Water-Wood production amount1 and single-Earth outputEarth retained for designer adjustment",
+    "Sandboxes use detached high-HP stationary targets and are not balance proofs"
+  ],
+  "git": {
+    "branch": "main",
+    "committed": false,
+    "pushed": false,
+    "previousPR17AndEffectChangesPreserved": true
+  }
+}

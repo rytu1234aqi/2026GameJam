@@ -4,6 +4,7 @@ using System.IO;
 using UnityEngine;
 using Spotlight.Contracts;
 using Spotlight.Presentation;
+using Spotlight.Presentation.Cinematics;
 
 namespace Spotlight.Bootstrap
 {
@@ -15,6 +16,8 @@ namespace Spotlight.Bootstrap
         public Camera WorldCamera;
         [Tooltip("正式UI预制体；留空继续使用原型界面。")]
         public GameUiReferences UiPrefab;
+        public CutsceneSequenceSO OpeningStory;
+        public CutscenePanelReferences OpeningCutscenePrefab;
         [Tooltip("留空使用玩家存档目录；自动测试可指定自己的临时目录。")]
         public string SaveDirectoryOverride;
         public ModuleComposition Services { get; private set; }
@@ -56,9 +59,13 @@ namespace Spotlight.Bootstrap
                             prefabs.Add(entry.Key, entry.Prefab);
                 pool = new ViewPool(prefabs);
                 worldView = gameObject.AddComponent<RuntimeWorldRenderer2D>();
+                worldView.ArtTheme = UiPrefab == null ? null : UiPrefab.ArtTheme;
+                worldView.WorldCamera = WorldCamera;
                 worldView.Bind(Services, pool);
                 gameView = gameObject.AddComponent<GameView>();
                 gameView.UiPrefab=UiPrefab;
+                gameView.OpeningStory=OpeningStory;
+                gameView.OpeningCutscenePrefab=OpeningCutscenePrefab;
                 gameView.Bind(Services.ViewContext);
                 feedback = gameObject.AddComponent<FeedbackService>();
                 feedback.Bind(Services.Events, Services.Core.World);

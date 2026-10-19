@@ -11,13 +11,47 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbdbef7af1b5ff3419db50b31953d227, type: 3}
   m_Name: Reaction_EnemyStatus_Water_Fire
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Id: reaction.EnemyStatus.Water.Fire
-  Enabled: 0
+  Enabled: 1
   Context: 1
   A: 1
   B: 2
   ConsumeA: 1
   ConsumeB: 1
   Priority: 100
-  Effects: []
+  Effects:
+  - Id: effect.area_damage
+    Kind: 7
+    TargetPolicy: 0
+    ReferenceId:
+    ResourceBucket: 0
+    ResourceAmount: 0
+    PhysicalDamage: 30
+    ElementDamage:
+      Water: 0
+      Fire: 0
+      Earth: 0
+      Wood: 0
+      Wind: 0
+      Thunder: 0
+    Gauge:
+      Water: 0
+      Fire: 0
+      Earth: 0
+      Wood: 0
+      Wind: 0
+      Thunder: 0
+    Amount: 0
+    Stacks: 0
+    DurationOverride: 0
+    DamageMultiplier: 1
+    SpeedMultiplier: 1
+    RadiusInCells: 2
+    MaxHits: 1
+    RetainedDamageMultiplier: 1
+    DurationSeconds: 0
+    TickIntervalSeconds: 0
+    LingeringSeconds: 0
+    RequiredStatusId:
+    AreaEffects: []

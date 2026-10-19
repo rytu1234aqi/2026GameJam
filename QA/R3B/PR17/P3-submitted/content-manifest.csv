@@ -1,0 +1,26 @@
+"Owner","TaskId","AssetPath","AssetType","DefinitionId","PrefabKey","DependsOn","RegistrationStatus"
+"P3","R3B-P3","Assets/_Game/Data/Prototype/P3/ProjectileBasic.asset","ScriptableObject","projectile.basic","ProjectileBasic","N/A","registered-static-reference"
+"P3","R3B-P3","Assets/_Game/Data/Prototype/P3/ProjectileEnemy.asset","ScriptableObject","projectile.enemy","EnemyProjectile","N/A","registered-static-reference"
+"P3","R3B-P3","Assets/_Game/Data/Prototype/P3/SpotlightSkill.asset","ScriptableObject","skill.spotlight","N/A","N/A","registered-static-reference"
+"P3","R3B-P3","Assets/_Game/Data/Prototype/P3/Status_ColdWave.asset","StatusEffectDefinitionSO","status.reaction.cold_wave","N/A","N/A","registered-static-reference"
+"P3","R3B-P3","Assets/_Game/Data/Prototype/P3/Status_ContactBurn.asset","StatusEffectDefinitionSO","status.contact.burn","N/A","N/A","registered-static-reference"
+"P3","R3B-P3","Assets/_Game/Data/Prototype/P3/Status_ContactWaterSlow.asset","StatusEffectDefinitionSO","status.contact.water_slow","N/A","N/A","registered-static-reference"
+"P3","R3B-P3","Assets/_Game/Data/Prototype/P3/Status_earth.asset","StatusEffectDefinitionSO","status.earth","N/A","N/A","registered-static-reference"
+"P3","R3B-P3","Assets/_Game/Data/Prototype/P3/Status_Entangle.asset","StatusEffectDefinitionSO","status.entangle","N/A","N/A","registered-static-reference"
+"P3","R3B-P3","Assets/_Game/Data/Prototype/P3/Status_fire.asset","StatusEffectDefinitionSO","status.fire","N/A","N/A","registered-static-reference"
+"P3","R3B-P3","Assets/_Game/Data/Prototype/P3/Status_thunder.asset","StatusEffectDefinitionSO","status.thunder","N/A","N/A","registered-static-reference"
+"P3","R3B-P3","Assets/_Game/Data/Prototype/P3/Status_ThunderBurn.asset","StatusEffectDefinitionSO","status.thunderburn","N/A","N/A","registered-static-reference"
+"P3","R3B-P3","Assets/_Game/Data/Prototype/P3/Status_ThunderStorm.asset","StatusEffectDefinitionSO","status.thunderstorm","N/A","N/A","registered-static-reference"
+"P3","R3B-P3","Assets/_Game/Data/Prototype/P3/Status_water.asset","StatusEffectDefinitionSO","status.water","N/A","N/A","registered-static-reference"
+"P3","R3B-P3","Assets/_Game/Data/Prototype/P3/Status_wind.asset","StatusEffectDefinitionSO","status.wind","N/A","N/A","registered-static-reference"
+"P3","R3B-P3","Assets/_Game/Data/Prototype/P3/Status_wood.asset","StatusEffectDefinitionSO","status.wood","N/A","N/A","registered-static-reference"
+"P3","R3B-P3","Assets/_Game/Data/Prototype/P3/TowerBasic.asset","ScriptableObject","tower.basic","TowerBasic","N/A","registered-static-reference"
+"P3","R3B-T01","Assets/_Game/Data/Prototype/P2/Element_fire.asset","ElementDefinitionSO","elm.fire","ElementFire","status.contact.burn","registered-static-reference"
+"P3","R3B-T01","Assets/_Game/Data/Prototype/P2/Element_water.asset","ElementDefinitionSO","elm.water","ElementWater","status.contact.water_slow","registered-static-reference"
+"P3","R3B-T02","Assets/_Game/Data/Prototype/P2/Reaction_EnemyStatus_Water_Water.asset","ReactionDefinitionSO","reaction.EnemyStatus.Water.Water","N/A","status.reaction.cold_wave","registered-static-reference"
+"P3","R3B-T03","Assets/_Game/Scripts/Presentation/Combat/HitFlashVisual2D.cs","Script","N/A","N/A","RuntimeWorldRenderer2D;DamageAppliedEvent;GameClock","Integrated; Unity 166/166 passed"
+
+P3,R3B-T06,Assets/_Game/Art/Towers,Tower Art Folder,N/A,N/A,N/A,已登记
+P3,R3B-T06,Assets/_Game/Art/World/Spring,Spring Art Folder,N/A,N/A,N/A,待接入
+P3,R3B-T06,Assets/_Game/Prefabs/Towers/TWR_Basic.prefab,Prefab,N/A,TWR_Basic,N/A,已登记
+P3,R3B-T06,Assets/_Game/Scripts/Presentation/Combat/ProjectileVisual2D.cs,C# Script,N/A,N/A,N/A,已登记

@@ -12,9 +12,12 @@ namespace Spotlight.Combat.Definitions
         public float SpeedInCellsPerSecond = 6;
         public float LifetimeSeconds = 10;
         public float CollisionRadiusInCells = 0.1f;
+        public bool PiercingEnabled;
+        public int MaxHits = 1;
+        public float RetainedDamageMultiplier = 1f;
         public ProjectileDefinition ToDefinition()
         {
-            return new ProjectileDefinition { Id=Id,PrefabKey=PrefabKey,SpeedInCellsPerSecond=SpeedInCellsPerSecond,LifetimeSeconds=LifetimeSeconds,CollisionRadiusInCells=CollisionRadiusInCells };
+            return new ProjectileDefinition { Id=Id,PrefabKey=PrefabKey,SpeedInCellsPerSecond=SpeedInCellsPerSecond,LifetimeSeconds=LifetimeSeconds,CollisionRadiusInCells=CollisionRadiusInCells,PiercingEnabled=PiercingEnabled,MaxHits=MaxHits,RetainedDamageMultiplier=RetainedDamageMultiplier };
         }
     }
 }

@@ -108,8 +108,9 @@ namespace Spotlight.Tests.Integration
                 GameObject instance = (GameObject)lease.View;
                 EnemyFacingVisual2D facing = instance.GetComponent<EnemyFacingVisual2D>();
                 EnemyHealthBar2D health = instance.GetComponent<EnemyHealthBar2D>();
-                Assert.AreSame(instance.GetComponent<SpriteRenderer>(), facing.BodyRenderer);
-                Assert.AreEqual(i == 1, facing.DefaultFacingRight, "Original melee art faces left; ranged faces right");
+                Assert.AreSame(instance.GetComponent<EnemySpriteAnimator2D>().BodyRenderer, facing.BodyRenderer);
+                Assert.AreSame(instance.transform, facing.BodyRenderer.transform.parent);
+                Assert.IsFalse(facing.DefaultFacingRight, "Both current goblin sprites face left");
                 bool baseline = facing.BodyRenderer.flipX;
                 Vector3 scale = instance.transform.localScale, barPosition = health.BarRoot.localPosition;
                 Quaternion rotation = instance.transform.localRotation;

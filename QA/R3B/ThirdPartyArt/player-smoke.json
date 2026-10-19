@@ -1,0 +1,1186 @@
+{
+    "succeeded": true,
+    "utc": "2026-10-15T14:51:56.1677629Z",
+    "platform": "WindowsPlayer",
+    "error": "",
+    "limitation": "Seed 456; zero-based Day1 towers (1,1)/(3,1)/(5,1)/(5,3)/(7,1), water (1,2), existing tower_stack on (5,1). Day2 existing heal on Spring, add tower (6,3) using real drops. Prefer a free legal event option so purchases do not consume the layout budget; paid branches have separate integration tests. Real commands/Bootstrap Update; no HP overrides or UI/material validation. Temp saves retained. Success requires an executed report.",
+    "isolatedSaveDirectory": "C:\\Users\\RytuKim\\AppData\\Local\\Temp\\Spotlight_R3_Smoke_64014b75193546afb00267d18671fb22",
+    "checks": [
+        "new run",
+        "day 1 event event.quiet_morning / continue",
+        "dismiss tutorial",
+        "tower (1,1)",
+        "tower (3,1)",
+        "tower (5,1)",
+        "tower (7,1)",
+        "tower (5,3)",
+        "water (1,2)",
+        "existing tower_stack (5,1)",
+        "save isolated checkpoint",
+        "return menu",
+        "continue checkpoint",
+        "save/continue preserves day/resources",
+        "start night 1",
+        "pause holds clock/ticks across three frames",
+        "2x",
+        "2x game delta=2.00000010430813, real=1.002137",
+        "real night 1 reached NightResult",
+        "confirm production",
+        "day 2 event event.element_trade / leave",
+        "existing Spring heal Day2",
+        "Day2 tower (6,3) from gold drops",
+        "save isolated checkpoint",
+        "return menu",
+        "continue checkpoint",
+        "save/continue preserves day/resources",
+        "start night 2",
+        "night 2 2x",
+        "real night 2 reached NightResult"
+    ],
+    "finalSnapshot": {
+        "capturedUtc": "2026-10-15T14:52:06.0146090Z",
+        "runId": "71595a304b1c4b538ee8914325550511",
+        "phase": "NightResult",
+        "speed": "Double",
+        "observationNote": "Bound before run; ActorSpawnedEvent records persist after death. Day/phase/time are dispatch or first-observation values; loaded runs do not contain past birth history.",
+        "day": 2,
+        "aliveEnemies": 0,
+        "totalObservedEnemyBirths": 10,
+        "attachedDuringActiveRun": false,
+        "gameTime": 11.100000578910113,
+        "tick": 333,
+        "paused": false,
+        "resources": [
+            {
+                "bucket": "Hand",
+                "definition": "elm.earth",
+                "amount": 3
+            },
+            {
+                "bucket": "Hand",
+                "definition": "elm.fire",
+                "amount": 3
+            },
+            {
+                "bucket": "Hand",
+                "definition": "elm.thunder",
+                "amount": 3
+            },
+            {
+                "bucket": "Hand",
+                "definition": "elm.water",
+                "amount": 3
+            },
+            {
+                "bucket": "Hand",
+                "definition": "elm.wind",
+                "amount": 3
+            },
+            {
+                "bucket": "Hand",
+                "definition": "elm.wood",
+                "amount": 3
+            },
+            {
+                "bucket": "Inventory",
+                "definition": "item.heal",
+                "amount": 0
+            },
+            {
+                "bucket": "Inventory",
+                "definition": "item.tower_stack",
+                "amount": 0
+            },
+            {
+                "bucket": "Inventory",
+                "definition": "res.gold",
+                "amount": 48
+            }
+        ],
+        "actors": [
+            {
+                "id": 1,
+                "kind": "Spring",
+                "definition": "spring",
+                "hp": 100.0,
+                "maxHp": 100.0,
+                "x": 4.0,
+                "y": -0.5
+            },
+            {
+                "id": 2,
+                "kind": "Tower",
+                "definition": "tower.basic",
+                "hp": 20.0,
+                "maxHp": 20.0,
+                "x": -3.0,
+                "y": -1.5
+            },
+            {
+                "id": 3,
+                "kind": "Tower",
+                "definition": "tower.basic",
+                "hp": 20.0,
+                "maxHp": 20.0,
+                "x": -1.0,
+                "y": -1.5
+            },
+            {
+                "id": 4,
+                "kind": "Tower",
+                "definition": "tower.basic",
+                "hp": 40.0,
+                "maxHp": 40.0,
+                "x": 1.0,
+                "y": -1.5
+            },
+            {
+                "id": 5,
+                "kind": "Tower",
+                "definition": "tower.basic",
+                "hp": 20.0,
+                "maxHp": 20.0,
+                "x": 3.0,
+                "y": -1.5
+            },
+            {
+                "id": 6,
+                "kind": "Tower",
+                "definition": "tower.basic",
+                "hp": 20.0,
+                "maxHp": 20.0,
+                "x": 1.0,
+                "y": 0.5
+            },
+            {
+                "id": 12,
+                "kind": "Tower",
+                "definition": "tower.basic",
+                "hp": 20.0,
+                "maxHp": 20.0,
+                "x": 2.0,
+                "y": 0.5
+            }
+        ],
+        "projectiles": [],
+        "births": [
+            {
+                "id": 1,
+                "definition": "spring",
+                "kind": "Spring",
+                "phase": "DayEvent",
+                "source": "first seen snapshot (birth time unknown)",
+                "day": 1,
+                "gameTime": 0.0
+            },
+            {
+                "id": 2,
+                "definition": "tower.basic",
+                "kind": "Tower",
+                "phase": "Build",
+                "source": "first seen snapshot (birth time unknown)",
+                "day": 1,
+                "gameTime": 0.0
+            },
+            {
+                "id": 3,
+                "definition": "tower.basic",
+                "kind": "Tower",
+                "phase": "Build",
+                "source": "first seen snapshot (birth time unknown)",
+                "day": 1,
+                "gameTime": 0.0
+            },
+            {
+                "id": 4,
+                "definition": "tower.basic",
+                "kind": "Tower",
+                "phase": "Build",
+                "source": "first seen snapshot (birth time unknown)",
+                "day": 1,
+                "gameTime": 0.0
+            },
+            {
+                "id": 5,
+                "definition": "tower.basic",
+                "kind": "Tower",
+                "phase": "Build",
+                "source": "first seen snapshot (birth time unknown)",
+                "day": 1,
+                "gameTime": 0.0
+            },
+            {
+                "id": 6,
+                "definition": "tower.basic",
+                "kind": "Tower",
+                "phase": "Build",
+                "source": "first seen snapshot (birth time unknown)",
+                "day": 1,
+                "gameTime": 0.0
+            },
+            {
+                "id": 8,
+                "definition": "enemy.goblin.melee",
+                "kind": "Enemy",
+                "phase": "Night",
+                "source": "ActorSpawnedEvent (dispatch time)",
+                "day": 1,
+                "gameTime": 0.03333333507180214
+            },
+            {
+                "id": 9,
+                "definition": "enemy.goblin.melee",
+                "kind": "Enemy",
+                "phase": "Night",
+                "source": "ActorSpawnedEvent (dispatch time)",
+                "day": 1,
+                "gameTime": 1.0000000521540642
+            },
+            {
+                "id": 10,
+                "definition": "enemy.goblin.melee",
+                "kind": "Enemy",
+                "phase": "Night",
+                "source": "ActorSpawnedEvent (dispatch time)",
+                "day": 1,
+                "gameTime": 2.0000001043081285
+            },
+            {
+                "id": 11,
+                "definition": "enemy.goblin.ranged",
+                "kind": "Enemy",
+                "phase": "Night",
+                "source": "ActorSpawnedEvent (dispatch time)",
+                "day": 1,
+                "gameTime": 4.033333543688059
+            },
+            {
+                "id": 12,
+                "definition": "tower.basic",
+                "kind": "Tower",
+                "phase": "Night",
+                "source": "first seen snapshot (birth time unknown)",
+                "day": 2,
+                "gameTime": 0.0
+            },
+            {
+                "id": 13,
+                "definition": "enemy.goblin.melee",
+                "kind": "Enemy",
+                "phase": "Night",
+                "source": "ActorSpawnedEvent (dispatch time)",
+                "day": 2,
+                "gameTime": 0.03333333507180214
+            },
+            {
+                "id": 14,
+                "definition": "enemy.goblin.melee",
+                "kind": "Enemy",
+                "phase": "Night",
+                "source": "ActorSpawnedEvent (dispatch time)",
+                "day": 2,
+                "gameTime": 1.0000000521540642
+            },
+            {
+                "id": 15,
+                "definition": "enemy.goblin.melee",
+                "kind": "Enemy",
+                "phase": "Night",
+                "source": "ActorSpawnedEvent (dispatch time)",
+                "day": 2,
+                "gameTime": 2.0000001043081285
+            },
+            {
+                "id": 16,
+                "definition": "enemy.goblin.melee",
+                "kind": "Enemy",
+                "phase": "Night",
+                "source": "ActorSpawnedEvent (dispatch time)",
+                "day": 2,
+                "gameTime": 3.0000001564621927
+            },
+            {
+                "id": 17,
+                "definition": "enemy.goblin.ranged",
+                "kind": "Enemy",
+                "phase": "Night",
+                "source": "ActorSpawnedEvent (dispatch time)",
+                "day": 2,
+                "gameTime": 6.033333647996187
+            },
+            {
+                "id": 18,
+                "definition": "enemy.goblin.ranged",
+                "kind": "Enemy",
+                "phase": "Night",
+                "source": "ActorSpawnedEvent (dispatch time)",
+                "day": 2,
+                "gameTime": 7.5333337262272839
+            }
+        ],
+        "settlements": [
+            {
+                "id": "71595a304b1c4b538ee8914325550511:1",
+                "boundaryNote": "Before is last observed NightResult, not transaction interception; after is actual event-dispatch read. Queued events or commands in the same frame may change resources before dispatch. Rewards are the authoritative production deltas. Null before means observer missed the boundary.",
+                "night": 1,
+                "beforeLastObservedNightResult": [
+                    {
+                        "bucket": "Hand",
+                        "definition": "elm.earth",
+                        "amount": 3
+                    },
+                    {
+                        "bucket": "Hand",
+                        "definition": "elm.fire",
+                        "amount": 3
+                    },
+                    {
+                        "bucket": "Hand",
+                        "definition": "elm.thunder",
+                        "amount": 3
+                    },
+                    {
+                        "bucket": "Hand",
+                        "definition": "elm.water",
+                        "amount": 2
+                    },
+                    {
+                        "bucket": "Hand",
+                        "definition": "elm.wind",
+                        "amount": 3
+                    },
+                    {
+                        "bucket": "Hand",
+                        "definition": "elm.wood",
+                        "amount": 3
+                    },
+                    {
+                        "bucket": "Inventory",
+                        "definition": "item.heal",
+                        "amount": 1
+                    },
+                    {
+                        "bucket": "Inventory",
+                        "definition": "item.tower_stack",
+                        "amount": 0
+                    },
+                    {
+                        "bucket": "Inventory",
+                        "definition": "res.gold",
+                        "amount": 25
+                    }
+                ],
+                "rewards": [
+                    {
+                        "bucket": "Hand",
+                        "definition": "elm.water",
+                        "amount": 1
+                    }
+                ],
+                "afterAtEventDispatch": [
+                    {
+                        "bucket": "Hand",
+                        "definition": "elm.earth",
+                        "amount": 3
+                    },
+                    {
+                        "bucket": "Hand",
+                        "definition": "elm.fire",
+                        "amount": 3
+                    },
+                    {
+                        "bucket": "Hand",
+                        "definition": "elm.thunder",
+                        "amount": 3
+                    },
+                    {
+                        "bucket": "Hand",
+                        "definition": "elm.water",
+                        "amount": 3
+                    },
+                    {
+                        "bucket": "Hand",
+                        "definition": "elm.wind",
+                        "amount": 3
+                    },
+                    {
+                        "bucket": "Hand",
+                        "definition": "elm.wood",
+                        "amount": 3
+                    },
+                    {
+                        "bucket": "Inventory",
+                        "definition": "item.heal",
+                        "amount": 1
+                    },
+                    {
+                        "bucket": "Inventory",
+                        "definition": "item.tower_stack",
+                        "amount": 0
+                    },
+                    {
+                        "bucket": "Inventory",
+                        "definition": "res.gold",
+                        "amount": 25
+                    }
+                ]
+            }
+        ]
+    },
+    "initialResources": [
+        {
+            "bucket": "Hand",
+            "definition": "elm.earth",
+            "amount": 3
+        },
+        {
+            "bucket": "Hand",
+            "definition": "elm.fire",
+            "amount": 3
+        },
+        {
+            "bucket": "Hand",
+            "definition": "elm.thunder",
+            "amount": 3
+        },
+        {
+            "bucket": "Hand",
+            "definition": "elm.water",
+            "amount": 3
+        },
+        {
+            "bucket": "Hand",
+            "definition": "elm.wind",
+            "amount": 3
+        },
+        {
+            "bucket": "Hand",
+            "definition": "elm.wood",
+            "amount": 3
+        },
+        {
+            "bucket": "Inventory",
+            "definition": "item.heal",
+            "amount": 1
+        },
+        {
+            "bucket": "Inventory",
+            "definition": "item.tower_stack",
+            "amount": 1
+        },
+        {
+            "bucket": "Inventory",
+            "definition": "res.gold",
+            "amount": 100
+        }
+    ],
+    "nightOne": {
+        "capturedUtc": "2026-10-15T14:52:00.4327455Z",
+        "runId": "71595a304b1c4b538ee8914325550511",
+        "phase": "NightResult",
+        "speed": "Double",
+        "observationNote": "Bound before run; ActorSpawnedEvent records persist after death. Day/phase/time are dispatch or first-observation values; loaded runs do not contain past birth history.",
+        "day": 1,
+        "aliveEnemies": 0,
+        "totalObservedEnemyBirths": 4,
+        "attachedDuringActiveRun": false,
+        "gameTime": 7.500000391155481,
+        "tick": 225,
+        "paused": false,
+        "resources": [
+            {
+                "bucket": "Hand",
+                "definition": "elm.earth",
+                "amount": 3
+            },
+            {
+                "bucket": "Hand",
+                "definition": "elm.fire",
+                "amount": 3
+            },
+            {
+                "bucket": "Hand",
+                "definition": "elm.thunder",
+                "amount": 3
+            },
+            {
+                "bucket": "Hand",
+                "definition": "elm.water",
+                "amount": 2
+            },
+            {
+                "bucket": "Hand",
+                "definition": "elm.wind",
+                "amount": 3
+            },
+            {
+                "bucket": "Hand",
+                "definition": "elm.wood",
+                "amount": 3
+            },
+            {
+                "bucket": "Inventory",
+                "definition": "item.heal",
+                "amount": 1
+            },
+            {
+                "bucket": "Inventory",
+                "definition": "item.tower_stack",
+                "amount": 0
+            },
+            {
+                "bucket": "Inventory",
+                "definition": "res.gold",
+                "amount": 25
+            }
+        ],
+        "actors": [
+            {
+                "id": 1,
+                "kind": "Spring",
+                "definition": "spring",
+                "hp": 100.0,
+                "maxHp": 100.0,
+                "x": 4.0,
+                "y": -0.5
+            },
+            {
+                "id": 2,
+                "kind": "Tower",
+                "definition": "tower.basic",
+                "hp": 20.0,
+                "maxHp": 20.0,
+                "x": -3.0,
+                "y": -1.5
+            },
+            {
+                "id": 3,
+                "kind": "Tower",
+                "definition": "tower.basic",
+                "hp": 20.0,
+                "maxHp": 20.0,
+                "x": -1.0,
+                "y": -1.5
+            },
+            {
+                "id": 4,
+                "kind": "Tower",
+                "definition": "tower.basic",
+                "hp": 40.0,
+                "maxHp": 40.0,
+                "x": 1.0,
+                "y": -1.5
+            },
+            {
+                "id": 5,
+                "kind": "Tower",
+                "definition": "tower.basic",
+                "hp": 20.0,
+                "maxHp": 20.0,
+                "x": 3.0,
+                "y": -1.5
+            },
+            {
+                "id": 6,
+                "kind": "Tower",
+                "definition": "tower.basic",
+                "hp": 20.0,
+                "maxHp": 20.0,
+                "x": 1.0,
+                "y": 0.5
+            }
+        ],
+        "projectiles": [],
+        "births": [
+            {
+                "id": 1,
+                "definition": "spring",
+                "kind": "Spring",
+                "phase": "DayEvent",
+                "source": "first seen snapshot (birth time unknown)",
+                "day": 1,
+                "gameTime": 0.0
+            },
+            {
+                "id": 2,
+                "definition": "tower.basic",
+                "kind": "Tower",
+                "phase": "Build",
+                "source": "first seen snapshot (birth time unknown)",
+                "day": 1,
+                "gameTime": 0.0
+            },
+            {
+                "id": 3,
+                "definition": "tower.basic",
+                "kind": "Tower",
+                "phase": "Build",
+                "source": "first seen snapshot (birth time unknown)",
+                "day": 1,
+                "gameTime": 0.0
+            },
+            {
+                "id": 4,
+                "definition": "tower.basic",
+                "kind": "Tower",
+                "phase": "Build",
+                "source": "first seen snapshot (birth time unknown)",
+                "day": 1,
+                "gameTime": 0.0
+            },
+            {
+                "id": 5,
+                "definition": "tower.basic",
+                "kind": "Tower",
+                "phase": "Build",
+                "source": "first seen snapshot (birth time unknown)",
+                "day": 1,
+                "gameTime": 0.0
+            },
+            {
+                "id": 6,
+                "definition": "tower.basic",
+                "kind": "Tower",
+                "phase": "Build",
+                "source": "first seen snapshot (birth time unknown)",
+                "day": 1,
+                "gameTime": 0.0
+            },
+            {
+                "id": 8,
+                "definition": "enemy.goblin.melee",
+                "kind": "Enemy",
+                "phase": "Night",
+                "source": "ActorSpawnedEvent (dispatch time)",
+                "day": 1,
+                "gameTime": 0.03333333507180214
+            },
+            {
+                "id": 9,
+                "definition": "enemy.goblin.melee",
+                "kind": "Enemy",
+                "phase": "Night",
+                "source": "ActorSpawnedEvent (dispatch time)",
+                "day": 1,
+                "gameTime": 1.0000000521540642
+            },
+            {
+                "id": 10,
+                "definition": "enemy.goblin.melee",
+                "kind": "Enemy",
+                "phase": "Night",
+                "source": "ActorSpawnedEvent (dispatch time)",
+                "day": 1,
+                "gameTime": 2.0000001043081285
+            },
+            {
+                "id": 11,
+                "definition": "enemy.goblin.ranged",
+                "kind": "Enemy",
+                "phase": "Night",
+                "source": "ActorSpawnedEvent (dispatch time)",
+                "day": 1,
+                "gameTime": 4.033333543688059
+            }
+        ],
+        "settlements": []
+    },
+    "nightTwo": {
+        "capturedUtc": "2026-10-15T14:52:06.0141031Z",
+        "runId": "71595a304b1c4b538ee8914325550511",
+        "phase": "NightResult",
+        "speed": "Double",
+        "observationNote": "Bound before run; ActorSpawnedEvent records persist after death. Day/phase/time are dispatch or first-observation values; loaded runs do not contain past birth history.",
+        "day": 2,
+        "aliveEnemies": 0,
+        "totalObservedEnemyBirths": 10,
+        "attachedDuringActiveRun": false,
+        "gameTime": 11.100000578910113,
+        "tick": 333,
+        "paused": false,
+        "resources": [
+            {
+                "bucket": "Hand",
+                "definition": "elm.earth",
+                "amount": 3
+            },
+            {
+                "bucket": "Hand",
+                "definition": "elm.fire",
+                "amount": 3
+            },
+            {
+                "bucket": "Hand",
+                "definition": "elm.thunder",
+                "amount": 3
+            },
+            {
+                "bucket": "Hand",
+                "definition": "elm.water",
+                "amount": 3
+            },
+            {
+                "bucket": "Hand",
+                "definition": "elm.wind",
+                "amount": 3
+            },
+            {
+                "bucket": "Hand",
+                "definition": "elm.wood",
+                "amount": 3
+            },
+            {
+                "bucket": "Inventory",
+                "definition": "item.heal",
+                "amount": 0
+            },
+            {
+                "bucket": "Inventory",
+                "definition": "item.tower_stack",
+                "amount": 0
+            },
+            {
+                "bucket": "Inventory",
+                "definition": "res.gold",
+                "amount": 48
+            }
+        ],
+        "actors": [
+            {
+                "id": 1,
+                "kind": "Spring",
+                "definition": "spring",
+                "hp": 100.0,
+                "maxHp": 100.0,
+                "x": 4.0,
+                "y": -0.5
+            },
+            {
+                "id": 2,
+                "kind": "Tower",
+                "definition": "tower.basic",
+                "hp": 20.0,
+                "maxHp": 20.0,
+                "x": -3.0,
+                "y": -1.5
+            },
+            {
+                "id": 3,
+                "kind": "Tower",
+                "definition": "tower.basic",
+                "hp": 20.0,
+                "maxHp": 20.0,
+                "x": -1.0,
+                "y": -1.5
+            },
+            {
+                "id": 4,
+                "kind": "Tower",
+                "definition": "tower.basic",
+                "hp": 40.0,
+                "maxHp": 40.0,
+                "x": 1.0,
+                "y": -1.5
+            },
+            {
+                "id": 5,
+                "kind": "Tower",
+                "definition": "tower.basic",
+                "hp": 20.0,
+                "maxHp": 20.0,
+                "x": 3.0,
+                "y": -1.5
+            },
+            {
+                "id": 6,
+                "kind": "Tower",
+                "definition": "tower.basic",
+                "hp": 20.0,
+                "maxHp": 20.0,
+                "x": 1.0,
+                "y": 0.5
+            },
+            {
+                "id": 12,
+                "kind": "Tower",
+                "definition": "tower.basic",
+                "hp": 20.0,
+                "maxHp": 20.0,
+                "x": 2.0,
+                "y": 0.5
+            }
+        ],
+        "projectiles": [],
+        "births": [
+            {
+                "id": 1,
+                "definition": "spring",
+                "kind": "Spring",
+                "phase": "DayEvent",
+                "source": "first seen snapshot (birth time unknown)",
+                "day": 1,
+                "gameTime": 0.0
+            },
+            {
+                "id": 2,
+                "definition": "tower.basic",
+                "kind": "Tower",
+                "phase": "Build",
+                "source": "first seen snapshot (birth time unknown)",
+                "day": 1,
+                "gameTime": 0.0
+            },
+            {
+                "id": 3,
+                "definition": "tower.basic",
+                "kind": "Tower",
+                "phase": "Build",
+                "source": "first seen snapshot (birth time unknown)",
+                "day": 1,
+                "gameTime": 0.0
+            },
+            {
+                "id": 4,
+                "definition": "tower.basic",
+                "kind": "Tower",
+                "phase": "Build",
+                "source": "first seen snapshot (birth time unknown)",
+                "day": 1,
+                "gameTime": 0.0
+            },
+            {
+                "id": 5,
+                "definition": "tower.basic",
+                "kind": "Tower",
+                "phase": "Build",
+                "source": "first seen snapshot (birth time unknown)",
+                "day": 1,
+                "gameTime": 0.0
+            },
+            {
+                "id": 6,
+                "definition": "tower.basic",
+                "kind": "Tower",
+                "phase": "Build",
+                "source": "first seen snapshot (birth time unknown)",
+                "day": 1,
+                "gameTime": 0.0
+            },
+            {
+                "id": 8,
+                "definition": "enemy.goblin.melee",
+                "kind": "Enemy",
+                "phase": "Night",
+                "source": "ActorSpawnedEvent (dispatch time)",
+                "day": 1,
+                "gameTime": 0.03333333507180214
+            },
+            {
+                "id": 9,
+                "definition": "enemy.goblin.melee",
+                "kind": "Enemy",
+                "phase": "Night",
+                "source": "ActorSpawnedEvent (dispatch time)",
+                "day": 1,
+                "gameTime": 1.0000000521540642
+            },
+            {
+                "id": 10,
+                "definition": "enemy.goblin.melee",
+                "kind": "Enemy",
+                "phase": "Night",
+                "source": "ActorSpawnedEvent (dispatch time)",
+                "day": 1,
+                "gameTime": 2.0000001043081285
+            },
+            {
+                "id": 11,
+                "definition": "enemy.goblin.ranged",
+                "kind": "Enemy",
+                "phase": "Night",
+                "source": "ActorSpawnedEvent (dispatch time)",
+                "day": 1,
+                "gameTime": 4.033333543688059
+            },
+            {
+                "id": 12,
+                "definition": "tower.basic",
+                "kind": "Tower",
+                "phase": "Night",
+                "source": "first seen snapshot (birth time unknown)",
+                "day": 2,
+                "gameTime": 0.0
+            },
+            {
+                "id": 13,
+                "definition": "enemy.goblin.melee",
+                "kind": "Enemy",
+                "phase": "Night",
+                "source": "ActorSpawnedEvent (dispatch time)",
+                "day": 2,
+                "gameTime": 0.03333333507180214
+            },
+            {
+                "id": 14,
+                "definition": "enemy.goblin.melee",
+                "kind": "Enemy",
+                "phase": "Night",
+                "source": "ActorSpawnedEvent (dispatch time)",
+                "day": 2,
+                "gameTime": 1.0000000521540642
+            },
+            {
+                "id": 15,
+                "definition": "enemy.goblin.melee",
+                "kind": "Enemy",
+                "phase": "Night",
+                "source": "ActorSpawnedEvent (dispatch time)",
+                "day": 2,
+                "gameTime": 2.0000001043081285
+            },
+            {
+                "id": 16,
+                "definition": "enemy.goblin.melee",
+                "kind": "Enemy",
+                "phase": "Night",
+                "source": "ActorSpawnedEvent (dispatch time)",
+                "day": 2,
+                "gameTime": 3.0000001564621927
+            },
+            {
+                "id": 17,
+                "definition": "enemy.goblin.ranged",
+                "kind": "Enemy",
+                "phase": "Night",
+                "source": "ActorSpawnedEvent (dispatch time)",
+                "day": 2,
+                "gameTime": 6.033333647996187
+            },
+            {
+                "id": 18,
+                "definition": "enemy.goblin.ranged",
+                "kind": "Enemy",
+                "phase": "Night",
+                "source": "ActorSpawnedEvent (dispatch time)",
+                "day": 2,
+                "gameTime": 7.5333337262272839
+            }
+        ],
+        "settlements": [
+            {
+                "id": "71595a304b1c4b538ee8914325550511:1",
+                "boundaryNote": "Before is last observed NightResult, not transaction interception; after is actual event-dispatch read. Queued events or commands in the same frame may change resources before dispatch. Rewards are the authoritative production deltas. Null before means observer missed the boundary.",
+                "night": 1,
+                "beforeLastObservedNightResult": [
+                    {
+                        "bucket": "Hand",
+                        "definition": "elm.earth",
+                        "amount": 3
+                    },
+                    {
+                        "bucket": "Hand",
+                        "definition": "elm.fire",
+                        "amount": 3
+                    },
+                    {
+                        "bucket": "Hand",
+                        "definition": "elm.thunder",
+                        "amount": 3
+                    },
+                    {
+                        "bucket": "Hand",
+                        "definition": "elm.water",
+                        "amount": 2
+                    },
+                    {
+                        "bucket": "Hand",
+                        "definition": "elm.wind",
+                        "amount": 3
+                    },
+                    {
+                        "bucket": "Hand",
+                        "definition": "elm.wood",
+                        "amount": 3
+                    },
+                    {
+                        "bucket": "Inventory",
+                        "definition": "item.heal",
+                        "amount": 1
+                    },
+                    {
+                        "bucket": "Inventory",
+                        "definition": "item.tower_stack",
+                        "amount": 0
+                    },
+                    {
+                        "bucket": "Inventory",
+                        "definition": "res.gold",
+                        "amount": 25
+                    }
+                ],
+                "rewards": [
+                    {
+                        "bucket": "Hand",
+                        "definition": "elm.water",
+                        "amount": 1
+                    }
+                ],
+                "afterAtEventDispatch": [
+                    {
+                        "bucket": "Hand",
+                        "definition": "elm.earth",
+                        "amount": 3
+                    },
+                    {
+                        "bucket": "Hand",
+                        "definition": "elm.fire",
+                        "amount": 3
+                    },
+                    {
+                        "bucket": "Hand",
+                        "definition": "elm.thunder",
+                        "amount": 3
+                    },
+                    {
+                        "bucket": "Hand",
+                        "definition": "elm.water",
+                        "amount": 3
+                    },
+                    {
+                        "bucket": "Hand",
+                        "definition": "elm.wind",
+                        "amount": 3
+                    },
+                    {
+                        "bucket": "Hand",
+                        "definition": "elm.wood",
+                        "amount": 3
+                    },
+                    {
+                        "bucket": "Inventory",
+                        "definition": "item.heal",
+                        "amount": 1
+                    },
+                    {
+                        "bucket": "Inventory",
+                        "definition": "item.tower_stack",
+                        "amount": 0
+                    },
+                    {
+                        "bucket": "Inventory",
+                        "definition": "res.gold",
+                        "amount": 25
+                    }
+                ]
+            }
+        ]
+    },
+    "production": [
+        {
+            "id": "71595a304b1c4b538ee8914325550511:1",
+            "boundaryNote": "Before is last observed NightResult, not transaction interception; after is actual event-dispatch read. Queued events or commands in the same frame may change resources before dispatch. Rewards are the authoritative production deltas. Null before means observer missed the boundary.",
+            "night": 1,
+            "beforeLastObservedNightResult": [
+                {
+                    "bucket": "Hand",
+                    "definition": "elm.earth",
+                    "amount": 3
+                },
+                {
+                    "bucket": "Hand",
+                    "definition": "elm.fire",
+                    "amount": 3
+                },
+                {
+                    "bucket": "Hand",
+                    "definition": "elm.thunder",
+                    "amount": 3
+                },
+                {
+                    "bucket": "Hand",
+                    "definition": "elm.water",
+                    "amount": 2
+                },
+                {
+                    "bucket": "Hand",
+                    "definition": "elm.wind",
+                    "amount": 3
+                },
+                {
+                    "bucket": "Hand",
+                    "definition": "elm.wood",
+                    "amount": 3
+                },
+                {
+                    "bucket": "Inventory",
+                    "definition": "item.heal",
+                    "amount": 1
+                },
+                {
+                    "bucket": "Inventory",
+                    "definition": "item.tower_stack",
+                    "amount": 0
+                },
+                {
+                    "bucket": "Inventory",
+                    "definition": "res.gold",
+                    "amount": 25
+                }
+            ],
+            "rewards": [
+                {
+                    "bucket": "Hand",
+                    "definition": "elm.water",
+                    "amount": 1
+                }
+            ],
+            "afterAtEventDispatch": [
+                {
+                    "bucket": "Hand",
+                    "definition": "elm.earth",
+                    "amount": 3
+                },
+                {
+                    "bucket": "Hand",
+                    "definition": "elm.fire",
+                    "amount": 3
+                },
+                {
+                    "bucket": "Hand",
+                    "definition": "elm.thunder",
+                    "amount": 3
+                },
+                {
+                    "bucket": "Hand",
+                    "definition": "elm.water",
+                    "amount": 3
+                },
+                {
+                    "bucket": "Hand",
+                    "definition": "elm.wind",
+                    "amount": 3
+                },
+                {
+                    "bucket": "Hand",
+                    "definition": "elm.wood",
+                    "amount": 3
+                },
+                {
+                    "bucket": "Inventory",
+                    "definition": "item.heal",
+                    "amount": 1
+                },
+                {
+                    "bucket": "Inventory",
+                    "definition": "item.tower_stack",
+                    "amount": 0
+                },
+                {
+                    "bucket": "Inventory",
+                    "definition": "res.gold",
+                    "amount": 25
+                }
+            ]
+        }
+    ]
+}

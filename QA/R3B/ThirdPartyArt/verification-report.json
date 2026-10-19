@@ -1,0 +1,307 @@
+{
+  "date": "2026-10-15",
+  "branch": "main",
+  "committed": false,
+  "pushed": false,
+  "runtimeImageCount": 32,
+  "referenceSketches": 6,
+  "sourceImages": [
+    {
+      "source": "ThirdParty/按钮按下1.png",
+      "asset": "Assets\\_Game\\Art\\ThirdParty\\按钮按下1.png",
+      "sha256": "93F0588E7994C44E6AB8810D5E638F66E248647EFE81FCB8B471CBCC8E93B510",
+      "unchanged": true
+    },
+    {
+      "source": "ThirdParty/按钮按下2.png",
+      "asset": "Assets\\_Game\\Art\\ThirdParty\\按钮按下2.png",
+      "sha256": "0AFB5FE4008E529B72D890C8AA44C7D94B8613D1E0056FAEA7BC58F3C9763D1B",
+      "unchanged": true
+    },
+    {
+      "source": "ThirdParty/按钮按下3.png",
+      "asset": "Assets\\_Game\\Art\\ThirdParty\\按钮按下3.png",
+      "sha256": "968BA53D15D67EA27A4E4160A78D5786B6A3298952EDEAAAC836E005A6031BEF",
+      "unchanged": true
+    },
+    {
+      "source": "ThirdParty/按钮按下4.png",
+      "asset": "Assets\\_Game\\Art\\ThirdParty\\按钮按下4.png",
+      "sha256": "EC90448C131B0A9F56F8B6DC8AEBC2C34D1CC8A9571ACA3FEC0BF0470C73D3EC",
+      "unchanged": true
+    },
+    {
+      "source": "ThirdParty/按钮交互1.png",
+      "asset": "Assets\\_Game\\Art\\ThirdParty\\按钮交互1.png",
+      "sha256": "D632F0443EB1EB01D58DD39DD25598C86C329D053483B0966F8AEF0C78E22920",
+      "unchanged": true
+    },
+    {
+      "source": "ThirdParty/按钮交互2.png",
+      "asset": "Assets\\_Game\\Art\\ThirdParty\\按钮交互2.png",
+      "sha256": "3249A67147A4D4D8374957AF77A27B7F2256130FD9EDCA73F2BAFAF5C5BBD4DB",
+      "unchanged": true
+    },
+    {
+      "source": "ThirdParty/按钮交互3.png",
+      "asset": "Assets\\_Game\\Art\\ThirdParty\\按钮交互3.png",
+      "sha256": "0C0FA778AE0988885A10BBDCA68921EA6B721F8F4BF18A8B9EF02EC57367F5B2",
+      "unchanged": true
+    },
+    {
+      "source": "ThirdParty/按钮交互4.png",
+      "asset": "Assets\\_Game\\Art\\ThirdParty\\按钮交互4.png",
+      "sha256": "C61010BDF8327E17789EBD60A1ABE770FF81F1C9571FF74025D1E8A3AF44B1C7",
+      "unchanged": true
+    },
+    {
+      "source": "ThirdParty/白天背景图.jpg",
+      "asset": "Assets\\_Game\\Art\\ThirdParty\\白天背景图.jpg",
+      "sha256": "F5422FFC8132B5DE7B30CB077B42D376DF17B001915B7A1CFA3014E48EB1EB39",
+      "unchanged": true
+    },
+    {
+      "source": "ThirdParty/防御塔.png",
+      "asset": "Assets\\_Game\\Art\\ThirdParty\\防御塔.png",
+      "sha256": "9E32A99651D2C0B4E76375D875A0DA1627F4F3C8162DD2FEA1AC0AB99C0890A4",
+      "unchanged": true
+    },
+    {
+      "source": "ThirdParty/风隼.png",
+      "asset": "Assets\\_Game\\Art\\ThirdParty\\风隼.png",
+      "sha256": "C50586048640878A7CA4FA6AB03AF1F80F85737269D6B6541EF8E4CDBD9A64F0",
+      "unchanged": true
+    },
+    {
+      "source": "ThirdParty/风隼动作.png",
+      "asset": "Assets\\_Game\\Art\\ThirdParty\\风隼动作.png",
+      "sha256": "39F431F5D52E4B63A1CE272162D2CF87CFF30DE3797FA0406BB148A5C54FC2D5",
+      "unchanged": true
+    },
+    {
+      "source": "ThirdParty/近战哥布林.png",
+      "asset": "Assets\\_Game\\Art\\ThirdParty\\近战哥布林.png",
+      "sha256": "DC741AE363DB3399D64178E9945A3D1AB5C3BE9B9D8A89A651AFBDE66BD0789A",
+      "unchanged": true
+    },
+    {
+      "source": "ThirdParty/近战哥布林动作.png",
+      "asset": "Assets\\_Game\\Art\\ThirdParty\\近战哥布林动作.png",
+      "sha256": "BC95A0CBC3FA9BE739ABBAA9EFF154C76300EDB26A246875C3360D6D99B790F5",
+      "unchanged": true
+    },
+    {
+      "source": "ThirdParty/女主立绘哭泣.png",
+      "asset": "Assets\\_Game\\Art\\ThirdParty\\女主立绘哭泣.png",
+      "sha256": "BC32CB83B7741070577DC20CE3D1D03D07D13950B19DE2D811ABD41F54234B25",
+      "unchanged": true
+    },
+    {
+      "source": "ThirdParty/女主立绘冷静.png",
+      "asset": "Assets\\_Game\\Art\\ThirdParty\\女主立绘冷静.png",
+      "sha256": "B8B8E75AE02D2AF6F5C7C198F94D76010465B195F1BEEEAF3F283D71F65EC055",
+      "unchanged": true
+    },
+    {
+      "source": "ThirdParty/女主立绘平淡.png",
+      "asset": "Assets\\_Game\\Art\\ThirdParty\\女主立绘平淡.png",
+      "sha256": "29BEECE9E2DA5C4C58EB213DFDB642FBDDEB0E8B340E7565415277FFDFE5C9BE",
+      "unchanged": true
+    },
+    {
+      "source": "ThirdParty/女主立绘生气.png",
+      "asset": "Assets\\_Game\\Art\\ThirdParty\\女主立绘生气.png",
+      "sha256": "64303400D2ABFB6D5B70BAFD7FB4946593ED63B83A420F28FAA4E8506A737773",
+      "unchanged": true
+    },
+    {
+      "source": "ThirdParty/女主立绘微笑.png",
+      "asset": "Assets\\_Game\\Art\\ThirdParty\\女主立绘微笑.png",
+      "sha256": "8D091747E0DA92442981255ECC39F93F0041F0261A94625E234A2BDE3FA05AC0",
+      "unchanged": true
+    },
+    {
+      "source": "ThirdParty/沙虫.png",
+      "asset": "Assets\\_Game\\Art\\ThirdParty\\沙虫.png",
+      "sha256": "FB9BA5F18365478187C4DC41D46CF367DFFE85FB3E75DE1E3A4733C72803A2FF",
+      "unchanged": true
+    },
+    {
+      "source": "ThirdParty/沙虫动作.png",
+      "asset": "Assets\\_Game\\Art\\ThirdParty\\沙虫动作.png",
+      "sha256": "E6D6B0322BD166FD3490EC7C91D1CEA55C56C1C1E919E595D335E4835BF4A7E6",
+      "unchanged": true
+    },
+    {
+      "source": "ThirdParty/石像鬼.png",
+      "asset": "Assets\\_Game\\Art\\ThirdParty\\石像鬼.png",
+      "sha256": "FFE31F02A8F3242FB9356823771D1069D3C2CC75633124EDD52CFA6FBD9C8FFB",
+      "unchanged": true
+    },
+    {
+      "source": "ThirdParty/石像鬼动作.png",
+      "asset": "Assets\\_Game\\Art\\ThirdParty\\石像鬼动作.png",
+      "sha256": "A96B4DBB8CB4ED1C8C87B0F42259F401E3DDBD4E05DCA851072D32229101312C",
+      "unchanged": true
+    },
+    {
+      "source": "ThirdParty/蚀魂王.png",
+      "asset": "Assets\\_Game\\Art\\ThirdParty\\蚀魂王.png",
+      "sha256": "0821189884F1834C0CE95D392939128E2EA299018605BF1F4A3B62F6BDBE393D",
+      "unchanged": true
+    },
+    {
+      "source": "ThirdParty/史莱姆.png",
+      "asset": "Assets\\_Game\\Art\\ThirdParty\\史莱姆.png",
+      "sha256": "9147E7C5EB2C0566F72E552A890CAD5C58EA99E0065462D517F270FA215AC80C",
+      "unchanged": true
+    },
+    {
+      "source": "ThirdParty/史莱姆动作.png",
+      "asset": "Assets\\_Game\\Art\\ThirdParty\\史莱姆动作.png",
+      "sha256": "475B7F8A79F00258284ABDE461E13C21A91119021BE0BAFE69B0C544DEFBD452",
+      "unchanged": true
+    },
+    {
+      "source": "ThirdParty/夜晚背景图.png",
+      "asset": "Assets\\_Game\\Art\\ThirdParty\\夜晚背景图.png",
+      "sha256": "4C128271ADA0DD3527D5C1A94FE90E372604DF7475FF2D82C86CCC045F433A39",
+      "unchanged": true
+    },
+    {
+      "source": "ThirdParty/远程哥布林.png",
+      "asset": "Assets\\_Game\\Art\\ThirdParty\\远程哥布林.png",
+      "sha256": "7F42E9DC6768B5C0363BEDF9BCC168C65EE71E8AC608A37138EFAE0069D5763A",
+      "unchanged": true
+    },
+    {
+      "source": "ThirdParty/远程哥布林动作.png",
+      "asset": "Assets\\_Game\\Art\\ThirdParty\\远程哥布林动作.png",
+      "sha256": "F61892A0FC49BA2EE54298F6819FA2226D9AFF074A2EBDEBF79412A41D0E565C",
+      "unchanged": true
+    },
+    {
+      "source": "ThirdParty/怨灵.png",
+      "asset": "Assets\\_Game\\Art\\ThirdParty\\怨灵.png",
+      "sha256": "716DF88A277A482FAA14567C0E66B7F66641DE19C8908CF9BEB4A8BFB00E6CC4",
+      "unchanged": true
+    },
+    {
+      "source": "ThirdParty/怨灵动作.png",
+      "asset": "Assets\\_Game\\Art\\ThirdParty\\怨灵动作.png",
+      "sha256": "04303C013407BFBEADB21A846E91BA058BBC5EE163A21190FC8968872C319A59",
+      "unchanged": true
+    },
+    {
+      "source": "ThirdParty/子弹.png",
+      "asset": "Assets\\_Game\\Art\\ThirdParty\\子弹.png",
+      "sha256": "BE813D7EE6B57BDED4C544D18361352DDF772F3A4EE783A6B2C2F63C359DA9E6",
+      "unchanged": true
+    }
+  ],
+  "enemyPrefabs": 10,
+  "gameplayScope": "Presentation only; original enemy IDs, stats, waves, routes, damage, saves and Wraith deferred flag retained",
+  "theme": "Assets/_Game/Data/Art/ThirdPartyUiTheme.asset",
+  "setupMenu": "聚光灯/美术/接入ThirdParty命名素材",
+  "fullRegression": {
+    "total": 265,
+    "passed": 265,
+    "failed": 0,
+    "report": "editmode-tests.xml",
+    "scope": "Full suite before final rotating projectile binding and button contrast refinement"
+  },
+  "finalRegression": {
+    "total": 4,
+    "passed": 4,
+    "failed": 0,
+    "report": "final-regression-tests.xml",
+    "scope": "Final assets, cropped frames, projectile direction and bounds, button contrast and states, pool preview reset, clock, day/night renderer lifecycle"
+  },
+  "render": {
+    "source": "Formal prefabs and theme, isolated ModuleComposition, real Flow and wave commands, one world/UI camera",
+    "resolution": "1280x720",
+    "files": [
+      "01-menu.png",
+      "02-day-event.png",
+      "03-tutorial.png",
+      "04-day-deployment.png",
+      "05-night-enemies.png",
+      "06-ten-enemy-gallery.png"
+    ],
+    "galleryOrder": [
+      "GoblinMelee",
+      "GoblinRanged",
+      "SlimeFire",
+      "SlimeWater",
+      "SlimeThunder",
+      "Sandworm",
+      "Gargoyle",
+      "Falcon",
+      "Wraith",
+      "SoulKing"
+    ]
+  },
+  "build": {
+    "succeeded": true,
+    "errors": 0,
+    "warnings": 1,
+    "warningDetail": "Headless batch build cannot regenerate ambient/reflection probes; graphical Unity captures passed",
+    "output": "Builds/WindowsThirdPartyArt/Spotlight.exe",
+    "report": "build-report.json"
+  },
+  "player": {
+    "succeeded": true,
+    "report": "player-smoke.json",
+    "scope": "Real first two nights, pause, 2x, isolated save/continue; service regression, not automated UI screenshot interaction"
+  },
+  "metadata": {
+    "assetMetaFiles": 684,
+    "duplicateGuids": 0
+  },
+  "deliverySha256": [
+    {
+      "path": "Assets/_Game/Scripts/Editor/ThirdPartyArtSetup.cs",
+      "sha256": "2E259339959D4B27D6D32FF5168ABE8E182003F91AB3F3E85EF6A65ADD636DCB"
+    },
+    {
+      "path": "Assets/_Game/Scripts/Editor/ThirdPartyActorArtSetup.cs",
+      "sha256": "7B7A10AB8E0ED12E14ADC0D95FBB63F16BB43B5AB01FA4B9087856460A05CA17"
+    },
+    {
+      "path": "Assets/_Game/Scripts/Editor/ThirdPartyUiArtSetup.cs",
+      "sha256": "4402CC74CA837A27E4A919BB394B876592F54B088BC41C5684682D9CCCAC19D7"
+    },
+    {
+      "path": "Assets/_Game/Scripts/Presentation/UI/ThirdPartyUiThemeSO.cs",
+      "sha256": "70D7BAA94D9DB2AC14CE13992B1F3CF101B370E6D6465AB1CEBC6911E37F4EDE"
+    },
+    {
+      "path": "Assets/_Game/Scripts/Presentation/Enemies/EnemySpriteAnimator2D.cs",
+      "sha256": "05A6397D0B7E085BDED7F73F41E3FD0F4E810D4BB44700C375919C87F08749A6"
+    },
+    {
+      "path": "Assets/_Game/Scripts/Bootstrap/RuntimeWorldRenderer2D.cs",
+      "sha256": "39F9157F43690A5DA82EC6402813DACC56C3A49D4C30E3A61889B1413EE7387F"
+    },
+    {
+      "path": "Assets/_Game/Scripts/Bootstrap/GameBootstrap.cs",
+      "sha256": "40899C6D599BF1E9FC27F1F8C0FB77799A291D7F5C51BD4F55C4C946305BF35E"
+    },
+    {
+      "path": "Assets/_Game/Scripts/Presentation/GameView.cs",
+      "sha256": "02BA2F78D74FC8AE5BD531C45BC51886FDEA43D7BAF4217FBC2ADDAE9647B3E4"
+    },
+    {
+      "path": "Assets/_Game/Prefabs/UI/UI_Game.prefab",
+      "sha256": "3FA7D0230E6662D55E5E771ED60B6ED63E79DB5252EDB313A4264A3D8FB32141"
+    },
+    {
+      "path": "Assets/_Game/Data/Art/ThirdPartyUiTheme.asset",
+      "sha256": "E16D42A273B4B472CEC0B873012A2C2CF0C31D7A1439A1ABEBFDF5B673D4179E"
+    },
+    {
+      "path": "Assets/_Game/Tests/Integration/ThirdPartyArtIntegrationTests.cs",
+      "sha256": "AF90C2CC5A68FD39BB0434432A4A075D7D6C1CFE6FD83C5D7C16B9C7C7363B1B"
+    }
+  ]
+}

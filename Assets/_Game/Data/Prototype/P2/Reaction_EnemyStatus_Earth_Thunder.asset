@@ -11,13 +11,110 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbdbef7af1b5ff3419db50b31953d227, type: 3}
   m_Name: Reaction_EnemyStatus_Earth_Thunder
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Id: reaction.EnemyStatus.Earth.Thunder
-  Enabled: 0
+  Enabled: 1
   Context: 1
   A: 3
   B: 6
   ConsumeA: 1
   ConsumeB: 1
   Priority: 100
-  Effects: []
+  Effects:
+  - Id: effect.area.magnetic
+    Kind: 9
+    TargetPolicy: 0
+    ReferenceId:
+    ResourceBucket: 0
+    ResourceAmount: 0
+    PhysicalDamage: 0
+    ElementDamage:
+      Water: 0
+      Fire: 0
+      Earth: 0
+      Wood: 0
+      Wind: 0
+      Thunder: 0
+    Gauge:
+      Water: 0
+      Fire: 0
+      Earth: 0
+      Wood: 0
+      Wind: 0
+      Thunder: 0
+    UseAreaLease: 1
+    Probability: 1
+    Amount: 0
+    Stacks: 0
+    DurationOverride: 0
+    DamageMultiplier: 1
+    SpeedMultiplier: 1
+    RadiusInCells: 1
+    MaxHits: 1
+    RetainedDamageMultiplier: 1
+    DurationSeconds: 6
+    TickIntervalSeconds: 1
+    LingeringSeconds: 1.5
+    RequiredStatusId:
+    AreaEffects:
+    - Id: effect.status.combo.magnetic
+      Kind: 3
+      TargetPolicy: 0
+      ReferenceId: status.combo.magnetic
+      PhysicalDamage: 0
+      ElementDamage:
+        Water: 0
+        Fire: 0
+        Earth: 0
+        Wood: 0
+        Wind: 0
+        Thunder: 0
+      Gauge:
+        Water: 0
+        Fire: 0
+        Earth: 0
+        Wood: 0
+        Wind: 0
+        Thunder: 0
+      Amount: 0
+      UseAreaLease: 1
+      Probability: 1
+      Stacks: 1
+      DurationOverride: 1.5
+      DamageMultiplier: 1
+  - Id: effect.status.effect.paralysis
+    Kind: 3
+    TargetPolicy: 0
+    ReferenceId: status.effect.paralysis
+    ResourceBucket: 0
+    ResourceAmount: 0
+    PhysicalDamage: 0
+    ElementDamage:
+      Water: 0
+      Fire: 0
+      Earth: 0
+      Wood: 0
+      Wind: 0
+      Thunder: 0
+    Gauge:
+      Water: 0
+      Fire: 0
+      Earth: 0
+      Wood: 0
+      Wind: 0
+      Thunder: 0
+    UseAreaLease: 1
+    Probability: 1
+    Amount: 0
+    Stacks: 1
+    DurationOverride: 1.5
+    DamageMultiplier: 1
+    SpeedMultiplier: 1
+    RadiusInCells: 0
+    MaxHits: 1
+    RetainedDamageMultiplier: 1
+    DurationSeconds: 0
+    TickIntervalSeconds: 0
+    LingeringSeconds: 0
+    RequiredStatusId:
+    AreaEffects: []

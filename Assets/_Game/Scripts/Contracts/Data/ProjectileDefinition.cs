@@ -6,6 +6,10 @@ namespace Spotlight.Contracts
 {
     public sealed class ProjectileDefinition
     {
+        public bool PiercingEnabled;
+        public int MaxHits = 1;
+        public float RetainedDamageMultiplier = 1f;
+
         public string Id;
         public string PrefabKey;
         public float SpeedInCellsPerSecond;

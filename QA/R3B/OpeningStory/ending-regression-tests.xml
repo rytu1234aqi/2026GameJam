@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="12" result="Passed" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-14 15:21:07Z" end-time="2026-10-14 15:21:09Z" duration="2.3186383">
+  <test-suite type="TestSuite" id="1356" name="2026GameJam" fullname="2026GameJam" runstate="Runnable" testcasecount="261" result="Passed" start-time="2026-10-14 15:21:07Z" end-time="2026-10-14 15:21:09Z" duration="2.318638" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties />
+    <test-suite type="Assembly" id="1702" name="Spotlight.Integration.Tests.dll" fullname="E:/PersonalProgram/2026GameJam/Library/ScriptAssemblies/Spotlight.Integration.Tests.dll" runstate="Runnable" testcasecount="194" result="Passed" start-time="2026-10-14 15:21:07Z" end-time="2026-10-14 15:21:09Z" duration="2.304325" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="47100" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+      </properties>
+      <test-suite type="TestSuite" id="1703" name="Spotlight" fullname="Spotlight" runstate="Runnable" testcasecount="194" result="Passed" start-time="2026-10-14 15:21:07Z" end-time="2026-10-14 15:21:09Z" duration="2.302566" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1704" name="Tests" fullname="Spotlight.Tests" runstate="Runnable" testcasecount="162" result="Passed" start-time="2026-10-14 15:21:07Z" end-time="2026-10-14 15:21:09Z" duration="2.299953" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1705" name="Integration" fullname="Spotlight.Tests.Integration" runstate="Runnable" testcasecount="157" result="Passed" start-time="2026-10-14 15:21:07Z" end-time="2026-10-14 15:21:09Z" duration="2.296977" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1491" name="OpeningStoryIntegrationTests" fullname="Spotlight.Tests.Integration.OpeningStoryIntegrationTests" classname="Spotlight.Tests.Integration.OpeningStoryIntegrationTests" runstate="Runnable" testcasecount="12" result="Passed" start-time="2026-10-14 15:21:07Z" end-time="2026-10-14 15:21:09Z" duration="2.293089" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1495" name="EmptySequenceKeepsLegacyStoryStartCompatible" fullname="Spotlight.Tests.Integration.OpeningStoryIntegrationTests.EmptySequenceKeepsLegacyStoryStartCompatible" methodname="EmptySequenceKeepsLegacyStoryStartCompatible" classname="Spotlight.Tests.Integration.OpeningStoryIntegrationTests" runstate="Runnable" seed="1020155547" result="Passed" start-time="2026-10-14 15:21:07Z" end-time="2026-10-14 15:21:08Z" duration="0.406919" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1493" name="EndlessAndContinueBypassOpening" fullname="Spotlight.Tests.Integration.OpeningStoryIntegrationTests.EndlessAndContinueBypassOpening" methodname="EndlessAndContinueBypassOpening" classname="Spotlight.Tests.Integration.OpeningStoryIntegrationTests" runstate="Runnable" seed="525506913" result="Passed" start-time="2026-10-14 15:21:08Z" end-time="2026-10-14 15:21:08Z" duration="0.132811" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1504" name="FormalOpeningAssetsAndBootstrapReferencesAreComplete" fullname="Spotlight.Tests.Integration.OpeningStoryIntegrationTests.FormalOpeningAssetsAndBootstrapReferencesAreComplete" methodname="FormalOpeningAssetsAndBootstrapReferencesAreComplete" classname="Spotlight.Tests.Integration.OpeningStoryIntegrationTests" runstate="Runnable" seed="1386765629" result="Passed" start-time="2026-10-14 15:21:08Z" end-time="2026-10-14 15:21:08Z" duration="0.041918" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1497" name="MultiParagraphChineseCopyRendersWithoutTruncation" fullname="Spotlight.Tests.Integration.OpeningStoryIntegrationTests.MultiParagraphChineseCopyRendersWithoutTruncation" methodname="MultiParagraphChineseCopyRendersWithoutTruncation" classname="Spotlight.Tests.Integration.OpeningStoryIntegrationTests" runstate="Runnable" seed="1698324631" result="Passed" start-time="2026-10-14 15:21:08Z" end-time="2026-10-14 15:21:08Z" duration="0.180555" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1496" name="PlayerFastForwardAndTransitionFinishCallbackExactlyOnce" fullname="Spotlight.Tests.Integration.OpeningStoryIntegrationTests.PlayerFastForwardAndTransitionFinishCallbackExactlyOnce" methodname="PlayerFastForwardAndTransitionFinishCallbackExactlyOnce" classname="Spotlight.Tests.Integration.OpeningStoryIntegrationTests" runstate="Runnable" seed="170124085" result="Passed" start-time="2026-10-14 15:21:08Z" end-time="2026-10-14 15:21:08Z" duration="0.018445" asserts="0">
+                <properties />
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1501" name="RealCanvasRendersAllChinesePages" fullname="Spotlight.Tests.Integration.OpeningStoryIntegrationTests.RealCanvasRendersAllChinesePages" classname="Spotlight.Tests.Integration.OpeningStoryIntegrationTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-14 15:21:08Z" end-time="2026-10-14 15:21:09Z" duration="1.356286" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1498" name="RealCanvasRendersAllChinesePages(960,540)" fullname="Spotlight.Tests.Integration.OpeningStoryIntegrationTests.RealCanvasRendersAllChinesePages(960,540)" methodname="RealCanvasRendersAllChinesePages" classname="Spotlight.Tests.Integration.OpeningStoryIntegrationTests" runstate="Runnable" seed="1308980683" result="Passed" start-time="2026-10-14 15:21:08Z" end-time="2026-10-14 15:21:08Z" duration="0.234398" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1499" name="RealCanvasRendersAllChinesePages(1280,720)" fullname="Spotlight.Tests.Integration.OpeningStoryIntegrationTests.RealCanvasRendersAllChinesePages(1280,720)" methodname="RealCanvasRendersAllChinesePages" classname="Spotlight.Tests.Integration.OpeningStoryIntegrationTests" runstate="Runnable" seed="441967025" result="Passed" start-time="2026-10-14 15:21:08Z" end-time="2026-10-14 15:21:09Z" duration="0.393741" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1500" name="RealCanvasRendersAllChinesePages(1920,1080)" fullname="Spotlight.Tests.Integration.OpeningStoryIntegrationTests.RealCanvasRendersAllChinesePages(1920,1080)" methodname="RealCanvasRendersAllChinesePages" classname="Spotlight.Tests.Integration.OpeningStoryIntegrationTests" runstate="Runnable" seed="726684349" result="Passed" start-time="2026-10-14 15:21:09Z" end-time="2026-10-14 15:21:09Z" duration="0.722991" asserts="0">
+                  <properties />
+                </test-case>
+              </test-suite>
+              <test-case id="1492" name="RealStoryClickKeepsMenuAndCheckpointUntilFinalPage" fullname="Spotlight.Tests.Integration.OpeningStoryIntegrationTests.RealStoryClickKeepsMenuAndCheckpointUntilFinalPage" methodname="RealStoryClickKeepsMenuAndCheckpointUntilFinalPage" classname="Spotlight.Tests.Integration.OpeningStoryIntegrationTests" runstate="Runnable" seed="458587731" result="Passed" start-time="2026-10-14 15:21:09Z" end-time="2026-10-14 15:21:09Z" duration="0.111739" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1494" name="RebindCancelsOpeningAndPreservesExternalPause" fullname="Spotlight.Tests.Integration.OpeningStoryIntegrationTests.RebindCancelsOpeningAndPreservesExternalPause" methodname="RebindCancelsOpeningAndPreservesExternalPause" classname="Spotlight.Tests.Integration.OpeningStoryIntegrationTests" runstate="Runnable" seed="447872174" result="Passed" start-time="2026-10-14 15:21:09Z" end-time="2026-10-14 15:21:09Z" duration="0.016201" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1502" name="SameTickInputRevealsOnceAndNextTickTurnsPageWithoutRootFade" fullname="Spotlight.Tests.Integration.OpeningStoryIntegrationTests.SameTickInputRevealsOnceAndNextTickTurnsPageWithoutRootFade" methodname="SameTickInputRevealsOnceAndNextTickTurnsPageWithoutRootFade" classname="Spotlight.Tests.Integration.OpeningStoryIntegrationTests" runstate="Runnable" seed="235425651" result="Passed" start-time="2026-10-14 15:21:09Z" end-time="2026-10-14 15:21:09Z" duration="0.008159" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1503" name="UnicodeRevealNeverSplitsSurrogateOrCombiningCharacter" fullname="Spotlight.Tests.Integration.OpeningStoryIntegrationTests.UnicodeRevealNeverSplitsSurrogateOrCombiningCharacter" methodname="UnicodeRevealNeverSplitsSurrogateOrCombiningCharacter" classname="Spotlight.Tests.Integration.OpeningStoryIntegrationTests" runstate="Runnable" seed="1317855341" result="Passed" start-time="2026-10-14 15:21:09Z" end-time="2026-10-14 15:21:09Z" duration="0.008428" asserts="0">
+                <properties />
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

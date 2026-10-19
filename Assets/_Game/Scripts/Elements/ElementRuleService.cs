@@ -94,10 +94,10 @@ namespace Spotlight.Elements
                 if (r.ConsumeA < 0 || r.ConsumeB < 0 || (input.Context == ReactionContext.EnemyStatus && r.ConsumeA + r.ConsumeB == 0)) throw new ArgumentException("reaction.consumption:" + r.Id);
                 foreach (EffectSpec e in r.Effects)
                 {
-                    if (input.Context == ReactionContext.Projectile && e.Kind != EffectKind.ModifyProjectile) throw new ArgumentException("reaction.projectile_effect:" + r.Id);
-                    if (input.Context == ReactionContext.EnemyStatus && e.Kind != EffectKind.Damage && e.Kind != EffectKind.ApplyStatus) throw new ArgumentException("reaction.status_effect:" + r.Id);
+                    if (input.Context == ReactionContext.Projectile && e.Kind != EffectKind.ModifyProjectile && e.Kind != EffectKind.ConfigurePiercing && e.Kind != EffectKind.AreaDamage && e.Kind != EffectKind.ChainDamage && e.Kind != EffectKind.CreateArea && e.Kind != EffectKind.AddGauge && e.Kind != EffectKind.ApplyStatus) throw new ArgumentException("reaction.projectile_effect:" + r.Id);
+                    if (input.Context == ReactionContext.EnemyStatus && e.Kind != EffectKind.Damage && e.Kind != EffectKind.ApplyStatus && e.Kind != EffectKind.AreaDamage && e.Kind != EffectKind.ChainDamage && e.Kind != EffectKind.CreateArea && e.Kind != EffectKind.AddGauge) throw new ArgumentException("reaction.status_effect:" + r.Id);
                     if (input.Context == ReactionContext.EnemyStatus && e.Kind == EffectKind.Damage && Nonzero(e.Gauge)) throw new ArgumentException("reaction.gauge_loop:" + r.Id);
-                    StatusDefinition sd; if (input.Context == ReactionContext.EnemyStatus && e.Kind == EffectKind.ApplyStatus && (!catalog.TryGetStatus(e.ReferenceId, out sd) || sd.IsReactionInput)) throw new ArgumentException("reaction.output_input:" + r.Id);
+                    StatusDefinition sd; if (e.Kind == EffectKind.ApplyStatus && (!catalog.TryGetStatus(e.ReferenceId, out sd) || sd.IsReactionInput)) throw new ArgumentException("reaction.output_input:" + r.Id);
                 }
                 while (true)
                 {
@@ -119,7 +119,8 @@ namespace Spotlight.Elements
             return new ReactionPlan { Matches = matches.AsReadOnly(), RemainingTokens = tokens.AsReadOnly() };
         }
         private static bool Nonzero(ElementAmounts a) { return a.Water != 0 || a.Fire != 0 || a.Earth != 0 || a.Wood != 0 || a.Wind != 0 || a.Thunder != 0; }
-        private static EffectSpec Clone(EffectSpec e) { return new EffectSpec { Id = e.Id, Kind = e.Kind, TargetPolicy = e.TargetPolicy, ReferenceId = e.ReferenceId, ResourceBucket = e.ResourceBucket, ResourceAmount = e.ResourceAmount, PhysicalDamage = e.PhysicalDamage, ElementDamage = e.ElementDamage, Gauge = e.Gauge, Amount = e.Amount, Stacks = e.Stacks, DurationOverride = e.DurationOverride, DamageMultiplier = e.DamageMultiplier, SpeedMultiplier = e.SpeedMultiplier }; }
+        private static IReadOnlyList<EffectSpec> CloneAreaEffects(IReadOnlyList<EffectSpec> input) { if(input==null)return null; var result=new EffectSpec[input.Count]; for(int i=0;i<result.Length;i++)result[i]=input[i]==null?null:Clone(input[i]); return result; }
+        private static EffectSpec Clone(EffectSpec e) { return new EffectSpec { Id = e.Id, Kind = e.Kind, TargetPolicy = e.TargetPolicy, ReferenceId = e.ReferenceId, ResourceBucket = e.ResourceBucket, ResourceAmount = e.ResourceAmount, PhysicalDamage = e.PhysicalDamage, ElementDamage = e.ElementDamage, Gauge = e.Gauge, Amount = e.Amount, Probability = e.Probability, UseAreaLease = e.UseAreaLease, Stacks = e.Stacks, DurationOverride = e.DurationOverride, DamageMultiplier = e.DamageMultiplier, SpeedMultiplier = e.SpeedMultiplier,RadiusInCells=e.RadiusInCells,MaxHits=e.MaxHits,RetainedDamageMultiplier=e.RetainedDamageMultiplier,DurationSeconds=e.DurationSeconds,TickIntervalSeconds=e.TickIntervalSeconds,LingeringSeconds=e.LingeringSeconds,RequiredStatusId=e.RequiredStatusId,AreaEffects=CloneAreaEffects(e.AreaEffects) }; }
         public ProjectileModifierDefinition GetProjectileModifier(ElementType element)
         {
             ProjectileModifierDefinition found = null;

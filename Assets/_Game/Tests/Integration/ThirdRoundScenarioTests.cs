@@ -173,8 +173,8 @@ namespace Spotlight.Tests.Integration
         {
             Place("elm.water",OccupantKind.ElementBlock,3,4);Place("elm.fire",OccupantKind.ElementBlock,3+dx,4+dy);
             ProductionResult result=runtime.Elements.ResolveProduction(new ProductionInput {SettlementId="qa.adjacency",CompletedNight=1,Board=runtime.Core.Board.GetSnapshot(),Random=runtime.Core.Random.GetState(RandomStream.Production)});
-            // Six single rules and three wood adjacency rules are registered in the formal catalog.
-            Assert.AreEqual(9,runtime.Catalog.GetProductionRules().Count);
+            // Six single rules and four wood adjacency rules, including Wood/Wood.
+            Assert.AreEqual(10,runtime.Catalog.GetProductionRules().Count);
             long water=0,fire=0;foreach(ResourceAmount delta in result.HandDeltas){if(delta.DefinitionId=="elm.water")water+=delta.Amount;if(delta.DefinitionId=="elm.fire")fire+=delta.Amount;}
             Assert.AreEqual(1,water);Assert.AreEqual(1,fire);Assert.AreEqual(0,result.Board.Count);
         }

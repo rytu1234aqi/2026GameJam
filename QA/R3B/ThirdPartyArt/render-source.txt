@@ -1,0 +1,1 @@
+1280x720; formal UI_Game prefab and ThirdPartyUiTheme; ModuleComposition with unique temporary save directory; real Flow/DayEvents/Wave services; one camera for world and ScreenSpaceCamera canvas. Gallery order: GoblinMelee, GoblinRanged, SlimeFire, SlimeWater, SlimeThunder, Sandworm, Gargoyle, Falcon, Wraith, SoulKing

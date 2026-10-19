@@ -33,7 +33,15 @@ namespace Spotlight.Tests.Integration
         {
             CollectionAssert.IsEmpty(catalog.ValidateAll());
             CollectionAssert.IsEmpty(asset.Validate());
-            Assert.AreEqual(9, catalog.GetProductionRules().Count);
+            CollectionAssert.AreEquivalent(new[]
+            {
+                "production.water", "production.fire", "production.earth", "production.wood", "production.wind", "production.thunder",
+                "production.wood_fire_convert", "production.wood_earth_bonus", "production.wood_water_bonus", "production.wood_wood_bonus"
+            }, catalog.GetProductionRules().Select(rule => rule.Id));
+            var woodPair = catalog.GetProductionRules().Single(rule => rule.Id == "production.wood_wood_bonus");
+            Assert.IsTrue(woodPair.Enabled);
+            Assert.AreEqual(ProductionMatch.AdjacentPair, woodPair.Match);
+            Assert.IsFalse(woodPair.ConsumeA || woodPair.ConsumeB);
             foreach (string id in new[] { "status.contact.burn", "status.contact.water_slow", "status.reaction.cold_wave", "status.boss.curse" })
             { StatusDefinition status; Assert.IsTrue(catalog.TryGetStatus(id, out status), id); }
             foreach (string id in new[] { "enemy.slime.water", "enemy.slime.fire", "enemy.slime.thunder", "enemy.sandworm", "enemy.gargoyle", "enemy.falcon" })

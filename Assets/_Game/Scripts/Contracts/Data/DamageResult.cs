@@ -13,6 +13,7 @@ namespace Spotlight.Contracts
         public float FinalDamage;
         public float RemainingHp;
         public bool NewlyKilled;
+        public bool Missed;
     }
 }
 

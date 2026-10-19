@@ -19,8 +19,10 @@
 "P3","R3B-T01","Assets/_Game/Data/Prototype/P2/Element_water.asset","ElementDefinitionSO","elm.water","ElementWater","status.contact.water_slow","registered-static-reference"
 "P3","R3B-T02","Assets/_Game/Data/Prototype/P2/Reaction_EnemyStatus_Water_Water.asset","ReactionDefinitionSO","reaction.EnemyStatus.Water.Water","N/A","status.reaction.cold_wave","registered-static-reference"
 "P3","R3B-T03","Assets/_Game/Scripts/Presentation/Combat/HitFlashVisual2D.cs","Script","N/A","N/A","RuntimeWorldRenderer2D;DamageAppliedEvent;GameClock","Integrated; Unity 166/166 passed"
-
-P3,R3B-T06,Assets/_Game/Art/Towers,Tower Art Folder,N/A,N/A,N/A,已登记
-P3,R3B-T06,Assets/_Game/Art/World/Spring,Spring Art Folder,N/A,N/A,N/A,待接入
-P3,R3B-T06,Assets/_Game/Prefabs/Towers/TWR_Basic.prefab,Prefab,N/A,TWR_Basic,N/A,已登记
-P3,R3B-T06,Assets/_Game/Scripts/Presentation/Combat/ProjectileVisual2D.cs,C# Script,N/A,N/A,N/A,已登记
+"P3","R3B-T06","Assets/_Game/Art/Towers/Tower_Basic_Temp.png","Sprite","N/A","N/A","texture-import; opaque background","Integrated locally; see QA/R3B/PR17/result-summary.json"
+"P3","R3B-T06","Assets/_Game/Art/World/Spring/SPR_Spring_Temp.png","Sprite","N/A","N/A","texture-import; opaque background","Integrated locally; see QA/R3B/PR17/result-summary.json"
+"P3","R3B-T06","Assets/_Game/Prefabs/Towers/TWR_Basic.prefab","Prefab","N/A","TowerBasic","tower sprite; existing SpriteUnlit","Integrated locally; see QA/R3B/PR17/result-summary.json"
+"P3","R3B-T06","Assets/_Game/Prefabs/Prototype/view.spring.prefab","Prefab","N/A","view.spring","spring sprite; existing SpriteUnlit","Integrated locally; see QA/R3B/PR17/result-summary.json"
+"P3","R3B-T06","Assets/_Game/Prefabs/Projectiles/PRJ_Basic.prefab","Prefab","N/A","ProjectileBasic","URP ParticlesUnlit; six slots","Integrated locally; see QA/R3B/PR17/result-summary.json"
+"P3","R3B-T06","Assets/_Game/Prefabs/Projectiles/PRJ_Enemy.prefab","Prefab","N/A","EnemyProjectile","URP ParticlesUnlit; six slots","Integrated locally; see QA/R3B/PR17/result-summary.json"
+"P3","R3B-T06","Assets/_Game/Scripts/Presentation/Combat/ProjectileVisual2D.cs","Script","N/A","N/A","RuntimeWorldRenderer2D; GameClock","Integrated locally; see QA/R3B/PR17/result-summary.json"

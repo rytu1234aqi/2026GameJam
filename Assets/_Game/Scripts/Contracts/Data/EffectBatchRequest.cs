@@ -6,6 +6,9 @@ namespace Spotlight.Contracts
 {
     public sealed class EffectBatchRequest
     {
+        public bool HasImpactPosition;
+        public WorldPoint ImpactPosition;
+
         public CommandContext Context;
         public EntityId Source;
         public EntityId SelectedTarget;

@@ -17,6 +17,13 @@ namespace Spotlight.Combat.Definitions
         public StatusRefreshPolicy RefreshPolicy = StatusRefreshPolicy.RefreshAllLayers;
         public float MoveSlowPerStack;
         public float AttackSlowPerStack;
+        public float AttackHastePerStack;
+        public ElementAmountsConfig OutgoingElementDamageBonusPerStack = new ElementAmountsConfig();
+        public ElementAmountsConfig OutgoingGaugeBonusPerStack = new ElementAmountsConfig();
+        public ElementAmountsConfig IncomingGaugeBonusPerStack = new ElementAmountsConfig();
+        public float AccuracyReductionPerStack;
+        public float HealPerTick;
+
         public float ArmorBreakPerStack;
         public ElementAmountsConfig ResistanceBreakPerStack = new ElementAmountsConfig();
         public bool PreventMovement;
@@ -25,7 +32,31 @@ namespace Spotlight.Combat.Definitions
         public ElementAmountsConfig DotElementPerStack = new ElementAmountsConfig();
         public StatusDefinition ToDefinition()
         {
-            return new StatusDefinition { Id=Id,ElementTag=ElementTag,IsReactionInput=IsReactionInput,IsReactionDamage=IsReactionDamage,DurationSeconds=DurationSeconds,TickIntervalSeconds=TickIntervalSeconds,MaxStacks=MaxStacks,RefreshPolicy=RefreshPolicy,MoveSlowPerStack=MoveSlowPerStack,AttackSlowPerStack=AttackSlowPerStack,ArmorBreakPerStack=ArmorBreakPerStack,ResistanceBreakPerStack=(ResistanceBreakPerStack==null?new ElementAmountsConfig():ResistanceBreakPerStack).ToDefinition(),PreventMovement=PreventMovement,PreventAttack=PreventAttack,DotPhysicalPerStack=DotPhysicalPerStack,DotElementPerStack=(DotElementPerStack==null?new ElementAmountsConfig():DotElementPerStack).ToDefinition() };
+            return new StatusDefinition
+            {
+                Id = Id,
+                ElementTag = ElementTag,
+                IsReactionInput = IsReactionInput,
+                IsReactionDamage = IsReactionDamage,
+                DurationSeconds = DurationSeconds,
+                TickIntervalSeconds = TickIntervalSeconds,
+                MaxStacks = MaxStacks,
+                RefreshPolicy = RefreshPolicy,
+                MoveSlowPerStack = MoveSlowPerStack,
+                AttackSlowPerStack = AttackSlowPerStack,
+                AttackHastePerStack = AttackHastePerStack,
+                AccuracyReductionPerStack = AccuracyReductionPerStack,
+                HealPerTick = HealPerTick,
+                OutgoingElementDamageBonusPerStack = (OutgoingElementDamageBonusPerStack??new ElementAmountsConfig()).ToDefinition(),
+                OutgoingGaugeBonusPerStack = (OutgoingGaugeBonusPerStack??new ElementAmountsConfig()).ToDefinition(),
+                IncomingGaugeBonusPerStack = (IncomingGaugeBonusPerStack??new ElementAmountsConfig()).ToDefinition(),
+                ArmorBreakPerStack = ArmorBreakPerStack,
+                ResistanceBreakPerStack = (ResistanceBreakPerStack==null?new ElementAmountsConfig():ResistanceBreakPerStack).ToDefinition(),
+                PreventMovement = PreventMovement,
+                PreventAttack = PreventAttack,
+                DotPhysicalPerStack = DotPhysicalPerStack,
+                DotElementPerStack = (DotElementPerStack==null?new ElementAmountsConfig():DotElementPerStack).ToDefinition()
+            };
         }
     }
 }

@@ -1,0 +1,1957 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+[Licensing::IpcConnector] Connection attempt to the License Client on channel: "LicenseClient-RytuKim" failed because channel doesn't exist; code: "0x80000002"
+[Licensing::Module] Successfully launched the LicensingClient (PId: 37792)
+[Licensing::IpcConnector] Successfully connected to the License Client on channel: "LicenseClient-RytuKim" at "2026-10-15T14:36:45.3119665Z"
+[Licensing::Client] Error: Code 10 while verifying Licensing Client signature (process Id: 37792, path: "D:/Unity Editor/2022.3.33f1c1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::Module] Error: LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.15.4+eee609c
+  Session Id:              980100f5ad364b7b93fdc48b63cbca44
+  Correlation Id:          af7d44ee3f71ff974e46a9f16cd41b00
+  External correlation Id: 291760343443507412
+  Machine Id:              nQl7k0AEiwH7t/0/DV8PL8v6dG4=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-RytuKim" (connect: 1.10s, validation: 0.05s, handshake: 0.11s)
+[Licensing::IpcConnector] Successfully connected to the License Notification on channel: "LicenseClient-RytuKim-notifications" at "2026-10-15T14:36:45.4776112Z"
+[Licensing::Module] Connected to LicensingClient (PId: 37792, launch time: 0.02, total connection time: 1.27s)
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully updated license
+Built from '2022.3/china_unity/release' branch; Version is '2022.3.33f1c1 (ea5182f68133) revision 15356290'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.26200) 64bit CoreCountrySpecific' Language: 'zh' Physical Memory: 65259 MB
+[Licensing::Client] Successfully resolved entitlements
+[Licensing::Module] Serial number assigned to: "ewogICJzdWJzR3JvdXAiIDogInVuaXR5IGVkaXRvciIsCiAgIm5hbWVzcGFjZSIgOiAidW5pdHlfZWRpdG9yIiwKICAidHlwZSIgOiAiRURJVE9SIiwKICAidGFnIiA6ICJVbml0eVBlcnNvbmFsXXXX"
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+D:\Unity Editor\2022.3.33f1c1\Editor\Unity.exe
+-batchmode
+-projectPath
+E:/PersonalProgram/2026GameJam
+-executeMethod
+Spotlight.Editor.ThirdPartyArtSetup.Apply
+-quit
+-logFile
+E:/PersonalProgram/2026GameJam/QA/R3B/ThirdPartyArt/setup.log
+Successfully changed project path to: E:/PersonalProgram/2026GameJam
+E:/PersonalProgram/2026GameJam
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [45452] Host "[IP] 169.254.64.250 [Port] 55504 [Flags] 2 [Guid] 4052519711 [EditorId] 4052519711 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-G41R6B36) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [45452] Host "[IP] 169.254.64.250 [Port] 55504 [Flags] 2 [Guid] 4052519711 [EditorId] 4052519711 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-G41R6B36) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[Package Manager] UpmClient::Connect -- Connected to IPC stream "Upm-41428" after 0.3 seconds.
+[Licensing::Client] Successfully resolved entitlements
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 59 packages:
+  Packages from [https://packages.unity.cn]:
+    com.unity.collab-proxy@2.12.4 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.collab-proxy@2.12.4)
+    com.unity.ide.rider@3.0.28 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.ide.rider@3.0.28)
+    com.unity.ide.visualstudio@2.0.22 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.ide.visualstudio@2.0.22)
+    com.unity.test-framework@1.1.33 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.test-framework@1.1.33)
+    com.unity.textmeshpro@3.0.6 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.textmeshpro@3.0.6)
+    com.unity.timeline@1.7.6 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.timeline@1.7.6)
+    com.unity.visualscripting@1.9.4 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.visualscripting@1.9.4)
+    com.unity.ext.nunit@1.0.6 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.ext.nunit@1.0.6)
+    com.unity.mathematics@1.2.6 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.mathematics@1.2.6)
+    com.unity.burst@1.8.15 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.burst@1.8.15)
+    com.unity.2d.animation@9.1.1 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.2d.animation@9.1.1)
+    com.unity.2d.pixel-perfect@5.0.3 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.2d.pixel-perfect@5.0.3)
+    com.unity.2d.psdimporter@8.0.5 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.2d.psdimporter@8.0.5)
+    com.unity.2d.spriteshape@9.0.3 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.2d.spriteshape@9.0.3)
+    com.unity.2d.tilemap.extras@3.1.2 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.2d.tilemap.extras@3.1.2)
+    com.unity.2d.aseprite@1.1.4 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.2d.aseprite@1.1.4)
+    com.unity.searcher@4.9.2 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.searcher@4.9.2)
+    com.unity.2d.common@8.0.2 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.2d.common@8.0.2)
+    com.unity.collections@1.2.4 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.collections@1.2.4)
+  Built-in packages:
+    com.unity.feature.2d@2.0.1 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.feature.2d@2.0.1)
+    com.unity.render-pipelines.universal@14.0.11 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.render-pipelines.universal@14.0.11)
+    com.unity.ugui@1.0.0 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.ugui@1.0.0)
+    com.unity.modules.ai@1.0.0 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.modules.ai@1.0.0)
+    com.unity.modules.androidjni@1.0.0 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.modules.androidjni@1.0.0)
+    com.unity.modules.animation@1.0.0 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.modules.animation@1.0.0)
+    com.unity.modules.assetbundle@1.0.0 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.modules.assetbundle@1.0.0)
+    com.unity.modules.audio@1.0.0 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.modules.audio@1.0.0)
+    com.unity.modules.cloth@1.0.0 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.modules.cloth@1.0.0)
+    com.unity.modules.director@1.0.0 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.modules.director@1.0.0)
+    com.unity.modules.imageconversion@1.0.0 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.modules.imageconversion@1.0.0)
+    com.unity.modules.imgui@1.0.0 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.modules.imgui@1.0.0)
+    com.unity.modules.jsonserialize@1.0.0 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.modules.jsonserialize@1.0.0)
+    com.unity.modules.particlesystem@1.0.0 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.modules.particlesystem@1.0.0)
+    com.unity.modules.physics@1.0.0 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.modules.physics@1.0.0)
+    com.unity.modules.physics2d@1.0.0 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.modules.physics2d@1.0.0)
+    com.unity.modules.screencapture@1.0.0 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.modules.screencapture@1.0.0)
+    com.unity.modules.terrain@1.0.0 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.modules.terrain@1.0.0)
+    com.unity.modules.terrainphysics@1.0.0 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.modules.terrainphysics@1.0.0)
+    com.unity.modules.tilemap@1.0.0 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.modules.tilemap@1.0.0)
+    com.unity.modules.ui@1.0.0 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.modules.ui@1.0.0)
+    com.unity.modules.uielements@1.0.0 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.modules.uielements@1.0.0)
+    com.unity.modules.umbra@1.0.0 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.modules.umbra@1.0.0)
+    com.unity.modules.unityanalytics@1.0.0 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.modules.unityanalytics@1.0.0)
+    com.unity.modules.unitywebrequest@1.0.0 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0)
+    com.unity.modules.unitywebrequestassetbundle@1.0.0 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0)
+    com.unity.modules.unitywebrequestaudio@1.0.0 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0)
+    com.unity.modules.unitywebrequesttexture@1.0.0 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.modules.unitywebrequesttexture@1.0.0)
+    com.unity.modules.unitywebrequestwww@1.0.0 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0)
+    com.unity.modules.vehicles@1.0.0 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.modules.vehicles@1.0.0)
+    com.unity.modules.video@1.0.0 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.modules.video@1.0.0)
+    com.unity.modules.vr@1.0.0 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.modules.vr@1.0.0)
+    com.unity.modules.wind@1.0.0 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.modules.wind@1.0.0)
+    com.unity.modules.xr@1.0.0 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.modules.xr@1.0.0)
+    com.unity.modules.subsystems@1.0.0 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.modules.subsystems@1.0.0)
+    com.unity.render-pipelines.core@14.0.11 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.render-pipelines.core@14.0.11)
+    com.unity.shadergraph@14.0.11 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.shadergraph@14.0.11)
+    com.unity.render-pipelines.universal-config@14.0.10 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.render-pipelines.universal-config@14.0.10)
+    com.unity.2d.sprite@1.0.0 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.2d.sprite@1.0.0)
+    com.unity.2d.tilemap@1.0.0 (location: E:\PersonalProgram\2026GameJam\Library\PackageCache\com.unity.2d.tilemap@1.0.0)
+[Subsystems] No new subsystems found in resolved package list.
+Package Manager log level set to [2]
+[Package Manager] Done registering packages in 0.22 seconds
+Refreshing native plugins compatible for Editor in 158.89 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.33f1c1 (ea5182f68133)
+[Subsystems] Discovering subsystems at path D:/Unity Editor/2022.3.33f1c1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path E:/PersonalProgram/2026GameJam/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 4070 Laptop GPU (ID=0x2860)
+    Vendor:   NVIDIA
+    VRAM:     7948 MB
+    Driver:   32.0.15.6094
+[Licensing::Client] Successfully resolved entitlements
+Initialize mono
+Mono path[0] = 'D:/Unity Editor/2022.3.33f1c1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity Editor/2022.3.33f1c1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Unity Editor/2022.3.33f1c1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56428
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+ImportWorker Server TCP listen port: 0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Unity Editor/2022.3.33f1c1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.026474 seconds.
+- Loaded All Assemblies, in  0.517 seconds
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.231 seconds
+Domain Reload Profiling: 718ms
+	BeginReloadAssembly (184ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (30ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (145ms)
+	LoadAllAssembliesAndSetupDomain (119ms)
+		LoadAssemblies (154ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (116ms)
+			TypeCache.Refresh (114ms)
+				TypeCache.ScanAssembly (89ms)
+			ScanForSourceGeneratedMonoScriptInfo (1ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (231ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (177ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (11ms)
+			SetLoadedEditorAssemblies (7ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (113ms)
+			ProcessInitializeOnLoadMethodAttributes (43ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+[Licensing::Client] Successfully resolved entitlements
+Application.AssetDatabase Initial Refresh Start
+[ScriptCompilation] Requested script compilation because: Assetdatabase observed changes in script compilation related files
+Starting: D:\Unity Editor\2022.3.33f1c1\Editor\Data\bee_backend.exe --dont-print-to-structured-log --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: E:/PersonalProgram/2026GameJam
+DisplayProgressbar: Compiling Scripts
+ExitCode: 0 Duration: 4s716ms
+[193/913    0s] WriteResponseFile Library/Bee/artifacts/rsp/4747638433968585886.rsp
+[691/913    0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+[905/913    1s] Csc Library/Bee/artifacts/1900b0aE.dag/Spotlight.Editor.dll (+2 others)
+[906/913    1s] Csc Library/Bee/artifacts/1900b0aE.dag/Spotlight.Integration.Tests.dll (+2 others)
+[907/913    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Spotlight.Integration.Tests.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Spotlight.Integration.Tests.dll, with 118 defines and 224 references
+
+processors: zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[908/913    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Spotlight.Editor.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Spotlight.Editor.dll, with 118 defines and 236 references
+
+processors: zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[909/913    0s] CopyFiles Library/ScriptAssemblies/Spotlight.Editor.pdb
+[910/913    0s] CopyFiles Library/ScriptAssemblies/Spotlight.Editor.dll
+[911/913    0s] CopyFiles Library/ScriptAssemblies/Spotlight.Integration.Tests.pdb
+[912/913    0s] CopyFiles Library/ScriptAssemblies/Spotlight.Integration.Tests.dll
+*** Tundra build success (4.62 seconds), 10 items updated, 913 evaluated
+AssetDatabase: script compilation time: 5.798344s
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  1.948 seconds
+Refreshing native plugins compatible for Editor in 111.74 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Start importing Assets/_Game/Scripts/Editor/ThirdPartyActorArtSetup.cs using Guid(e80e3ce6df4a45c2b8983d4f44244175) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: '3c3fd1c27b259aa9d7924c9eaf886a29') in 0.023795 seconds
+Start importing Assets/_Game/Tests/Integration/ThirdPartyArtIntegrationTests.cs using Guid(9ec3bed036f5418d9f76b03b2a94af3d) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: '7cfab0ac598622130a9dd08aaafac719') in 0.011775 seconds
+Refreshing native plugins compatible for Editor in 91.83 ms, found 5 plugins.
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  4.804 seconds
+Domain Reload Profiling: 6636ms
+	BeginReloadAssembly (321ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (23ms)
+	RebuildCommonClasses (41ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (176ms)
+	LoadAllAssembliesAndSetupDomain (1285ms)
+		LoadAssemblies (1247ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (230ms)
+			TypeCache.Refresh (189ms)
+				TypeCache.ScanAssembly (173ms)
+			ScanForSourceGeneratedMonoScriptInfo (30ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (4805ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (4529ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (13ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (231ms)
+			ProcessInitializeOnLoadAttributes (4068ms)
+			ProcessInitializeOnLoadMethodAttributes (127ms)
+			AfterProcessingInitializeOnLoad (86ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (10ms)
+Refreshing native plugins compatible for Editor in 119.21 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=ede71bd6dd2c3ba43afc41504e569710): Total: 24.414 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	Summary:
+		Imports: total=2 (actual=2, local cache=0, cache server=0)
+		Asset DB Process Time: managed=3 ms, native=10828 ms
+		Asset DB Callback time: managed=65 ms, native=138 ms
+		Scripting: domain reloads=1, domain reload time=7387 ms, compile time=5798 ms, other=192 ms
+		Project Asset Count: scripts=7621, non-scripts=2611
+		Asset File Changes: new=0, changed=2, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokeBeforeRefreshCallbacks: 10.856ms
+	ApplyChangesToAssetFolders: 0.051ms
+	Scan: 596.727ms
+	OnSourceAssetsModified: 2.586ms
+	GetAllGuidsForCategorization: 1.073ms
+	CategorizeAssets: 174.459ms
+	ImportOutOfDateAssets: 5135.922ms (-770.870ms without children)
+		ImportManagerImport: 48.044ms (10.976ms without children)
+			ImportInProcess: 37.062ms
+			UpdateCategorizedAssets: 0.006ms
+		CompileScripts: 5798.452ms
+		ReloadNativeAssets: 0.017ms
+		UnloadImportedAssets: 56.144ms
+		ReloadImportedAssets: 0.000ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 2.309ms
+		InitializingProgressBar: 0.001ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.000ms
+		OnDemandSchedulerStart: 1.823ms
+	PostProcessAllAssets: 70.995ms
+	Hotreload: 119.654ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.000ms
+	UnloadStreamsBegin: 1.140ms
+	PersistCurrentRevisions: 0.582ms
+	UnloadStreamsEnd: 0.050ms
+	GenerateScriptTypeHashes: 1.580ms
+	Untracked: 18299.716ms
+Application.AssetDatabase Initial Refresh End
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.11 seconds
+Scanning for USB devices : 4.982ms
+Initializing Unity extensions:
+[Licensing::Client] Successfully resolved entitlements
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-2026GameJam
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ProgressiveSceneManager::Cancel()
+Unloading 21 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 127 unused Assets / (1.3 MB). Loaded Objects now: 6918.
+Memory consumption went from 168.7 MB to 167.3 MB.
+Total: 5.747800 ms (FindLiveObjects: 0.445900 ms CreateObjectMapping: 0.170200 ms MarkObjects: 4.644500 ms  DeleteObjects: 0.486200 ms)
+
+Asset Pipeline Refresh (id=572dcbd1c0f40db4784629ea7ae33668): Total: 0.063 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=9295fa7753ec3f74fa1f409168496889): Total: 0.014 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Start importing Assets/_Game/Art/ThirdParty/白天背景图.jpg using Guid(016ac6dcbee505740a44a27950f51b62) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: '2d2b63c199409ebc4ab260187a51b02a') in 0.181074 seconds
+Refreshing native plugins compatible for Editor in 91.78 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=2902ba083645f54408c31b059f00d0b7): Total: 0.407 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=8 ms, native=213 ms
+		Asset DB Callback time: managed=11 ms, native=173 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=7621, non-scripts=2611
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 5
+	InvokeBeforeRefreshCallbacks: 0.001ms
+	ApplyChangesToAssetFolders: 0.069ms
+	Scan: 21.370ms
+	OnSourceAssetsModified: 0.000ms
+	GetAllGuidsForCategorization: 0.290ms
+	CategorizeAssets: 2.421ms
+	ImportOutOfDateAssets: 188.462ms (-1.667ms without children)
+		ImportManagerImport: 184.473ms (2.585ms without children)
+			ImportInProcess: 181.864ms
+			UpdateCategorizedAssets: 0.024ms
+		ReloadNativeAssets: 0.020ms
+		UnloadImportedAssets: 0.127ms
+		ReloadImportedAssets: 2.176ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.882ms
+		InitializingProgressBar: 0.005ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.000ms
+		OnDemandSchedulerStart: 2.445ms
+	PostProcessAllAssets: 93.121ms
+	Hotreload: 92.061ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.310ms
+	UnloadStreamsBegin: 0.796ms
+	PersistCurrentRevisions: 0.295ms
+	UnloadStreamsEnd: 0.049ms
+	Untracked: 8.087ms
+Start importing Assets/_Game/Art/ThirdParty/夜晚背景图.png using Guid(cffe61164d688ed4da00899a7ff5c768) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: 'd25d3f92da4c6de8efab386d0740857e') in 0.251461 seconds
+Refreshing native plugins compatible for Editor in 94.24 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=df432a22fe207684a8e51fa055b5d944): Total: 0.417 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=297 ms
+		Asset DB Callback time: managed=17 ms, native=101 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=7621, non-scripts=2611
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 5
+	InvokeBeforeRefreshCallbacks: 0.000ms
+	ApplyChangesToAssetFolders: 0.064ms
+	Scan: 24.592ms
+	OnSourceAssetsModified: 0.000ms
+	GetAllGuidsForCategorization: 0.258ms
+	CategorizeAssets: 2.788ms
+	ImportOutOfDateAssets: 258.346ms (-1.356ms without children)
+		ImportManagerImport: 255.045ms (2.458ms without children)
+			ImportInProcess: 252.561ms
+			UpdateCategorizedAssets: 0.025ms
+		ReloadNativeAssets: 0.023ms
+		UnloadImportedAssets: 0.147ms
+		ReloadImportedAssets: 1.883ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.003ms
+		InitializingProgressBar: 0.005ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.000ms
+		OnDemandSchedulerStart: 1.596ms
+	PostProcessAllAssets: 24.794ms
+	Hotreload: 94.400ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.338ms
+	UnloadStreamsBegin: 0.671ms
+	PersistCurrentRevisions: 0.362ms
+	UnloadStreamsEnd: 0.058ms
+	Untracked: 10.288ms
+Start importing Assets/_Game/Art/ThirdParty/女主立绘平淡.png using Guid(15fea027a4e1bd64aa1a2f3273705a9f) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: '95be800602066a5b50bd595601a4edc9') in 0.375910 seconds
+Refreshing native plugins compatible for Editor in 123.90 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=8245d38b00bee1541a4011d74364825e): Total: 0.570 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=427 ms
+		Asset DB Callback time: managed=7 ms, native=133 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=7621, non-scripts=2611
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 5
+	InvokeBeforeRefreshCallbacks: 0.001ms
+	ApplyChangesToAssetFolders: 0.057ms
+	Scan: 30.175ms
+	OnSourceAssetsModified: 0.000ms
+	GetAllGuidsForCategorization: 0.289ms
+	CategorizeAssets: 2.847ms
+	ImportOutOfDateAssets: 384.237ms (-2.014ms without children)
+		ImportManagerImport: 380.440ms (3.055ms without children)
+			ImportInProcess: 377.356ms
+			UpdateCategorizedAssets: 0.028ms
+		ReloadNativeAssets: 0.023ms
+		UnloadImportedAssets: 0.152ms
+		ReloadImportedAssets: 2.628ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.169ms
+		InitializingProgressBar: 0.006ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
+		OnDemandSchedulerStart: 1.831ms
+	PostProcessAllAssets: 17.596ms
+	Hotreload: 124.093ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.324ms
+	UnloadStreamsBegin: 0.157ms
+	PersistCurrentRevisions: 0.331ms
+	UnloadStreamsEnd: 0.050ms
+	Untracked: 9.800ms
+Start importing Assets/_Game/Art/ThirdParty/女主立绘冷静.png using Guid(03fbd7494a5d8b444a86cabafb7b4e66) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: '007c343118a50b4c5a216ed8ead8dfef') in 0.373434 seconds
+Refreshing native plugins compatible for Editor in 120.60 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=dc61b7fc47ba0074e9b3dae39f313d92): Total: 0.569 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=425 ms
+		Asset DB Callback time: managed=10 ms, native=132 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=7621, non-scripts=2611
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 5
+	InvokeBeforeRefreshCallbacks: 0.001ms
+	ApplyChangesToAssetFolders: 0.059ms
+	Scan: 31.219ms
+	OnSourceAssetsModified: 0.000ms
+	GetAllGuidsForCategorization: 0.273ms
+	CategorizeAssets: 2.578ms
+	ImportOutOfDateAssets: 380.876ms (-1.559ms without children)
+		ImportManagerImport: 377.323ms (2.845ms without children)
+			ImportInProcess: 374.451ms
+			UpdateCategorizedAssets: 0.028ms
+		ReloadNativeAssets: 0.023ms
+		UnloadImportedAssets: 0.146ms
+		ReloadImportedAssets: 2.188ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.065ms
+		InitializingProgressBar: 0.005ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
+		OnDemandSchedulerStart: 1.684ms
+	PostProcessAllAssets: 22.080ms
+	Hotreload: 120.849ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.324ms
+	UnloadStreamsBegin: 0.280ms
+	PersistCurrentRevisions: 0.319ms
+	UnloadStreamsEnd: 0.046ms
+	Untracked: 10.415ms
+Start importing Assets/_Game/Art/ThirdParty/女主立绘微笑.png using Guid(9f0b8f42c432eee478eb2d63f68b04c2) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: '5988c230b804ef099397b256da5429e9') in 0.378355 seconds
+Refreshing native plugins compatible for Editor in 108.05 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=b1dd758b151bae644b153ecb45373813): Total: 0.547 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=422 ms
+		Asset DB Callback time: managed=7 ms, native=116 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=7621, non-scripts=2611
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 5
+	InvokeBeforeRefreshCallbacks: 0.001ms
+	ApplyChangesToAssetFolders: 0.051ms
+	Scan: 24.166ms
+	OnSourceAssetsModified: 0.000ms
+	GetAllGuidsForCategorization: 0.413ms
+	CategorizeAssets: 2.724ms
+	ImportOutOfDateAssets: 385.758ms (-2.102ms without children)
+		ImportManagerImport: 382.392ms (3.092ms without children)
+			ImportInProcess: 379.273ms
+			UpdateCategorizedAssets: 0.027ms
+		ReloadNativeAssets: 0.023ms
+		UnloadImportedAssets: 0.138ms
+		ReloadImportedAssets: 2.598ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.009ms
+		InitializingProgressBar: 0.005ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.000ms
+		OnDemandSchedulerStart: 1.696ms
+	PostProcessAllAssets: 15.209ms
+	Hotreload: 108.200ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.301ms
+	UnloadStreamsBegin: 0.353ms
+	PersistCurrentRevisions: 0.348ms
+	UnloadStreamsEnd: 0.050ms
+	Untracked: 9.034ms
+Start importing Assets/_Game/Art/ThirdParty/女主立绘生气.png using Guid(7d1b07921cca1c246b17a4f3d1b924b3) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: 'fe8e77fc93163f40366c4bc4e8c4ed74') in 0.361006 seconds
+Refreshing native plugins compatible for Editor in 109.58 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=2ceb6cd0db5c688409e73591ba7983bd): Total: 0.535 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=410 ms
+		Asset DB Callback time: managed=7 ms, native=117 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=7621, non-scripts=2611
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 5
+	InvokeBeforeRefreshCallbacks: 0.000ms
+	ApplyChangesToAssetFolders: 0.056ms
+	Scan: 26.254ms
+	OnSourceAssetsModified: 0.000ms
+	GetAllGuidsForCategorization: 0.282ms
+	CategorizeAssets: 2.783ms
+	ImportOutOfDateAssets: 369.560ms (-2.086ms without children)
+		ImportManagerImport: 365.614ms (3.624ms without children)
+			ImportInProcess: 361.960ms
+			UpdateCategorizedAssets: 0.030ms
+		ReloadNativeAssets: 0.025ms
+		UnloadImportedAssets: 0.146ms
+		ReloadImportedAssets: 2.865ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.123ms
+		InitializingProgressBar: 0.006ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
+		OnDemandSchedulerStart: 1.864ms
+	PostProcessAllAssets: 15.113ms
+	Hotreload: 109.744ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.326ms
+	UnloadStreamsBegin: 0.157ms
+	PersistCurrentRevisions: 0.341ms
+	UnloadStreamsEnd: 0.059ms
+	Untracked: 10.710ms
+Start importing Assets/_Game/Art/ThirdParty/女主立绘哭泣.png using Guid(695596dd3d1b3604796a92efbffbc967) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: 'e0cb85a91da9c1c1b91a5e46ce9e1e4e') in 0.387832 seconds
+Refreshing native plugins compatible for Editor in 114.64 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=860488c95545d364e8fc5928b4a7a8a6): Total: 0.574 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=441 ms
+		Asset DB Callback time: managed=8 ms, native=122 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=7621, non-scripts=2611
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 5
+	InvokeBeforeRefreshCallbacks: 0.001ms
+	ApplyChangesToAssetFolders: 0.059ms
+	Scan: 31.039ms
+	OnSourceAssetsModified: 0.000ms
+	GetAllGuidsForCategorization: 0.262ms
+	CategorizeAssets: 2.575ms
+	ImportOutOfDateAssets: 396.848ms (-2.588ms without children)
+		ImportManagerImport: 393.229ms (3.600ms without children)
+			ImportInProcess: 389.597ms
+			UpdateCategorizedAssets: 0.032ms
+		ReloadNativeAssets: 0.022ms
+		UnloadImportedAssets: 0.138ms
+		ReloadImportedAssets: 3.114ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.981ms
+		InitializingProgressBar: 0.005ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.000ms
+		OnDemandSchedulerStart: 1.946ms
+	PostProcessAllAssets: 16.832ms
+	Hotreload: 114.803ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.371ms
+	UnloadStreamsBegin: 0.226ms
+	PersistCurrentRevisions: 0.326ms
+	UnloadStreamsEnd: 0.055ms
+	Untracked: 10.108ms
+Start importing Assets/_Game/Art/ThirdParty/按钮交互1.png using Guid(a3f53f3e8a952a14f8a176ee4235b468) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: '7415187cc555a2a07504596cdaa4eef3') in 0.018640 seconds
+Refreshing native plugins compatible for Editor in 121.65 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=6f1d748a99f47f748abb18b5fcbdce39): Total: 0.217 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Game/Art/ThirdParty/按钮按下1.png using Guid(baf769a00ee163d4eafd30b4de000339) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: '05494656970465cba8df97f30f6307db') in 0.020919 seconds
+Refreshing native plugins compatible for Editor in 104.10 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=dcf477a4105b1a24d845a566d01887a0): Total: 0.190 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Game/Art/ThirdParty/按钮交互2.png using Guid(3640f4ef4db4bb74b9e4e341319556b4) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: '80219ee09dafb8dc01c2a8c0da63deb8') in 0.014420 seconds
+Refreshing native plugins compatible for Editor in 76.13 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=f15d4f61ed87ed749a4100df5814adb8): Total: 0.145 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Game/Art/ThirdParty/按钮按下2.png using Guid(cd2434a54076f6545a17a9484df2457f) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: 'ad8531c177afa7ad983e10dadd8ef3c8') in 0.011618 seconds
+Refreshing native plugins compatible for Editor in 85.36 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=d0a24c770cc6e8b438426a607bd40ea0): Total: 0.153 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Game/Art/ThirdParty/按钮交互3.png using Guid(93ca4aeac95431c43b90d94cb5191f42) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: '94336618bd5c6686b527fd1d9f43f93f') in 0.014010 seconds
+Refreshing native plugins compatible for Editor in 80.66 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=ec9ee4360c2031a4fab914f490470804): Total: 0.146 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Game/Art/ThirdParty/按钮按下3.png using Guid(e1b403d8b49681f469fc2f08cb1730dd) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: 'f67af9da7f1371c535cde742d9b18194') in 0.013316 seconds
+Refreshing native plugins compatible for Editor in 82.62 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=831af3f557c007c4db79806260c57d56): Total: 0.150 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Game/Art/ThirdParty/按钮交互4.png using Guid(12e83354623e434409a6f95a6bbaa19b) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: '1e09063cc61a182198c1086404679894') in 0.013741 seconds
+Refreshing native plugins compatible for Editor in 95.97 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=ce41a3d79ecb8834fb38f01c4772e5f3): Total: 0.169 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Game/Art/ThirdParty/按钮按下4.png using Guid(d6d5b9e8623c8f74b803007eae0f8dec) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: 'f652a681d1780a73f7152fbdb046c7c2') in 0.015289 seconds
+Refreshing native plugins compatible for Editor in 87.03 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=0840c4948ca361745b19b2bf7c467a4f): Total: 0.156 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+Loaded scene 'Library/Unused/734f1b5b68e839843a7b012d63379026'
+	Deserialize:            51.097 ms
+	Integration:            21.607 ms
+	Integration of assets:  3.427 ms
+	Thread Wait Time:       0.059 ms
+	Total Operation Time:   76.190 ms
+Asset Pipeline Refresh (id=95617e8ac45a4954d9b54004acd5d51e): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+Loaded scene 'Library/Unused/ae74e0a24eaec824b9ba8d1743df758a'
+	Deserialize:            1.359 ms
+	Integration:            1.300 ms
+	Integration of assets:  0.002 ms
+	Thread Wait Time:       0.045 ms
+	Total Operation Time:   2.707 ms
+Asset Pipeline Refresh (id=763ab2c3db1b40d46aa30ed5ebee66a7): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+Loaded scene 'Library/Unused/f16b724907bb6d44985b5f1ac47a3d59'
+	Deserialize:            1.463 ms
+	Integration:            2.482 ms
+	Integration of assets:  0.003 ms
+	Thread Wait Time:       0.014 ms
+	Total Operation Time:   3.962 ms
+Asset Pipeline Refresh (id=5466840e49c81b945a2082e2f7106aca): Total: 0.031 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+Loaded scene 'Library/Unused/40692a2cf9691184a8ead50a7dda81c8'
+	Deserialize:            1.270 ms
+	Integration:            0.291 ms
+	Integration of assets:  0.003 ms
+	Thread Wait Time:       0.039 ms
+	Total Operation Time:   1.602 ms
+Asset Pipeline Refresh (id=ecd86cc38e4aac14f8d5009c99983c41): Total: 0.034 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+Loaded scene 'Library/Unused/ec4a4b29a9a989a439a4313bff5d2816'
+	Deserialize:            1.604 ms
+	Integration:            2.611 ms
+	Integration of assets:  0.001 ms
+	Thread Wait Time:       0.013 ms
+	Total Operation Time:   4.229 ms
+Asset Pipeline Refresh (id=2abdf7dbfba82ae4aa6f5f17610a3a5a): Total: 0.031 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+Loaded scene 'Library/Unused/288f26444ad951c44ad27d8fff0a4d6d'
+	Deserialize:            1.649 ms
+	Integration:            0.363 ms
+	Integration of assets:  0.003 ms
+	Thread Wait Time:       0.032 ms
+	Total Operation Time:   2.047 ms
+Asset Pipeline Refresh (id=835c0d0ea08e12a47a9e0d832d9f0edc): Total: 0.033 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Game/Data/Art/ThirdPartyUiTheme.asset using Guid(16181a3eccb3ee843b88d4f24e7755f1) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: 'b863f804a3d696c3ef749ec38a33c071') in 0.011132 seconds
+Refreshing native plugins compatible for Editor in 98.63 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=c18375a0db7d18240a39c4a556abec12): Total: 0.164 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+命名 UI 素材已导入，UI_Game.ArtTheme 与正式面板已绑定。
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Spotlight.Editor.ThirdPartyUiArtSetup:Apply () (at Assets/_Game/Scripts/Editor/ThirdPartyUiArtSetup.cs:44)
+Spotlight.Editor.ThirdPartyArtSetup:Apply () (at Assets/_Game/Scripts/Editor/ThirdPartyArtSetup.cs:34)
+
+(Filename: Assets/_Game/Scripts/Editor/ThirdPartyUiArtSetup.cs Line: 44)
+
+Start importing Assets/_Game/Art/ThirdParty/近战哥布林.png using Guid(64efda2627e17a4499bdebe4892fe6f6) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: 'c32869842e94aa04035eae1adeaee099') in 0.078146 seconds
+Refreshing native plugins compatible for Editor in 82.18 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=c92a277df03d9fb4e9f88aa55194e91f): Total: 0.263 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Game/Art/ThirdParty/近战哥布林动作.png using Guid(00f7fbc05a6a4bd4c9d10c55e06a11cc) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: 'ce694100c567aa9eddf32430881786ba') in 0.120452 seconds
+Refreshing native plugins compatible for Editor in 163.90 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=ef54d8b578e56174aa57a14e3d4fe5d4): Total: 0.403 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=1 ms, native=222 ms
+		Asset DB Callback time: managed=5 ms, native=172 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=7621, non-scripts=2611
+		Asset File Changes: new=1, changed=1, moved=0, deleted=0
+		Scan Filter Count: 5
+	InvokeBeforeRefreshCallbacks: 0.000ms
+	ApplyChangesToAssetFolders: 0.073ms
+	Scan: 57.911ms
+	OnSourceAssetsModified: 0.063ms
+	GetAllGuidsForCategorization: 0.573ms
+	CategorizeAssets: 11.992ms
+	ImportOutOfDateAssets: 133.435ms (-4.548ms without children)
+		ImportManagerImport: 129.567ms (6.485ms without children)
+			ImportInProcess: 123.050ms
+			UpdateCategorizedAssets: 0.033ms
+		ReloadNativeAssets: 0.026ms
+		UnloadImportedAssets: 0.134ms
+		ReloadImportedAssets: 5.154ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.068ms
+		InitializingProgressBar: 0.006ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
+		OnDemandSchedulerStart: 2.027ms
+	PostProcessAllAssets: 14.230ms
+	Hotreload: 164.439ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.341ms
+	UnloadStreamsBegin: 0.171ms
+	PersistCurrentRevisions: 0.356ms
+	UnloadStreamsEnd: 0.057ms
+	Untracked: 18.999ms
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+Loaded scene 'Library/Unused/0a2ab09691554c64691d3d9e6a12ae82'
+	Deserialize:            2.295 ms
+	Integration:            5.117 ms
+	Integration of assets:  0.004 ms
+	Thread Wait Time:       0.043 ms
+	Total Operation Time:   7.458 ms
+Asset Pipeline Refresh (id=d783a5e379f39a344a7543bd4a93fb52): Total: 0.045 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Game/Art/ThirdParty/远程哥布林.png using Guid(3058f065726bccc4e8d7df391adac076) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: '039fbb1cd43a4d45958d2d007ee48882') in 0.090205 seconds
+Refreshing native plugins compatible for Editor in 102.90 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=541573047a08d8c4aac23bb6ddc646d9): Total: 0.337 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=215 ms
+		Asset DB Callback time: managed=7 ms, native=113 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=7621, non-scripts=2611
+		Asset File Changes: new=1, changed=1, moved=0, deleted=0
+		Scan Filter Count: 5
+	InvokeBeforeRefreshCallbacks: 0.001ms
+	ApplyChangesToAssetFolders: 0.079ms
+	Scan: 75.892ms
+	OnSourceAssetsModified: 0.060ms
+	GetAllGuidsForCategorization: 0.575ms
+	CategorizeAssets: 13.624ms
+	ImportOutOfDateAssets: 100.569ms (-1.768ms without children)
+		ImportManagerImport: 95.564ms (3.899ms without children)
+			ImportInProcess: 91.632ms
+			UpdateCategorizedAssets: 0.033ms
+		ReloadNativeAssets: 0.044ms
+		UnloadImportedAssets: 0.177ms
+		ReloadImportedAssets: 2.649ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.442ms
+		InitializingProgressBar: 0.009ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
+		OnDemandSchedulerStart: 2.451ms
+	PostProcessAllAssets: 17.280ms
+	Hotreload: 103.481ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.395ms
+	UnloadStreamsBegin: 0.119ms
+	PersistCurrentRevisions: 0.372ms
+	UnloadStreamsEnd: 0.059ms
+	Untracked: 24.246ms
+Start importing Assets/_Game/Art/ThirdParty/远程哥布林动作.png using Guid(f44e9822db563d7409f496bb7694aacb) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: 'c203059937628adddec4d71eb1f8e958') in 0.096400 seconds
+Refreshing native plugins compatible for Editor in 119.01 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=b1313fa5f5bcdf048b65c9a125f9be74): Total: 0.324 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=1 ms, native=180 ms
+		Asset DB Callback time: managed=13 ms, native=128 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=7621, non-scripts=2611
+		Asset File Changes: new=1, changed=1, moved=0, deleted=0
+		Scan Filter Count: 5
+	InvokeBeforeRefreshCallbacks: 0.000ms
+	ApplyChangesToAssetFolders: 0.063ms
+	Scan: 47.181ms
+	OnSourceAssetsModified: 0.056ms
+	GetAllGuidsForCategorization: 0.615ms
+	CategorizeAssets: 11.365ms
+	ImportOutOfDateAssets: 104.310ms (-2.064ms without children)
+		ImportManagerImport: 101.054ms (3.957ms without children)
+			ImportInProcess: 97.069ms
+			UpdateCategorizedAssets: 0.028ms
+		ReloadNativeAssets: 0.025ms
+		UnloadImportedAssets: 0.115ms
+		ReloadImportedAssets: 2.614ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.882ms
+		InitializingProgressBar: 0.005ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.000ms
+		OnDemandSchedulerStart: 1.681ms
+	PostProcessAllAssets: 21.918ms
+	Hotreload: 119.609ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.346ms
+	UnloadStreamsBegin: 0.163ms
+	PersistCurrentRevisions: 0.397ms
+	UnloadStreamsEnd: 0.051ms
+	Untracked: 17.541ms
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+Loaded scene 'Library/Unused/6fc46ac84be581a488e35092d10ecbf2'
+	Deserialize:            1.771 ms
+	Integration:            0.480 ms
+	Integration of assets:  0.003 ms
+	Thread Wait Time:       0.080 ms
+	Total Operation Time:   2.333 ms
+Asset Pipeline Refresh (id=8d397813bad7164419a3b3f8ca935d5c): Total: 0.045 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Game/Art/ThirdParty/史莱姆.png using Guid(0639f40cee63a0d49b2b4c29f6d228f3) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: '75d4f41bc995ffc5a4e84ae7c24eebe5') in 0.079319 seconds
+Refreshing native plugins compatible for Editor in 138.68 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=f96a1c52996730f4b82fe6e32ac9b1a7): Total: 0.373 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=217 ms
+		Asset DB Callback time: managed=7 ms, native=147 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=7621, non-scripts=2611
+		Asset File Changes: new=1, changed=1, moved=0, deleted=0
+		Scan Filter Count: 5
+	InvokeBeforeRefreshCallbacks: 0.001ms
+	ApplyChangesToAssetFolders: 0.076ms
+	Scan: 84.592ms
+	OnSourceAssetsModified: 0.079ms
+	GetAllGuidsForCategorization: 0.597ms
+	CategorizeAssets: 15.678ms
+	ImportOutOfDateAssets: 91.563ms (-2.717ms without children)
+		ImportManagerImport: 86.964ms (4.617ms without children)
+			ImportInProcess: 82.314ms
+			UpdateCategorizedAssets: 0.033ms
+		ReloadNativeAssets: 0.034ms
+		UnloadImportedAssets: 0.154ms
+		ReloadImportedAssets: 3.527ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.507ms
+		InitializingProgressBar: 0.007ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
+		OnDemandSchedulerStart: 2.086ms
+	PostProcessAllAssets: 15.565ms
+	Hotreload: 139.277ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.380ms
+	UnloadStreamsBegin: 0.223ms
+	PersistCurrentRevisions: 0.329ms
+	UnloadStreamsEnd: 0.053ms
+	Untracked: 24.539ms
+Start importing Assets/_Game/Art/ThirdParty/史莱姆动作.png using Guid(d8acc8f1d90c73b48a523387f7608c34) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: 'e85eedf25d8533d3828bd4cc16647383') in 0.083406 seconds
+Refreshing native plugins compatible for Editor in 110.22 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=1a6f14accd6a1a14aaec114266aa742d): Total: 0.326 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=198 ms
+		Asset DB Callback time: managed=6 ms, native=120 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=7621, non-scripts=2611
+		Asset File Changes: new=1, changed=1, moved=0, deleted=0
+		Scan Filter Count: 5
+	InvokeBeforeRefreshCallbacks: 0.001ms
+	ApplyChangesToAssetFolders: 0.090ms
+	Scan: 67.651ms
+	OnSourceAssetsModified: 0.057ms
+	GetAllGuidsForCategorization: 0.659ms
+	CategorizeAssets: 13.651ms
+	ImportOutOfDateAssets: 93.599ms (-2.128ms without children)
+		ImportManagerImport: 89.280ms (4.245ms without children)
+			ImportInProcess: 85.004ms
+			UpdateCategorizedAssets: 0.031ms
+		ReloadNativeAssets: 0.027ms
+		UnloadImportedAssets: 0.181ms
+		ReloadImportedAssets: 2.913ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.398ms
+		InitializingProgressBar: 0.009ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
+		OnDemandSchedulerStart: 1.919ms
+	PostProcessAllAssets: 15.889ms
+	Hotreload: 110.769ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.386ms
+	UnloadStreamsBegin: 0.170ms
+	PersistCurrentRevisions: 0.330ms
+	UnloadStreamsEnd: 0.055ms
+	Untracked: 22.394ms
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+Loaded scene 'Library/Unused/eb4d46ffee0bd7a4794826425fc17a37'
+	Deserialize:            1.055 ms
+	Integration:            2.372 ms
+	Integration of assets:  0.001 ms
+	Thread Wait Time:       0.017 ms
+	Total Operation Time:   3.445 ms
+Asset Pipeline Refresh (id=acadcedfc127b344280fbb2dbdb3ad1a): Total: 0.058 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Game/Art/ThirdParty/史莱姆.png using Guid(0639f40cee63a0d49b2b4c29f6d228f3) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: '75d4f41bc995ffc5a4e84ae7c24eebe5') in 0.077374 seconds
+Refreshing native plugins compatible for Editor in 136.66 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=4a67891d74c9b994f9adb69e08041476): Total: 0.355 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=207 ms
+		Asset DB Callback time: managed=1 ms, native=146 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=7621, non-scripts=2611
+		Asset File Changes: new=1, changed=1, moved=0, deleted=0
+		Scan Filter Count: 5
+	InvokeBeforeRefreshCallbacks: 0.001ms
+	ApplyChangesToAssetFolders: 0.076ms
+	Scan: 79.963ms
+	OnSourceAssetsModified: 0.055ms
+	GetAllGuidsForCategorization: 0.577ms
+	CategorizeAssets: 14.645ms
+	ImportOutOfDateAssets: 89.900ms (-3.844ms without children)
+		ImportManagerImport: 84.880ms (5.804ms without children)
+			ImportInProcess: 79.044ms
+			UpdateCategorizedAssets: 0.032ms
+		ReloadNativeAssets: 0.046ms
+		UnloadImportedAssets: 1.005ms
+		ReloadImportedAssets: 4.547ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.439ms
+		InitializingProgressBar: 0.008ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
+		OnDemandSchedulerStart: 1.819ms
+	PostProcessAllAssets: 10.052ms
+	Hotreload: 137.289ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.419ms
+	UnloadStreamsBegin: 0.074ms
+	PersistCurrentRevisions: 0.493ms
+	UnloadStreamsEnd: 0.058ms
+	Untracked: 21.777ms
+Start importing Assets/_Game/Art/ThirdParty/史莱姆动作.png using Guid(d8acc8f1d90c73b48a523387f7608c34) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: 'e85eedf25d8533d3828bd4cc16647383') in 0.081561 seconds
+Refreshing native plugins compatible for Editor in 187.85 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=a202b99f916042b4a9a5c11747160fe0): Total: 0.427 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=220 ms
+		Asset DB Callback time: managed=0 ms, native=204 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=7621, non-scripts=2611
+		Asset File Changes: new=1, changed=1, moved=0, deleted=0
+		Scan Filter Count: 5
+	InvokeBeforeRefreshCallbacks: 0.000ms
+	ApplyChangesToAssetFolders: 0.076ms
+	Scan: 84.595ms
+	OnSourceAssetsModified: 0.052ms
+	GetAllGuidsForCategorization: 0.674ms
+	CategorizeAssets: 14.387ms
+	ImportOutOfDateAssets: 97.042ms (-6.082ms without children)
+		ImportManagerImport: 91.565ms (8.172ms without children)
+			ImportInProcess: 83.361ms
+			UpdateCategorizedAssets: 0.033ms
+		ReloadNativeAssets: 0.028ms
+		UnloadImportedAssets: 0.968ms
+		ReloadImportedAssets: 6.908ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.519ms
+		InitializingProgressBar: 0.008ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
+		OnDemandSchedulerStart: 2.127ms
+	PostProcessAllAssets: 10.641ms
+	Hotreload: 194.776ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.369ms
+	UnloadStreamsBegin: 0.171ms
+	PersistCurrentRevisions: 0.383ms
+	UnloadStreamsEnd: 0.058ms
+	Untracked: 23.486ms
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+Loaded scene 'Library/Unused/08f6beba7c3f3564fa7c170d6975b8d5'
+	Deserialize:            1.447 ms
+	Integration:            3.329 ms
+	Integration of assets:  0.001 ms
+	Thread Wait Time:       0.015 ms
+	Total Operation Time:   4.792 ms
+Asset Pipeline Refresh (id=12734768800904b409f5426945cb835b): Total: 0.065 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Game/Art/ThirdParty/史莱姆.png using Guid(0639f40cee63a0d49b2b4c29f6d228f3) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: '75d4f41bc995ffc5a4e84ae7c24eebe5') in 0.084809 seconds
+Refreshing native plugins compatible for Editor in 128.54 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=273e93067e16f4d438fc9faa89bde003): Total: 0.392 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=252 ms
+		Asset DB Callback time: managed=1 ms, native=137 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=7621, non-scripts=2611
+		Asset File Changes: new=1, changed=1, moved=0, deleted=0
+		Scan Filter Count: 5
+	InvokeBeforeRefreshCallbacks: 0.001ms
+	ApplyChangesToAssetFolders: 0.082ms
+	Scan: 112.603ms
+	OnSourceAssetsModified: 0.055ms
+	GetAllGuidsForCategorization: 0.614ms
+	CategorizeAssets: 15.364ms
+	ImportOutOfDateAssets: 98.736ms (-5.294ms without children)
+		ImportManagerImport: 93.084ms (7.374ms without children)
+			ImportInProcess: 85.676ms
+			UpdateCategorizedAssets: 0.034ms
+		ReloadNativeAssets: 0.030ms
+		UnloadImportedAssets: 1.146ms
+		ReloadImportedAssets: 6.045ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.682ms
+		InitializingProgressBar: 0.007ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.000ms
+		OnDemandSchedulerStart: 2.036ms
+	PostProcessAllAssets: 9.331ms
+	Hotreload: 129.223ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.388ms
+	UnloadStreamsBegin: 0.070ms
+	PersistCurrentRevisions: 0.343ms
+	UnloadStreamsEnd: 0.058ms
+	Untracked: 24.922ms
+Start importing Assets/_Game/Art/ThirdParty/史莱姆动作.png using Guid(d8acc8f1d90c73b48a523387f7608c34) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: 'e85eedf25d8533d3828bd4cc16647383') in 0.075080 seconds
+Refreshing native plugins compatible for Editor in 118.34 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=4a6f7746267890e4fa7fc6d8f820bbbb): Total: 0.338 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=200 ms
+		Asset DB Callback time: managed=1 ms, native=135 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=7621, non-scripts=2611
+		Asset File Changes: new=1, changed=1, moved=0, deleted=0
+		Scan Filter Count: 5
+	InvokeBeforeRefreshCallbacks: 0.001ms
+	ApplyChangesToAssetFolders: 0.080ms
+	Scan: 71.756ms
+	OnSourceAssetsModified: 0.057ms
+	GetAllGuidsForCategorization: 0.647ms
+	CategorizeAssets: 15.326ms
+	ImportOutOfDateAssets: 88.296ms (-4.262ms without children)
+		ImportManagerImport: 82.875ms (6.387ms without children)
+			ImportInProcess: 76.455ms
+			UpdateCategorizedAssets: 0.033ms
+		ReloadNativeAssets: 0.026ms
+		UnloadImportedAssets: 1.040ms
+		ReloadImportedAssets: 5.059ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.375ms
+		InitializingProgressBar: 0.008ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
+		OnDemandSchedulerStart: 2.172ms
+	PostProcessAllAssets: 11.330ms
+	Hotreload: 125.393ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.392ms
+	UnloadStreamsBegin: 0.170ms
+	PersistCurrentRevisions: 0.351ms
+	UnloadStreamsEnd: 0.061ms
+	Untracked: 23.855ms
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+Loaded scene 'Library/Unused/a4f383b59a8ccb84e80f72736456fa7a'
+	Deserialize:            1.509 ms
+	Integration:            5.047 ms
+	Integration of assets:  0.002 ms
+	Thread Wait Time:       0.078 ms
+	Total Operation Time:   6.635 ms
+Asset Pipeline Refresh (id=be09e76e455bb9444abd5bc5cbb63e02): Total: 0.049 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Game/Art/ThirdParty/沙虫.png using Guid(f62e0d6a936c16b4e9c64c64a275f30f) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: '3e9590f20647d89e8cb7012f51d90744') in 0.106000 seconds
+Refreshing native plugins compatible for Editor in 137.30 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=abe1744c74ef7e24d8e2deb712a80c8a): Total: 0.388 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=234 ms
+		Asset DB Callback time: managed=6 ms, native=147 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=7621, non-scripts=2611
+		Asset File Changes: new=1, changed=1, moved=0, deleted=0
+		Scan Filter Count: 5
+	InvokeBeforeRefreshCallbacks: 0.000ms
+	ApplyChangesToAssetFolders: 0.070ms
+	Scan: 78.733ms
+	OnSourceAssetsModified: 0.052ms
+	GetAllGuidsForCategorization: 0.647ms
+	CategorizeAssets: 12.364ms
+	ImportOutOfDateAssets: 121.082ms (-6.576ms without children)
+		ImportManagerImport: 116.774ms (8.466ms without children)
+			ImportInProcess: 108.275ms
+			UpdateCategorizedAssets: 0.033ms
+		ReloadNativeAssets: 0.025ms
+		UnloadImportedAssets: 0.141ms
+		ReloadImportedAssets: 7.222ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.169ms
+		InitializingProgressBar: 0.006ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.000ms
+		OnDemandSchedulerStart: 2.320ms
+	PostProcessAllAssets: 15.466ms
+	Hotreload: 137.915ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.351ms
+	UnloadStreamsBegin: 0.100ms
+	PersistCurrentRevisions: 0.359ms
+	UnloadStreamsEnd: 0.055ms
+	Untracked: 21.179ms
+Start importing Assets/_Game/Art/ThirdParty/沙虫动作.png using Guid(d13d8826a8d5b654ca7dd850f47dd775) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: 'c82e8199f7e94eae8e214cac08fe1fb9') in 0.152708 seconds
+Refreshing native plugins compatible for Editor in 235.08 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=bfdab0abff910ab4f9785d7d7c7d6722): Total: 0.591 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=1 ms, native=335 ms
+		Asset DB Callback time: managed=8 ms, native=245 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=7621, non-scripts=2611
+		Asset File Changes: new=1, changed=1, moved=0, deleted=0
+		Scan Filter Count: 5
+	InvokeBeforeRefreshCallbacks: 0.000ms
+	ApplyChangesToAssetFolders: 0.073ms
+	Scan: 126.172ms
+	OnSourceAssetsModified: 0.059ms
+	GetAllGuidsForCategorization: 0.613ms
+	CategorizeAssets: 14.455ms
+	ImportOutOfDateAssets: 167.689ms (-3.971ms without children)
+		ImportManagerImport: 163.394ms (6.470ms without children)
+			ImportInProcess: 156.886ms
+			UpdateCategorizedAssets: 0.037ms
+		ReloadNativeAssets: 0.024ms
+		UnloadImportedAssets: 0.145ms
+		ReloadImportedAssets: 4.717ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.270ms
+		InitializingProgressBar: 0.007ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
+		OnDemandSchedulerStart: 2.103ms
+	PostProcessAllAssets: 18.877ms
+	Hotreload: 235.817ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.353ms
+	UnloadStreamsBegin: 0.129ms
+	PersistCurrentRevisions: 0.384ms
+	UnloadStreamsEnd: 0.071ms
+	Untracked: 26.528ms
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+Loaded scene 'Library/Unused/9ac5a259d848e3e498a7f0e9862cca87'
+	Deserialize:            1.797 ms
+	Integration:            2.674 ms
+	Integration of assets:  0.001 ms
+	Thread Wait Time:       0.015 ms
+	Total Operation Time:   4.487 ms
+Asset Pipeline Refresh (id=93bacf21928c9694186547ac1d517c98): Total: 0.106 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Game/Art/ThirdParty/石像鬼.png using Guid(f52cc43d464aad544b0323be30a15677) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: 'b2b1cfe8ce274909aabaed7dfedc0969') in 0.133828 seconds
+Refreshing native plugins compatible for Editor in 229.23 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=754ad0b5c8b1b3b4a9f721ebaadfc53e): Total: 0.605 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=349 ms
+		Asset DB Callback time: managed=10 ms, native=245 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=7621, non-scripts=2611
+		Asset File Changes: new=1, changed=1, moved=0, deleted=0
+		Scan Filter Count: 5
+	InvokeBeforeRefreshCallbacks: 0.001ms
+	ApplyChangesToAssetFolders: 0.076ms
+	Scan: 148.630ms
+	OnSourceAssetsModified: 0.077ms
+	GetAllGuidsForCategorization: 1.417ms
+	CategorizeAssets: 18.835ms
+	ImportOutOfDateAssets: 146.538ms (-2.700ms without children)
+		ImportManagerImport: 140.894ms (4.821ms without children)
+			ImportInProcess: 136.038ms
+			UpdateCategorizedAssets: 0.034ms
+		ReloadNativeAssets: 0.039ms
+		UnloadImportedAssets: 0.215ms
+		ReloadImportedAssets: 3.683ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.982ms
+		InitializingProgressBar: 0.009ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
+		OnDemandSchedulerStart: 2.416ms
+	PostProcessAllAssets: 25.451ms
+	Hotreload: 229.882ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.404ms
+	UnloadStreamsBegin: 0.543ms
+	PersistCurrentRevisions: 0.505ms
+	UnloadStreamsEnd: 0.123ms
+	Untracked: 33.017ms
+Start importing Assets/_Game/Art/ThirdParty/石像鬼动作.png using Guid(44bf8a5580774b64f8c9deca8f9aab5e) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: '157fcfb6ffdbab8b42bc4e01235ba1e5') in 0.123084 seconds
+Refreshing native plugins compatible for Editor in 199.68 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=904a7bec142d77f449d132e54a0d7bc8): Total: 0.500 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=1 ms, native=280 ms
+		Asset DB Callback time: managed=7 ms, native=211 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=7621, non-scripts=2611
+		Asset File Changes: new=1, changed=1, moved=0, deleted=0
+		Scan Filter Count: 5
+	InvokeBeforeRefreshCallbacks: 0.001ms
+	ApplyChangesToAssetFolders: 0.086ms
+	Scan: 102.518ms
+	OnSourceAssetsModified: 0.053ms
+	GetAllGuidsForCategorization: 0.642ms
+	CategorizeAssets: 13.843ms
+	ImportOutOfDateAssets: 134.506ms (-2.700ms without children)
+		ImportManagerImport: 130.288ms (5.016ms without children)
+			ImportInProcess: 125.235ms
+			UpdateCategorizedAssets: 0.037ms
+		ReloadNativeAssets: 0.024ms
+		UnloadImportedAssets: 0.150ms
+		ReloadImportedAssets: 3.413ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.324ms
+		InitializingProgressBar: 0.007ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.000ms
+		OnDemandSchedulerStart: 2.000ms
+	PostProcessAllAssets: 17.950ms
+	Hotreload: 200.580ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.431ms
+	UnloadStreamsBegin: 0.275ms
+	PersistCurrentRevisions: 0.380ms
+	UnloadStreamsEnd: 0.056ms
+	Untracked: 28.430ms
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+Loaded scene 'Library/Unused/2eeba748ac40763479a2f7478772b8a1'
+	Deserialize:            2.513 ms
+	Integration:            4.378 ms
+	Integration of assets:  0.004 ms
+	Thread Wait Time:       0.042 ms
+	Total Operation Time:   6.936 ms
+Asset Pipeline Refresh (id=9e1ca1f5546354f44835a2d2261e7e73): Total: 0.067 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Game/Art/ThirdParty/风隼.png using Guid(13a398a6d4868f746be18d04e60412be) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: '3f4b3e40c1c3044c0312e517bda00ad5') in 0.133738 seconds
+Refreshing native plugins compatible for Editor in 321.36 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=d6c2aeb04ec2b0d4da44ce96126328a4): Total: 0.661 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=320 ms
+		Asset DB Callback time: managed=7 ms, native=331 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=7621, non-scripts=2611
+		Asset File Changes: new=1, changed=1, moved=0, deleted=0
+		Scan Filter Count: 5
+	InvokeBeforeRefreshCallbacks: 0.001ms
+	ApplyChangesToAssetFolders: 0.084ms
+	Scan: 128.320ms
+	OnSourceAssetsModified: 0.065ms
+	GetAllGuidsForCategorization: 0.617ms
+	CategorizeAssets: 15.157ms
+	ImportOutOfDateAssets: 147.230ms (-3.985ms without children)
+		ImportManagerImport: 142.575ms (6.600ms without children)
+			ImportInProcess: 135.937ms
+			UpdateCategorizedAssets: 0.038ms
+		ReloadNativeAssets: 0.026ms
+		UnloadImportedAssets: 0.164ms
+		ReloadImportedAssets: 4.863ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.359ms
+		InitializingProgressBar: 0.008ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
+		OnDemandSchedulerStart: 2.219ms
+	PostProcessAllAssets: 17.540ms
+	Hotreload: 322.052ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.408ms
+	UnloadStreamsBegin: 0.133ms
+	PersistCurrentRevisions: 0.377ms
+	UnloadStreamsEnd: 0.063ms
+	Untracked: 28.641ms
+Start importing Assets/_Game/Art/ThirdParty/风隼动作.png using Guid(c0108c1787e6c3246820b56010c420f3) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: '18b99784aa10a429657162df218c9865') in 0.177790 seconds
+Refreshing native plugins compatible for Editor in 238.91 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=e4b608a8ca5f280448c0444c50ab4d5c): Total: 0.741 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=1 ms, native=472 ms
+		Asset DB Callback time: managed=11 ms, native=255 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=7621, non-scripts=2611
+		Asset File Changes: new=1, changed=1, moved=0, deleted=0
+		Scan Filter Count: 5
+	InvokeBeforeRefreshCallbacks: 0.001ms
+	ApplyChangesToAssetFolders: 0.156ms
+	Scan: 207.365ms
+	OnSourceAssetsModified: 0.062ms
+	GetAllGuidsForCategorization: 0.818ms
+	CategorizeAssets: 16.234ms
+	ImportOutOfDateAssets: 198.878ms (-5.988ms without children)
+		ImportManagerImport: 192.937ms (9.221ms without children)
+			ImportInProcess: 183.669ms
+			UpdateCategorizedAssets: 0.047ms
+		ReloadNativeAssets: 0.024ms
+		UnloadImportedAssets: 0.207ms
+		ReloadImportedAssets: 7.062ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.409ms
+		InitializingProgressBar: 0.009ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
+		OnDemandSchedulerStart: 3.219ms
+	PostProcessAllAssets: 26.758ms
+	Hotreload: 239.636ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.841ms
+	UnloadStreamsBegin: 1.621ms
+	PersistCurrentRevisions: 0.750ms
+	UnloadStreamsEnd: 0.133ms
+	Untracked: 48.004ms
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+Loaded scene 'Library/Unused/3ab3e4a408e62d341b062b2c43b03150'
+	Deserialize:            2.318 ms
+	Integration:            4.599 ms
+	Integration of assets:  0.003 ms
+	Thread Wait Time:       0.166 ms
+	Total Operation Time:   7.086 ms
+Asset Pipeline Refresh (id=d4ec1bcb30245ac47bb73246a3b79c8c): Total: 0.113 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Game/Art/ThirdParty/怨灵.png using Guid(2fcc5a2294ca67340844fdbc263cd633) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: '681ce8c41f744a794b4e24919e87343e') in 0.144489 seconds
+Refreshing native plugins compatible for Editor in 321.81 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=1f884131c316aa145bf8da0c7d3c7d04): Total: 0.743 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=389 ms
+		Asset DB Callback time: managed=13 ms, native=339 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=7621, non-scripts=2611
+		Asset File Changes: new=1, changed=1, moved=0, deleted=0
+		Scan Filter Count: 5
+	InvokeBeforeRefreshCallbacks: 0.001ms
+	ApplyChangesToAssetFolders: 0.122ms
+	Scan: 166.826ms
+	OnSourceAssetsModified: 0.070ms
+	GetAllGuidsForCategorization: 0.690ms
+	CategorizeAssets: 15.979ms
+	ImportOutOfDateAssets: 162.886ms (-5.726ms without children)
+		ImportManagerImport: 156.768ms (9.413ms without children)
+			ImportInProcess: 147.307ms
+			UpdateCategorizedAssets: 0.048ms
+		ReloadNativeAssets: 0.034ms
+		UnloadImportedAssets: 0.257ms
+		ReloadImportedAssets: 6.665ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 2.277ms
+		InitializingProgressBar: 0.010ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
+		OnDemandSchedulerStart: 2.602ms
+	PostProcessAllAssets: 29.617ms
+	Hotreload: 322.952ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.586ms
+	UnloadStreamsBegin: 0.966ms
+	PersistCurrentRevisions: 0.664ms
+	UnloadStreamsEnd: 0.149ms
+	Untracked: 41.746ms
+Start importing Assets/_Game/Art/ThirdParty/怨灵动作.png using Guid(fbcf8591be473a94d8e5138f9c9e2706) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: '70ed9447823730aba47e288ebe637750') in 0.198439 seconds
+Refreshing native plugins compatible for Editor in 597.85 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=32c64694764b97d4b89fa67d09872dbd): Total: 1.202 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=3 ms, native=551 ms
+		Asset DB Callback time: managed=2 ms, native=644 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=7621, non-scripts=2611
+		Asset File Changes: new=1, changed=1, moved=0, deleted=0
+		Scan Filter Count: 5
+	InvokeBeforeRefreshCallbacks: 0.001ms
+	ApplyChangesToAssetFolders: 0.106ms
+	Scan: 250.607ms
+	OnSourceAssetsModified: 0.072ms
+	GetAllGuidsForCategorization: 0.694ms
+	CategorizeAssets: 14.636ms
+	ImportOutOfDateAssets: 230.614ms (-16.657ms without children)
+		ImportManagerImport: 222.906ms (20.732ms without children)
+			ImportInProcess: 202.105ms
+			UpdateCategorizedAssets: 0.069ms
+		ReloadNativeAssets: 0.026ms
+		UnloadImportedAssets: 1.033ms
+		ReloadImportedAssets: 17.660ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.406ms
+		InitializingProgressBar: 0.009ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
+		OnDemandSchedulerStart: 4.230ms
+	PostProcessAllAssets: 27.362ms
+	Hotreload: 619.359ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.547ms
+	UnloadStreamsBegin: 2.212ms
+	PersistCurrentRevisions: 0.506ms
+	UnloadStreamsEnd: 0.083ms
+	Untracked: 55.245ms
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+Loaded scene 'Library/Unused/3718f0a612653144c963e4c54c7c8dbf'
+	Deserialize:            4.143 ms
+	Integration:            0.432 ms
+	Integration of assets:  0.002 ms
+	Thread Wait Time:       0.040 ms
+	Total Operation Time:   4.617 ms
+Asset Pipeline Refresh (id=9ca2016b3f882aa439dfb6da227e7bba): Total: 0.122 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Game/Art/ThirdParty/蚀魂王.png using Guid(2232c5f081a271b468002b237b55f394) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: '534a879de290f7d57efbd0fb4e633a75') in 0.194662 seconds
+Refreshing native plugins compatible for Editor in 264.27 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=f0e13b6816435084d902efa3a392fb12): Total: 0.790 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=1 ms, native=493 ms
+		Asset DB Callback time: managed=12 ms, native=282 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=7621, non-scripts=2611
+		Asset File Changes: new=1, changed=1, moved=0, deleted=0
+		Scan Filter Count: 5
+	InvokeBeforeRefreshCallbacks: 0.001ms
+	ApplyChangesToAssetFolders: 0.118ms
+	Scan: 206.326ms
+	OnSourceAssetsModified: 0.102ms
+	GetAllGuidsForCategorization: 0.984ms
+	CategorizeAssets: 24.637ms
+	ImportOutOfDateAssets: 214.052ms (-4.121ms without children)
+		ImportManagerImport: 205.959ms (7.959ms without children)
+			ImportInProcess: 197.938ms
+			UpdateCategorizedAssets: 0.063ms
+		ReloadNativeAssets: 0.037ms
+		UnloadImportedAssets: 0.265ms
+		ReloadImportedAssets: 5.553ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.958ms
+		InitializingProgressBar: 0.011ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
+		OnDemandSchedulerStart: 4.388ms
+	PostProcessAllAssets: 29.345ms
+	Hotreload: 265.502ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.586ms
+	UnloadStreamsBegin: 0.677ms
+	PersistCurrentRevisions: 0.485ms
+	UnloadStreamsEnd: 0.080ms
+	Untracked: 46.648ms
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+Loaded scene 'Library/Unused/b23d31c88771cd44e88b38284eccfe68'
+	Deserialize:            2.503 ms
+	Integration:            7.655 ms
+	Integration of assets:  0.002 ms
+	Thread Wait Time:       0.035 ms
+	Total Operation Time:   10.194 ms
+Asset Pipeline Refresh (id=ced559b788ec5f14b887e6d62e248638): Total: 0.170 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Game/Art/ThirdParty/防御塔.png using Guid(3519304ea6fb9d74b958f0c5e961ba65) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: '352f29fbdf1e015b335994901502bfc5') in 0.275409 seconds
+Refreshing native plugins compatible for Editor in 370.68 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=77b1d7b85e7ff424083f8dcdf14c047e): Total: 1.191 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=776 ms
+		Asset DB Callback time: managed=22 ms, native=390 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=7621, non-scripts=2611
+		Asset File Changes: new=1, changed=1, moved=0, deleted=0
+		Scan Filter Count: 5
+	InvokeBeforeRefreshCallbacks: 0.001ms
+	ApplyChangesToAssetFolders: 0.161ms
+	Scan: 364.575ms
+	OnSourceAssetsModified: 0.077ms
+	GetAllGuidsForCategorization: 1.824ms
+	CategorizeAssets: 18.723ms
+	ImportOutOfDateAssets: 317.497ms (-15.786ms without children)
+		ImportManagerImport: 309.250ms (20.449ms without children)
+			ImportInProcess: 288.723ms
+			UpdateCategorizedAssets: 0.078ms
+		ReloadNativeAssets: 0.034ms
+		UnloadImportedAssets: 0.210ms
+		ReloadImportedAssets: 17.067ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.815ms
+		InitializingProgressBar: 0.009ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
+		OnDemandSchedulerStart: 4.896ms
+	PostProcessAllAssets: 40.948ms
+	Hotreload: 372.105ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.831ms
+	UnloadStreamsBegin: 2.354ms
+	PersistCurrentRevisions: 0.514ms
+	UnloadStreamsEnd: 0.109ms
+	Untracked: 70.800ms
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+Loaded scene 'Library/Unused/a9b3b40bf6037594ba04b0cbb679a734'
+	Deserialize:            2.538 ms
+	Integration:            0.137 ms
+	Integration of assets:  0.002 ms
+	Thread Wait Time:       0.027 ms
+	Total Operation Time:   2.704 ms
+Asset Pipeline Refresh (id=1c21b7fd36e1be14c87cf315aaeaed09): Total: 0.118 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Game/Art/ThirdParty/子弹.png using Guid(cd57fb5832f6d2740bcb604ad9005fed) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: '203ad266f1e8664efd563b4962b3e8ab') in 0.116819 seconds
+Refreshing native plugins compatible for Editor in 241.34 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=0c9f29e406bbd974581d3317cd0cc379): Total: 0.632 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=358 ms
+		Asset DB Callback time: managed=11 ms, native=260 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=7621, non-scripts=2611
+		Asset File Changes: new=1, changed=1, moved=0, deleted=0
+		Scan Filter Count: 5
+	InvokeBeforeRefreshCallbacks: 0.001ms
+	ApplyChangesToAssetFolders: 0.177ms
+	Scan: 153.625ms
+	OnSourceAssetsModified: 0.096ms
+	GetAllGuidsForCategorization: 1.411ms
+	CategorizeAssets: 23.464ms
+	ImportOutOfDateAssets: 133.876ms (-4.399ms without children)
+		ImportManagerImport: 127.478ms (7.901ms without children)
+			ImportInProcess: 119.531ms
+			UpdateCategorizedAssets: 0.047ms
+		ReloadNativeAssets: 0.032ms
+		UnloadImportedAssets: 0.297ms
+		ReloadImportedAssets: 5.482ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 2.013ms
+		InitializingProgressBar: 0.012ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
+		OnDemandSchedulerStart: 2.961ms
+	PostProcessAllAssets: 30.278ms
+	Hotreload: 242.333ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.525ms
+	UnloadStreamsBegin: 0.804ms
+	PersistCurrentRevisions: 0.518ms
+	UnloadStreamsEnd: 0.121ms
+	Untracked: 45.207ms
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+Loaded scene 'Library/Unused/f2de8bda1625a274ebc0951e6862ef10'
+	Deserialize:            10.600 ms
+	Integration:            8.678 ms
+	Integration of assets:  0.007 ms
+	Thread Wait Time:       0.030 ms
+	Total Operation Time:   19.314 ms
+Start importing Assets/_Game/Prefabs/Projectiles/PRJ_Basic.prefab using Guid(9895a6645498d5342aec5197da831652) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: '2aa0cdc3664163a8f258b8529b959193') in 0.088834 seconds
+Refreshing native plugins compatible for Editor in 180.10 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=743304b2ac3f6aa45bfe58922d9ac9a1): Total: 0.450 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=256 ms
+		Asset DB Callback time: managed=0 ms, native=192 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=7621, non-scripts=2611
+		Asset File Changes: new=0, changed=1, moved=0, deleted=0
+		Scan Filter Count: 5
+	InvokeBeforeRefreshCallbacks: 0.001ms
+	ApplyChangesToAssetFolders: 0.154ms
+	Scan: 80.717ms
+	OnSourceAssetsModified: 0.062ms
+	GetAllGuidsForCategorization: 0.348ms
+	CategorizeAssets: 13.562ms
+	ImportOutOfDateAssets: 146.949ms (-4.602ms without children)
+		ImportManagerImport: 140.335ms (48.992ms without children)
+			ImportInProcess: 91.299ms
+			UpdateCategorizedAssets: 0.044ms
+		ReloadNativeAssets: 0.033ms
+		UnloadImportedAssets: 0.989ms
+		ReloadImportedAssets: 5.668ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.889ms
+		InitializingProgressBar: 0.010ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.002ms
+		OnDemandSchedulerStart: 2.625ms
+	PostProcessAllAssets: 12.726ms
+	Hotreload: 180.496ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.941ms
+	UnloadStreamsBegin: 0.321ms
+	PersistCurrentRevisions: 0.763ms
+	UnloadStreamsEnd: 0.083ms
+	Untracked: 13.359ms
+Start importing Assets/_Game/Art/ThirdParty/子弹.png using Guid(cd57fb5832f6d2740bcb604ad9005fed) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: '203ad266f1e8664efd563b4962b3e8ab') in 0.094720 seconds
+Refreshing native plugins compatible for Editor in 281.36 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=b33836fa19b89b740871c2138a3142f9): Total: 0.564 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=259 ms
+		Asset DB Callback time: managed=1 ms, native=302 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=7621, non-scripts=2611
+		Asset File Changes: new=1, changed=1, moved=0, deleted=0
+		Scan Filter Count: 5
+	InvokeBeforeRefreshCallbacks: 0.001ms
+	ApplyChangesToAssetFolders: 0.080ms
+	Scan: 99.288ms
+	OnSourceAssetsModified: 0.068ms
+	GetAllGuidsForCategorization: 0.726ms
+	CategorizeAssets: 16.647ms
+	ImportOutOfDateAssets: 112.316ms (-6.924ms without children)
+		ImportManagerImport: 105.768ms (9.398ms without children)
+			ImportInProcess: 96.315ms
+			UpdateCategorizedAssets: 0.055ms
+		ReloadNativeAssets: 0.029ms
+		UnloadImportedAssets: 0.920ms
+		ReloadImportedAssets: 7.844ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.625ms
+		InitializingProgressBar: 0.008ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
+		OnDemandSchedulerStart: 3.044ms
+	PostProcessAllAssets: 12.866ms
+	Hotreload: 290.725ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.434ms
+	UnloadStreamsBegin: 0.075ms
+	PersistCurrentRevisions: 0.427ms
+	UnloadStreamsEnd: 0.069ms
+	Untracked: 30.400ms
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+Loaded scene 'Library/Unused/d745d45c0a32a4f46b1617f690dcbd8a'
+	Deserialize:            11.233 ms
+	Integration:            7.815 ms
+	Integration of assets:  0.004 ms
+	Thread Wait Time:       0.080 ms
+	Total Operation Time:   19.133 ms
+Start importing Assets/_Game/Prefabs/Projectiles/PRJ_Enemy.prefab using Guid(f9c9daf279436d842acc9c99ac278df3) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: '8f44d31b81d0035f6e23d2bbf4d108c3') in 0.086982 seconds
+Refreshing native plugins compatible for Editor in 196.52 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=a97c82e70cec9f340a3bc297008a6eb6): Total: 0.561 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=349 ms
+		Asset DB Callback time: managed=0 ms, native=210 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=7621, non-scripts=2611
+		Asset File Changes: new=0, changed=1, moved=0, deleted=0
+		Scan Filter Count: 5
+	InvokeBeforeRefreshCallbacks: 0.001ms
+	ApplyChangesToAssetFolders: 0.105ms
+	Scan: 150.902ms
+	OnSourceAssetsModified: 0.217ms
+	GetAllGuidsForCategorization: 0.848ms
+	CategorizeAssets: 13.775ms
+	ImportOutOfDateAssets: 165.556ms (-5.693ms without children)
+		ImportManagerImport: 159.964ms (70.564ms without children)
+			ImportInProcess: 89.347ms
+			UpdateCategorizedAssets: 0.052ms
+		ReloadNativeAssets: 0.033ms
+		UnloadImportedAssets: 0.518ms
+		ReloadImportedAssets: 6.486ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.528ms
+		InitializingProgressBar: 0.008ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.004ms
+		OnDemandSchedulerStart: 2.709ms
+	PostProcessAllAssets: 14.390ms
+	Hotreload: 196.983ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.550ms
+	UnloadStreamsBegin: 0.190ms
+	PersistCurrentRevisions: 0.855ms
+	UnloadStreamsEnd: 0.079ms
+	Untracked: 16.763ms
+Start importing Assets/_Game/Data/Prototype/P1/PrototypeCatalog.asset using Guid(7da81c6e75af0cd45a5086d4d0aee3d3) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: 'e6a6408f8465d70fe3b3a379e6fc7cd7') in 0.031982 seconds
+Refreshing native plugins compatible for Editor in 224.84 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=a89c2c6afe61e27458589bac1d415d50): Total: 0.364 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=121 ms
+		Asset DB Callback time: managed=1 ms, native=241 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=7621, non-scripts=2611
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 6
+	InvokeBeforeRefreshCallbacks: 0.001ms
+	ApplyChangesToAssetFolders: 0.130ms
+	Scan: 56.673ms
+	OnSourceAssetsModified: 0.001ms
+	GetAllGuidsForCategorization: 0.373ms
+	CategorizeAssets: 3.602ms
+	ImportOutOfDateAssets: 42.144ms (0.849ms without children)
+		ImportManagerImport: 35.912ms (0.950ms without children)
+			ImportInProcess: 34.905ms
+			UpdateCategorizedAssets: 0.057ms
+		ReloadNativeAssets: 0.205ms
+		UnloadImportedAssets: 0.158ms
+		ReloadImportedAssets: 0.000ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.753ms
+		InitializingProgressBar: 0.009ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
+		OnDemandSchedulerStart: 3.256ms
+	PostProcessAllAssets: 17.235ms
+	Hotreload: 225.388ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.657ms
+	UnloadStreamsBegin: 2.590ms
+	PersistCurrentRevisions: 0.590ms
+	UnloadStreamsEnd: 0.093ms
+	Untracked: 14.679ms
+ThirdParty 命名素材接入完成；更新原图 0 张，保留现有资产 GUID。
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Spotlight.Editor.ThirdPartyArtSetup:Apply () (at Assets/_Game/Scripts/Editor/ThirdPartyArtSetup.cs:37)
+
+(Filename: Assets/_Game/Scripts/Editor/ThirdPartyArtSetup.cs Line: 37)
+
+Batchmode quit successfully invoked - shutting down!
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[Licensing::IpcConnector] License Notification channel disconnected successfully.
+[Licensing::IpcConnector] License Client channel disconnected successfully.
+Cleanup mono
+22:37:47.236 |V| RiderPlugin                    | :1                             | AppDomain.CurrentDomain.DomainUnload lifetimeDefinition.Terminate
+[Performance] WinEditorMain                                                                                                  :        1 samples, Peak.  7.62 s (1.0x), Avg.  7.62 s, Total. 7.619 s (12.1%)
+[Performance] WinEditorMain.ConfigureCrashHandler                                                                            :        1 samples, Peak.  28.2 us (1.0x), Avg.  28.2 us, Total. 28.20 us (0.0%)
+[Performance] WinEditorMain.CurlRequestInitialize                                                                            :        1 samples, Peak.  4.41 ms (1.0x), Avg.  4.41 ms, Total. 4.409 ms (0.0%)
+[Performance] WinEditorMain.SetupLogFile                                                                                     :        1 samples, Peak.  3.42 ms (1.0x), Avg.  3.42 ms, Total. 3.424 ms (0.0%)
+[Performance] WinEditorMain.RunNativeTestsIfRequiredAndExit                                                                  :        1 samples, Peak.   300 ns (1.0x), Avg.   300 ns, Total. 300.0 ns (0.0%)
+[Performance] WinEditorMain.Licensing                                                                                        :        1 samples, Peak.  7.58 s (1.0x), Avg.  7.58 s, Total. 7.583 s (12.0%)
+[Performance] WinEditorMain.InitializeCrashHandler                                                                           :        1 samples, Peak.  23.1 ms (1.0x), Avg.  23.1 ms, Total. 23.14 ms (0.0%)
+[Performance] WinEditorMain.CreateApplication                                                                                :        1 samples, Peak.   275 us (1.0x), Avg.   275 us, Total. 275.0 us (0.0%)
+[Performance] Application.InitializeProject                                                                                  :        1 samples, Peak.  29.7 s (1.0x), Avg.  29.7 s, Total. 29.73 s (47.0%)
+[Performance] Application.PackageManager.StartServer                                                                         :        1 samples, Peak.   137 ms (1.0x), Avg.   137 ms, Total. 137.4 ms (0.2%)
+[Performance] Application.AcquireProjectLock                                                                                 :        1 samples, Peak.  70.1 ms (1.0x), Avg.  70.1 ms, Total. 70.09 ms (0.1%)
+[Performance] Application.InitializeEngineNoGraphics                                                                         :        1 samples, Peak.  98.7 ms (1.0x), Avg.  98.7 ms, Total. 98.69 ms (0.2%)
+[Performance] Application.PackageManager.Initialize                                                                          :        1 samples, Peak.   330 ms (1.0x), Avg.   330 ms, Total. 330.2 ms (0.5%)
+[Performance] Connecting to Package Manager                                                                                  :       34 samples, Peak.  70.9 us (22.1x), Avg.  3.21 us, Total. 109.2 us (0.0%)
+[Performance] Application.EngineGraphics.Initialize                                                                          :        1 samples, Peak.   523 ms (1.0x), Avg.   523 ms, Total. 522.9 ms (0.8%)
+[Performance] Application.GI.Initialize                                                                                      :        1 samples, Peak.  6.07 ms (1.0x), Avg.  6.07 ms, Total. 6.071 ms (0.0%)
+[Performance] Application.LoadAllDefaultResourcesFromEditor                                                                  :        1 samples, Peak.  1.69 ms (1.0x), Avg.  1.69 ms, Total. 1.690 ms (0.0%)
+[Performance] Application.LoadMonoAssemblies                                                                                 :        1 samples, Peak.   821 ms (1.0x), Avg.   821 ms, Total. 821.5 ms (1.3%)
+[Performance] RestoreManagedReferences                                                                                       :        2 samples, Peak.   146 ms (2.0x), Avg.  72.8 ms, Total. 145.6 ms (0.2%)
+[Performance] InitializeOnLoad MixerEffectDefinitionReloader                                                                 :        2 samples, Peak.  2.91 ms (1.1x), Avg.  2.65 ms, Total. 5.300 ms (0.0%)
+[Performance] InitializeOnLoad SettingsService                                                                               :        2 samples, Peak.  13.4 us (1.3x), Avg.  10.7 us, Total. 21.40 us (0.0%)
+[Performance] InitializeOnLoad SceneSearch                                                                                   :        2 samples, Peak.   335 us (1.2x), Avg.   286 us, Total. 571.3 us (0.0%)
+[Performance] InitializeOnLoad ObjectSelectorSearch                                                                          :        2 samples, Peak.   365 us (1.3x), Avg.   279 us, Total. 558.7 us (0.0%)
+[Performance] InitializeOnLoad EditMode                                                                                      :        2 samples, Peak.   336 us (1.1x), Avg.   310 us, Total. 619.5 us (0.0%)
+[Performance] InitializeOnLoad ProjectSearch                                                                                 :        2 samples, Peak.  88.0 us (1.5x), Avg.  60.6 us, Total. 121.1 us (0.0%)
+[Performance] InitializeOnLoad WindowLayout                                                                                  :        2 samples, Peak.   503 us (1.1x), Avg.   453 us, Total. 906.7 us (0.0%)
+[Performance] InitializeOnLoad DrivenRectTransformUndo                                                                       :        2 samples, Peak.   196 us (1.1x), Avg.   184 us, Total. 368.1 us (0.0%)
+[Performance] InitializeOnLoad CacheServerWindow                                                                             :        2 samples, Peak.  14.3 us (1.4x), Avg.  10.5 us, Total. 20.90 us (0.0%)
+[Performance] InitializeOnLoad NativeFormatImporterUtility                                                                   :        2 samples, Peak.  1.96 ms (1.1x), Avg.  1.79 ms, Total. 3.585 ms (0.0%)
+[Performance] InitializeOnLoad CloudBuild                                                                                    :        2 samples, Peak.  6.80 us (1.2x), Avg.  5.85 us, Total. 11.70 us (0.0%)
+[Performance] InitializeOnLoad ManagedDebuggerWindow                                                                         :        2 samples, Peak.   548 us (1.5x), Avg.   375 us, Total. 749.4 us (0.0%)
+[Performance] InitializeOnLoad PrefabInstanceChangedListener                                                                 :        2 samples, Peak.   110 us (1.1x), Avg.   104 us, Total. 207.4 us (0.0%)
+[Performance] InitializeOnLoad AddComponentWindow                                                                            :        2 samples, Peak.  85.1 us (1.1x), Avg.  77.0 us, Total. 154.1 us (0.0%)
+[Performance] InitializeOnLoad ManagedDebugger                                                                               :        2 samples, Peak.   300 ns (1.0x), Avg.   300 ns, Total. 600.0 ns (0.0%)
+[Performance] InitializeOnLoad MenuItems                                                                                     :        2 samples, Peak.  59.3 us (1.0x), Avg.  58.7 us, Total. 117.3 us (0.0%)
+[Performance] InitializeOnLoad UISystemProfilerRenderService                                                                 :        2 samples, Peak.  6.00 us (1.2x), Avg.  4.90 us, Total. 9.800 us (0.0%)
+[Performance] InitializeOnLoad AssetStoreContext                                                                             :        2 samples, Peak.  25.2 ms (1.1x), Avg.  22.1 ms, Total. 44.19 ms (0.1%)
+[Performance] InitializeOnLoad ShortcutIntegration                                                                           :        2 samples, Peak.  64.2 us (1.1x), Avg.  56.4 us, Total. 112.8 us (0.0%)
+[Performance] InitializeOnLoad PlayModeDownload                                                                              :        2 samples, Peak.  5.69 ms (1.9x), Avg.  2.95 ms, Total. 5.903 ms (0.0%)
+[Performance] InitializeOnLoad UnityConnect                                                                                  :        2 samples, Peak.   213 us (1.7x), Avg.   127 us, Total. 253.4 us (0.0%)
+[Performance] InitializeOnLoad SearchService                                                                                 :        2 samples, Peak.   322 us (1.4x), Avg.   232 us, Total. 464.5 us (0.0%)
+[Performance] InitializeOnLoad EditorMonitor                                                                                 :        2 samples, Peak.   925 us (1.3x), Avg.   735 us, Total. 1.471 ms (0.0%)
+[Performance] InitializeOnLoad RetainedMode                                                                                  :        2 samples, Peak.  2.47 ms (1.0x), Avg.  2.42 ms, Total. 4.832 ms (0.0%)
+[Performance] InitializeOnLoad EditorShaderLoader                                                                            :        2 samples, Peak.   665 us (1.1x), Avg.   600 us, Total. 1.200 ms (0.0%)
+[Performance] InitializeOnLoad EditorDelegateRegistration                                                                    :        2 samples, Peak.   708 us (1.3x), Avg.   566 us, Total. 1.133 ms (0.0%)
+[Performance] InitializeOnLoad UIDocumentHierarchyWatcher                                                                    :        2 samples, Peak.  76.6 us (1.0x), Avg.  74.3 us, Total. 148.6 us (0.0%)
+[Performance] InitializeOnLoad LiveReloadTrackerCreator                                                                      :        2 samples, Peak.   191 us (1.2x), Avg.   159 us, Total. 318.7 us (0.0%)
+[Performance] InitializeOnLoad UxmlObjectEditorFactories                                                                     :        2 samples, Peak.   670 us (1.2x), Avg.   558 us, Total. 1.116 ms (0.0%)
+[Performance] InitializeOnLoad UXMLEditorFactories                                                                           :        2 samples, Peak.  62.5 ms (1.2x), Avg.  53.1 ms, Total. 106.2 ms (0.2%)
+[Performance] InitializeOnLoad CloudBuildPoller                                                                              :        2 samples, Peak.   275 us (1.0x), Avg.   272 us, Total. 543.9 us (0.0%)
+[Performance] InitializeOnLoad AdsService                                                                                    :        2 samples, Peak.  1.46 ms (1.2x), Avg.  1.26 ms, Total. 2.522 ms (0.0%)
+[Performance] InitializeOnLoad EditorGameServicesAnalytics                                                                   :        2 samples, Peak.  1.99 ms (1.7x), Avg.  1.17 ms, Total. 2.335 ms (0.0%)
+[Performance] InitializeOnLoad UDPService                                                                                    :        2 samples, Peak.   156 us (1.1x), Avg.   138 us, Total. 276.0 us (0.0%)
+[Performance] InitializeOnLoad BuildService                                                                                  :        2 samples, Peak.   141 us (1.2x), Avg.   116 us, Total. 233.0 us (0.0%)
+[Performance] InitializeOnLoad ServicesRepository                                                                            :        2 samples, Peak.   300 ns (1.0x), Avg.   300 ns, Total. 600.0 ns (0.0%)
+[Performance] InitializeOnLoad PurchasingService                                                                             :        2 samples, Peak.  5.32 ms (1.2x), Avg.  4.58 ms, Total. 9.158 ms (0.0%)
+[Performance] InitializeOnLoad AnalyticsService                                                                              :        2 samples, Peak.   160 us (1.2x), Avg.   133 us, Total. 266.6 us (0.0%)
+[Performance] InitializeOnLoad CrashService                                                                                  :        2 samples, Peak.   124 us (1.2x), Avg.   103 us, Total. 205.1 us (0.0%)
+[Performance] InitializeOnLoad SearchWindow                                                                                  :        2 samples, Peak.   147 us (1.3x), Avg.   110 us, Total. 219.8 us (0.0%)
+[Performance] InitializeOnLoad CustomIndexers                                                                                :        2 samples, Peak.  18.5 ms (1.1x), Avg.  17.0 ms, Total. 33.92 ms (0.1%)
+[Performance] InitializeOnLoad SearchMonitor                                                                                 :        2 samples, Peak.  1.05 ms (1.1x), Avg.   935 us, Total. 1.871 ms (0.0%)
+[Performance] InitializeOnLoad ParameterControllerEditor                                                                     :        2 samples, Peak.  18.1 us (1.2x), Avg.  15.0 us, Total. 30.10 us (0.0%)
+[Performance] InitializeOnLoad LayerSettingsWindow                                                                           :        2 samples, Peak.  26.2 us (1.7x), Avg.  15.1 us, Total. 30.20 us (0.0%)
+[Performance] InitializeOnLoad PackageManagerHookGUIDConverter.RegisterPackagesEventHandler                                  :        2 samples, Peak.   742 us (1.7x), Avg.   435 us, Total. 870.4 us (0.0%)
+[Performance] InitializeOnLoad EditorDragAndDrop.RegisterEditorClient                                                        :        2 samples, Peak.   242 us (1.1x), Avg.   214 us, Total. 427.0 us (0.0%)
+[Performance] InitializeOnLoad EditorEventCallbacks.InitializeFontAssetResourceChangeCallBacks                               :        2 samples, Peak.  1.06 ms (1.0x), Avg.  1.04 ms, Total. 2.070 ms (0.0%)
+[Performance] InitializeOnLoad SceneTemplateService.Init                                                                     :        2 samples, Peak.  1.01 ms (1.1x), Avg.   900 us, Total. 1.800 ms (0.0%)
+[Performance] InitializeOnLoad DiagnosticSwitchesConsoleMessage.Init                                                         :        2 samples, Peak.  9.53 ms (1.9x), Avg.  5.14 ms, Total. 10.27 ms (0.0%)
+[Performance] InitializeOnLoad SysrootManager.Initialize                                                                     :        2 samples, Peak.   555 us (1.0x), Avg.   532 us, Total. 1.065 ms (0.0%)
+[Performance] InitializeOnLoad RectSelection.RegisterShortcutContext                                                         :        2 samples, Peak.   238 us (1.1x), Avg.   226 us, Total. 451.2 us (0.0%)
+[Performance] InitializeOnLoad PackageManagerWindow.EditorInitializedInSafeMode                                              :        2 samples, Peak.  22.6 ms (2.0x), Avg.  11.3 ms, Total. 22.69 ms (0.0%)
+[Performance] InitializeOnLoad EditorWindow.Initialize                                                                       :        2 samples, Peak.   192 us (1.1x), Avg.   175 us, Total. 349.3 us (0.0%)
+[Performance] InitializeOnLoad AssetPostprocessingInternal.RefreshCustomDependencies                                         :        2 samples, Peak.  2.58 ms (1.2x), Avg.  2.22 ms, Total. 4.447 ms (0.0%)
+[Performance] InitializeOnLoad SceneViewMotion.RegisterShortcutContexts                                                      :        2 samples, Peak.   170 us (1.3x), Avg.   134 us, Total. 268.3 us (0.0%)
+[Performance] InitializeOnLoad ScopedRegistryAddedPopup.SubscribeToRegistriesAdded                                           :        2 samples, Peak.  7.04 ms (2.0x), Avg.  3.56 ms, Total. 7.114 ms (0.0%)
+[Performance] InitializeOnLoad ToolShortcutContext.Init                                                                      :        2 samples, Peak.   158 us (1.3x), Avg.   119 us, Total. 237.9 us (0.0%)
+[Performance] InitializeOnLoad MemoryProfilerCompilationGuard.InjectCompileGuard                                             :        2 samples, Peak.   108 us (1.3x), Avg.  84.5 us, Total. 169.1 us (0.0%)
+[Performance] InitializeOnLoad SceneVisibilityManager.Initialize                                                             :        2 samples, Peak.  3.92 ms (1.7x), Avg.  2.35 ms, Total. 4.704 ms (0.0%)
+[Performance] AssemblyReloadEvents.afterAssemblyReload: UnityEditor.SceneTemplate.SceneTemplateService.AfterAssemblyReload   :        2 samples, Peak.  3.45 ms (1.8x), Avg.  1.87 ms, Total. 3.742 ms (0.0%)
+[Performance] ProcessService.EditorAfterLoadAllAssemblies                                                                    :        2 samples, Peak.   352 us (1.2x), Avg.   297 us, Total. 593.5 us (0.0%)
+[Performance] Application.ReadLicenseInfo                                                                                    :        1 samples, Peak.  21.6 ms (1.0x), Avg.  21.6 ms, Total. 21.64 ms (0.0%)
+[Performance] Application.InitialRefresh                                                                                     :        1 samples, Peak.  24.4 s (1.0x), Avg.  24.4 s, Total. 24.42 s (38.6%)
+[Performance] ShaderImporter.SourceAssetModified                                                                             :       26 samples, Peak.  2.00 us (2.1x), Avg.   973 ns, Total. 25.30 us (0.0%)
+[Performance] ShaderIncludeImporter.SourceAssetModified                                                                      :       26 samples, Peak.  1.70 us (1.5x), Avg.  1.15 us, Total. 29.90 us (0.0%)
+[Performance] Compiling Scripts                                                                                              :        1 samples, Peak.  5.80 s (1.0x), Avg.  5.80 s, Total. 5.798 s (9.2%)
+[Performance] AssemblyReloadEvents.beforeAssemblyReload: UnityEditor.SceneTemplate.SceneTemplateService.BeforeAssemblyReload :        1 samples, Peak.   401 us (1.0x), Avg.   401 us, Total. 400.7 us (0.0%)
+[Performance] PSDImporterAssetPostProcessor.OnPreprocessAsset                                                                :       43 samples, Peak.   876 us (25.5x), Avg.  34.4 us, Total. 1.479 ms (0.0%)
+[Performance] PresetManagerPostProcessor.OnPreprocessAsset                                                                   :       43 samples, Peak.   149 us (14.5x), Avg.  10.2 us, Total. 439.6 us (0.0%)
+[Performance] CancelSplashScreenOnAssetChange.OnPreprocessAsset                                                              :       43 samples, Peak.  84.8 us (17.2x), Avg.  4.93 us, Total. 212.0 us (0.0%)
+[Performance] ShaderGraphAssetPostProcessor.OnPreprocessAsset                                                                :       43 samples, Peak.   116 us (17.9x), Avg.  6.47 us, Total. 278.4 us (0.0%)
+[Performance] SpritePostProcess.OnPreprocessAsset                                                                            :       43 samples, Peak.  1.41 ms (13.5x), Avg.   105 us, Total. 4.503 ms (0.0%)
+[Performance] InitializeOnLoad BurstLoader                                                                                   :        1 samples, Peak.  3.23 s (1.0x), Avg.  3.23 s, Total. 3.229 s (5.1%)
+[Performance] InitializeOnLoad EditorToolManager                                                                             :        2 samples, Peak.  2.18 ms (1.8x), Avg.  1.18 ms, Total. 2.364 ms (0.0%)
+[Performance] InitializeOnLoad BackgroundWatcher                                                                             :        1 samples, Peak.   141 us (1.0x), Avg.   141 us, Total. 141.2 us (0.0%)
+[Performance] InitializeOnLoad UnityTestProtocolStarter                                                                      :        1 samples, Peak.   146 us (1.0x), Avg.   146 us, Total. 146.0 us (0.0%)
+[Performance] InitializeOnLoad TestStarter                                                                                   :        1 samples, Peak.   549 us (1.0x), Avg.   549 us, Total. 548.7 us (0.0%)
+[Performance] InitializeOnLoad RerunCallbackInitializer                                                                      :        1 samples, Peak.  9.86 ms (1.0x), Avg.  9.86 ms, Total. 9.855 ms (0.0%)
+[Performance] InitializeOnLoad R3BStoryWaveTool                                                                              :        1 samples, Peak.   163 us (1.0x), Avg.   163 us, Total. 163.0 us (0.0%)
+[Performance] InitializeOnLoad R3BLootTool                                                                                   :        1 samples, Peak.  65.5 us (1.0x), Avg.  65.5 us, Total. 65.50 us (0.0%)
+[Performance] InitializeOnLoad ProjectSetupTool                                                                              :        1 samples, Peak.  36.5 us (1.0x), Avg.  36.5 us, Total. 36.50 us (0.0%)
+[Performance] InitializeOnLoad WorkspaceValidation                                                                           :        1 samples, Peak.   113 us (1.0x), Avg.   113 us, Total. 112.5 us (0.0%)
+[Performance] InitializeOnLoad R3BEnemyPrefabTool                                                                            :        1 samples, Peak.   115 us (1.0x), Avg.   115 us, Total. 115.5 us (0.0%)
+[Performance] InitializeOnLoad R3BBossSkillTool                                                                              :        1 samples, Peak.  71.9 us (1.0x), Avg.  71.9 us, Total. 71.90 us (0.0%)
+[Performance] InitializeOnLoad ShadowCasterGroup2DManager                                                                    :        1 samples, Peak.  69.8 us (1.0x), Avg.  69.8 us, Total. 69.80 us (0.0%)
+[Performance] InitializeOnLoad ProbeGIBaking                                                                                 :        1 samples, Peak.  1.87 ms (1.0x), Avg.  1.87 ms, Total. 1.874 ms (0.0%)
+[Performance] InitializeOnLoad FilterWindow                                                                                  :        1 samples, Peak.  42.4 us (1.0x), Avg.  42.4 us, Total. 42.40 us (0.0%)
+[Performance] InitializeOnLoad RealtimeProbeSubdivisionDebug                                                                 :        1 samples, Peak.  1.08 ms (1.0x), Avg.  1.08 ms, Total. 1.076 ms (0.0%)
+[Performance] InitializeOnLoad NodeClassCache                                                                                :        1 samples, Peak.  6.80 us (1.0x), Avg.  6.80 us, Total. 6.800 us (0.0%)
+[Performance] InitializeOnLoad ShaderGraphMaterialsUpdater                                                                   :        2 samples, Peak.   320 us (1.7x), Avg.   185 us, Total. 370.0 us (0.0%)
+[Performance] InitializeOnLoad Renderer2DAnalytics                                                                           :        1 samples, Peak.  57.9 us (1.0x), Avg.  57.9 us, Total. 57.90 us (0.0%)
+[Performance] InitializeOnLoad RiderScriptEditor                                                                             :        1 samples, Peak.   218 ms (1.0x), Avg.   218 ms, Total. 217.9 ms (0.3%)
+[Performance] InitializeOnLoad CallbackInitializer                                                                           :        1 samples, Peak.  3.37 ms (1.0x), Avg.  3.37 ms, Total. 3.369 ms (0.0%)
+[Performance] InitializeOnLoad SpriteEditorWindow                                                                            :        1 samples, Peak.   634 us (1.0x), Avg.   634 us, Total. 634.1 us (0.0%)
+[Performance] InitializeOnLoad PackageEntryPoint                                                                             :        1 samples, Peak.   323 ms (1.0x), Avg.   323 ms, Total. 323.0 ms (0.5%)
+[Performance] InitializeOnLoad BackgroundImport                                                                              :        1 samples, Peak.   190 us (1.0x), Avg.   190 us, Total. 189.9 us (0.0%)
+[Performance] InitializeOnLoad VSUsageUtility                                                                                :        1 samples, Peak.  50.1 ms (1.0x), Avg.  50.1 ms, Total. 50.13 ms (0.1%)
+[Performance] InitializeOnLoad VisualStudioEditor                                                                            :        1 samples, Peak.  7.60 ms (1.0x), Avg.  7.60 ms, Total. 7.598 ms (0.0%)
+[Performance] InitializeOnLoad TestRunnerApiListener                                                                         :        1 samples, Peak.   439 us (1.0x), Avg.   439 us, Total. 439.3 us (0.0%)
+[Performance] InitializeOnLoad VisualStudioIntegration                                                                       :        1 samples, Peak.   374 us (1.0x), Avg.   374 us, Total. 373.9 us (0.0%)
+[Performance] InitializeOnLoad PrefabLayoutRebuilder                                                                         :        1 samples, Peak.   176 us (1.0x), Avg.   176 us, Total. 175.8 us (0.0%)
+[Performance] InitializeOnLoad SpriteSkinCompositeStartup                                                                    :        1 samples, Peak.  16.9 ms (1.0x), Avg.  16.9 ms, Total. 16.92 ms (0.0%)
+[Performance] InitializeOnLoad UnityInternalsInjector                                                                        :        1 samples, Peak.   855 us (1.0x), Avg.   855 us, Total. 854.5 us (0.0%)
+[Performance] InitializeOnLoad UVCSToolbarBoostrap                                                                           :        1 samples, Peak.  62.5 ms (1.0x), Avg.  62.5 ms, Total. 62.46 ms (0.1%)
+[Performance] InitializeOnLoad UnityAnalyticsStorage                                                                         :        1 samples, Peak.   368 us (1.0x), Avg.   368 us, Total. 367.7 us (0.0%)
+[Performance] InitializeOnLoad BoneGizmoInitializer                                                                          :        1 samples, Peak.  6.18 ms (1.0x), Avg.  6.18 ms, Total. 6.179 ms (0.0%)
+[Performance] InitializeOnLoad Analytics                                                                                     :        1 samples, Peak.   245 us (1.0x), Avg.   245 us, Total. 244.8 us (0.0%)
+[Performance] InitializeOnLoad SceneDragAndDrop                                                                              :        1 samples, Peak.   175 us (1.0x), Avg.   175 us, Total. 175.4 us (0.0%)
+[Performance] InitializeOnLoad SpriteShapeUpdateCache                                                                        :        1 samples, Peak.   467 us (1.0x), Avg.   467 us, Total. 467.3 us (0.0%)
+[Performance] InitializeOnLoad SpriteShapeUnityAnalyticsStorage                                                              :        1 samples, Peak.  15.3 us (1.0x), Avg.  15.3 us, Total. 15.30 us (0.0%)
+[Performance] InitializeOnLoad IKEditorManager.CreateInstance                                                                :        1 samples, Peak.  3.57 ms (1.0x), Avg.  3.57 ms, Total. 3.574 ms (0.0%)
+[Performance] InitializeOnLoad $BurstDirectCallInitializer.Initialize                                                        :        7 samples, Peak.  21.9 ms (3.6x), Avg.  6.02 ms, Total. 42.11 ms (0.1%)
+[Performance] InitializeOnLoad SceneViewGridManager.Initialize                                                               :        1 samples, Peak.  5.51 ms (1.0x), Avg.  5.51 ms, Total. 5.509 ms (0.0%)
+[Performance] InitializeOnLoad TilemapPrefabStageHelper.Initialize                                                           :        1 samples, Peak.  2.60 ms (1.0x), Avg.  2.60 ms, Total. 2.600 ms (0.0%)
+[Performance] InitializeOnLoad SceneViewOpenTilePaletteHelper.Initialize                                                     :        1 samples, Peak.  2.67 ms (1.0x), Avg.  2.67 ms, Total. 2.666 ms (0.0%)
+[Performance] InitializeOnLoad TileDragAndDropManager.Initialize                                                             :        1 samples, Peak.  2.57 ms (1.0x), Avg.  2.57 ms, Total. 2.569 ms (0.0%)
+[Performance] InitializeOnLoad VisualStudioEditor.LegacyVisualStudioCodePackageDisabler                                      :        1 samples, Peak.  1.59 ms (1.0x), Avg.  1.59 ms, Total. 1.587 ms (0.0%)
+[Performance] InitializeOnLoad MaterialReimporter.RegisterUpgraderReimport                                                   :        2 samples, Peak.   167 us (1.6x), Avg.   103 us, Total. 205.2 us (0.0%)
+[Performance] InitializeOnLoad BackgroundImport.Setup                                                                        :        1 samples, Peak.   677 us (1.0x), Avg.   677 us, Total. 676.7 us (0.0%)
+[Performance] InitializeOnLoad TestJobDataHolder.ResumeRunningJobs                                                           :        1 samples, Peak.  2.71 ms (1.0x), Avg.  2.71 ms, Total. 2.713 ms (0.0%)
+[Performance] InitializeOnLoad AnalyticsReporter.RegisterCallbacks                                                           :        1 samples, Peak.   381 us (1.0x), Avg.   381 us, Total. 381.4 us (0.0%)
+[Performance] InitializeOnLoad CoreRenderPipelinePreferences.InitPreferenceProviders                                         :        1 samples, Peak.  44.9 ms (1.0x), Avg.  44.9 ms, Total. 44.94 ms (0.1%)
+[Performance] InitializeOnLoad VolumeGizmoDrawer.InitVolumeGizmoCallbacks                                                    :        1 samples, Peak.   369 us (1.0x), Avg.   369 us, Total. 369.5 us (0.0%)
+[Performance] InitializeOnLoad DebugManagerWindowLifetimeAnalytic.SubscribeToDebugManagerOpenCloseWindows                    :        1 samples, Peak.   382 us (1.0x), Avg.   382 us, Total. 382.0 us (0.0%)
+[Performance] DidReloadScriptsTestRunnerWindow.CompilationCallback                                                           :        1 samples, Peak.   480 us (1.0x), Avg.   480 us, Total. 479.9 us (0.0%)
+[Performance] DidReloadScriptsTestListCache.ScriptReloaded                                                                   :        1 samples, Peak.  2.64 ms (1.0x), Avg.  2.64 ms, Total. 2.643 ms (0.0%)
+[Performance] DidReloadScriptsVolumeComponentEditor.OnEditorReload                                                           :        1 samples, Peak.  18.6 ms (1.0x), Avg.  18.6 ms, Total. 18.65 ms (0.0%)
+[Performance] DidReloadScriptsDebugWindow.OnEditorReload                                                                     :        1 samples, Peak.  12.8 ms (1.0x), Avg.  12.8 ms, Total. 12.78 ms (0.0%)
+[Performance] DidReloadScriptsLookDev.OnEditorReload                                                                         :        1 samples, Peak.   199 us (1.0x), Avg.   199 us, Total. 199.4 us (0.0%)
+[Performance] DidReloadScriptsAdvancedDropdownWindow.OnScriptReload                                                          :        1 samples, Peak.   210 us (1.0x), Avg.   210 us, Total. 209.8 us (0.0%)
+[Performance] AssemblyReloadEvents.afterAssemblyReload: UnityEditor.U2D.Animation.BoneGizmo.OnAfterAssemblyReload            :        1 samples, Peak.   793 us (1.0x), Avg.   793 us, Total. 793.4 us (0.0%)
+[Performance] AssetDatabase.ImportAssets                                                                                     :       46 samples, Peak.   365 ms (31.7x), Avg.  11.5 ms, Total. 528.7 ms (0.8%)
+[Performance] VersionControl.Task.Wait                                                                                       :        1 samples, Peak.  9.70 us (1.0x), Avg.  9.70 us, Total. 9.700 us (0.0%)
+[Performance] TMPro_TexturePostProcessor.OnPostprocessAllAssets                                                              :       84 samples, Peak.  20.2 ms (3.8x), Avg.  5.33 ms, Total. 448.0 ms (0.7%)
+[Performance] UVCSAssetPostprocessor.OnPostprocessAllAssets                                                                  :       84 samples, Peak.   353 us (17.9x), Avg.  19.7 us, Total. 1.659 ms (0.0%)
+[Performance] BuilderAssetPostprocessor.OnPostprocessAllAssets                                                               :       84 samples, Peak.  2.72 ms (29.5x), Avg.  92.1 us, Total. 7.738 ms (0.0%)
+[Performance] ArtifactBrowserPostProcessor.OnPostprocessAllAssets                                                            :       84 samples, Peak.   450 us (32.1x), Avg.  14.0 us, Total. 1.177 ms (0.0%)
+[Performance] AssetEvents.OnPostprocessAllAssets                                                                             :      168 samples, Peak.   210 us (37.6x), Avg.  5.57 us, Total. 936.2 us (0.0%)
+[Performance] AudioMixerPostprocessor.OnPostprocessAllAssets                                                                 :       84 samples, Peak.   240 us (29.7x), Avg.  8.10 us, Total. 680.3 us (0.0%)
+[Performance] StyleCatalogPostProcessor.OnPostprocessAllAssets                                                               :       84 samples, Peak.  33.7 ms (41.5x), Avg.   811 us, Total. 68.13 ms (0.1%)
+[Performance] BuildCatalog                                                                                                   :        1 samples, Peak.  32.8 ms (1.0x), Avg.  32.8 ms, Total. 32.79 ms (0.1%)
+[Performance] ModelImporterPostProcessor.OnPostprocessAllAssets                                                              :       84 samples, Peak.  1.44 ms (24.7x), Avg.  58.4 us, Total. 4.910 ms (0.0%)
+[Performance] MaterialPostprocessor.OnPostprocessAllAssets                                                                   :      168 samples, Peak.   698 us (24.8x), Avg.  28.1 us, Total. 4.719 ms (0.0%)
+[Performance] UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets                                      :       84 samples, Peak.  2.83 ms (38.0x), Avg.  74.4 us, Total. 6.250 ms (0.0%)
+[Performance] RetainedModeAssetPostprocessor.OnPostprocessAllAssets                                                          :       84 samples, Peak.  3.11 ms (36.1x), Avg.  86.1 us, Total. 7.231 ms (0.0%)
+[Performance] AssetChangedListener.OnPostprocessAllAssets                                                                    :       84 samples, Peak.  1.31 ms (20.8x), Avg.  62.9 us, Total. 5.287 ms (0.0%)
+[Performance] PostProcessor.OnPostprocessAllAssets                                                                           :       84 samples, Peak.   204 us (11.1x), Avg.  18.4 us, Total. 1.546 ms (0.0%)
+[Performance] ShaderGraphAssetPostProcessor.OnPostprocessAllAssets                                                           :       84 samples, Peak.  1.33 ms (10.0x), Avg.   133 us, Total. 11.18 ms (0.0%)
+[Performance] SpeedTreePostProcessor.OnPostprocessAllAssets                                                                  :       84 samples, Peak.   145 us (12.8x), Avg.  11.3 us, Total. 946.6 us (0.0%)
+[Performance] TextAssetPostProcessor.OnPostprocessAllAssets                                                                  :       84 samples, Peak.   679 us (21.9x), Avg.  31.0 us, Total. 2.605 ms (0.0%)
+[Performance] AssetProcessor.OnPostprocessAllAssets                                                                          :      252 samples, Peak.  1.48 ms (61.5x), Avg.  24.1 us, Total. 6.068 ms (0.0%)
+[Performance] SpriteLibraryAssetPostprocessor.OnPostprocessAllAssets                                                         :       84 samples, Peak.   209 us (26.4x), Avg.  7.91 us, Total. 664.3 us (0.0%)
+[Performance] PSDImporterAssetPostProcessor.OnPostprocessAllAssets                                                           :       84 samples, Peak.  69.7 us (17.2x), Avg.  4.06 us, Total. 341.0 us (0.0%)
+[Performance] PSDImportPostProcessor.OnPostprocessAllAssets                                                                  :       84 samples, Peak.  94.3 us (21.1x), Avg.  4.47 us, Total. 375.2 us (0.0%)
+[Performance] SpriteEditorTexturePostprocessor.OnPostprocessAllAssets                                                        :       84 samples, Peak.   214 us (6.5x), Avg.  32.7 us, Total. 2.747 ms (0.0%)
+[Performance] SpriteShapeAssetPostProcessor.OnPostprocessAllAssets                                                           :       84 samples, Peak.   282 us (12.8x), Avg.  22.0 us, Total. 1.845 ms (0.0%)
+[Performance] SyncVS.PostprocessSyncProject                                                                                  :       42 samples, Peak.  1.72 ms (8.9x), Avg.   194 us, Total. 8.135 ms (0.0%)
+[Performance] Application.ImportPackagesAndSetTemplateWhenCreatingProject                                                    :        1 samples, Peak.  13.2 ms (1.0x), Avg.  13.2 ms, Total. 13.24 ms (0.0%)
+[Performance] Application.SyncCurrentColorSpace                                                                              :        1 samples, Peak.   688 ms (1.0x), Avg.   688 ms, Total. 688.5 ms (1.1%)
+[Performance] Application.OnUsbDevicesChanged                                                                                :        1 samples, Peak.  5.08 ms (1.0x), Avg.  5.08 ms, Total. 5.077 ms (0.0%)
+[Performance] Application.AssetInstanceCacheUpdate                                                                           :        1 samples, Peak.   500 ns (1.0x), Avg.   500 ns, Total. 500.0 ns (0.0%)
+[Performance] Application.UnityExtensions.Initialize                                                                         :        1 samples, Peak.  7.49 ms (1.0x), Avg.  7.49 ms, Total. 7.492 ms (0.0%)
+[Performance] CodeEditorProjectSync.SyncEditorProject                                                                        :        1 samples, Peak.   559 ms (1.0x), Avg.   559 ms, Total. 559.3 ms (0.9%)
+[Performance] Application.ExecuteStartups                                                                                    :        1 samples, Peak.   112 ms (1.0x), Avg.   112 ms, Total. 112.1 ms (0.2%)
+[Performance] Menu.RegisterMenuInterface                                                                                     :       26 samples, Peak.  1.20 us (5.6x), Avg.   215 ns, Total. 5.600 us (0.0%)
+[Performance] Gizmo.RebuildRenderers                                                                                         :        1 samples, Peak.   110 ms (1.0x), Avg.   110 ms, Total. 110.3 ms (0.2%)
+[Performance] Gizmo.AddGizmoRenderers                                                                                        :      115 samples, Peak.  1.68 ms (48.5x), Avg.  34.7 us, Total. 3.993 ms (0.0%)
+[Performance] Application.editorInitializingProject                                                                          :        1 samples, Peak.   722 ms (1.0x), Avg.   722 ms, Total. 721.9 ms (1.1%)
+[Performance] Application.InitializeMenu                                                                                     :        1 samples, Peak.   170 ms (1.0x), Avg.   170 ms, Total. 170.0 ms (0.3%)
+[Performance] Menu.RebuildAll                                                                                                :        1 samples, Peak.   170 ms (1.0x), Avg.   170 ms, Total. 169.9 ms (0.3%)
+[Performance] Menu.BuildRegisteredMenuInterfaces                                                                             :        1 samples, Peak.   167 ms (1.0x), Avg.   167 ms, Total. 167.1 ms (0.3%)
+[Performance] Menu.FilterMenuItem                                                                                            :      776 samples, Peak.  71.4 ms (773.0x), Avg.  92.4 us, Total. 71.68 ms (0.1%)
+[Performance] UpdateAllMenus                                                                                                 :        1 samples, Peak.   473 us (1.0x), Avg.   473 us, Total. 473.2 us (0.0%)
+[Performance] Menu.RebuildOSMainMenu                                                                                         :        2 samples, Peak.  2.24 ms (1.0x), Avg.  2.18 ms, Total. 4.364 ms (0.0%)
+[Performance] EditorSceneManager.sceneClosing: UnityEditor.SceneVisibilityManager.EditorSceneManagerOnSceneClosing           :        1 samples, Peak.   240 us (1.0x), Avg.   240 us, Total. 239.9 us (0.0%)
+[Performance] GUIView.RepaintAll.PlayerLoopController                                                                        :        1 samples, Peak.   900 ns (1.0x), Avg.   900 ns, Total. 900.0 ns (0.0%)
+[Performance] EditorSceneManager.newSceneCreated: UnityEditor.SceneTemplate.SceneTemplateService.OnNewSceneCreated           :        1 samples, Peak.   241 us (1.0x), Avg.   241 us, Total. 240.8 us (0.0%)
+[Performance] EditorSceneManager.newSceneCreated: UnityEditor.SceneVisibilityManager.EditorSceneManagerOnNewSceneCreated     :        1 samples, Peak.   174 us (1.0x), Avg.   174 us, Total. 173.8 us (0.0%)
+[Performance] EditorSceneManager.newSceneCreated: UnityEditor.SceneManagement.StageNavigationManager.OnNewSceneCreated       :        1 samples, Peak.  49.0 us (1.0x), Avg.  49.0 us, Total. 49.00 us (0.0%)
+[Performance] Application.InvokeFinishedLoadingProject                                                                       :        1 samples, Peak.  10.8 ms (1.0x), Avg.  10.8 ms, Total. 10.81 ms (0.0%)
+[Performance] ProcessService.OnProjectLoaded                                                                                 :        1 samples, Peak.  42.7 us (1.0x), Avg.  42.7 us, Total. 42.70 us (0.0%)
+[Performance] AssetDatabase.Refresh                                                                                          :        2 samples, Peak.  63.0 ms (1.6x), Avg.  38.7 ms, Total. 77.44 ms (0.1%)
+[Performance] AssetDatabase.ImportAsset                                                                                      :       37 samples, Peak.  1.21 s (2.6x), Avg.   464 ms, Total. 17.15 s (27.1%)
+[Performance] TextureImporter.Import                                                                                         :       37 samples, Peak.   359 ms (3.6x), Avg.  99.7 ms, Total. 3.688 s (5.8%)
+[Performance] Light2DPostProcess.OnPostprocessSprites                                                                        :       37 samples, Peak.   488 us (6.6x), Avg.  73.5 us, Total. 2.721 ms (0.0%)
+[Performance] SpritePostProcess.OnPostprocessSprites                                                                         :       37 samples, Peak.  5.67 ms (7.9x), Avg.   719 us, Total. 26.59 ms (0.0%)
+[Performance] SceneDataContainer.TransformHierarchyChangedSetParentCallback                                                  :        3 samples, Peak.  9.90 us (2.5x), Avg.  3.90 us, Total. 11.70 us (0.0%)
+[Performance] SceneVisibilityState.IsFlagSetInParents                                                                        :        3 samples, Peak.  1.00 us (1.5x), Avg.   667 ns, Total. 2.000 us (0.0%)
+[Performance] PaletteAssetModificationProcessor.OnWillSaveAssets                                                             :       67 samples, Peak.   172 us (13.4x), Avg.  12.9 us, Total. 862.3 us (0.0%)
+[Performance] StateMacroSavedEvent.OnWillSaveAssets                                                                          :       67 samples, Peak.   154 us (7.2x), Avg.  21.3 us, Total. 1.425 ms (0.0%)
+[Performance] FlowMacroSavedEvent.OnWillSaveAssets                                                                           :       67 samples, Peak.  85.7 us (13.0x), Avg.  6.57 us, Total. 440.2 us (0.0%)
+[Performance] UnityCloudProjectLinkMonitor.OnWillSaveAssets                                                                  :       67 samples, Peak.   235 us (44.5x), Avg.  5.28 us, Total. 353.9 us (0.0%)
+[Performance] UVCSAssetModificationProcessor.OnWillSaveAssets                                                                :       67 samples, Peak.   206 us (47.4x), Avg.  4.35 us, Total. 291.5 us (0.0%)
+[Performance] BuilderAssetModificationProcessor.OnWillSaveAssets                                                             :       67 samples, Peak.   207 us (37.3x), Avg.  5.56 us, Total. 372.5 us (0.0%)
+[Performance] TerrainModificationProcessor.OnWillSaveAssets                                                                  :       67 samples, Peak.   363 us (51.7x), Avg.  7.01 us, Total. 469.5 us (0.0%)
+[Performance] EditorApplication.projectChanged: UnityEditor.Audio.MixerEffectDefinitionReloader.OnProjectChanged             :       22 samples, Peak.   811 us (1.9x), Avg.   427 us, Total. 9.386 ms (0.0%)
+[Performance] EditorApplication.quitting: Unity.Burst.Editor.BurstLoader.OnEditorApplicationQuitting                         :        1 samples, Peak.  41.1 us (1.0x), Avg.  41.1 us, Total. 41.10 us (0.0%)
+[Performance] EditorApplication.quitting: UnityEditor.Tilemaps.SceneViewGridManager.EditorQuitting                           :        1 samples, Peak.  93.7 us (1.0x), Avg.  93.7 us, Total. 93.70 us (0.0%)
+[Performance] EditorApplication.quitting: callback in UnityEditor.TextCore.Text.EditorEventCallbacks                         :        1 samples, Peak.  26.4 ms (1.0x), Avg.  26.4 ms, Total. 26.37 ms (0.0%)
+[Performance] Application.Shutdown.PauseProfilerSession                                                                      :        1 samples, Peak.  36.6 us (1.0x), Avg.  36.6 us, Total. 36.60 us (0.0%)
+[Performance] Application.Shutdown.PauseAssetImportWorkers                                                                   :        1 samples, Peak.   311 us (1.0x), Avg.   311 us, Total. 310.7 us (0.0%)
+[Performance] Application.Shutdown.SaveAssets                                                                                :        1 samples, Peak.   763 us (1.0x), Avg.   763 us, Total. 763.0 us (0.0%)
+[Performance] Application.Shutdown.CleanupRenderPipeline                                                                     :        1 samples, Peak.  3.20 us (1.0x), Avg.  3.20 us, Total. 3.200 us (0.0%)
+[Performance] Application.Shutdown.StopPreloadManager                                                                        :        1 samples, Peak.  9.79 ms (1.0x), Avg.  9.79 ms, Total. 9.787 ms (0.0%)
+[Performance] Application.Shutdown.DestroyWorld                                                                              :        1 samples, Peak.  1.01 ms (1.0x), Avg.  1.01 ms, Total. 1.014 ms (0.0%)
+[Performance] Application.Shutdown.CleanupAfterLoad                                                                          :        1 samples, Peak.   228 ms (1.0x), Avg.   228 ms, Total. 227.8 ms (0.4%)
+[Performance] Application.Shutdown.Progress                                                                                  :        1 samples, Peak.  8.30 us (1.0x), Avg.  8.30 us, Total. 8.300 us (0.0%)
+[Performance] Application.Shutdown.GICleanupManagers                                                                         :        1 samples, Peak.  1.75 ms (1.0x), Avg.  1.75 ms, Total. 1.746 ms (0.0%)
+[Performance] Application.Shutdown.MenuCleanupClass                                                                          :        1 samples, Peak.   480 us (1.0x), Avg.   480 us, Total. 480.0 us (0.0%)
+[Performance] Application.Shutdown.ADBSaveStateBeforeShutdown                                                                :        1 samples, Peak.  13.2 us (1.0x), Avg.  13.2 us, Total. 13.20 us (0.0%)
+[Performance] Application.Shutdown.RemoteShutdown                                                                            :        1 samples, Peak.  1.30 us (1.0x), Avg.  1.30 us, Total. 1.300 us (0.0%)
+[Performance] Application.Shutdown.CleanupVCProvider                                                                         :        1 samples, Peak.  35.1 us (1.0x), Avg.  35.1 us, Total. 35.10 us (0.0%)
+[Performance] Application.Shutdown.InputShutdown                                                                             :        1 samples, Peak.   800 ns (1.0x), Avg.   800 ns, Total. 800.0 ns (0.0%)
+[Performance] Application.Shutdown.GizmoManagerDestroy                                                                       :        1 samples, Peak.  2.07 ms (1.0x), Avg.  2.07 ms, Total. 2.073 ms (0.0%)
+[Performance] Application.Shutdown.ProfilerSession                                                                           :        1 samples, Peak.   235 us (1.0x), Avg.   235 us, Total. 234.7 us (0.0%)
+[Performance] Application.Shutdown.ReleaseGfxWindowOnAllGUIViews                                                             :        1 samples, Peak.   400 ns (1.0x), Avg.   400 ns, Total. 400.0 ns (0.0%)
+[Performance] Application.Shutdown.CleanupEngine                                                                             :        1 samples, Peak.   323 ms (1.0x), Avg.   323 ms, Total. 323.2 ms (0.5%)
+[Performance] Application.Shutdown.CleanupAssetDatabase                                                                      :        1 samples, Peak.  29.7 ms (1.0x), Avg.  29.7 ms, Total. 29.67 ms (0.0%)
+[Performance] Application.Shutdown.ScriptCompilationCleanUp                                                                  :        1 samples, Peak.  36.4 ms (1.0x), Avg.  36.4 ms, Total. 36.44 ms (0.1%)
+[Performance] Application.Shutdown.DestroyJobSystem                                                                          :        1 samples, Peak.   216 us (1.0x), Avg.   216 us, Total. 216.2 us (0.0%)
+[Performance] Application.Shutdown.CleanupPersistentManager                                                                  :        1 samples, Peak.  2.38 ms (1.0x), Avg.  2.38 ms, Total. 2.376 ms (0.0%)
+[Performance] Application.Shutdown.CleanupAsyncReadManager                                                                   :        1 samples, Peak.   895 us (1.0x), Avg.   895 us, Total. 895.4 us (0.0%)
+[Performance] Application.Shutdown.CleanupProgressBar                                                                        :        1 samples, Peak.   300 ns (1.0x), Avg.   300 ns, Total. 300.0 ns (0.0%)
+[Performance] Application.Shutdown.CleanupMono                                                                               :        1 samples, Peak.   464 ms (1.0x), Avg.   464 ms, Total. 463.6 ms (0.7%)
+[Performance] Application.Shutdown.CleanupStdConverters                                                                      :        1 samples, Peak. 10.00 us (1.0x), Avg. 10.00 us, Total. 10.000 us (0.0%)
+[Performance] Application.Shutdown.UnloadAllPlatformSupportModuleNativeDlls                                                  :        1 samples, Peak.   700 ns (1.0x), Avg.   700 ns, Total. 700.0 ns (0.0%)
+[Performance] Application.Shutdown.UnloadAllPlatformSupportNativeLibraries                                                   :        1 samples, Peak.   200 ns (1.0x), Avg.   200 ns, Total. 200.0 ns (0.0%)
+[Performance] Application.Shutdown.CleanupAutoDocumentation                                                                  :        1 samples, Peak.   461 us (1.0x), Avg.   461 us, Total. 460.8 us (0.0%)
+[Performance] Application.Shutdown.ShaderNameManagerDestroy                                                                  :        1 samples, Peak.  63.7 us (1.0x), Avg.  63.7 us, Total. 63.70 us (0.0%)
+[Performance] Application.Shutdown.CleanupCacheServer                                                                        :        1 samples, Peak.   300 ns (1.0x), Avg.   300 ns, Total. 300.0 ns (0.0%)
+[Performance] Application.Shutdown.Virtualization_Shutdown                                                                   :        1 samples, Peak.   400 ns (1.0x), Avg.   400 ns, Total. 400.0 ns (0.0%)
+[Performance] Application.Shutdown.DevConnections                                                                            :        1 samples, Peak.   265 us (1.0x), Avg.   265 us, Total. 264.6 us (0.0%)
+Exiting batchmode successfully now!
+Exiting without the bug reporter. Application will terminate with return code 0

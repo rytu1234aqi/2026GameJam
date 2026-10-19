@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="4" result="Passed" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-15 14:38:28Z" end-time="2026-10-15 14:38:29Z" duration="1.0876406">
+  <test-suite type="TestSuite" id="1361" name="2026GameJam" fullname="2026GameJam" runstate="Runnable" testcasecount="265" result="Passed" start-time="2026-10-15 14:38:28Z" end-time="2026-10-15 14:38:29Z" duration="1.087641" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties />
+    <test-suite type="Assembly" id="1712" name="Spotlight.Integration.Tests.dll" fullname="E:/PersonalProgram/2026GameJam/Library/ScriptAssemblies/Spotlight.Integration.Tests.dll" runstate="Runnable" testcasecount="198" result="Passed" start-time="2026-10-15 14:38:28Z" end-time="2026-10-15 14:38:29Z" duration="1.071532" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="60024" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+      </properties>
+      <test-suite type="TestSuite" id="1713" name="Spotlight" fullname="Spotlight" runstate="Runnable" testcasecount="198" result="Passed" start-time="2026-10-15 14:38:28Z" end-time="2026-10-15 14:38:29Z" duration="1.068187" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1714" name="Tests" fullname="Spotlight.Tests" runstate="Runnable" testcasecount="166" result="Passed" start-time="2026-10-15 14:38:28Z" end-time="2026-10-15 14:38:29Z" duration="1.064429" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1715" name="Integration" fullname="Spotlight.Tests.Integration" runstate="Runnable" testcasecount="161" result="Passed" start-time="2026-10-15 14:38:28Z" end-time="2026-10-15 14:38:29Z" duration="1.060869" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1642" name="ThirdPartyArtIntegrationTests" fullname="Spotlight.Tests.Integration.ThirdPartyArtIntegrationTests" classname="Spotlight.Tests.Integration.ThirdPartyArtIntegrationTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-15 14:38:28Z" end-time="2026-10-15 14:38:29Z" duration="1.056332" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1646" name="ActualRendererSwitchesDayNightAndCleansBackgroundOnRebind" fullname="Spotlight.Tests.Integration.ThirdPartyArtIntegrationTests.ActualRendererSwitchesDayNightAndCleansBackgroundOnRebind" methodname="ActualRendererSwitchesDayNightAndCleansBackgroundOnRebind" classname="Spotlight.Tests.Integration.ThirdPartyArtIntegrationTests" runstate="Runnable" seed="468876761" result="Passed" start-time="2026-10-15 14:38:28Z" end-time="2026-10-15 14:38:29Z" duration="0.875919" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1645" name="EditModePreviewResetAndPoolReuseFollowActualClock" fullname="Spotlight.Tests.Integration.ThirdPartyArtIntegrationTests.EditModePreviewResetAndPoolReuseFollowActualClock" methodname="EditModePreviewResetAndPoolReuseFollowActualClock" classname="Spotlight.Tests.Integration.ThirdPartyArtIntegrationTests" runstate="Runnable" seed="713833945" result="Passed" start-time="2026-10-15 14:38:29Z" end-time="2026-10-15 14:38:29Z" duration="0.139766" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1644" name="FormalUiThemeHasFivePortraitsTwoBackgroundsAndRealButtonStates" fullname="Spotlight.Tests.Integration.ThirdPartyArtIntegrationTests.FormalUiThemeHasFivePortraitsTwoBackgroundsAndRealButtonStates" methodname="FormalUiThemeHasFivePortraitsTwoBackgroundsAndRealButtonStates" classname="Spotlight.Tests.Integration.ThirdPartyArtIntegrationTests" runstate="Runnable" seed="1837812731" result="Passed" start-time="2026-10-15 14:38:29Z" end-time="2026-10-15 14:38:29Z" duration="0.017575" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1643" name="TenFormalEnemiesUseCroppedArtAndNoActivePlaceholder" fullname="Spotlight.Tests.Integration.ThirdPartyArtIntegrationTests.TenFormalEnemiesUseCroppedArtAndNoActivePlaceholder" methodname="TenFormalEnemiesUseCroppedArtAndNoActivePlaceholder" classname="Spotlight.Tests.Integration.ThirdPartyArtIntegrationTests" runstate="Runnable" seed="1363866261" result="Passed" start-time="2026-10-15 14:38:29Z" end-time="2026-10-15 14:38:29Z" duration="0.010040" asserts="0">
+                <properties />
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

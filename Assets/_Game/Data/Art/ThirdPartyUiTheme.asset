@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae0c1c97c60a415186807a46c9cd93da, type: 3}
+  m_Name: ThirdPartyUiTheme
+  m_EditorClassIdentifier: 
+  DayBackground: {fileID: 21300000, guid: 016ac6dcbee505740a44a27950f51b62, type: 3}
+  NightBackground: {fileID: 21300000, guid: cffe61164d688ed4da00899a7ff5c768, type: 3}
+  WorldSpriteMaterial: {fileID: 2100000, guid: 7afc6ee283ef9ce46bf550a0b9de58a2, type: 2}
+  PortraitNeutral: {fileID: 21300000, guid: 15fea027a4e1bd64aa1a2f3273705a9f, type: 3}
+  PortraitCalm: {fileID: 21300000, guid: 03fbd7494a5d8b444a86cabafb7b4e66, type: 3}
+  PortraitSmile: {fileID: 21300000, guid: 9f0b8f42c432eee478eb2d63f68b04c2, type: 3}
+  PortraitAngry: {fileID: 21300000, guid: 7d1b07921cca1c246b17a4f3d1b924b3, type: 3}
+  PortraitCrying: {fileID: 21300000, guid: 695596dd3d1b3604796a92efbffbc967, type: 3}
+  ButtonNormal:
+  - {fileID: 21300000, guid: a3f53f3e8a952a14f8a176ee4235b468, type: 3}
+  - {fileID: 21300000, guid: 3640f4ef4db4bb74b9e4e341319556b4, type: 3}
+  - {fileID: 21300000, guid: 93ca4aeac95431c43b90d94cb5191f42, type: 3}
+  - {fileID: 21300000, guid: 12e83354623e434409a6f95a6bbaa19b, type: 3}
+  ButtonPressed:
+  - {fileID: 21300000, guid: baf769a00ee163d4eafd30b4de000339, type: 3}
+  - {fileID: 21300000, guid: cd2434a54076f6545a17a9484df2457f, type: 3}
+  - {fileID: 21300000, guid: e1b403d8b49681f469fc2f08cb1730dd, type: 3}
+  - {fileID: 21300000, guid: d6d5b9e8623c8f74b803007eae0f8dec, type: 3}

@@ -55,7 +55,7 @@ namespace Spotlight.Bootstrap
             Clock = new GameClock(Core.Store.GetFlowSnapshot, Events);
             Driver = new SimulationDriver(Clock, Core.Store.GetFlowSnapshot, Catalog.GetSettings().LogicTicksPerGameSecond);
             Elements = new ElementRuleService(Catalog, Core.Random);
-            Combat = new CombatServices(Catalog, Core.Board, Core.World, Core.Transactions, Core.Commands, Core.Ids, Events, Elements, Clock);
+            Combat = new CombatServices(Catalog, Core.Board, Core.World, Core.Transactions, Core.Commands, Core.Ids, Events, Elements, Clock, Core.Random);
             Enemies = new EnemyServices(Catalog, Core.Board, Core.World, Core.Motion, Core.Transactions, Core.Commands, Core.Ids, Core.Random, Combat.Status, Combat.Damage, Combat.Projectiles, Combat.Effects, Events, Clock);
             Gameplay = new GameplayServices(Catalog, Core.World, Core.Transactions, Core.Commands, Core.Random, Combat.Effects, Clock, Events, Core.Store.GetFlowSnapshot, Core.Resources, Core.Store.GetDayEventState);
             Saves = new SaveService(Core.Store, Catalog, Events, saveDirectory);

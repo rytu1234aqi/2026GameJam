@@ -1,0 +1,141 @@
+{
+    "utc": "2026-10-14T14:03:43.7695860Z",
+    "combinations": "21种无序组合；战斗与生产独立显示；数值读取当前资产。\nWater+Water: EnemyStatus=可用[reaction.EnemyStatus.Water.Water]; Projectile=禁用[reaction.Projectile.Water.Water]; 生产=无相邻规则\r\nWater+Fire: EnemyStatus=可用[reaction.EnemyStatus.Water.Fire]; Projectile=禁用[reaction.Projectile.Water.Fire]; 生产=无相邻规则\r\nWater+Earth: EnemyStatus=可用[reaction.EnemyStatus.Water.Earth]; Projectile=禁用[reaction.Projectile.Water.Earth]; 生产=无相邻规则\r\nWater+Wood: EnemyStatus=可用[reaction.EnemyStatus.Water.Wood]; Projectile=禁用[reaction.Projectile.Water.Wood]; 生产=可用[production.wood_water_bonus:elm.wood×1]\r\nWater+Wind: EnemyStatus=可用[reaction.EnemyStatus.Water.Wind]; Projectile=禁用[reaction.Projectile.Water.Wind]; 生产=无相邻规则\r\nWater+Thunder: EnemyStatus=可用[reaction.EnemyStatus.Water.Thunder]; Projectile=禁用[reaction.Projectile.Water.Thunder]; 生产=无相邻规则\r\nFire+Fire: EnemyStatus=禁用[reaction.EnemyStatus.Fire.Fire]; Projectile=可用[reaction.Projectile.Fire.Fire]; 生产=无相邻规则\r\nFire+Earth: EnemyStatus=可用[reaction.EnemyStatus.Fire.Earth]; Projectile=禁用[reaction.Projectile.Fire.Earth]; 生产=无相邻规则\r\nFire+Wood: EnemyStatus=禁用[reaction.EnemyStatus.Fire.Wood]; Projectile=可用[reaction.Projectile.Fire.Wood]; 生产=可用[production.wood_fire_convert:elm.fire×1]\r\nFire+Wind: EnemyStatus=可用[reaction.EnemyStatus.Fire.Wind]; Projectile=禁用[reaction.Projectile.Fire.Wind]; 生产=无相邻规则\r\nFire+Thunder: EnemyStatus=可用[reaction.EnemyStatus.Fire.Thunder]; Projectile=禁用[reaction.Projectile.Fire.Thunder]; 生产=无相邻规则\r\nEarth+Earth: EnemyStatus=禁用[reaction.EnemyStatus.Earth.Earth]; Projectile=禁用[reaction.Projectile.Earth.Earth]; 生产=无相邻规则；障碍方案未实现；现地单土生产保留（偏原案）\r\nEarth+Wood: EnemyStatus=禁用[reaction.EnemyStatus.Earth.Wood]; Projectile=禁用[reaction.Projectile.Earth.Wood]; 生产=可用[production.wood_earth_bonus:elm.wood×1]\r\nEarth+Wind: EnemyStatus=可用[reaction.EnemyStatus.Earth.Wind]; Projectile=禁用[reaction.Projectile.Earth.Wind]; 生产=无相邻规则\r\nEarth+Thunder: EnemyStatus=可用[reaction.EnemyStatus.Earth.Thunder]; Projectile=禁用[reaction.Projectile.Earth.Thunder]; 生产=无相邻规则\r\nWood+Wood: EnemyStatus=可用[reaction.EnemyStatus.Wood.Wood]; Projectile=禁用[reaction.Projectile.Wood.Wood]; 生产=可用[production.wood_wood_bonus:elm.wood×1]\r\nWood+Wind: EnemyStatus=可用[reaction.EnemyStatus.Wood.Wind]; Projectile=禁用[reaction.Projectile.Wood.Wind]; 生产=无相邻规则\r\nWood+Thunder: EnemyStatus=可用[reaction.EnemyStatus.Wood.Thunder]; Projectile=禁用[reaction.Projectile.Wood.Thunder]; 生产=无相邻规则\r\nWind+Wind: EnemyStatus=禁用[reaction.EnemyStatus.Wind.Wind]; Projectile=可用[reaction.Projectile.Wind.Wind]; 生产=无相邻规则\r\nWind+Thunder: EnemyStatus=可用[reaction.EnemyStatus.Wind.Thunder]; Projectile=禁用[reaction.Projectile.Wind.Thunder]; 生产=无相邻规则\r\nThunder+Thunder: EnemyStatus=可用[reaction.EnemyStatus.Thunder.Thunder]; Projectile=禁用[reaction.Projectile.Thunder.Thunder]; 生产=无相邻规则\r\n",
+    "limitation": "Detached six-second combat experiments with stationary high-HP enemies. Reaction events and actual state are recorded; these are not seven-night balance or probability distribution proofs.",
+    "succeeded": true,
+    "cases": [
+        {
+            "id": "reaction.EnemyStatus.Earth.Thunder",
+            "context": "EnemyStatus",
+            "result": "实际独立沙盒：真实正式配置、独立DTO和临时存档；未启动波次，三个静止大血量敌人。\nreaction.EnemyStatus.Earth.Thunder\nt=0秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态= 计量= 攻速倍率=1\r\neffect=CreateArea\r\n实际反应=reaction.EnemyStatus.Earth.Thunder / EnemyStatus\r\nt=1秒 / 区域=1\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态=status.effect.paralysis×1,status.combo.magnetic×1 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态=status.combo.magnetic×1 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态=status.combo.magnetic×1 计量= 攻速倍率=1\r\nt=2秒 / 区域=1\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态=status.combo.magnetic×1 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态=status.combo.magnetic×1 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态=status.combo.magnetic×1 计量= 攻速倍率=1\r\nt=6秒 / 区域=1\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态=status.combo.magnetic×1 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态=status.combo.magnetic×1 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态=status.combo.magnetic×1 计量= 攻速倍率=1\r\n",
+            "error": "",
+            "succeeded": true
+        },
+        {
+            "id": "reaction.EnemyStatus.Earth.Wind",
+            "context": "EnemyStatus",
+            "result": "实际独立沙盒：真实正式配置、独立DTO和临时存档；未启动波次，三个静止大血量敌人。\nreaction.EnemyStatus.Earth.Wind\nt=0秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态= 计量= 攻速倍率=1\r\neffect=CreateArea\r\n实际反应=reaction.EnemyStatus.Earth.Wind / EnemyStatus\r\nt=1秒 / 区域=1\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态=status.combo.sand×1 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态=status.combo.sand×1 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态=status.combo.sand×1 计量= 攻速倍率=1\r\nt=2秒 / 区域=1\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态=status.combo.sand×1 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态=status.combo.sand×1 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态=status.combo.sand×1 计量= 攻速倍率=1\r\nt=6秒 / 区域=1\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态=status.combo.sand×1 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态=status.combo.sand×1 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态=status.combo.sand×1 计量= 攻速倍率=1\r\n",
+            "error": "",
+            "succeeded": true
+        },
+        {
+            "id": "reaction.EnemyStatus.Fire.Earth",
+            "context": "EnemyStatus",
+            "result": "实际独立沙盒：真实正式配置、独立DTO和临时存档；未启动波次，三个静止大血量敌人。\nreaction.EnemyStatus.Fire.Earth\nt=0秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态= 计量= 攻速倍率=1\r\neffect=CreateArea\r\n实际反应=reaction.EnemyStatus.Fire.Earth / EnemyStatus\r\nt=1秒 / 区域=1\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态=status.area.lava_burn×1,status.area.lava_slow×1 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态=status.area.lava_burn×1,status.area.lava_slow×1 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态=status.area.lava_burn×1,status.area.lava_slow×1 计量= 攻速倍率=1\r\nt=2秒 / 区域=1\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=9990 状态=status.area.lava_burn×1,status.area.lava_slow×1 计量= 攻速倍率=1\nEnemy#4 HP=9990 状态=status.area.lava_burn×1,status.area.lava_slow×1 计量= 攻速倍率=1\nEnemy#5 HP=9990 状态=status.area.lava_burn×1,status.area.lava_slow×1 计量= 攻速倍率=1\r\nt=6秒 / 区域=1\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=9950 状态=status.area.lava_burn×1,status.area.lava_slow×1 计量= 攻速倍率=1\nEnemy#4 HP=9950 状态=status.area.lava_burn×1,status.area.lava_slow×1 计量= 攻速倍率=1\nEnemy#5 HP=9950 状态=status.area.lava_burn×1,status.area.lava_slow×1 计量= 攻速倍率=1\r\n",
+            "error": "",
+            "succeeded": true
+        },
+        {
+            "id": "reaction.EnemyStatus.Fire.Thunder",
+            "context": "EnemyStatus",
+            "result": "实际独立沙盒：真实正式配置、独立DTO和临时存档；未启动波次，三个静止大血量敌人。\nreaction.EnemyStatus.Fire.Thunder\nt=0秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态= 计量= 攻速倍率=1\r\neffect=AreaDamage\r\n实际反应=reaction.EnemyStatus.Fire.Thunder / EnemyStatus\r\nt=1秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=9950 状态= 计量=Fire:30,Thunder:30 攻速倍率=1\nEnemy#4 HP=9950 状态= 计量= 攻速倍率=1\nEnemy#5 HP=9950 状态= 计量= 攻速倍率=1\r\nt=2秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=9950 状态= 计量=Fire:25.16669,Thunder:25.16669 攻速倍率=1\nEnemy#4 HP=9950 状态= 计量= 攻速倍率=1\nEnemy#5 HP=9950 状态= 计量= 攻速倍率=1\r\nt=6秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=9950 状态= 计量=Fire:5.166708,Thunder:5.166708 攻速倍率=1\nEnemy#4 HP=9950 状态= 计量= 攻速倍率=1\nEnemy#5 HP=9950 状态= 计量= 攻速倍率=1\r\n",
+            "error": "",
+            "succeeded": true
+        },
+        {
+            "id": "reaction.EnemyStatus.Fire.Wind",
+            "context": "EnemyStatus",
+            "result": "实际独立沙盒：真实正式配置、独立DTO和临时存档；未启动波次，三个静止大血量敌人。\nreaction.EnemyStatus.Fire.Wind\nt=0秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态= 计量= 攻速倍率=1\r\neffect=CreateArea\r\n实际反应=reaction.EnemyStatus.Fire.Wind / EnemyStatus\r\nt=1秒 / 区域=1\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态=status.combo.fire_dot×1 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态=status.combo.fire_dot×1 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态=status.combo.fire_dot×1 计量= 攻速倍率=1\r\nt=2秒 / 区域=1\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=9990 状态=status.combo.fire_dot×1 计量= 攻速倍率=1\nEnemy#4 HP=9990 状态=status.combo.fire_dot×1 计量= 攻速倍率=1\nEnemy#5 HP=9990 状态=status.combo.fire_dot×1 计量= 攻速倍率=1\r\nt=6秒 / 区域=1\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=9950 状态=status.combo.fire_dot×1 计量= 攻速倍率=1\nEnemy#4 HP=9950 状态=status.combo.fire_dot×1 计量= 攻速倍率=1\nEnemy#5 HP=9950 状态=status.combo.fire_dot×1 计量= 攻速倍率=1\r\n",
+            "error": "",
+            "succeeded": true
+        },
+        {
+            "id": "reaction.EnemyStatus.Thunder.Thunder",
+            "context": "EnemyStatus",
+            "result": "实际独立沙盒：真实正式配置、独立DTO和临时存档；未启动波次，三个静止大血量敌人。\nreaction.EnemyStatus.Thunder.Thunder\nt=0秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态= 计量= 攻速倍率=1\r\neffect=ChainDamage\r\neffect=ChainDamage\r\neffect=ChainDamage\r\n实际反应=reaction.EnemyStatus.Thunder.Thunder / EnemyStatus\r\nt=1秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态=status.effect.paralysis×1 计量= 攻速倍率=1\nEnemy#4 HP=9985 状态=status.effect.paralysis×1 计量= 攻速倍率=1\nEnemy#5 HP=9988 状态=status.effect.paralysis×1 计量= 攻速倍率=1\r\nt=2秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#4 HP=9985 状态= 计量= 攻速倍率=1\nEnemy#5 HP=9988 状态= 计量= 攻速倍率=1\r\nt=6秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#4 HP=9985 状态= 计量= 攻速倍率=1\nEnemy#5 HP=9988 状态= 计量= 攻速倍率=1\r\n",
+            "error": "",
+            "succeeded": true
+        },
+        {
+            "id": "reaction.EnemyStatus.Water.Earth",
+            "context": "EnemyStatus",
+            "result": "实际独立沙盒：真实正式配置、独立DTO和临时存档；未启动波次，三个静止大血量敌人。\nreaction.EnemyStatus.Water.Earth\nt=0秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态= 计量= 攻速倍率=1\r\neffect=CreateArea\r\n实际反应=reaction.EnemyStatus.Water.Earth / EnemyStatus\r\nt=1秒 / 区域=1\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态=status.area.mud_slow×1 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态=status.area.mud_slow×1 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态=status.area.mud_slow×1 计量= 攻速倍率=1\r\nt=2秒 / 区域=1\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态=status.area.mud_slow×1 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态=status.area.mud_slow×1 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态=status.area.mud_slow×1 计量= 攻速倍率=1\r\nt=6秒 / 区域=1\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态=status.area.mud_slow×1 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态=status.area.mud_slow×1 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态=status.area.mud_slow×1 计量= 攻速倍率=1\r\n",
+            "error": "",
+            "succeeded": true
+        },
+        {
+            "id": "reaction.EnemyStatus.Water.Fire",
+            "context": "EnemyStatus",
+            "result": "实际独立沙盒：真实正式配置、独立DTO和临时存档；未启动波次，三个静止大血量敌人。\nreaction.EnemyStatus.Water.Fire\nt=0秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态= 计量= 攻速倍率=1\r\neffect=AreaDamage\r\n实际反应=reaction.EnemyStatus.Water.Fire / EnemyStatus\r\nt=1秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=9970 状态= 计量= 攻速倍率=1\nEnemy#4 HP=9970 状态= 计量= 攻速倍率=1\nEnemy#5 HP=9970 状态= 计量= 攻速倍率=1\r\nt=2秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=9970 状态= 计量= 攻速倍率=1\nEnemy#4 HP=9970 状态= 计量= 攻速倍率=1\nEnemy#5 HP=9970 状态= 计量= 攻速倍率=1\r\nt=6秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=9970 状态= 计量= 攻速倍率=1\nEnemy#4 HP=9970 状态= 计量= 攻速倍率=1\nEnemy#5 HP=9970 状态= 计量= 攻速倍率=1\r\n",
+            "error": "",
+            "succeeded": true
+        },
+        {
+            "id": "reaction.EnemyStatus.Water.Thunder",
+            "context": "EnemyStatus",
+            "result": "实际独立沙盒：真实正式配置、独立DTO和临时存档；未启动波次，三个静止大血量敌人。\nreaction.EnemyStatus.Water.Thunder\nt=0秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态= 计量= 攻速倍率=1\r\neffect=ChainDamage\r\neffect=ChainDamage\r\n实际反应=reaction.EnemyStatus.Water.Thunder / EnemyStatus\r\nt=1秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态=status.effect.paralysis×1 计量= 攻速倍率=1\nEnemy#4 HP=9980 状态=status.water×1,status.effect.paralysis×1 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态=status.water×1 计量= 攻速倍率=1\r\nt=2秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#4 HP=9980 状态=status.water×1 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态=status.water×1 计量= 攻速倍率=1\r\nt=6秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#4 HP=9980 状态=status.water×1 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态=status.water×1 计量= 攻速倍率=1\r\n",
+            "error": "",
+            "succeeded": true
+        },
+        {
+            "id": "reaction.EnemyStatus.Water.Water",
+            "context": "EnemyStatus",
+            "result": "实际独立沙盒：真实正式配置、独立DTO和临时存档；未启动波次，三个静止大血量敌人。\nreaction.EnemyStatus.Water.Water\nt=0秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态= 计量= 攻速倍率=1\r\n实际反应=reaction.EnemyStatus.Water.Water / EnemyStatus\r\nt=1秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态=status.reaction.cold_wave×1 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态= 计量= 攻速倍率=1\r\nt=2秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态=status.reaction.cold_wave×1 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态= 计量= 攻速倍率=1\r\nt=6秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态= 计量= 攻速倍率=1\r\n",
+            "error": "",
+            "succeeded": true
+        },
+        {
+            "id": "reaction.EnemyStatus.Water.Wind",
+            "context": "EnemyStatus",
+            "result": "实际独立沙盒：真实正式配置、独立DTO和临时存档；未启动波次，三个静止大血量敌人。\nreaction.EnemyStatus.Water.Wind\nt=0秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态= 计量= 攻速倍率=1\r\neffect=CreateArea\r\n实际反应=reaction.EnemyStatus.Water.Wind / EnemyStatus\r\nt=1秒 / 区域=1\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态=status.combo.water_slow×1 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态=status.combo.water_slow×1 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态=status.combo.water_slow×1,status.combo.freeze×1 计量= 攻速倍率=1\r\nt=2秒 / 区域=1\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态=status.combo.water_slow×1 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态=status.combo.water_slow×1 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态=status.combo.water_slow×1 计量= 攻速倍率=1\r\nt=6秒 / 区域=1\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态=status.combo.water_slow×1 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态=status.combo.water_slow×1 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态=status.combo.water_slow×1 计量= 攻速倍率=1\r\n",
+            "error": "",
+            "succeeded": true
+        },
+        {
+            "id": "reaction.EnemyStatus.Water.Wood",
+            "context": "EnemyStatus",
+            "result": "实际独立沙盒：真实正式配置、独立DTO和临时存档；未启动波次，三个静止大血量敌人。\nreaction.EnemyStatus.Water.Wood\nt=0秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态= 计量= 攻速倍率=1\r\neffect=CreateArea\r\n实际反应=reaction.EnemyStatus.Water.Wood / EnemyStatus\r\nt=1秒 / 区域=1\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态=status.combo.water_slow×1 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态=status.combo.water_slow×1 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态=status.combo.water_slow×1 计量= 攻速倍率=1\r\nt=2秒 / 区域=1\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态=status.combo.water_slow×1 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态=status.combo.water_slow×1 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态=status.combo.water_slow×1 计量= 攻速倍率=1\r\nt=6秒 / 区域=1\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态=status.combo.water_slow×1 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态=status.combo.water_slow×1 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态=status.combo.water_slow×1 计量= 攻速倍率=1\r\n",
+            "error": "",
+            "succeeded": true
+        },
+        {
+            "id": "reaction.EnemyStatus.Wind.Thunder",
+            "context": "EnemyStatus",
+            "result": "实际独立沙盒：真实正式配置、独立DTO和临时存档；未启动波次，三个静止大血量敌人。\nreaction.EnemyStatus.Wind.Thunder\nt=0秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态= 计量= 攻速倍率=1\r\n实际反应=reaction.EnemyStatus.Wind.Thunder / EnemyStatus\r\nt=1秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态=status.thunderstorm×1 计量= 攻速倍率=0.95\nEnemy#4 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态= 计量= 攻速倍率=1\r\nt=2秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=9998 状态=status.thunderstorm×1 计量= 攻速倍率=0.95\nEnemy#4 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态= 计量= 攻速倍率=1\r\nt=6秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=9994 状态= 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态= 计量= 攻速倍率=1\r\n",
+            "error": "",
+            "succeeded": true
+        },
+        {
+            "id": "reaction.EnemyStatus.Wood.Thunder",
+            "context": "EnemyStatus",
+            "result": "实际独立沙盒：真实正式配置、独立DTO和临时存档；未启动波次，三个静止大血量敌人。\nreaction.EnemyStatus.Wood.Thunder\nt=0秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态= 计量= 攻速倍率=1\r\n实际反应=reaction.EnemyStatus.Wood.Thunder / EnemyStatus\r\nt=1秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态=status.thunderburn×1 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态= 计量= 攻速倍率=1\r\nt=2秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=9998 状态=status.thunderburn×1 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态= 计量= 攻速倍率=1\r\nt=6秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=9994 状态= 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态= 计量= 攻速倍率=1\r\n",
+            "error": "",
+            "succeeded": true
+        },
+        {
+            "id": "reaction.EnemyStatus.Wood.Wind",
+            "context": "EnemyStatus",
+            "result": "实际独立沙盒：真实正式配置、独立DTO和临时存档；未启动波次，三个静止大血量敌人。\nreaction.EnemyStatus.Wood.Wind\nt=0秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态= 计量= 攻速倍率=1\r\n实际反应=reaction.EnemyStatus.Wood.Wind / EnemyStatus\r\nt=1秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态=status.entangle×1 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态= 计量= 攻速倍率=1\r\nt=2秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态=status.entangle×1 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态= 计量= 攻速倍率=1\r\nt=6秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态= 计量= 攻速倍率=1\r\n",
+            "error": "",
+            "succeeded": true
+        },
+        {
+            "id": "reaction.EnemyStatus.Wood.Wood",
+            "context": "EnemyStatus",
+            "result": "实际独立沙盒：真实正式配置、独立DTO和临时存档；未启动波次，三个静止大血量敌人。\nreaction.EnemyStatus.Wood.Wood\nt=0秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态= 计量= 攻速倍率=1\r\neffect=CreateArea\r\n实际反应=reaction.EnemyStatus.Wood.Wood / EnemyStatus\r\nt=1秒 / 区域=1\nTower#2 HP=12 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态=status.entangle×1 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态=status.entangle×1 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态=status.entangle×1 计量= 攻速倍率=1\r\nt=2秒 / 区域=1\nTower#2 HP=14 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态=status.entangle×1 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态=status.entangle×1 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态=status.entangle×1 计量= 攻速倍率=1\r\nt=6秒 / 区域=1\nTower#2 HP=20 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态=status.entangle×1 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态=status.entangle×1 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态=status.entangle×1 计量= 攻速倍率=1\r\n",
+            "error": "",
+            "succeeded": true
+        },
+        {
+            "id": "reaction.Projectile.Fire.Fire",
+            "context": "Projectile",
+            "result": "实际独立沙盒：真实正式配置、独立DTO和临时存档；未启动波次，三个静止大血量敌人。\nreaction.Projectile.Fire.Fire\nt=0秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态= 计量= 攻速倍率=1\r\n实际反应=reaction.Projectile.Fire.Fire / Projectile\r\nt=1秒 / 区域=0\nTower#2 HP=10 状态=status.combo.blaze×1 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=9977 状态= 计量=Fire:50 攻速倍率=1\nEnemy#4 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态= 计量= 攻速倍率=1\r\nt=2秒 / 区域=0\nTower#2 HP=10 状态=status.combo.blaze×1 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=9977 状态= 计量=Fire:47.33331 攻速倍率=1\nEnemy#4 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态= 计量= 攻速倍率=1\r\nt=6秒 / 区域=0\nTower#2 HP=10 状态=status.combo.blaze×1 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=9977 状态= 计量=Fire:27.33322 攻速倍率=1\nEnemy#4 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态= 计量= 攻速倍率=1\r\n",
+            "error": "",
+            "succeeded": true
+        },
+        {
+            "id": "reaction.Projectile.Fire.Wood",
+            "context": "Projectile",
+            "result": "实际独立沙盒：真实正式配置、独立DTO和临时存档；未启动波次，三个静止大血量敌人。\nreaction.Projectile.Fire.Wood\nt=0秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态= 计量= 攻速倍率=1\r\n实际反应=reaction.Projectile.Fire.Wood / Projectile\r\nt=1秒 / 区域=0\nTower#2 HP=10 状态=status.combo.fire_boost×1 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=9975 状态= 计量=Fire:25,Wood:25 攻速倍率=1\nEnemy#4 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态= 计量= 攻速倍率=1\r\nt=2秒 / 区域=0\nTower#2 HP=10 状态=status.combo.fire_boost×1 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=9975 状态= 计量=Fire:22.33334,Wood:22.33334 攻速倍率=1\nEnemy#4 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态= 计量= 攻速倍率=1\r\nt=6秒 / 区域=0\nTower#2 HP=10 状态=status.combo.fire_boost×1 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=9975 状态= 计量=Fire:2.333355,Wood:2.333355 攻速倍率=1\nEnemy#4 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态= 计量= 攻速倍率=1\r\n",
+            "error": "",
+            "succeeded": true
+        },
+        {
+            "id": "reaction.Projectile.Wind.Wind",
+            "context": "Projectile",
+            "result": "实际独立沙盒：真实正式配置、独立DTO和临时存档；未启动波次，三个静止大血量敌人。\nreaction.Projectile.Wind.Wind\nt=0秒 / 区域=0\nTower#2 HP=10 状态= 计量= 攻速倍率=1\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#4 HP=10000 状态= 计量= 攻速倍率=1\nEnemy#5 HP=10000 状态= 计量= 攻速倍率=1\r\n实际反应=reaction.Projectile.Wind.Wind / Projectile\r\nt=1秒 / 区域=0\nTower#2 HP=10 状态=status.combo.haste×1 计量= 攻速倍率=1.3\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=9978 状态=status.combo.wind_slow×1 计量=Wind:25 攻速倍率=1\nEnemy#4 HP=9982.4 状态=status.combo.wind_slow×1 计量=Wind:25 攻速倍率=1\nEnemy#5 HP=9985.92 状态=status.combo.wind_slow×1 计量=Wind:25 攻速倍率=1\r\nt=2秒 / 区域=0\nTower#2 HP=10 状态=status.combo.haste×1 计量= 攻速倍率=1.3\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=9978 状态=status.combo.wind_slow×1 计量=Wind:22.33334 攻速倍率=1\nEnemy#4 HP=9982.4 状态=status.combo.wind_slow×1 计量=Wind:22.83334 攻速倍率=1\nEnemy#5 HP=9985.92 状态=status.combo.wind_slow×1 计量=Wind:23.16667 攻速倍率=1\r\nt=6秒 / 区域=0\nTower#2 HP=10 状态=status.combo.haste×1 计量= 攻速倍率=1.3\nSpring#1 HP=100 状态= 计量= 攻速倍率=1\nEnemy#3 HP=9978 状态= 计量=Wind:2.333355 攻速倍率=1\nEnemy#4 HP=9982.4 状态= 计量=Wind:2.833356 攻速倍率=1\nEnemy#5 HP=9985.92 状态= 计量=Wind:3.166689 攻速倍率=1\r\n",
+            "error": "",
+            "succeeded": true
+        }
+    ]
+}

@@ -7,6 +7,7 @@ namespace Spotlight.Presentation
     public sealed class GameUiReferences : MonoBehaviour
     {
         public Canvas Canvas;
+        public ThirdPartyUiThemeSO ArtTheme;
         public TutorialPanelReferences TutorialPanelPrefab;
         public DayEventPanelReferences DayEventPanelPrefab;
         public NightResultPanelReferences NightResultPanelPrefab;

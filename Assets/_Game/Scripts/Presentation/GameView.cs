@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Spotlight.Contracts;
+using Spotlight.Presentation.Cinematics;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
@@ -14,6 +15,14 @@ namespace Spotlight.Presentation
         public uint seed = 1;
         public bool PreviewOnly;
         public GameUiReferences UiPrefab;
+        [Tooltip("故事模式开场；留空保留直接开局。")]
+        public CutsceneSequenceSO OpeningStory;
+        public CutscenePanelReferences OpeningCutscenePrefab;
+        public CutscenePlayer OpeningPlayer { get; private set; }
+        public bool IsOpeningPlaying { get { return openingActive; } }
+        private bool openingActive;
+        private Guid openingPause;
+        private GameObject openingObject;
         private GameViewContext services;
         private Canvas canvas;
         private Transform panel, actions, overlay;
@@ -79,6 +88,7 @@ namespace Spotlight.Presentation
         }
         public void Unbind()
         {
+            CancelOpening();
             CancelSelection(); ReleasePlayerPause();
             foreach (IDisposable s in subscriptions) s.Dispose(); subscriptions.Clear(); pending.Clear(); services = null;
             foreach(ButtonBinding binding in buttonBindings)binding.Event.RemoveListener(binding.Listener);
@@ -96,6 +106,7 @@ namespace Spotlight.Presentation
         }
         private void Start() { if (PreviewOnly && services == null) TestWidgets(); }
         private void OnDestroy() { Unbind(); }
+        private void OnDisable() { if(openingActive){CancelOpening();RefreshControlStates();} }
         private CommandContext Command() { return services.Commands.Create(services.Flow.GetSnapshot().Revision); }
         private void Result(OperationResult result)
         {
@@ -139,10 +150,10 @@ namespace Spotlight.Presentation
         }
         private void RefreshControlStates()
         {
-            if(ui==null||services==null)return;GamePhase phase=services.Flow.GetSnapshot().Phase;bool ready=pending.Count==0;
+            if(ui==null||services==null)return;GamePhase phase=services.Flow.GetSnapshot().Phase;bool ready=pending.Count==0&&!openingActive;
             for(int i=0;i<ids.Length;i++){
                 ui.ElementButtons[i].interactable=ready&&phase==GamePhase.Build&&services.Resources.GetQuantity(ResourceBucket.Hand,ids[i])>0;
-                ColorBlock colors=ui.ElementButtons[i].colors;colors.normalColor=placing==ids[i]?new Color(0.65f,0.9f,1):Color.white;ui.ElementButtons[i].colors=colors;
+                ColorBlock colors=ui.ElementButtons[i].colors;colors.normalColor=placing==ids[i]?new Color(0.65f,0.9f,1):Color.white;ui.ElementButtons[i].colors=colors;ApplyArtState(ui.ElementButtons[i],placing==ids[i]);
             }
             for(int i=0;i<itemIds.Length;i++)ui.ItemButtons[i].interactable=ready&&(phase==GamePhase.Build||phase==GamePhase.Night)&&services.Resources.GetQuantity(ResourceBucket.Inventory,itemIds[i])>0;
             ui.CancelSelectionButton.interactable=ready;ui.PauseButton.interactable=ready&&(phase==GamePhase.Build||phase==GamePhase.Night);ui.NormalSpeedButton.interactable=ready;ui.DoubleSpeedButton.interactable=ready;
@@ -151,6 +162,7 @@ namespace Spotlight.Presentation
                 bool available=true;if((menu!=null&&binding.Button==menu.ContinueButton)||(end!=null&&binding.Button==end.RetryButton)){SaveReadResult save=services.Saves.ReadCheckpoint();available=save.Error==ErrorCode.None&&save.Data!=null;}
                 binding.Button.interactable=ready&&available;
             }
+            foreach(ButtonBinding binding in buttonBindings)if(binding.Button!=null&&Array.IndexOf(ui.ElementButtons,binding.Button)<0)ApplyArtState(binding.Button);
         }
         private void RefreshStatus()
         {
@@ -185,16 +197,16 @@ namespace Spotlight.Presentation
             resultButtons.Clear();resultFeedback=null;
             ReleaseContainer(actions); actions = Rect(ActionMount, "Actions", 0, 0, 1020, 720);
             if(ui!=null)ui.ActionsRoot.SetSiblingIndex(ui.ModalRoot.GetSiblingIndex());
-            if(phase==GamePhase.NightResult||phase==GamePhase.GameOver||phase==GamePhase.Ending)((RectTransform)actions).sizeDelta=new Vector2(1280,720);
+            if(phase==GamePhase.Menu||phase==GamePhase.NightResult||phase==GamePhase.GameOver||phase==GamePhase.Ending)((RectTransform)actions).sizeDelta=new Vector2(1280,720);
             int index = 0;
             if (phase == GamePhase.Menu && ui!=null && ui.MainMenuPanelPrefab!=null)
             {
                 string error;MainMenuPanelReferences prefab=ui.MainMenuPanelPrefab;
                 if(!prefab.Validate(out error))throw new InvalidOperationException(error);
-                MainMenuPanelReferences menu=Instantiate(prefab,actions,false);menu.gameObject.SetActive(true);
+                MainMenuPanelReferences menu=Instantiate(prefab,actions,false);menu.gameObject.SetActive(true);if(ui.ArtTheme!=null)ui.ArtTheme.ApplyMenu(menu);
                 SaveReadResult checkpoint=services.Saves.ReadCheckpoint();
                 bool available=checkpoint.Error==ErrorCode.None&&checkpoint.Data!=null;
-                menu.ContinueButton.interactable=available;
+                menu.ContinueButton.interactable=available;ApplyArtState(menu.ContinueButton);
                 menu.HintText.text=available?"选择故事或无尽模式，或继续上次旅程。":CheckpointHint(checkpoint);
                 BindButton(menu.StoryButton,delegate {NewRun(GameMode.Story);});
                 BindButton(menu.EndlessButton,delegate {NewRun(GameMode.Endless);});
@@ -237,6 +249,7 @@ namespace Spotlight.Presentation
         {
             string error;if(!ui.NightResultPanelPrefab.Validate(out error))throw new InvalidOperationException(error);
             NightResultPanelReferences instance=Instantiate(ui.NightResultPanelPrefab,actions,false);instance.gameObject.SetActive(true);
+            if(ui.ArtTheme!=null)ui.ArtTheme.ApplyDialogue(instance.Root,ui.ArtTheme.PortraitSmile);
             instance.TitleText.text="守护成功";SetResultSummary(instance.SummaryText);resultFeedback=instance.HintText;
             bool milestone=IsEndlessMilestone();instance.HintText.text=milestone?"已完成无尽里程碑，继续挑战可领取里程碑奖励。":"确认后迎接下一天，黎明生产以实际结算为准。";
             instance.NextDayButton.GetComponentInChildren<Text>(true).text=milestone?"继续无尽挑战":"迎接下一天";
@@ -248,6 +261,7 @@ namespace Spotlight.Presentation
         {
             string error;if(!ui.RunEndPanelPrefab.Validate(out error))throw new InvalidOperationException(error);
             RunEndPanelReferences instance=Instantiate(ui.RunEndPanelPrefab,actions,false);instance.gameObject.SetActive(true);
+            if(ui.ArtTheme!=null)ui.ArtTheme.ApplyDialogue(instance.Root,phase==GamePhase.GameOver?ui.ArtTheme.PortraitCrying:ui.ArtTheme.PortraitSmile);
             instance.TitleText.text=PhaseName(phase);SetResultSummary(instance.SummaryText);resultFeedback=instance.HintText;
             instance.RetryButton.GetComponentInChildren<Text>(true).text="从记录重试";instance.ReturnMenuButton.GetComponentInChildren<Text>(true).text="返回菜单";instance.ContinueEndlessButton.GetComponentInChildren<Text>(true).text="继续无尽挑战";
             instance.RetryButton.gameObject.SetActive(phase==GamePhase.GameOver);
@@ -259,7 +273,7 @@ namespace Spotlight.Presentation
                 if(checkpoint.Error!=ErrorCode.None||checkpoint.Data==null)return new OperationResult(OperationState.Rejected,checkpoint.Error==ErrorCode.None?ErrorCode.SaveUnavailable:checkpoint.Error,Guid.Empty,services.Flow.GetSnapshot().Revision,"ui.retry.checkpoint");
                 OperationResult loaded=services.Flow.TryLoadRun(Command(),checkpoint.Data);if(loaded.State==OperationState.Committed)productionSummary=null;return loaded;
             });
-            instance.RetryButton.interactable=retry;
+            instance.RetryButton.interactable=retry;ApplyArtState(instance.RetryButton);
             BindResultButton(instance.ReturnMenuButton,delegate {return services.Flow.TryReturnToMenu(Command());});
             BindResultButton(instance.ContinueEndlessButton,delegate {return services.Flow.TryContinueEndless(Command());});
         }
@@ -283,16 +297,59 @@ namespace Spotlight.Presentation
         {
             foreach(Button button in resultButtons)if(button!=null){button.interactable=enabled;
                 RunEndPanelReferences end=button.GetComponentInParent<RunEndPanelReferences>();
-                if(enabled&&end!=null&&button==end.RetryButton){SaveReadResult save=services.Saves.ReadCheckpoint();button.interactable=save.Error==ErrorCode.None&&save.Data!=null;}}
+                if(enabled&&end!=null&&button==end.RetryButton){SaveReadResult save=services.Saves.ReadCheckpoint();button.interactable=save.Error==ErrorCode.None&&save.Data!=null;}ApplyArtState(button);}
         }
         private void ActionButton(string text, int i, Action action) { Button(actions, text, 24 + i % 4 * 236, 622 + i / 4 * 44, 220, 38, action); }
         private void NewRun(GameMode mode)
+        {
+            if(services==null||openingActive)return;
+            if(mode==GameMode.Story&&services.Flow.GetSnapshot().Phase==GamePhase.Menu&&OpeningStory!=null&&OpeningStory.Slides!=null&&OpeningStory.Slides.Length>0)
+            { PlayOpening(); return; }
+            StartRun(mode);
+        }
+        private void PlayOpening()
+        {
+            openingActive=true;
+            try
+            {
+                CancelSelection();
+                openingPause=services.Clock.AcquirePause(PauseReason.Modal);
+                string error;
+                CutscenePanelReferences references=OpeningCutscenePrefab!=null&&OpeningCutscenePrefab.Validate(out error)
+                    ?Instantiate(OpeningCutscenePrefab,canvas.transform,false)
+                    :CutscenePanelReferences.CreateDefaultPanel(canvas.transform,font);
+                openingObject=references.gameObject;openingObject.SetActive(true);references.transform.SetAsLastSibling();
+                OpeningPlayer=references.GetComponent<CutscenePlayer>();
+                if(OpeningPlayer==null)OpeningPlayer=references.gameObject.AddComponent<CutscenePlayer>();
+                OpeningPlayer.Panel=references;
+                OpeningPlayer.Begin(OpeningStory,delegate {
+                    if(!openingActive||services==null)return;
+                    CancelOpening();
+                    if(services.Flow.GetSnapshot().Phase==GamePhase.Menu)StartRun(GameMode.Story);
+                    RefreshControlStates();
+                });
+                RefreshControlStates();
+            }
+            catch(Exception error)
+            {
+                CancelOpening();note.text="开场播放失败，请重试。";Debug.LogException(error,this);RefreshControlStates();
+            }
+        }
+        private void CancelOpening()
+        {
+            openingActive=false;
+            if(OpeningPlayer!=null)OpeningPlayer.Cancel();OpeningPlayer=null;
+            if(services!=null&&openingPause!=Guid.Empty)services.Clock.ReleasePause(openingPause);openingPause=Guid.Empty;
+            if(openingObject!=null){openingObject.SetActive(false);PresentationObjects.Release(openingObject);}openingObject=null;
+        }
+        private void StartRun(GameMode mode)
         {
             OperationResult result=services.Flow.TryNewRun(Command(),new NewRunRequest {LevelId=defaultLevelId,Mode=mode,Seed=seed});
             if(result.State==OperationState.Committed){CancelSelection();ReleasePlayerPause();}Result(result);
         }
         private void Menu()
         {
+            if(services==null||openingActive)return;
             OperationResult result=services.Flow.TryReturnToMenu(Command());
             if(result.State==OperationState.Committed){CancelSelection();ReleasePlayerPause();}Result(result);
         }
@@ -300,12 +357,13 @@ namespace Spotlight.Presentation
         { return save.Error==ErrorCode.SaveUnavailable||save.Error==ErrorCode.None?"没有可继续的记录，请开始新的旅程。":"继续游戏不可用："+ErrorText(save.Error)+"。请开始新的旅程。"; }
         private void Load()
         {
+            if(services==null||openingActive)return;
             SaveReadResult save=services.Saves.ReadCheckpoint();
             if(save.Error!=ErrorCode.None||save.Data==null)
             {
                 note.text=CheckpointHint(save);
                 MainMenuPanelReferences menu=ui==null?null:ui.ActionsRoot.GetComponentInChildren<MainMenuPanelReferences>();
-                if(menu!=null){menu.HintText.text=note.text;menu.ContinueButton.interactable=false;}return;
+                if(menu!=null){menu.HintText.text=note.text;menu.ContinueButton.interactable=false;ApplyArtState(menu.ContinueButton);}return;
             }
             OperationResult result=services.Flow.TryLoadRun(Command(),save.Data);
             if(result.State==OperationState.Committed)productionSummary=null;
@@ -313,12 +371,12 @@ namespace Spotlight.Presentation
             MainMenuPanelReferences remaining=ui==null?null:ui.ActionsRoot.GetComponentInChildren<MainMenuPanelReferences>();
             if(remaining!=null&&result.State!=OperationState.Committed)remaining.HintText.text=note.text;
         }
-        private void Place(string id) { if (services == null || pending.Count!=0 || services.Flow.GetSnapshot().Phase != GamePhase.Build) return; placing = id; move = swap = false; note.text = "点击空格放置，或点取消";RefreshControlStates(); }
+        private void Place(string id) { if (services == null || openingActive || pending.Count!=0 || services.Flow.GetSnapshot().Phase != GamePhase.Build) return; placing = id; move = swap = false; note.text = "点击空格放置，或点取消";RefreshControlStates(); }
         private void ChooseMove(bool exchange) { if (!selected) { note.text = "先点选元素或塔"; return; } placing = null; move = !exchange; swap = exchange; note.text = exchange ? "点击要交换的格子" : "点击要移往的空格"; }
         private void Update()
         {
             if(services!=null){statusRefreshTimer+=Time.unscaledDeltaTime;if(statusRefreshTimer>=0.2f){statusRefreshTimer=0;RefreshStatus();}}
-            if (services == null || blocked || !Input.GetMouseButtonDown(0) || (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())) return;
+            if (services == null || openingActive || blocked || !Input.GetMouseButtonDown(0) || (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())) return;
             Camera camera = Camera.main; if (camera == null) return;
             Vector3 hit = camera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -camera.transform.position.z)); WorldPoint world = new WorldPoint(hit.x, hit.y);
             if (selectedItem != null) { SelectItemTarget(world); return; }
@@ -328,7 +386,7 @@ namespace Spotlight.Presentation
         }
         private void HandleBoardClick(CellCoord clicked)
         {
-            if(services==null||blocked||pending.Count!=0||services.Flow.GetSnapshot().Phase!=GamePhase.Build)return;
+            if(services==null||openingActive||blocked||pending.Count!=0||services.Flow.GetSnapshot().Phase!=GamePhase.Build)return;
             if (move || swap) { OperationResult r = swap ? services.Deployment.TrySwap(Command(), cell, clicked) : services.Deployment.TryMove(Command(), cell, clicked); move = swap = false; Result(r); return; }
             if (placing != null) { Result(services.Deployment.TryPlace(Command(), new PlacementRequest { Cell = clicked, DefinitionId = placing, Kind = placing == towerId ? OccupantKind.Tower : OccupantKind.ElementBlock })); return; }
             CellSnapshot c; selected = services.Board.TryGetCell(clicked, out c) && c.OccupantKind != OccupantKind.None; cell = clicked;
@@ -336,7 +394,7 @@ namespace Spotlight.Presentation
         }
         private void BeginItem(int index)
         {
-            if (services == null) return; CancelSelection();
+            if (services == null || openingActive) return; CancelSelection();
             if (services.Resources.GetQuantity(ResourceBucket.Inventory, itemIds[index]) <= 0) { note.text = "暂时没有这个道具"; return; }
             selectedItem = itemIds[index]; itemPause = services.Clock.AcquirePause(PauseReason.ItemSelection);
             if (index == 0) UseItem(services.World.SpringId); else note.text = "点击一座存活的塔强化，或点取消";
@@ -350,7 +408,7 @@ namespace Spotlight.Presentation
         private void ReleaseItem() { selectedItem = null; if (services != null && itemPause != Guid.Empty) services.Clock.ReleasePause(itemPause); itemPause = Guid.Empty; }
         private void ReleasePlayerPause() { if(services!=null&&playerPause!=Guid.Empty)services.Clock.ReleasePause(playerPause);playerPause=Guid.Empty; }
         private void CancelSelection() { ReleaseItem(); placing = null; move = swap = false; }
-        private void Pause() { if (services == null) return; if (playerPause == Guid.Empty) playerPause = services.Clock.AcquirePause(PauseReason.Player); else { services.Clock.ReleasePause(playerPause); playerPause = Guid.Empty; } note.text = playerPause == Guid.Empty ? "继续守护" : "已暂停"; }
+        private void Pause() { if (services == null || openingActive) return; if (playerPause == Guid.Empty) playerPause = services.Clock.AcquirePause(PauseReason.Player); else { services.Clock.ReleasePause(playerPause); playerPause = Guid.Empty; } note.text = playerPause == Guid.Empty ? "继续守护" : "已暂停"; }
         private void DrawModal()
         {
             FlowSnapshot flow = services.Flow.GetSnapshot();
@@ -368,7 +426,7 @@ namespace Spotlight.Presentation
             if (flow.Phase == GamePhase.DayEvent) {
                 DayEventPanelReferences prefab=ui!=null?ui.DayEventPanelPrefab:null;
                 if(prefab!=null){string error;if(!prefab.Validate(out error)){InvalidModal(error);return;}
-                    DayEventPanelReferences instance=Instantiate(prefab,ModalMount,false);overlay=instance.transform;ActivateModal();
+                    DayEventPanelReferences instance=Instantiate(prefab,ModalMount,false);overlay=instance.transform;ActivateModal();if(ui.ArtTheme!=null)ui.ArtTheme.ApplyDialogue(instance.Root,ui.ArtTheme.PortraitNeutral);
                     instance.TitleText.text="第 "+day.State.DayIndex+" 天 · 今日事件";instance.BodyText.text=day.Text;
                     if(day.Options!=null)foreach(EventOptionDefinition option in day.Options){if(option==null)continue;string id=option.Id,eventId=day.State.InstanceId;
                         Button button=Instantiate(instance.OptionButtonTemplate,instance.OptionsRoot,false);button.name="Option_"+id;
@@ -388,7 +446,7 @@ namespace Spotlight.Presentation
             } else if(tutorialOpen) {
                 TutorialPanelReferences prefab=ui!=null?ui.TutorialPanelPrefab:null;
                 if(prefab!=null){string error;if(!prefab.Validate(out error)){InvalidModal(error);return;}
-                    TutorialPanelReferences instance=Instantiate(prefab,ModalMount,false);overlay=instance.transform;ActivateModal();
+                    TutorialPanelReferences instance=Instantiate(prefab,ModalMount,false);overlay=instance.transform;ActivateModal();if(ui.ArtTheme!=null)ui.ArtTheme.ApplyDialogue(instance.Root,ui.ArtTheme.PortraitCalm);
                     instance.TitleText.text="守护指南";instance.BodyText.text=tutorial;modalButtons.Add(instance.ConfirmButton);
                     BindButton(instance.ConfirmButton,delegate {SubmitModal(delegate {return services.Flow.TryDismissTutorial(Command());});});
                 }else{Modal("守护指南",tutorial);modalButtons.Add(Button(overlay,"开始部署",490,550,300,48,delegate {SubmitModal(delegate {return services.Flow.TryDismissTutorial(Command());});}));}
@@ -406,7 +464,7 @@ namespace Spotlight.Presentation
             finally{modalSubmitting=false;SetModalInteractable(modalPending==Guid.Empty);}
         }
         private void SetModalInteractable(bool enabled)
-        {foreach(Button button in modalButtons)if(button!=null)button.interactable=enabled;}
+        {foreach(Button button in modalButtons)if(button!=null){button.interactable=enabled;ApplyArtState(button);}}
         private void ActivateModal()
         {overlay.gameObject.SetActive(true);overlay.SetAsLastSibling();if(ui!=null)ui.ModalRoot.SetAsLastSibling();blocked=true;}
         private void InvalidModal(string error)
@@ -462,6 +520,7 @@ namespace Spotlight.Presentation
             if(!UiPrefab.Validate(out error))throw new InvalidOperationException(error);
             ui=Instantiate(UiPrefab,transform,false);generatedUi=ui.gameObject;
             if(!ui.Validate(out error))throw new InvalidOperationException(error);
+            if(ui.ArtTheme!=null)ui.ArtTheme.ApplyButtons(ui.transform);
             canvas=ui.Canvas;panel=canvas.transform;font=ui.TitleText.font!=null?ui.TitleText.font:CreateFont();
             title=ui.TitleText;health=ui.SpringHpText;wave=ui.WaveText;skill=ui.SkillText;gold=ui.GoldText;note=ui.HintText;selection=ui.SelectionText;
             for(int i=0;i<hands.Length;i++){int index=i;hands[i]=ui.HandTexts[i];BindButton(ui.ElementButtons[i],delegate {Place(ids[index]);});}
@@ -487,9 +546,12 @@ namespace Spotlight.Presentation
             ownedEvents=new GameObject("UI Event System",typeof(EventSystem),typeof(StandaloneInputModule));
             ownedEvents.transform.SetParent(transform,false);
         }
+        private void ApplyArtState(Button button,bool selected=false)
+        {if(ui!=null&&ui.ArtTheme!=null)ui.ArtTheme.ApplyState(button,selected);}
         private void BindButton(Button button,Action action)
         {
-            UnityAction listener=delegate {if(pending.Count==0&&action!=null)action();};
+            UnityAction listener=delegate {if(!openingActive&&pending.Count==0&&action!=null)action();};
+            if(ui!=null&&ui.ArtTheme!=null){ui.ArtTheme.ApplyButton(button);ui.ArtTheme.ApplyState(button);}
             buttonBindings.Add(new ButtonBinding {Button=button,Event=button.onClick,Listener=listener});button.onClick.AddListener(listener);
         }
         private void ReleaseContainer(Transform container)

@@ -31,6 +31,28 @@ namespace Spotlight.Bootstrap
         public ItemDefinitionSO[] Items=new ItemDefinitionSO[0];
         public DayEventDefinitionSO[] DayEvents=new DayEventDefinitionSO[0];
         public ResourceDefinitionSO[] Resources=new ResourceDefinitionSO[0];
+#if UNITY_EDITOR
+        // Only effect assets are collected here; unrelated catalog entries stay authored explicitly.
+        public void CollectEffectAssetsInEditor()
+        {
+            Reactions = CollectInEditor(Reactions);
+            Statuses = CollectInEditor(Statuses);
+            UnityEditor.EditorUtility.SetDirty(this);
+        }
+        private static T[] CollectInEditor<T>(T[] existing) where T : ScriptableObject
+        {
+            List<T> result = new List<T>();
+            if (existing != null) foreach (T asset in existing) if (asset != null && !result.Contains(asset)) result.Add(asset);
+            string[] guids = UnityEditor.AssetDatabase.FindAssets("t:" + typeof(T).Name, new[] { "Assets/_Game/Data" });
+            Array.Sort(guids, StringComparer.Ordinal);
+            foreach (string guid in guids)
+            {
+                T asset = UnityEditor.AssetDatabase.LoadAssetAtPath<T>(UnityEditor.AssetDatabase.GUIDToAssetPath(guid));
+                if (asset != null && !result.Contains(asset)) result.Add(asset);
+            }
+            return result.ToArray();
+        }
+#endif
         public CatalogData BuildCatalogData()
         {
             CatalogData data=new CatalogData();

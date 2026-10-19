@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="9" result="Passed" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-14 05:41:27Z" end-time="2026-10-14 05:41:29Z" duration="1.9169079">
+  <test-suite type="TestSuite" id="1289" name="2026GameJam" fullname="2026GameJam" runstate="Runnable" testcasecount="205" result="Passed" start-time="2026-10-14 05:41:27Z" end-time="2026-10-14 05:41:29Z" duration="1.916908" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties />
+    <test-suite type="Assembly" id="1568" name="Spotlight.Integration.Tests.dll" fullname="E:/PersonalProgram/2026GameJam/Library/ScriptAssemblies/Spotlight.Integration.Tests.dll" runstate="Runnable" testcasecount="158" result="Passed" start-time="2026-10-14 05:41:27Z" end-time="2026-10-14 05:41:29Z" duration="1.901412" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="34432" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+      </properties>
+      <test-suite type="TestSuite" id="1569" name="Spotlight" fullname="Spotlight" runstate="Runnable" testcasecount="158" result="Passed" start-time="2026-10-14 05:41:27Z" end-time="2026-10-14 05:41:29Z" duration="1.899886" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1570" name="Tests" fullname="Spotlight.Tests" runstate="Runnable" testcasecount="150" result="Passed" start-time="2026-10-14 05:41:27Z" end-time="2026-10-14 05:41:29Z" duration="1.896823" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1571" name="Integration" fullname="Spotlight.Tests.Integration" runstate="Runnable" testcasecount="145" result="Passed" start-time="2026-10-14 05:41:27Z" end-time="2026-10-14 05:41:29Z" duration="1.893618" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1420" name="PR16UiIntegrationTests" fullname="Spotlight.Tests.Integration.PR16UiIntegrationTests" classname="Spotlight.Tests.Integration.PR16UiIntegrationTests" runstate="Runnable" testcasecount="18" result="Passed" start-time="2026-10-14 05:41:27Z" end-time="2026-10-14 05:41:29Z" duration="1.889874" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-suite type="ParameterizedMethod" id="1440" name="FormalOutcomeCanvasRendersReadableControls" fullname="Spotlight.Tests.Integration.PR16UiIntegrationTests.FormalOutcomeCanvasRendersReadableControls" classname="Spotlight.Tests.Integration.PR16UiIntegrationTests" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-10-14 05:41:27Z" end-time="2026-10-14 05:41:29Z" duration="1.885182" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1431" name="FormalOutcomeCanvasRendersReadableControls(NightResult,1280,720)" fullname="Spotlight.Tests.Integration.PR16UiIntegrationTests.FormalOutcomeCanvasRendersReadableControls(NightResult,1280,720)" methodname="FormalOutcomeCanvasRendersReadableControls" classname="Spotlight.Tests.Integration.PR16UiIntegrationTests" runstate="Runnable" seed="2143179945" result="Passed" start-time="2026-10-14 05:41:27Z" end-time="2026-10-14 05:41:28Z" duration="0.708828" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1432" name="FormalOutcomeCanvasRendersReadableControls(NightResult,960,540)" fullname="Spotlight.Tests.Integration.PR16UiIntegrationTests.FormalOutcomeCanvasRendersReadableControls(NightResult,960,540)" methodname="FormalOutcomeCanvasRendersReadableControls" classname="Spotlight.Tests.Integration.PR16UiIntegrationTests" runstate="Runnable" seed="873413795" result="Passed" start-time="2026-10-14 05:41:28Z" end-time="2026-10-14 05:41:28Z" duration="0.126646" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1433" name="FormalOutcomeCanvasRendersReadableControls(NightResult,1920,1080)" fullname="Spotlight.Tests.Integration.PR16UiIntegrationTests.FormalOutcomeCanvasRendersReadableControls(NightResult,1920,1080)" methodname="FormalOutcomeCanvasRendersReadableControls" classname="Spotlight.Tests.Integration.PR16UiIntegrationTests" runstate="Runnable" seed="483567349" result="Passed" start-time="2026-10-14 05:41:28Z" end-time="2026-10-14 05:41:28Z" duration="0.181544" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1434" name="FormalOutcomeCanvasRendersReadableControls(GameOver,1280,720)" fullname="Spotlight.Tests.Integration.PR16UiIntegrationTests.FormalOutcomeCanvasRendersReadableControls(GameOver,1280,720)" methodname="FormalOutcomeCanvasRendersReadableControls" classname="Spotlight.Tests.Integration.PR16UiIntegrationTests" runstate="Runnable" seed="49747430" result="Passed" start-time="2026-10-14 05:41:28Z" end-time="2026-10-14 05:41:28Z" duration="0.132584" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1435" name="FormalOutcomeCanvasRendersReadableControls(GameOver,960,540)" fullname="Spotlight.Tests.Integration.PR16UiIntegrationTests.FormalOutcomeCanvasRendersReadableControls(GameOver,960,540)" methodname="FormalOutcomeCanvasRendersReadableControls" classname="Spotlight.Tests.Integration.PR16UiIntegrationTests" runstate="Runnable" seed="298209141" result="Passed" start-time="2026-10-14 05:41:28Z" end-time="2026-10-14 05:41:28Z" duration="0.122588" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1436" name="FormalOutcomeCanvasRendersReadableControls(GameOver,1920,1080)" fullname="Spotlight.Tests.Integration.PR16UiIntegrationTests.FormalOutcomeCanvasRendersReadableControls(GameOver,1920,1080)" methodname="FormalOutcomeCanvasRendersReadableControls" classname="Spotlight.Tests.Integration.PR16UiIntegrationTests" runstate="Runnable" seed="1943070556" result="Passed" start-time="2026-10-14 05:41:28Z" end-time="2026-10-14 05:41:29Z" duration="0.163695" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1437" name="FormalOutcomeCanvasRendersReadableControls(Ending,1280,720)" fullname="Spotlight.Tests.Integration.PR16UiIntegrationTests.FormalOutcomeCanvasRendersReadableControls(Ending,1280,720)" methodname="FormalOutcomeCanvasRendersReadableControls" classname="Spotlight.Tests.Integration.PR16UiIntegrationTests" runstate="Runnable" seed="1897856968" result="Passed" start-time="2026-10-14 05:41:29Z" end-time="2026-10-14 05:41:29Z" duration="0.133765" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1438" name="FormalOutcomeCanvasRendersReadableControls(Ending,960,540)" fullname="Spotlight.Tests.Integration.PR16UiIntegrationTests.FormalOutcomeCanvasRendersReadableControls(Ending,960,540)" methodname="FormalOutcomeCanvasRendersReadableControls" classname="Spotlight.Tests.Integration.PR16UiIntegrationTests" runstate="Runnable" seed="240831968" result="Passed" start-time="2026-10-14 05:41:29Z" end-time="2026-10-14 05:41:29Z" duration="0.123732" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1439" name="FormalOutcomeCanvasRendersReadableControls(Ending,1920,1080)" fullname="Spotlight.Tests.Integration.PR16UiIntegrationTests.FormalOutcomeCanvasRendersReadableControls(Ending,1920,1080)" methodname="FormalOutcomeCanvasRendersReadableControls" classname="Spotlight.Tests.Integration.PR16UiIntegrationTests" runstate="Runnable" seed="1421270180" result="Passed" start-time="2026-10-14 05:41:29Z" end-time="2026-10-14 05:41:29Z" duration="0.180376" asserts="0">
+                  <properties />
+                </test-case>
+              </test-suite>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

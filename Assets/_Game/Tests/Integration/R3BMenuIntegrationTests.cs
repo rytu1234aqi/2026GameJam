@@ -48,7 +48,7 @@ namespace Spotlight.Tests.Integration
             Assert.AreEqual("聚光灯",Menu.TitleText.text);
             Assert.IsFalse(Menu.ContinueButton.interactable);Assert.That(Menu.HintText.text,Does.Contain("没有可继续"));
             Assert.AreEqual(Menu.TitleText.font,Ui.TitleText.font);
-            Assert.Greater(Menu.StoryButton.GetComponent<RectTransform>().sizeDelta.y,40);
+            Canvas.ForceUpdateCanvases();Assert.Greater(Menu.StoryButton.GetComponent<RectTransform>().rect.height,40);
             Assert.AreNotEqual(Menu.StoryButton.transform.localPosition,Menu.EndlessButton.transform.localPosition);
             Assert.AreEqual(1,host.GetComponentsInChildren<Canvas>(true).Length);
         }

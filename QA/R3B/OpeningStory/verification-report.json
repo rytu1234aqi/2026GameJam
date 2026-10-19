@@ -1,0 +1,94 @@
+{
+  "date": "2026-10-14",
+  "branch": "main",
+  "narrative": "Original opening accepted by user",
+  "fullRegression": {
+    "total": 261,
+    "passed": 261,
+    "failed": 0,
+    "report": "editmode-tests.xml",
+    "scope": "Full suite before final opaque ending refinement"
+  },
+  "finalOpeningRegression": {
+    "total": 12,
+    "passed": 12,
+    "failed": 0,
+    "report": "ending-regression-tests.xml",
+    "scope": "Final opening including opaque fade, exactly-once callback, repeat playback"
+  },
+  "render": {
+    "slides": 5,
+    "illustrations": 3,
+    "sizes": [
+      "960x540",
+      "1280x720",
+      "1920x1080"
+    ],
+    "stills": 15,
+    "video": "opening-preview.mp4",
+    "fps": 15,
+    "frames": 277,
+    "durationSeconds": 18.466666666666665,
+    "source": "Real Unity CutscenePlayer and formal GameView Canvas; automatically simulated progression",
+    "framesArchive": "Docs/Verification/opening-story-20261014/Frames"
+  },
+  "build": {
+    "succeeded": true,
+    "errors": 0,
+    "warnings": 0,
+    "output": "Builds/WindowsOpeningStory/Spotlight.exe",
+    "report": "build-report.json"
+  },
+  "windowsPlayerRegression": {
+    "succeeded": true,
+    "report": "player-smoke.json",
+    "scope": "Original first two nights, pause, 2x, isolated save/continue; not opening UI input"
+  },
+  "imageGeneration": {
+    "tool": "Built-in imagegen",
+    "prompts": "illustration-prompts.json",
+    "assets": "Assets/_Game/Art/Story/Opening"
+  },
+  "sourceSha256": [
+    {
+      "path": "Assets/_Game/Scripts/Presentation/Cinematics/CutscenePlayer.cs",
+      "sha256": "47DE7614003EDF374ABD3032CF680C4EC42134F9D57D4C426ECC5B2B064A9604"
+    },
+    {
+      "path": "Assets/_Game/Scripts/Presentation/Cinematics/CutsceneSequenceSO.cs",
+      "sha256": "CD197F9977E3BA1E8C69B9363FADCEB5642644783B32DFF9F9299C24809D5D10"
+    },
+    {
+      "path": "Assets/_Game/Scripts/Presentation/Cinematics/CutscenePanelReferences.cs",
+      "sha256": "56B1AAAC2DE07B7B770FFB216B58411DA1BC06023ECB43320CBEDB012EB3E200"
+    },
+    {
+      "path": "Assets/_Game/Scripts/Presentation/GameView.cs",
+      "sha256": "C1265D87F52FE69E0592ABE05B6501E3CF37590966167302A7012C134F6573CA"
+    },
+    {
+      "path": "Assets/_Game/Scripts/Bootstrap/GameBootstrap.cs",
+      "sha256": "711F49A354250172A2CB031A1CFDC0C2EA1AE2213B83CF22490DD1BE74167908"
+    },
+    {
+      "path": "Assets/_Game/Scripts/Editor/OpeningStorySetupTool.cs",
+      "sha256": "32576D98792D15DAE954A7B36795EAFDDE538414910C0992BEDB09F994867D67"
+    },
+    {
+      "path": "Assets/_Game/Tests/Integration/OpeningStoryIntegrationTests.cs",
+      "sha256": "51898DAAD07EA4B519B80D88C4A9EBA6B12B5C472DFF4A4383977BB0F0EE0D41"
+    },
+    {
+      "path": "Assets/_Game/Data/Story/OpeningStory.asset",
+      "sha256": "99A3BB0C8BD6B72150B274CFF9241E6F0A70DC548AA2507DF6F92042770CCCDB"
+    },
+    {
+      "path": "Assets/_Game/Prefabs/UI/Story/UI_OpeningStory.prefab",
+      "sha256": "778158D3EBD80459DF94AD4D953B953E1F7D84B4758D06F8770DD6E67B88B8FE"
+    },
+    {
+      "path": "Assets/_Game/Scenes/00_Bootstrap.unity",
+      "sha256": "350A89ADFCEC33FF11EFC07D99FE2E74D4EC07828705E2E2F3FEC136360A123B"
+    }
+  ]
+}

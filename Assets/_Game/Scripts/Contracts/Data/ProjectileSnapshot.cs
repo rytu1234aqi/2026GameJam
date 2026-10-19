@@ -6,6 +6,10 @@ namespace Spotlight.Contracts
 {
     public sealed class ProjectileSnapshot
     {
+        public int HitCount;
+        public int MaxHits = 1;
+        public bool PiercingEnabled;
+
         public long ProjectileId;
         public EntityId Source;
         public WorldPoint Position;

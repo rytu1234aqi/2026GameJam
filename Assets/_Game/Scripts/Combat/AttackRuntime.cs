@@ -106,8 +106,13 @@ namespace Spotlight.Combat
         {
             internal long Id; internal string Definition; internal EntityId Source; internal ActorKind SourceKind; internal WorldPoint Position, Direction;
             internal float Speed, Life, Radius, Physical; internal ElementAmounts Damage, Gauge; internal DamageOrigin Origin; internal int Mask;
+            internal bool Piercing, Exhausted; internal int Hits, MaxHits = 1; internal float Retention = 1; internal HashSet<long> Overlapping = new HashSet<long>();
+            internal List<HitEffect> HitEffects = new List<HitEffect>();
             internal List<ReactionToken> Tokens = new List<ReactionToken>(); internal List<string> Rules = new List<string>();
+            internal HashSet<long> VisitedBlocks = new HashSet<long>();
+            internal HashSet<CellCoord> VisitedLegacyCells = new HashSet<CellCoord>();
         }
+        private sealed class HitEffect { internal EffectSpec Effect; internal string Reaction; internal float Multiplier; }
         private sealed class Intersection { internal float T; internal ActorSnapshot Actor; internal CellSnapshot Cell; }
         private readonly CombatServices owner; private readonly DamageRuntime damage; private readonly List<Bullet> bullets = new List<Bullet>(); private long sequence, tokenSequence;
         internal ProjectileRuntime(CombatServices owner, DamageRuntime damage) { this.owner = owner; this.damage = damage; }
@@ -117,17 +122,17 @@ namespace Spotlight.Combat
         {
             if (request == null || request.PhysicalDamage < 0 || !CombatMath.Finite(request.PhysicalDamage) || !CombatMath.ValidAmounts(request.ElementDamage, false) || !CombatMath.ValidAmounts(request.Gauge, false)) return owner.Result(OperationState.Rejected, ErrorCode.InvalidArgument, "projectile.request");
             ProjectileDefinition d; ActorSnapshot source;
-            if (!owner.Catalog.TryGetProjectile(request.DefinitionId, out d) || d.SpeedInCellsPerSecond <= 0 || d.LifetimeSeconds <= 0 || d.CollisionRadiusInCells < 0) return owner.Result(OperationState.Rejected, ErrorCode.InvalidDefinition, "projectile.definition");
+            if (!owner.Catalog.TryGetProjectile(request.DefinitionId, out d) || d.SpeedInCellsPerSecond <= 0 || d.LifetimeSeconds <= 0 || d.CollisionRadiusInCells < 0 || d.MaxHits < 1 || d.MaxHits > 64 || !CombatMath.Finite(d.RetainedDamageMultiplier) || d.RetainedDamageMultiplier < 0 || d.RetainedDamageMultiplier > 1) return owner.Result(OperationState.Rejected, ErrorCode.InvalidDefinition, "projectile.definition");
             if (!owner.World.TryGetActor(request.Source, out source) || source.CurrentHp <= 0 || (source.Kind != ActorKind.Tower && source.Kind != ActorKind.Enemy)) return owner.Result(OperationState.Rejected, ErrorCode.InvalidTarget, "projectile.source");
             float dx = request.AimPoint.X - request.Origin.X, dy = request.AimPoint.Y - request.Origin.Y, length = (float)Math.Sqrt(dx * dx + dy * dy);
             if (!CombatMath.Finite(length) || length <= 0) return owner.Result(OperationState.Rejected, ErrorCode.InvalidArgument, "projectile.direction");
             LevelDefinition level; float size = owner.Catalog.TryGetLevel(owner.Board.GetSnapshot().LevelId, out level) ? level.CellSize : 1;
             bullets.Add(new Bullet { Id = ++sequence, Definition = request.DefinitionId, Source = request.Source, SourceKind = source.Kind, Position = request.Origin, Direction = new WorldPoint(dx / length, dy / length),
-                Speed = d.SpeedInCellsPerSecond * size, Life = d.LifetimeSeconds, Radius = d.CollisionRadiusInCells * size, Physical = request.PhysicalDamage, Damage = request.ElementDamage, Gauge = request.Gauge, Origin = request.DamageOrigin });
+                Speed = d.SpeedInCellsPerSecond * size, Life = d.LifetimeSeconds, Radius = d.CollisionRadiusInCells * size, Piercing = d.PiercingEnabled, MaxHits = d.MaxHits, Retention = d.RetainedDamageMultiplier, Physical = request.PhysicalDamage, Damage = request.ElementDamage, Gauge = request.Gauge, Origin = request.DamageOrigin });
             return owner.Result(OperationState.Committed, ErrorCode.None, "projectile.spawned");
         }
         public IReadOnlyList<ProjectileSnapshot> GetSnapshot()
-        { List<ProjectileSnapshot> result = new List<ProjectileSnapshot>(); foreach (Bullet b in bullets) result.Add(new ProjectileSnapshot { ProjectileId = b.Id, Source = b.Source, Position = b.Position, Direction = b.Direction, AppliedElementMask = b.Mask, AppliedReactionIds = new List<string>(b.Rules).AsReadOnly() }); return result.AsReadOnly(); }
+        { List<ProjectileSnapshot> result = new List<ProjectileSnapshot>(); foreach (Bullet b in bullets) result.Add(new ProjectileSnapshot { ProjectileId = b.Id, Source = b.Source, Position = b.Position, Direction = b.Direction, AppliedElementMask = b.Mask, HitCount = b.Hits, MaxHits = b.MaxHits, PiercingEnabled = b.Piercing, AppliedReactionIds = new List<string>(b.Rules).AsReadOnly() }); return result.AsReadOnly(); }
         internal void Advance(float delta)
         {
             List<Bullet> remove = new List<Bullet>();
@@ -146,18 +151,30 @@ namespace Spotlight.Combat
                     return (a.Actor != null ? a.Actor.Id.Value : a.Cell.OccupantId.Value).CompareTo(c.Actor != null ? c.Actor.Id.Value : c.Cell.OccupantId.Value);
                 });
                 bool hit = false;
+                var overlap = new HashSet<long>();
+                foreach (ActorSnapshot actor in owner.World.GetActors(targets)) { float radius = actor.CollisionRadius+b.Radius; if (CombatMath.DistanceSquared(next,actor.Position) <= radius*radius) overlap.Add(actor.Id.Value); }
                 foreach (Intersection item in intersections)
                 {
                     if (item.T < 0 || item.T > 1) continue;
                     if (item.Actor != null)
                     {
-                        OperationResult result = damage.Enqueue(new DamagePacket { PacketId = "projectile:" + b.Id, Source = b.Source, Target = item.Actor.Id, Origin = b.Origin,
-                            PhysicalDamage = b.Physical, ElementDamage = b.Damage, Gauge = b.Gauge });
-                        if (result.State != OperationState.Rejected) { hit = true; break; }
+                        if (b.Overlapping.Contains(item.Actor.Id.Value) || b.Exhausted || b.Hits >= b.MaxHits) continue;
+                        int hitIndex = b.Hits + 1;
+                        DamagePacket packet = new DamagePacket { PacketId = "projectile:" + b.Id + ":" + hitIndex, Source = b.Source, Target = item.Actor.Id, Origin = b.Origin,
+                            PhysicalDamage = b.Physical, ElementDamage = b.Damage, Gauge = b.Gauge };
+                        bool missed = damage.Preview(packet).Missed;
+                        OperationResult result = damage.Enqueue(packet);
+                        if (result.State != OperationState.Rejected)
+                        {
+                            b.Hits++; if(b.Hits >= b.MaxHits)b.Exhausted=true; WorldPoint impact = new WorldPoint(b.Position.X+(next.X-b.Position.X)*item.T,b.Position.Y+(next.Y-b.Position.Y)*item.T);
+                            if (!missed) foreach (HitEffect effect in b.HitEffects) owner.Effects.TryExecute(new EffectBatchRequest { Context=owner.Commands.Create(owner.Transactions.Revision), Source=b.Source, SelectedTarget=item.Actor.Id, Origin=DamageOrigin.Reaction, ReactionId=effect.Reaction, ReactionDamageMultiplier=effect.Multiplier, HasImpactPosition=true, ImpactPosition=impact, Effects=new EffectSpec[] { effect.Effect } });
+                            if (!b.Piercing) { hit = true; break; }
+                            b.Physical *= b.Retention; b.Damage = CombatMath.Scale(b.Damage,b.Retention);
+                        }
                     }
                     else Modify(b, item.Cell);
                 }
-                b.Position = next; b.Life -= delta; if (hit || b.Life <= 0) remove.Add(b);
+                b.Overlapping = overlap; b.Position = next; b.Life -= delta; if (hit || b.Life <= 0) remove.Add(b);
             }
             foreach (Bullet b in remove) bullets.Remove(b);
         }
@@ -171,19 +188,43 @@ namespace Spotlight.Combat
         { if (Math.Abs(delta) < 0.000001f) return origin >= min && origin <= max; float a = (min - origin) / delta, b = (max - origin) / delta; if (a > b) { float t = a; a = b; b = t; } lo = Math.Max(lo, a); hi = Math.Min(hi, b); return lo <= hi; }
         private void Modify(Bullet b, CellSnapshot cell)
         {
-            ElementDefinition element; if (!owner.Catalog.TryGetElement(cell.DefinitionId, out element) || element.Element == ElementType.None) return;
-            int mask = 1 << ((int)element.Element - 1); if ((b.Mask & mask) != 0) return;
-            ProjectileModifierDefinition m = element.ProjectileModifier; if (m == null) return;
-            b.Mask |= mask; Apply(b, m.PhysicalAdd, m.DamageAdd, m.GaugeAdd, m.DamageMultiplier, m.SpeedMultiplier);
+            if(b.Exhausted)return;
+            ElementDefinition element; if (!owner.Catalog.TryGetElement(cell.DefinitionId, out element) || (int)element.Element < 1 || (int)element.Element > 6) return;
+            // Block identity and element identity have different lifetimes: every distinct
+            // block supplies an input, while the ordinary modifier applies once per type.
+            if (cell.OccupantId.Value != 0 ? !b.VisitedBlocks.Add(cell.OccupantId.Value) : !b.VisitedLegacyCells.Add(cell.Cell)) return;
+            int mask = 1 << ((int)element.Element - 1);
+            if ((b.Mask & mask) == 0)
+            {
+                b.Mask |= mask; ProjectileModifierDefinition m = element.ProjectileModifier;
+                if (m != null) Apply(b, m.PhysicalAdd, m.DamageAdd, m.GaugeAdd, m.DamageMultiplier, m.SpeedMultiplier);
+            }
             b.Tokens.Add(new ReactionToken { TokenId = ++tokenSequence, Element = element.Element, DefinitionId = element.Id });
             ReactionPlan plan = owner.Rules.ResolveReactions(new ReactionInput { Context = ReactionContext.Projectile, Tokens = b.Tokens.AsReadOnly(), AppliedRuleIds = b.Rules.AsReadOnly() });
             foreach (ReactionMatch match in plan.Matches)
             {
-                foreach (EffectSpec e in match.Effects) Apply(b, e.PhysicalDamage, e.ElementDamage, e.Gauge, e.DamageMultiplier, e.SpeedMultiplier);
+                if (b.Rules.Contains(match.RuleId)) continue;
+                List<EffectSpec> sourceEffects = new List<EffectSpec>();
+                foreach (EffectSpec e in match.Effects) if (e.Kind == EffectKind.ApplyStatus && e.TargetPolicy == EffectTargetPolicy.SourceActor) sourceEffects.Add(e);
+                if (sourceEffects.Count > 0)
+                {
+                    OperationResult applied = owner.Effects.TryExecute(new EffectBatchRequest { Context=owner.Commands.Create(owner.Transactions.Revision), Source=b.Source, SelectedTarget=b.Source, Origin=DamageOrigin.Reaction, ReactionId=match.RuleId, ReactionDamageMultiplier=owner.ReactionMultiplier, Effects=sourceEffects.AsReadOnly() });
+                    if (applied.State != OperationState.Committed) continue;
+                }
+                foreach (EffectSpec e in match.Effects)
+                {
+                    if(b.Exhausted)continue;
+                    if(e.Kind == EffectKind.ApplyStatus && e.TargetPolicy == EffectTargetPolicy.SourceActor) continue;
+                    if(e.Kind == EffectKind.ModifyProjectile) Apply(b,e.PhysicalDamage,e.ElementDamage,e.Gauge,e.DamageMultiplier,e.SpeedMultiplier);
+                    else if(e.Kind == EffectKind.ConfigurePiercing) { b.Piercing=true; b.MaxHits=e.MaxHits; b.Retention=e.RetainedDamageMultiplier; }
+                    else if(e.Kind == EffectKind.AreaDamage || e.Kind == EffectKind.ChainDamage || e.Kind == EffectKind.CreateArea || e.Kind == EffectKind.AddGauge || e.Kind == EffectKind.ApplyStatus) b.HitEffects.Add(new HitEffect { Effect=AdvancedEffectRuntime.CopyEffect(e), Reaction=match.RuleId, Multiplier=owner.ReactionMultiplier });
+                }
                 b.Rules.Add(match.RuleId); owner.Events.Publish(new ReactionResolvedEvent { Target = b.Source, RuleId = match.RuleId, Context = ReactionContext.Projectile, Position = owner.Board.CellToWorld(cell.Cell) });
+                if (match.ConsumedTokenIds != null) b.Tokens.RemoveAll(delegate(ReactionToken token) { return ContainsToken(match.ConsumedTokenIds, token.TokenId); });
             }
-            b.Tokens = new List<ReactionToken>(plan.RemainingTokens);
         }
+        private static bool ContainsToken(IReadOnlyList<long> ids, long id)
+        { for (int i = 0; i < ids.Count; i++) if (ids[i] == id) return true; return false; }
         private static void Apply(Bullet b, float physical, ElementAmounts elemental, ElementAmounts gauge, float multiplier, float speed)
         { b.Physical = Math.Max(0, b.Physical + physical) * multiplier; b.Damage = CombatMath.Scale(CombatMath.Add(b.Damage, elemental, true), multiplier); b.Gauge = CombatMath.Add(b.Gauge, gauge, true); b.Speed *= speed; }
     }

@@ -2,7 +2,8 @@
   "name": "Spotlight.Combat.Tests",
   "references": [
     "Spotlight.Contracts",
-    "Spotlight.Combat"
+    "Spotlight.Combat",
+    "Spotlight.Elements"
   ],
   "includePlatforms": [
     "Editor"
@@ -15,4 +16,3 @@
     "UNITY_INCLUDE_TESTS"
   ]
 }
-

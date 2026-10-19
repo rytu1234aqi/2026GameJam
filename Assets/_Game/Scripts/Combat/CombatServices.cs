@@ -19,6 +19,7 @@ namespace Spotlight.Combat
         private readonly DamageRuntime damage;
         private readonly StatusRuntime status;
         private readonly EffectRuntime effects;
+        internal readonly AdvancedEffectRuntime Advanced;
         private readonly TowerRuntime towers;
         private readonly ProjectileRuntime projectiles;
         private readonly SkillRuntime skill;
@@ -40,18 +41,36 @@ namespace Spotlight.Combat
         internal string RunId;
         internal GamePhase Phase;
         private IDisposable phaseSubscription;
-        public CombatServices(IGameCatalog catalog, IBoardQuery board, IWorldQuery world, IStateTransactionService transactions, ICommandContextFactory commands, IEntityIdService ids, IEventBus events, IElementRuleService rules, IGameClock clock)
+        private readonly IRandomService random;
+        private uint probabilitySeed;
+        internal long EffectSequence;
+        internal bool Roll(float probability, string key)
+        {
+            if (probability <= 0) return false;
+            if (probability >= 1) return true;
+            unchecked
+            {
+                uint value = 2166136261u ^ probabilitySeed;
+                foreach (char c in key ?? String.Empty) value = (value ^ c) * 16777619u;
+                value ^= value >> 16; value *= 0x7feb352du;
+                value ^= value >> 15; value *= 0x846ca68bu; value ^= value >> 16;
+                return (value >> 8) / 16777216f < probability;
+            }
+        }
+        public CombatServices(IGameCatalog catalog, IBoardQuery board, IWorldQuery world, IStateTransactionService transactions, ICommandContextFactory commands, IEntityIdService ids, IEventBus events, IElementRuleService rules, IGameClock clock, IRandomService random = null)
         {
             if (catalog == null || board == null || world == null || transactions == null || commands == null || ids == null || events == null || rules == null || clock == null) throw new ArgumentNullException();
+            // The composition is constructed before a run initializes its random streams.
+            this.random = random; probabilitySeed = 0u;
             Catalog = catalog; Board = board; World = world; Transactions = transactions; Commands = commands; Ids = ids; Events = events; Rules = rules; Clock = clock;
-            status = new StatusRuntime(this); damage = new DamageRuntime(this, status); effects = new EffectRuntime(this, damage, status);
+            status = new StatusRuntime(this); damage = new DamageRuntime(this, status); Advanced = new AdvancedEffectRuntime(this, damage, status); effects = new EffectRuntime(this, damage, status);
             projectiles = new ProjectileRuntime(this, damage); towers = new TowerRuntime(this, projectiles, status); skill = new SkillRuntime(this);
             TickSystems = new List<ITickSystem> { this }.AsReadOnly();
             Stages = new List<TickStage> { TickStage.PlayerCommands, TickStage.StatusAndGauge, TickStage.Attacks, TickStage.Projectiles, TickStage.DamageAndReaction, TickStage.DeathAndLoot }.AsReadOnly();
         }
         public void BeginSession(SessionStartContext context)
         {
-            EndSession(); RunId = context.RunId; Time = Clock.GetSnapshot().GameTime; Phase = GamePhase.Build;
+            EndSession(); probabilitySeed = random == null ? 0u : random.GetState(RandomStream.Wave).State; RunId = context.RunId; Time = Clock.GetSnapshot().GameTime; Phase = GamePhase.Build;
             phaseSubscription = Events.Subscribe<PhaseChangedEvent>(delegate(PhaseChangedEvent e) {
                 Phase = e.NewPhase;
                 if (e.NewPhase == GamePhase.Night) ResetNight();
@@ -62,13 +81,14 @@ namespace Spotlight.Combat
         public void EndSession()
         {
             if (phaseSubscription != null) phaseSubscription.Dispose(); phaseSubscription = null;
-            damage.Clear(); status.Clear(); effects.Clear(); projectiles.Clear(); towers.Clear(); contacts.Clear(); reactionDirty.Clear(); reactionQueue.Clear(); skill.Clear(); reactionTickIndex = -1; RunId = null;
+            Advanced.ResetSession(); damage.Clear(); status.Clear(); effects.Clear(); projectiles.Clear(); towers.Clear(); contacts.Clear(); reactionDirty.Clear(); reactionQueue.Clear(); skill.Clear(); reactionTickIndex = -1; EffectSequence = 0; RunId = null;
         }
-        public void ResetNight() { towers.ResetNightCooldowns(); skill.ResetForNight(); contacts.Clear(); }
+        public IReadOnlyList<AreaEffectSnapshot> GetAreaEffects() { return Advanced.GetSnapshot(); }
+        public void ResetNight() { probabilitySeed = random == null ? 0u : random.GetState(RandomStream.Wave).State; EffectSequence = 0; Advanced.Clear(); towers.ResetNightCooldowns(); skill.ResetForNight(); contacts.Clear(); }
         internal void EndNightTransient()
         {
             // Session receipts and monotonically allocated IDs survive normal night boundaries.
-            status.ClearNightTransient();contacts.Clear();reactionDirty.Clear();reactionQueue.Clear();skill.EndNightTransient();projectiles.Clear();
+            Advanced.Clear();status.ClearNightTransient();contacts.Clear();reactionDirty.Clear();reactionQueue.Clear();skill.EndNightTransient();projectiles.Clear();
         }
         public string GetProjectileDefinitionId(long id) { return projectiles.GetDefinitionId(id); }
         internal OperationResult Result(OperationState state, ErrorCode error, string key)
@@ -81,7 +101,7 @@ namespace Spotlight.Combat
         {
             Time = context.GameTime;
             if (context.Stage == TickStage.PlayerCommands) skill.ExecutePending();
-            else if (context.Stage == TickStage.StatusAndGauge) { skill.Advance(); status.Advance(context.DeltaSeconds); }
+            else if (context.Stage == TickStage.StatusAndGauge) { skill.Advance(); if (Phase == GamePhase.Night) Advanced.Advance(); status.Advance(context.DeltaSeconds); }
             else if (context.Stage == TickStage.Attacks) { towers.Advance(context.DeltaSeconds); Contact(); }
             else if (context.Stage == TickStage.Projectiles) projectiles.Advance(context.DeltaSeconds);
             else if (context.Stage == TickStage.DamageAndReaction)
@@ -210,8 +230,12 @@ namespace Spotlight.Combat
         internal DamageResult Calculate(DamagePacket p, ActorSnapshot actor)
         {
             CombatModifiers m = statuses.GetModifiers(actor.Id);
+            bool primary = p.Origin == DamageOrigin.Tower || p.Origin == DamageOrigin.Enemy;
+            CombatModifiers source = primary ? statuses.GetModifiers(p.Source) : new CombatModifiers();
+            if (primary && !owner.Roll(source.AccuracyMultiplier, "accuracy:" + p.PacketId))
+                return new DamageResult { Error = ErrorCode.None, PacketId = p.PacketId, Source = p.Source, Target = p.Target, RemainingHp = actor.CurrentHp, Missed = true };
             float final = Math.Max(0, p.PhysicalDamage * p.DamageMultiplier) * (1 - CombatMath.Clamp01(actor.PhysicalReduction - m.ArmorBreak));
-            for (int i = 0; i < 6; i++) final += Math.Max(0, CombatMath.Get(p.ElementDamage, i) * p.DamageMultiplier) * (1 - CombatMath.Clamp01(CombatMath.Get(actor.ElementResistance, i) - CombatMath.Get(m.ResistanceBreak, i)));
+            for (int i = 0; i < 6; i++) final += Math.Max(0, CombatMath.Get(p.ElementDamage, i) * p.DamageMultiplier * (1 + CombatMath.Get(source.OutgoingElementDamageBonus, i))) * (1 - CombatMath.Clamp01(CombatMath.Get(actor.ElementResistance, i) - CombatMath.Get(m.ResistanceBreak, i)));
             return new DamageResult { Error = ErrorCode.None, PacketId = p.PacketId, Source = p.Source, Target = p.Target, FinalDamage = final, RemainingHp = Math.Max(0, actor.CurrentHp - final), NewlyKilled = actor.CurrentHp > 0 && actor.CurrentHp - final <= 0 };
         }
         internal void Drain()
@@ -224,7 +248,7 @@ namespace Spotlight.Combat
                 ActorSnapshot actor; owner.World.TryGetActor(p.Target, out actor);
                 StateMutationBatch batch = owner.Batch("combat.damage"); batch.Actors = new ActorMutation[] { CombatMath.Health(actor, r.RemainingHp, actor.MaxHp) };
                 OperationResult commit = owner.Transactions.TryCommit(batch); if (commit.State != OperationState.Committed) break;
-                queue.Dequeue(); statuses.ApplyGauge(p.Source, p.Target, p.Gauge); owner.Events.Publish(new DamageAppliedEvent { Result = r });
+                queue.Dequeue(); if (!r.Missed) statuses.ApplyGauge(p.Source, p.Target, p.Gauge, p.Origin == DamageOrigin.Tower || p.Origin == DamageOrigin.Enemy); owner.Events.Publish(new DamageAppliedEvent { Result = r });
             }
         }
     }
@@ -232,7 +256,7 @@ namespace Spotlight.Combat
     internal sealed class StatusRuntime : IStatusService
     {
         private sealed class Gauge { internal float Value; internal double LastHit; }
-        private sealed class Layer { internal long Id; internal EntityId Source; internal string Reaction; internal double Expiry, NextTick; internal float Multiplier; }
+        private sealed class Layer { internal long Id; internal EntityId Source; internal string Reaction, Scope; internal double Expiry, NextTick; internal float Multiplier; }
         private sealed class Group { internal string Id; internal List<Layer> Layers = new List<Layer>(); }
         private readonly CombatServices owner;
         private readonly Dictionary<long, Gauge[]> gauges = new Dictionary<long, Gauge[]>();
@@ -268,21 +292,27 @@ namespace Spotlight.Combat
             if (groups.TryGetValue(actor.Value, out list)) foreach (Group g in list)
             {
                 List<StatusLayerSnapshot> layers = new List<StatusLayerSnapshot>();
-                foreach (Layer l in g.Layers) layers.Add(new StatusLayerSnapshot { LayerId = l.Id, Source = l.Source, ReactionId = l.Reaction, RemainingSeconds = (float)Math.Max(0, l.Expiry - owner.Time), SnapshotDamageMultiplier = l.Multiplier });
+                foreach (Layer l in g.Layers) layers.Add(new StatusLayerSnapshot { LayerId = l.Id, Source = l.Source, ReactionId = l.Reaction, ScopeId = l.Scope, RemainingSeconds = (float)Math.Max(0, l.Expiry - owner.Time), SnapshotDamageMultiplier = l.Multiplier });
                 result.Add(new StatusSnapshot { DefinitionId = g.Id, Target = actor, Layers = layers.AsReadOnly() });
             }
             return result.AsReadOnly();
         }
         public CombatModifiers GetModifiers(EntityId actor)
         {
+            ActorSnapshot living;
+            if (!owner.World.TryGetActor(actor, out living) || living.CurrentHp <= 0) return new CombatModifiers();
             CombatModifiers result = new CombatModifiers(); float[] resistance = new float[6]; List<Group> list;
             if (groups.TryGetValue(actor.Value, out list)) foreach (Group g in list)
             {
-                StatusDefinition d; if (!owner.Catalog.TryGetStatus(g.Id, out d)) continue; int count = g.Layers.Count;
-                result.MoveMultiplier -= d.MoveSlowPerStack * count; result.AttackRateMultiplier -= d.AttackSlowPerStack * count; result.ArmorBreak += d.ArmorBreakPerStack * count;
+                StatusDefinition d; if (!owner.Catalog.TryGetStatus(g.Id, out d)) continue; int count = g.Layers.FindAll(delegate(Layer l) { return l.Expiry > owner.Time; }).Count;
+                result.MoveMultiplier -= d.MoveSlowPerStack * count; result.AttackRateMultiplier += (d.AttackHastePerStack - d.AttackSlowPerStack) * count; result.AccuracyMultiplier -= d.AccuracyReductionPerStack * count;
+                result.OutgoingElementDamageBonus = CombatMath.Add(result.OutgoingElementDamageBonus, CombatMath.Scale(d.OutgoingElementDamageBonusPerStack, count), false);
+                result.OutgoingGaugeBonus = CombatMath.Add(result.OutgoingGaugeBonus, CombatMath.Scale(d.OutgoingGaugeBonusPerStack, count), false);
+                result.IncomingGaugeBonus = CombatMath.Add(result.IncomingGaugeBonus, CombatMath.Scale(d.IncomingGaugeBonusPerStack, count), false); result.ArmorBreak += d.ArmorBreakPerStack * count;
                 result.PreventMovement |= d.PreventMovement && count > 0; result.PreventAttack |= d.PreventAttack && count > 0;
                 for (int i = 0; i < 6; i++) resistance[i] += CombatMath.Get(d.ResistanceBreakPerStack, i) * count;
             }
+            result.AccuracyMultiplier = CombatMath.Clamp01(result.AccuracyMultiplier);
             result.MoveMultiplier = Math.Max(0.1f, result.MoveMultiplier); result.AttackRateMultiplier = Math.Max(0.1f, result.AttackRateMultiplier); result.ResistanceBreak = CombatMath.Amounts(resistance); return result;
         }
         internal ErrorCode CheckGauge(EntityId target, ElementAmounts amounts)
@@ -318,17 +348,19 @@ namespace Spotlight.Combat
             ErrorCode e = CheckStatus(request); if (e != ErrorCode.None) return owner.Result(OperationState.Rejected, e, "status.invalid");
             statusQueue.Enqueue(Copy(request)); return owner.Result(OperationState.Queued, ErrorCode.None, "status.queued");
         }
-        internal static StatusApplyRequest Copy(StatusApplyRequest r) { return new StatusApplyRequest { Source = r.Source, Target = r.Target, StatusId = r.StatusId, ReactionId = r.ReactionId, Stacks = r.Stacks, DurationOverride = r.DurationOverride, SnapshotDamageMultiplier = r.SnapshotDamageMultiplier }; }
+        internal static StatusApplyRequest Copy(StatusApplyRequest r) { return new StatusApplyRequest { Source = r.Source, Target = r.Target, StatusId = r.StatusId, ReactionId = r.ReactionId, ScopeId = r.ScopeId, Stacks = r.Stacks, DurationOverride = r.DurationOverride, SnapshotDamageMultiplier = r.SnapshotDamageMultiplier }; }
         internal void Drain()
         { while (gaugeQueue.Count > 0) { GaugeWork w = gaugeQueue.Dequeue(); ApplyGauge(w.Source, w.Target, w.Amounts); } while (statusQueue.Count > 0) ApplyStatus(statusQueue.Dequeue()); }
-        internal void ApplyGauge(EntityId source, EntityId target, ElementAmounts amounts)
+        internal void ApplyGauge(EntityId source, EntityId target, ElementAmounts amounts, bool outgoing = false)
         {
             if (CheckGauge(target, amounts) != ErrorCode.None) return;
             Gauge[] state = GetGaugeState(target);
+            CombatModifiers incomingMods = GetModifiers(target);
+            CombatModifiers outgoingMods = outgoing ? GetModifiers(source) : new CombatModifiers();
             for (int i = 0; i < 6; i++)
             {
                 float incoming = CombatMath.Get(amounts, i); if (incoming <= 0) continue; GaugeDefinition d = Definition(i);
-                state[i].Value = Math.Min(d.MaxValue, state[i].Value + incoming * d.IncomingMultiplier); state[i].LastHit = owner.Time;
+                state[i].Value = Math.Min(d.MaxValue, state[i].Value + incoming * d.IncomingMultiplier * (1 + CombatMath.Get(incomingMods.IncomingGaugeBonus, i)) * (1 + CombatMath.Get(outgoingMods.OutgoingGaugeBonus, i))); state[i].LastHit = owner.Time;
                 if (state[i].Value >= d.Threshold) { state[i].Value = 0; ApplyStatus(new StatusApplyRequest { Source = source, Target = target, StatusId = FindBaseStatus(d.Element), Stacks = 1 }); }
             }
             owner.Events.Publish(new StatusChangedEvent { Actor = target });
@@ -340,11 +372,19 @@ namespace Spotlight.Combat
             List<Group> list; if (!groups.TryGetValue(request.Target.Value, out list)) { list = new List<Group>(); groups.Add(request.Target.Value, list); }
             Group group = list.Find(delegate(Group g) { return g.Id == request.StatusId; }); if (group == null) { group = new Group { Id = request.StatusId }; list.Add(group); }
             float duration = request.DurationOverride > 0 ? request.DurationOverride : d.DurationSeconds;
-            if (d.RefreshPolicy == StatusRefreshPolicy.RefreshAllLayers) foreach (Layer l in group.Layers) l.Expiry = owner.Time + duration;
-            for (int i = 0; i < request.Stacks && group.Layers.Count < d.MaxStacks; i++) group.Layers.Add(new Layer { Id = ++layerSequence, Source = request.Source, Reaction = request.ReactionId, Expiry = owner.Time + duration,
+            string scope = request.ScopeId ?? String.Empty;
+            int count = 0;
+            foreach (Layer l in group.Layers) if ((l.Scope ?? String.Empty) == scope) { count++; if (scope.Length > 0 || d.RefreshPolicy == StatusRefreshPolicy.RefreshAllLayers) l.Expiry = owner.Time + duration; }
+            int wanted = scope.Length > 0 ? Math.Max(0, request.Stacks - count) : request.Stacks;
+            for (int i = 0; i < wanted && count + i < d.MaxStacks; i++) group.Layers.Add(new Layer { Id = ++layerSequence, Source = request.Source, Reaction = request.ReactionId, Scope = scope, Expiry = owner.Time + duration,
                 NextTick = d.TickIntervalSeconds > 0 ? owner.Time + d.TickIntervalSeconds : Double.PositiveInfinity, Multiplier = request.SnapshotDamageMultiplier });
             if (d.IsReactionInput) owner.MarkReaction(request.Target);
             owner.Events.Publish(new StatusChangedEvent { Actor = request.Target });
+        }
+        internal void ReleaseScope(EntityId actor, string scope, double expiry)
+        {
+            List<Group> list; if (!groups.TryGetValue(actor.Value, out list)) return;
+            foreach (Group g in list) foreach (Layer l in g.Layers) if (l.Scope == scope) l.Expiry = expiry;
         }
         internal IReadOnlyList<ReactionToken> Tokens(EntityId actor)
         {
@@ -384,6 +424,12 @@ namespace Spotlight.Combat
                         {
                             if (d.DotPhysicalPerStack > 0 || !CombatMath.Zero(d.DotElementPerStack)) owner.Damage.Enqueue(new DamagePacket { PacketId = "dot:" + actor.Value + ":" + l.Id + ":" + l.NextTick.ToString("R", System.Globalization.CultureInfo.InvariantCulture), Source = l.Source, Target = actor, Origin = DamageOrigin.StatusDot, ReactionId = l.Reaction,
                                 PhysicalDamage = d.DotPhysicalPerStack, ElementDamage = d.DotElementPerStack, DamageMultiplier = l.Multiplier });
+                            if (d.HealPerTick > 0 && target.Kind == ActorKind.Tower)
+                            {
+                                OperationResult healed = owner.Effects.TryExecute(new EffectBatchRequest { Context = owner.Commands.Create(owner.Transactions.Revision), Source = l.Source, SelectedTarget = actor, Origin = DamageOrigin.StatusDot,
+                                    Effects = new EffectSpec[] { new EffectSpec { Kind = EffectKind.Heal, TargetPolicy = EffectTargetPolicy.SelectedActor, Amount = d.HealPerTick } } });
+                                if (healed.State != OperationState.Committed) break;
+                            }
                             l.NextTick += d.TickIntervalSeconds;
                             if (d.TickIntervalSeconds <= 0) break;
                         }

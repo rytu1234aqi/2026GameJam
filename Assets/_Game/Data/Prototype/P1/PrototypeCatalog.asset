@@ -53,6 +53,8 @@ MonoBehaviour:
     Prefab: {fileID: 6702698221392096915, guid: 810afe7ea7485a84a9cd3e3079a6cbc8, type: 3}
   - Key: view.spring
     Prefab: {fileID: 1404067193729501992, guid: 25ba2aac6d89b8b46a0377be6481172f, type: 3}
+  - Key: EnemyWraith
+    Prefab: {fileID: 8761633847647929537, guid: 8cca973a179539941a2f229974d08b8c, type: 3}
   Levels:
   - {fileID: 11400000, guid: 4f56d2a644827f844b21fa569c58301e, type: 2}
   Elements:
@@ -72,6 +74,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f495af5ed593e8045b9e4d8f385ed926, type: 2}
   - {fileID: 11400000, guid: 6f60335e73bfd8147ae78c7b42f2c7ff, type: 2}
   - {fileID: 11400000, guid: 69a3836930d771d459cb050a8e91fc62, type: 2}
+  - {fileID: 11400000, guid: 3aeb567c8a379da4ea34a190e94cb7ca, type: 2}
   Reactions:
   - {fileID: 11400000, guid: 042c690ac64a07247b2bbd1a3d17b304, type: 2}
   - {fileID: 11400000, guid: 9724ea09b0db9bc4594d4fe390bc84d4, type: 2}
@@ -141,6 +144,19 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 64964ac59bb2154489a246a19905e42b, type: 2}
   - {fileID: 11400000, guid: 20d433b10c975b54088aa3512196c058, type: 2}
   - {fileID: 11400000, guid: ddf00626c9856bc4b97516adf167cf69, type: 2}
+  - {fileID: 11400000, guid: 110bd91560b9b7f42bb1299b9d1bc460, type: 2}
+  - {fileID: 11400000, guid: 11e6322c5c1ec2147bbc8e1b61ef7c97, type: 2}
+  - {fileID: 11400000, guid: a772af6b986327a4ab8337031ac2f9c5, type: 2}
+  - {fileID: 11400000, guid: d6be74fe707f2cc43933e93a44b29683, type: 2}
+  - {fileID: 11400000, guid: 0b1f2e92b9763a04389e2dad2adb3b28, type: 2}
+  - {fileID: 11400000, guid: 16b41b7423bf2b448b34ebda737eb932, type: 2}
+  - {fileID: 11400000, guid: 6b60ede0bfe7b0a4b98ff634b02233fb, type: 2}
+  - {fileID: 11400000, guid: b24c18fcb8bf51c418ee3db716c579d8, type: 2}
+  - {fileID: 11400000, guid: b45a649f456c0134494469fe06f363e2, type: 2}
+  - {fileID: 11400000, guid: d277c77e6f817bb48bc28eda902dd5d1, type: 2}
+  - {fileID: 11400000, guid: d3c8e953a23be0f4887925d9d6f3052d, type: 2}
+  - {fileID: 11400000, guid: d9a28d54a72a8eb42bbe4bd0c6c07e0c, type: 2}
+  - {fileID: 11400000, guid: fbfd4472f68ec624ca73ba5e8d31e0dc, type: 2}
   Skills:
   - {fileID: 11400000, guid: c6cb6b8b38c04864b99f912d1d2c94bd, type: 2}
   Enemies:

@@ -1,0 +1,4 @@
+fps=15
+frames=277
+resolution=1280x720
+source=real CutscenePlayer.Tick and formal Canvas

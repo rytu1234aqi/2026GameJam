@@ -154,6 +154,8 @@ MonoBehaviour:
   CatalogAsset: {fileID: 11400000, guid: 7da81c6e75af0cd45a5086d4d0aee3d3, type: 2}
   WorldCamera: {fileID: 620383347}
   UiPrefab: {fileID: 4437942761746692914, guid: c059053ff4f896045aef2d258367e408, type: 3}
+  OpeningStory: {fileID: 11400000, guid: a71ff6b9485e6c74f80c1a0b8699b3ec, type: 2}
+  OpeningCutscenePrefab: {fileID: 7661648644306649666, guid: dc73cdd3cfd73264b9b91497c010fec4, type: 3}
   SaveDirectoryOverride: 
 --- !u!4 &534436013
 Transform:

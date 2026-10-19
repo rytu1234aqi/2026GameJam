@@ -8,6 +8,10 @@ namespace Spotlight.Contracts
     {
         public float MoveMultiplier = 1f;
         public float AttackRateMultiplier = 1f;
+        public ElementAmounts OutgoingElementDamageBonus;
+        public ElementAmounts OutgoingGaugeBonus;
+        public ElementAmounts IncomingGaugeBonus;
+        public float AccuracyMultiplier = 1f;
         public float ArmorBreak;
         public ElementAmounts ResistanceBreak;
         public bool PreventMovement;

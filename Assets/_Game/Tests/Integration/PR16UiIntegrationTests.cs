@@ -97,7 +97,7 @@ namespace Spotlight.Tests.Integration
         [Test] public void HandIconsPreserveShapeAndDoNotOverlapQuantityText()
         {
             for(int i=0;i<6;i++){
-                Button button=Ui.ElementButtons[i];Image icon=button.transform.Find("ElementIcon"+i).GetComponent<Image>();Assert.NotNull(icon.sprite);Assert.IsTrue(icon.preserveAspect);Assert.IsFalse(icon.raycastTarget);Assert.IsNull(button.GetComponent<Image>().sprite);
+                Button button=Ui.ElementButtons[i];Image icon=button.transform.Find("ElementIcon"+i).GetComponent<Image>();Assert.NotNull(icon.sprite);Assert.IsTrue(icon.preserveAspect);Assert.IsFalse(icon.raycastTarget);Assert.NotNull(Ui.ArtTheme);Assert.That(Ui.ArtTheme.ButtonNormal,Does.Contain(button.GetComponent<Image>().sprite));
                 RectTransform label=Ui.HandTexts[i].rectTransform;Assert.GreaterOrEqual(label.anchoredPosition.x,icon.rectTransform.anchoredPosition.x+icon.rectTransform.sizeDelta.x/2+3);
                 Assert.AreEqual(22,icon.rectTransform.sizeDelta.x);Assert.AreEqual(22,icon.rectTransform.sizeDelta.y);
             }

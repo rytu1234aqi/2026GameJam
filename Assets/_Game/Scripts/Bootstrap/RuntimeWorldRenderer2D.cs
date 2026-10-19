@@ -9,9 +9,16 @@ namespace Spotlight.Bootstrap
     /// <summary>只读取 DTO 和租借显示对象；碰撞、HP、寿命由业务模块决定。</summary>
     public sealed class RuntimeWorldRenderer2D : MonoBehaviour
     {
+        public ThirdPartyUiThemeSO ArtTheme;
+        public Camera WorldCamera;
         private ModuleComposition services;
         private ViewPool pool;
         private IDisposable damageSubscription;
+        private IDisposable removedSubscription;
+        private SpriteRenderer background;
+        private Material fallbackWorldMaterial;
+        private Material tileMaterial;
+        private AdvancedEffectVisual2D advancedEffects;
         private readonly Dictionary<string, double> pendingHits = new Dictionary<string, double>();
         private sealed class DisplayEntry
         {
@@ -23,11 +30,21 @@ namespace Spotlight.Bootstrap
             internal EnemyHealthBar2D HealthBar;
             internal EnemyFacingVisual2D Facing;
             internal HitFlashVisual2D HitFlash;
+            internal EnemySpriteAnimator2D Animation;
+            internal bool Moving, Dying;
+            internal double DeathUntil, LastVisualTime;
             internal WorldPoint LastPosition;
             internal bool HasPosition;
         }
         private readonly Dictionary<string, DisplayEntry> views = new Dictionary<string, DisplayEntry>();
         private readonly List<GameObject> tiles = new List<GameObject>();
+        private sealed class TileVisual
+        {
+            internal SpriteRenderer Renderer;
+            internal bool Reserved, OnGroundPath;
+        }
+        private readonly List<TileVisual> tileVisuals = new List<TileVisual>();
+        private bool hasTilePhase, tilesAtNight;
         private readonly HashSet<string> visible = new HashSet<string>();
         private string runId;
         private Sprite tileSprite;
@@ -38,8 +55,14 @@ namespace Spotlight.Bootstrap
             Unbind();
             this.services = services;
             this.pool = pool;
+            advancedEffects = GetComponent<AdvancedEffectVisual2D>();
+            if (advancedEffects == null) advancedEffects = gameObject.AddComponent<AdvancedEffectVisual2D>();
+            advancedEffects.Bind(services == null ? null : services.Events, services == null ? null : services.Clock);
             if (services != null)
+            {
                 damageSubscription = services.Events.Subscribe<DamageAppliedEvent>(OnDamageApplied);
+                removedSubscription = services.Events.Subscribe<ActorRemovedEvent>(OnActorRemoved);
+            }
             tileTexture = new Texture2D(1, 1);
             tileTexture.SetPixel(0, 0, Color.white);
             tileTexture.Apply();
@@ -50,6 +73,7 @@ namespace Spotlight.Bootstrap
         {
             if (services == null || pool == null) return;
             FlowSnapshot flow = services.Flow.GetSnapshot();
+            ApplyBackground(flow.Phase);
             if (flow.RunId != runId)
             {
                 ClearViews();
@@ -57,7 +81,11 @@ namespace Spotlight.Bootstrap
                 if (!string.IsNullOrEmpty(runId)) BuildTiles();
             }
             if (string.IsNullOrEmpty(runId)) return;
+            ApplyTilePhase(flow.Phase);
             double gameTime = services.Clock.GetSnapshot().GameTime;
+            advancedEffects.CellSize = services.Core.Store.Level == null ? 1 : services.Core.Store.Level.CellSize;
+            advancedEffects.ApplyAreas(services.Combat.GetAreaEffects());
+            advancedEffects.ApplyVisualTime(gameTime);
             visible.Clear();
             foreach (ActorKind kind in new[] { ActorKind.Spring, ActorKind.Tower, ActorKind.Enemy })
                 foreach (ActorSnapshot actor in services.Core.World.GetActors(kind))
@@ -79,7 +107,16 @@ namespace Spotlight.Bootstrap
                     Show("projectile:" + projectile.ProjectileId, definition.PrefabKey, projectile.Position, 30, null, projectile, gameTime);
             }
             foreach (string key in new List<string>(views.Keys))
-                if (!visible.Contains(key)) ReturnView(key);
+                if (!visible.Contains(key))
+                {
+                    DisplayEntry entry = views[key];
+                    if (entry.Dying && entry.View != null && gameTime < entry.DeathUntil)
+                    {
+                        entry.Animation.ApplyVisualTime(gameTime, false);
+                        if (entry.HitFlash != null) entry.HitFlash.ApplyVisualTime(gameTime);
+                    }
+                    else ReturnView(key);
+                }
             pendingHits.Clear();
         }
 
@@ -94,8 +131,48 @@ namespace Spotlight.Bootstrap
             string key = "actor:" + result.Target.Value;
             double time = services.Clock.GetSnapshot().GameTime;
             DisplayEntry entry;
+            // Projectile hits already played their source animation when the view was rented.
+            if (result.PacketId == null || !result.PacketId.StartsWith("projectile:", StringComparison.Ordinal))
+                PlaySourceAttack(result.Source, time);
             if (views.TryGetValue(key, out entry) && entry.HitFlash != null) entry.HitFlash.PlayHit(time);
             else pendingHits[key] = time;
+        }
+
+        private void PlaySourceAttack(EntityId source, double gameTime)
+        {
+            DisplayEntry entry;
+            if (views.TryGetValue("actor:" + source.Value, out entry) && !entry.Dying && entry.Animation != null)
+                entry.Animation.PlayAttack(gameTime);
+        }
+
+        private void OnActorRemoved(ActorRemovedEvent removed)
+        {
+            if (services == null || removed == null) return;
+            string currentRun = services.Flow.GetSnapshot().RunId;
+            if (currentRun != runId || string.IsNullOrEmpty(currentRun)) return;
+            string key = "actor:" + removed.Actor.Value;
+            DisplayEntry entry;
+            if (!views.TryGetValue(key, out entry)) return;
+            if (removed.Reason != DeathReason.Killed || !HasDeathFrames(entry.Animation))
+            {
+                ReturnView(key);
+                return;
+            }
+            if (entry.Dying) return;
+            double gameTime = services.Clock.GetSnapshot().GameTime;
+            float seconds = entry.Animation.DeathSeconds;
+            double duration = !float.IsNaN(seconds) && !float.IsInfinity(seconds) && seconds > 0 ? seconds : 0d;
+            entry.Dying = true;
+            entry.DeathUntil = gameTime + duration;
+            entry.Animation.PlayDeath(gameTime);
+            if (entry.HealthBar != null) entry.HealthBar.ApplyHealth(0, 1);
+        }
+
+        private static bool HasDeathFrames(EnemySpriteAnimator2D animation)
+        {
+            if (animation == null || animation.DeathFrames == null) return false;
+            foreach (Sprite frame in animation.DeathFrames) if (frame != null) return true;
+            return false;
         }
 
         private string ActorPrefab(ActorSnapshot actor)
@@ -138,11 +215,17 @@ namespace Spotlight.Bootstrap
                         Element = view.GetComponent<ElementVisual2D>(),
                         Projectile = view.GetComponent<ProjectileVisual2D>(),
                         HealthBar = view.GetComponent<EnemyHealthBar2D>(),
-                        Facing = view.GetComponent<EnemyFacingVisual2D>()
+                        Facing = view.GetComponent<EnemyFacingVisual2D>(),
+                        Animation = actor != null && actor.Kind == ActorKind.Enemy ? view.GetComponent<EnemySpriteAnimator2D>() : null
                     };
                     // Enemy bodies live below the positioning root; never select the health bar.
                     if (entry.Facing != null && entry.Facing.BodyRenderer != null)
                         entry.Renderer = entry.Facing.BodyRenderer;
+                    if (entry.Animation != null)
+                    {
+                        if (entry.Animation.BodyRenderer == null) entry.Animation.BodyRenderer = entry.Renderer;
+                        entry.Animation.ResetVisual();
+                    }
                     if (actor != null && actor.Kind == ActorKind.Enemy && entry.Renderer != null)
                     {
                         entry.HitFlash = view.GetComponent<HitFlashVisual2D>();
@@ -154,6 +237,7 @@ namespace Spotlight.Bootstrap
                         if (pendingHits.TryGetValue(key, out hitTime)) entry.HitFlash.PlayHit(hitTime);
                     }
                     views.Add(key, entry);
+                    if (projectile != null) PlaySourceAttack(projectile.Source, gameTime);
                 }
                 catch (Exception exception)
                 {
@@ -170,9 +254,17 @@ namespace Spotlight.Bootstrap
             {
                 entry.Projectile.SetDirection(projectile.Direction);
                 entry.Projectile.SetElements(projectile.AppliedElementMask);
+                entry.Projectile.ApplyVisualTime(gameTime);
             }
             if (actor != null && actor.Kind == ActorKind.Enemy)
             {
+                if (!entry.HasPosition || gameTime != entry.LastVisualTime)
+                {
+                    float dx = position.X - entry.LastPosition.X;
+                    float dy = position.Y - entry.LastPosition.Y;
+                    entry.Moving = entry.HasPosition && dx * dx + dy * dy > .00000001f;
+                }
+                if (entry.Animation != null) entry.Animation.ApplyVisualTime(gameTime, entry.Moving);
                 if (entry.HealthBar != null) entry.HealthBar.ApplyHealth(actor.CurrentHp, actor.MaxHp);
                 if (entry.Facing != null)
                     entry.Facing.SetDirection(entry.HasPosition
@@ -180,6 +272,7 @@ namespace Spotlight.Bootstrap
                         : new WorldPoint(0, 0));
                 entry.LastPosition = position;
                 entry.HasPosition = true;
+                entry.LastVisualTime = gameTime;
             }
             visible.Add(key);
         }
@@ -190,6 +283,7 @@ namespace Spotlight.Bootstrap
             views.Remove(key);
             pendingHits.Remove(key);
             if (entry.HitFlash != null) entry.HitFlash.ResetVisual();
+            if (entry.Animation != null) entry.Animation.ResetVisual();
             if (pool != null) pool.Return(entry.Lease.LeaseId);
         }
 
@@ -197,6 +291,7 @@ namespace Spotlight.Bootstrap
         {
             LevelDefinition level = services.Core.Store.Level;
             if (level == null) return;
+            bool night = IsNightPhase(services.Flow.GetSnapshot().Phase);
             foreach (CellSnapshot cell in services.Core.Board.GetSnapshot().Cells)
             {
                 GameObject tile = new GameObject("Cell_" + cell.Cell.X + "_" + cell.Cell.Y);
@@ -208,26 +303,130 @@ namespace Spotlight.Bootstrap
                 renderer.sprite = tileSprite;
                 renderer.sortingOrder = -10;
                 renderer.color = cell.Reserved ? new Color(.18f, .35f, .4f) : cell.OnGroundPath ? new Color(.32f, .28f, .22f) : new Color(.19f, .23f, .28f);
+                if (ArtTheme != null)
+                {
+                    renderer.color = TileColor(cell.Reserved, cell.OnGroundPath, night);
+                    Material material = TileMaterial();
+                    if (material != null) renderer.sharedMaterial = material;
+                }
                 tiles.Add(tile);
+                tileVisuals.Add(new TileVisual { Renderer = renderer, Reserved = cell.Reserved, OnGroundPath = cell.OnGroundPath });
             }
+            hasTilePhase = ArtTheme != null;
+            tilesAtNight = night;
+        }
+
+        private static bool IsNightPhase(GamePhase phase)
+        {
+            return phase == GamePhase.Night || phase == GamePhase.NightResult || phase == GamePhase.GameOver;
+        }
+
+        private static Color TileColor(bool reserved, bool path, bool night)
+        {
+            if (night)
+                return reserved ? new Color(.16f, .55f, .65f, .55f) :
+                    path ? new Color(.30f, .25f, .20f, .48f) : new Color(.13f, .20f, .32f, .45f);
+            return reserved ? new Color(.25f, .65f, .7f, .55f) :
+                path ? new Color(.68f, .48f, .25f, .55f) : new Color(.94f, .83f, .60f, .55f);
+        }
+
+        private void ApplyTilePhase(GamePhase phase)
+        {
+            if (ArtTheme == null) return;
+            bool night = IsNightPhase(phase);
+            if (hasTilePhase && tilesAtNight == night) return;
+            foreach (TileVisual tile in tileVisuals)
+                if (tile.Renderer != null) tile.Renderer.color = TileColor(tile.Reserved, tile.OnGroundPath, night);
+            hasTilePhase = true;
+            tilesAtNight = night;
+        }
+
+        private void ApplyBackground(GamePhase phase)
+        {
+            if (ArtTheme == null || WorldCamera == null || !WorldCamera.orthographic) return;
+            bool night = IsNightPhase(phase);
+            Sprite sprite = night ? ArtTheme.NightBackground : ArtTheme.DayBackground;
+            if (sprite == null) sprite = night ? ArtTheme.DayBackground : ArtTheme.NightBackground;
+            if (sprite == null) return;
+            if (background == null)
+            {
+                GameObject view = new GameObject("ThirdPartyWorldBackground");
+                view.transform.SetParent(transform, false);
+                background = view.AddComponent<SpriteRenderer>();
+                background.sortingOrder = -1000;
+            }
+            background.sprite = sprite;
+            Material material = WorldMaterial();
+            if (material != null) background.sharedMaterial = material;
+            Vector2 size = sprite.bounds.size;
+            if (size.x <= 0 || size.y <= 0) return;
+            float height = WorldCamera.orthographicSize * 2f;
+            float scale = Mathf.Max(height * WorldCamera.aspect / size.x, height / size.y);
+            Vector3 center = WorldCamera.transform.position;
+            background.transform.position = new Vector3(center.x, center.y, 0);
+            // Use world scale so the cover remains correct if this host is scaled.
+            background.transform.localScale = Vector3.one;
+            Vector3 parentScale = background.transform.lossyScale;
+            background.transform.localScale = new Vector3(
+                Mathf.Abs(parentScale.x) > .00001f ? scale / Mathf.Abs(parentScale.x) : scale,
+                Mathf.Abs(parentScale.y) > .00001f ? scale / Mathf.Abs(parentScale.y) : scale, 1);
+        }
+
+        private Material WorldMaterial()
+        {
+            if (ArtTheme != null && ArtTheme.WorldSpriteMaterial != null) return ArtTheme.WorldSpriteMaterial;
+            if (fallbackWorldMaterial == null)
+            {
+                Shader shader = Shader.Find("Sprites/Default");
+                if (shader != null) fallbackWorldMaterial = new Material(shader);
+            }
+            return fallbackWorldMaterial;
+        }
+
+        private Material TileMaterial()
+        {
+            if (tileMaterial == null)
+            {
+                // 白色单像素格子独立用材质，明确保持纯色贴图路径。
+                Shader shader = Shader.Find("Sprites/Default");
+                if (shader != null)
+                {
+                    tileMaterial = new Material(shader) { name = "RuntimeFlatTileUnlit" };
+                    tileMaterial.mainTexture = tileTexture;
+                    tileMaterial.color = Color.white;
+                }
+            }
+            return tileMaterial;
         }
 
         private void ClearViews()
         {
+            if (advancedEffects != null) advancedEffects.ClearVisuals();
             foreach (string key in new List<string>(views.Keys)) ReturnView(key);
             visible.Clear();
             pendingHits.Clear();
-            foreach (GameObject tile in tiles) if (tile != null) Destroy(tile);
+            foreach (GameObject tile in tiles) if (tile != null) PresentationObjects.Release(tile);
             tiles.Clear();
+            tileVisuals.Clear();
+            hasTilePhase = tilesAtNight = false;
         }
 
         public void Unbind()
         {
+            if (advancedEffects != null) advancedEffects.Unbind();
             if (damageSubscription != null) damageSubscription.Dispose();
             damageSubscription = null;
+            if (removedSubscription != null) removedSubscription.Dispose();
+            removedSubscription = null;
+            if (background != null) PresentationObjects.Release(background.gameObject);
+            background = null;
+            if (fallbackWorldMaterial != null) PresentationObjects.Release(fallbackWorldMaterial);
+            fallbackWorldMaterial = null;
             ClearViews(); services = null; pool = null; runId = null;
-            if (tileSprite != null) Destroy(tileSprite);
-            if (tileTexture != null) Destroy(tileTexture);
+            if (tileMaterial != null) PresentationObjects.Release(tileMaterial);
+            tileMaterial = null;
+            if (tileSprite != null) PresentationObjects.Release(tileSprite);
+            if (tileTexture != null) PresentationObjects.Release(tileTexture);
             tileSprite = null; tileTexture = null;
         }
 

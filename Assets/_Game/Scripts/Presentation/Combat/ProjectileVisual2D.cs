@@ -9,7 +9,13 @@ namespace Spotlight.Presentation
         public SpriteRenderer ElementOverlay;
 
         [Header("Element Effects (顺序: 水/火/土/木/风/雷)")]
-        public GameObject[] elementEffectObjects;
+        public GameObject[] elementEffectObjects = new GameObject[6];
+
+        private GameObject[] cachedEffects;
+        private ParticleSystem[][] cachedParticles;
+        private int selectedEffect = -1;
+        private bool hasVisualTime;
+        private double lastVisualTime;
 
         private Quaternion baseRotation;
         private Color baseColor;
@@ -68,7 +74,6 @@ namespace Spotlight.Presentation
 
         /// <summary>
         /// 根据mask显示首个对应特效，关闭其他特效。
-        /// 暂不执行颜色覆盖。
         /// </summary>
         public void SetElements(int appliedElementMask)
         {
@@ -76,16 +81,12 @@ namespace Spotlight.Presentation
 
             int index = FirstKnownElement(appliedElementMask);
 
-            // 特效开关：开启首个，关闭其他
             SetEffectByIndex(index);
-
-            // ---- 暂不覆盖颜色 ----
-            // if (ElementOverlay != null)
-            // {
-            //     ElementOverlay.enabled = index >= 0;
-            //     if (index >= 0)
-            //         ElementOverlay.color = ElementColors[index];
-            // }
+            if (ElementOverlay != null)
+            {
+                ElementOverlay.enabled = index >= 0;
+                if (index >= 0) ElementOverlay.color = ElementColors[index];
+            }
         }
 
         /// <summary>
@@ -93,31 +94,77 @@ namespace Spotlight.Presentation
         /// </summary>
         private void SetEffectByIndex(int index)
         {
-            if (elementEffectObjects == null || elementEffectObjects.Length == 0)
-                return;
-
-            for (int i = 0; i < elementEffectObjects.Length; i++)
+            CacheEffects();
+            if (selectedEffect == index) return;
+            StopEffects();
+            selectedEffect = index;
+            hasVisualTime = false;
+            if (index < 0 || index >= cachedEffects.Length || cachedEffects[index] == null) return;
+            cachedEffects[index].SetActive(true);
+            foreach (ParticleSystem particle in cachedParticles[index])
             {
-                if (elementEffectObjects[i] == null) continue;
+                // Starting at zero skips prefab prewarm and leaves all advancement to the game clock.
+                particle.Simulate(0f, false, true, false);
+                particle.Pause(false);
+            }
+        }
 
-                bool shouldBeActive = (i == index);
-
-                if (shouldBeActive && !elementEffectObjects[i].activeSelf)
+        private void CacheEffects()
+        {
+            int length = elementEffectObjects == null ? 0 : elementEffectObjects.Length;
+            bool changed = cachedEffects == null || cachedEffects.Length != length;
+            if (!changed)
+                for (int i = 0; i < length; i++)
+                    if (cachedEffects[i] != elementEffectObjects[i]) { changed = true; break; }
+            if (!changed) return;
+            StopEffects();
+            cachedEffects = new GameObject[length];
+            cachedParticles = new ParticleSystem[length][];
+            for (int i = 0; i < length; i++)
+            {
+                cachedEffects[i] = elementEffectObjects[i];
+                cachedParticles[i] = cachedEffects[i] == null
+                    ? new ParticleSystem[0] : cachedEffects[i].GetComponentsInChildren<ParticleSystem>(true);
+                foreach (ParticleSystem particle in cachedParticles[i])
                 {
-                    elementEffectObjects[i].SetActive(true);
+                    // Even runtime-provided effects must start empty and never advance automatically.
+                    particle.Stop(false, ParticleSystemStopBehavior.StopEmittingAndClear);
+                    var main = particle.main;
+                    main.prewarm = false;
+                    main.playOnAwake = false;
+                }
+            }
+            StopEffects();
+            selectedEffect = -1;
+            hasVisualTime = false;
+        }
 
-                    // 修复报错：将 StopAll 改为 StopEmittingAndClear
-                    ParticleSystem ps = elementEffectObjects[i].GetComponent<ParticleSystem>();
-                    if (ps != null)
-                    {
-                        ps.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
-                        ps.Play(true);
-                    }
-                }
-                else if (!shouldBeActive && elementEffectObjects[i].activeSelf)
+        private void StopEffects()
+        {
+            if (cachedEffects == null) return;
+            for (int i = 0; i < cachedEffects.Length; i++)
+            {
+                foreach (ParticleSystem particle in cachedParticles[i])
                 {
-                    elementEffectObjects[i].SetActive(false);
+                    if (particle != null) particle.Stop(false, ParticleSystemStopBehavior.StopEmittingAndClear);
                 }
+                if (cachedEffects[i] != null) cachedEffects[i].SetActive(false);
+            }
+        }
+
+        public void ApplyVisualTime(double gameTime)
+        {
+            if (double.IsNaN(gameTime) || double.IsInfinity(gameTime) || gameTime < 0) return;
+            if (!hasVisualTime) { lastVisualTime = gameTime; hasVisualTime = true; return; }
+            double delta = gameTime - lastVisualTime;
+            if (delta <= 0 || delta > float.MaxValue) return;
+            lastVisualTime = gameTime;
+            if (cachedEffects == null || selectedEffect < 0 || selectedEffect >= cachedEffects.Length) return;
+            foreach (ParticleSystem particle in cachedParticles[selectedEffect])
+            {
+                if (particle == null) continue;
+                particle.Simulate((float)delta, false, false, false);
+                particle.Pause(false);
             }
         }
 
@@ -133,8 +180,11 @@ namespace Spotlight.Presentation
                 ElementOverlay.color = baseColor;
             }
 
-            // 关闭所有特效
-            SetEffectByIndex(-1);
+            CacheEffects();
+            StopEffects();
+            selectedEffect = -1;
+            hasVisualTime = false;
+            lastVisualTime = 0;
         }
 
         private static int FirstKnownElement(int mask)

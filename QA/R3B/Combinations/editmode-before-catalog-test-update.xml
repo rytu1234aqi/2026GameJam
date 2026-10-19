@@ -1,0 +1,1170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="249" result="Failed(Child)" total="249" passed="243" failed="6" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-14 14:06:28Z" end-time="2026-10-14 14:06:36Z" duration="7.7424563">
+  <test-suite type="TestSuite" id="1000" name="2026GameJam" fullname="2026GameJam" runstate="Runnable" testcasecount="249" result="Failed" site="Child" start-time="2026-10-14 14:06:28Z" end-time="2026-10-14 14:06:36Z" duration="7.742456" total="249" passed="243" failed="6" inconclusive="0" skipped="0" asserts="0">
+    <properties />
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1035" name="Spotlight.Combat.Tests.dll" fullname="E:/PersonalProgram/2026GameJam/Library/ScriptAssemblies/Spotlight.Combat.Tests.dll" runstate="Runnable" testcasecount="29" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.014164" total="29" passed="29" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="43112" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+      </properties>
+      <test-suite type="TestSuite" id="1036" name="Spotlight" fullname="Spotlight" runstate="Runnable" testcasecount="29" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.013531" total="29" passed="29" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1037" name="Tests" fullname="Spotlight.Tests" runstate="Runnable" testcasecount="29" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.013491" total="29" passed="29" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1040" name="AdvancedCombat" fullname="Spotlight.Tests.AdvancedCombat" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.011465" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1025" name="AdvancedCombatTests" fullname="Spotlight.Tests.AdvancedCombat.AdvancedCombatTests" classname="Spotlight.Tests.AdvancedCombat.AdvancedCombatTests" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.005989" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1026" name="AdvancedValidationAndRejectedCommitHaveNoSideEffects" fullname="Spotlight.Tests.AdvancedCombat.AdvancedCombatTests.AdvancedValidationAndRejectedCommitHaveNoSideEffects" methodname="AdvancedValidationAndRejectedCommitHaveNoSideEffects" classname="Spotlight.Tests.AdvancedCombat.AdvancedCombatTests" runstate="Runnable" seed="389999879" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.045757" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1031" name="AreaCopiesConfigurationAndLogicalTimeControlsPulses" fullname="Spotlight.Tests.AdvancedCombat.AdvancedCombatTests.AreaCopiesConfigurationAndLogicalTimeControlsPulses" methodname="AreaCopiesConfigurationAndLogicalTimeControlsPulses" classname="Spotlight.Tests.AdvancedCombat.AdvancedCombatTests" runstate="Runnable" seed="1248171251" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.024533" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1027" name="AreaDamageUsesCircularCentersAndDuplicateReceipt" fullname="Spotlight.Tests.AdvancedCombat.AdvancedCombatTests.AreaDamageUsesCircularCentersAndDuplicateReceipt" methodname="AreaDamageUsesCircularCentersAndDuplicateReceipt" classname="Spotlight.Tests.AdvancedCombat.AdvancedCombatTests" runstate="Runnable" seed="415646134" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.001595" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1028" name="ChainSurvivesFirstDeathAndRequiresStatusInsteadOfGauge" fullname="Spotlight.Tests.AdvancedCombat.AdvancedCombatTests.ChainSurvivesFirstDeathAndRequiresStatusInsteadOfGauge" methodname="ChainSurvivesFirstDeathAndRequiresStatusInsteadOfGauge" classname="Spotlight.Tests.AdvancedCombat.AdvancedCombatTests" runstate="Runnable" seed="49663786" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.003191" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1034" name="EmptySecondaryTargetsAndMissingPrimaryAreHandled" fullname="Spotlight.Tests.AdvancedCombat.AdvancedCombatTests.EmptySecondaryTargetsAndMissingPrimaryAreHandled" methodname="EmptySecondaryTargetsAndMissingPrimaryAreHandled" classname="Spotlight.Tests.AdvancedCombat.AdvancedCombatTests" runstate="Runnable" seed="1729047661" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.000764" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1029" name="IndependentAreaScopesLeaveAndExpireWithoutRefreshOrDuplication" fullname="Spotlight.Tests.AdvancedCombat.AdvancedCombatTests.IndependentAreaScopesLeaveAndExpireWithoutRefreshOrDuplication" methodname="IndependentAreaScopesLeaveAndExpireWithoutRefreshOrDuplication" classname="Spotlight.Tests.AdvancedCombat.AdvancedCombatTests" runstate="Runnable" seed="1695193029" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.002973" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1030" name="LeavingOneAreaPreservesOtherScopeLease" fullname="Spotlight.Tests.AdvancedCombat.AdvancedCombatTests.LeavingOneAreaPreservesOtherScopeLease" methodname="LeavingOneAreaPreservesOtherScopeLease" classname="Spotlight.Tests.AdvancedCombat.AdvancedCombatTests" runstate="Runnable" seed="1383286817" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.003176" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1032" name="PiercingCountsReentryAndKeepsFlyingAfterBudget" fullname="Spotlight.Tests.AdvancedCombat.AdvancedCombatTests.PiercingCountsReentryAndKeepsFlyingAfterBudget" methodname="PiercingCountsReentryAndKeepsFlyingAfterBudget" classname="Spotlight.Tests.AdvancedCombat.AdvancedCombatTests" runstate="Runnable" seed="1237090462" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.005497" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1033" name="ProjectileStoresSecondaryEffectUntilDirectImpactWithoutRecursion" fullname="Spotlight.Tests.AdvancedCombat.AdvancedCombatTests.ProjectileStoresSecondaryEffectUntilDirectImpactWithoutRecursion" methodname="ProjectileStoresSecondaryEffectUntilDirectImpactWithoutRecursion" classname="Spotlight.Tests.AdvancedCombat.AdvancedCombatTests" runstate="Runnable" seed="161429416" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.003855" asserts="0">
+                <properties />
+              </test-case>
+            </test-suite>
+          </test-suite>
+          <test-suite type="TestSuite" id="1039" name="ElementModifiers" fullname="Spotlight.Tests.ElementModifiers" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.001220" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1011" name="ElementModifierTests" fullname="Spotlight.Tests.ElementModifiers.ElementModifierTests" classname="Spotlight.Tests.ElementModifiers.ElementModifierTests" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.001080" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1020" name="AreaUsesEnemyPositionWhileAreaDamageUsesExplicitImpactPoint" fullname="Spotlight.Tests.ElementModifiers.ElementModifierTests.AreaUsesEnemyPositionWhileAreaDamageUsesExplicitImpactPoint" methodname="AreaUsesEnemyPositionWhileAreaDamageUsesExplicitImpactPoint" classname="Spotlight.Tests.ElementModifiers.ElementModifierTests" runstate="Runnable" seed="2142152197" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.005328" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1018" name="FractionalProbabilityReplaysFromWaveSeedWithoutAdvancingRandomState" fullname="Spotlight.Tests.ElementModifiers.ElementModifierTests.FractionalProbabilityReplaysFromWaveSeedWithoutAdvancingRandomState" methodname="FractionalProbabilityReplaysFromWaveSeedWithoutAdvancingRandomState" classname="Spotlight.Tests.ElementModifiers.ElementModifierTests" runstate="Runnable" seed="1875988102" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.005379" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1019" name="FriendlyAreaHealsCircularCentersClampsAndPulsesWithoutHealingEnemies" fullname="Spotlight.Tests.ElementModifiers.ElementModifierTests.FriendlyAreaHealsCircularCentersClampsAndPulsesWithoutHealingEnemies" methodname="FriendlyAreaHealsCircularCentersClampsAndPulsesWithoutHealingEnemies" classname="Spotlight.Tests.ElementModifiers.ElementModifierTests" runstate="Runnable" seed="599616136" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.001222" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1024" name="HealingStatusUsesTicksAndSessionRestartClearsAllModifiers" fullname="Spotlight.Tests.ElementModifiers.ElementModifierTests.HealingStatusUsesTicksAndSessionRestartClearsAllModifiers" methodname="HealingStatusUsesTicksAndSessionRestartClearsAllModifiers" classname="Spotlight.Tests.ElementModifiers.ElementModifierTests" runstate="Runnable" seed="2063306414" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.000767" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1013" name="IncomingGaugeAlwaysAppliesAndOutgoingGaugeAppliesOnlyToPrimary" fullname="Spotlight.Tests.ElementModifiers.ElementModifierTests.IncomingGaugeAlwaysAppliesAndOutgoingGaugeAppliesOnlyToPrimary" methodname="IncomingGaugeAlwaysAppliesAndOutgoingGaugeAppliesOnlyToPrimary" classname="Spotlight.Tests.ElementModifiers.ElementModifierTests" runstate="Runnable" seed="583198738" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.001341" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1014" name="MissIsRepeatableDoesNotDamageOrSupplyGaugeAndReceiptIsUnique" fullname="Spotlight.Tests.ElementModifiers.ElementModifierTests.MissIsRepeatableDoesNotDamageOrSupplyGaugeAndReceiptIsUnique" methodname="MissIsRepeatableDoesNotDamageOrSupplyGaugeAndReceiptIsUnique" classname="Spotlight.Tests.ElementModifiers.ElementModifierTests" runstate="Runnable" seed="743609949" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.000746" asserts="0">
+                <properties />
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1023" name="NaturalAreaFreezeExpiresBeforeAreaAndDoesNotRefreshOnPulses" fullname="Spotlight.Tests.ElementModifiers.ElementModifierTests.NaturalAreaFreezeExpiresBeforeAreaAndDoesNotRefreshOnPulses" classname="Spotlight.Tests.ElementModifiers.ElementModifierTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000202" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1021" name="NaturalAreaFreezeExpiresBeforeAreaAndDoesNotRefreshOnPulses(0.0f,False)" fullname="Spotlight.Tests.ElementModifiers.ElementModifierTests.NaturalAreaFreezeExpiresBeforeAreaAndDoesNotRefreshOnPulses(0.0f,False)" methodname="NaturalAreaFreezeExpiresBeforeAreaAndDoesNotRefreshOnPulses" classname="Spotlight.Tests.ElementModifiers.ElementModifierTests" runstate="Runnable" seed="1209240937" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.002184" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1022" name="NaturalAreaFreezeExpiresBeforeAreaAndDoesNotRefreshOnPulses(1.0f,True)" fullname="Spotlight.Tests.ElementModifiers.ElementModifierTests.NaturalAreaFreezeExpiresBeforeAreaAndDoesNotRefreshOnPulses(1.0f,True)" methodname="NaturalAreaFreezeExpiresBeforeAreaAndDoesNotRefreshOnPulses" classname="Spotlight.Tests.ElementModifiers.ElementModifierTests" runstate="Runnable" seed="204007721" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.000739" asserts="0">
+                  <properties />
+                </test-case>
+              </test-suite>
+              <test-case id="1012" name="PrimaryDamageScalesOnlyMatchingElementAndExpiryRestoresModifiers" fullname="Spotlight.Tests.ElementModifiers.ElementModifierTests.PrimaryDamageScalesOnlyMatchingElementAndExpiryRestoresModifiers" methodname="PrimaryDamageScalesOnlyMatchingElementAndExpiryRestoresModifiers" classname="Spotlight.Tests.ElementModifiers.ElementModifierTests" runstate="Runnable" seed="1879232885" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.000495" asserts="0">
+                <properties />
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1017" name="SourceActorProbabilityValidationAndRejectedCommitHaveNoSideEffects" fullname="Spotlight.Tests.ElementModifiers.ElementModifierTests.SourceActorProbabilityValidationAndRejectedCommitHaveNoSideEffects" classname="Spotlight.Tests.ElementModifiers.ElementModifierTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000103" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1015" name="SourceActorProbabilityValidationAndRejectedCommitHaveNoSideEffects(0.0f,0)" fullname="Spotlight.Tests.ElementModifiers.ElementModifierTests.SourceActorProbabilityValidationAndRejectedCommitHaveNoSideEffects(0.0f,0)" methodname="SourceActorProbabilityValidationAndRejectedCommitHaveNoSideEffects" classname="Spotlight.Tests.ElementModifiers.ElementModifierTests" runstate="Runnable" seed="580231974" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.001171" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1016" name="SourceActorProbabilityValidationAndRejectedCommitHaveNoSideEffects(1.0f,1)" fullname="Spotlight.Tests.ElementModifiers.ElementModifierTests.SourceActorProbabilityValidationAndRejectedCommitHaveNoSideEffects(1.0f,1)" methodname="SourceActorProbabilityValidationAndRejectedCommitHaveNoSideEffects" classname="Spotlight.Tests.ElementModifiers.ElementModifierTests" runstate="Runnable" seed="914856476" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.000376" asserts="0">
+                  <properties />
+                </test-case>
+              </test-suite>
+            </test-suite>
+          </test-suite>
+          <test-suite type="TestSuite" id="1038" name="ProjectileCombinations" fullname="Spotlight.Tests.ProjectileCombinations" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000646" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1001" name="ProjectileCombinationTests" fullname="Spotlight.Tests.ProjectileCombinations.ProjectileCombinationTests" classname="Spotlight.Tests.ProjectileCombinations.ProjectileCombinationTests" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000518" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1004" name="BlockIdWinsOverChangedCellAndLegacyCellDeduplicates" fullname="Spotlight.Tests.ProjectileCombinations.ProjectileCombinationTests.BlockIdWinsOverChangedCellAndLegacyCellDeduplicates" methodname="BlockIdWinsOverChangedCellAndLegacyCellDeduplicates" classname="Spotlight.Tests.ProjectileCombinations.ProjectileCombinationTests" runstate="Runnable" seed="2074725777" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.011844" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1002" name="DifferentWindBlocksActivateOnceAndSourceBuffExpires" fullname="Spotlight.Tests.ProjectileCombinations.ProjectileCombinationTests.DifferentWindBlocksActivateOnceAndSourceBuffExpires" methodname="DifferentWindBlocksActivateOnceAndSourceBuffExpires" classname="Spotlight.Tests.ProjectileCombinations.ProjectileCombinationTests" runstate="Runnable" seed="1813702763" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.001230" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1009" name="ExhaustedPiercingCannotBeReactivatedByLaterBlocks" fullname="Spotlight.Tests.ProjectileCombinations.ProjectileCombinationTests.ExhaustedPiercingCannotBeReactivatedByLaterBlocks" methodname="ExhaustedPiercingCannotBeReactivatedByLaterBlocks" classname="Spotlight.Tests.ProjectileCombinations.ProjectileCombinationTests" runstate="Runnable" seed="1785372022" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.003687" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1007" name="FailedSourceBuffRetainsTokensAndAvoidsPartialProjectileChange" fullname="Spotlight.Tests.ProjectileCombinations.ProjectileCombinationTests.FailedSourceBuffRetainsTokensAndAvoidsPartialProjectileChange" methodname="FailedSourceBuffRetainsTokensAndAvoidsPartialProjectileChange" classname="Spotlight.Tests.ProjectileCombinations.ProjectileCombinationTests" runstate="Runnable" seed="634974005" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.001030" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1006" name="NullModifierStillSuppliesValidCombinationInput" fullname="Spotlight.Tests.ProjectileCombinations.ProjectileCombinationTests.NullModifierStillSuppliesValidCombinationInput" methodname="NullModifierStillSuppliesValidCombinationInput" classname="Spotlight.Tests.ProjectileCombinations.ProjectileCombinationTests" runstate="Runnable" seed="2132121143" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.000552" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1005" name="OrdinaryFireAndWindBonusesApplyOncePerType" fullname="Spotlight.Tests.ProjectileCombinations.ProjectileCombinationTests.OrdinaryFireAndWindBonusesApplyOncePerType" methodname="OrdinaryFireAndWindBonusesApplyOncePerType" classname="Spotlight.Tests.ProjectileCombinations.ProjectileCombinationTests" runstate="Runnable" seed="1122525630" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.000784" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1008" name="PriorityConsumesTokensBeforeOtherMatchingRules" fullname="Spotlight.Tests.ProjectileCombinations.ProjectileCombinationTests.PriorityConsumesTokensBeforeOtherMatchingRules" methodname="PriorityConsumesTokensBeforeOtherMatchingRules" classname="Spotlight.Tests.ProjectileCombinations.ProjectileCombinationTests" runstate="Runnable" seed="536954169" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.001296" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1010" name="SelectedActorStatusWaitsUntilImpact" fullname="Spotlight.Tests.ProjectileCombinations.ProjectileCombinationTests.SelectedActorStatusWaitsUntilImpact" methodname="SelectedActorStatusWaitsUntilImpact" classname="Spotlight.Tests.ProjectileCombinations.ProjectileCombinationTests" runstate="Runnable" seed="543274055" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.000899" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1003" name="SingleBlockAcrossFramesCannotSupplyTwoWindTokens" fullname="Spotlight.Tests.ProjectileCombinations.ProjectileCombinationTests.SingleBlockAcrossFramesCannotSupplyTwoWindTokens" methodname="SingleBlockAcrossFramesCannotSupplyTwoWindTokens" classname="Spotlight.Tests.ProjectileCombinations.ProjectileCombinationTests" runstate="Runnable" seed="827443236" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.000447" asserts="0">
+                <properties />
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+    <test-suite type="Assembly" id="1074" name="Spotlight.Core.Tests.dll" fullname="E:/PersonalProgram/2026GameJam/Library/ScriptAssemblies/Spotlight.Core.Tests.dll" runstate="Runnable" testcasecount="29" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.002315" total="29" passed="29" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="43112" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+      </properties>
+      <test-suite type="TestSuite" id="1075" name="Spotlight" fullname="Spotlight" runstate="Runnable" testcasecount="29" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.002289" total="29" passed="29" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1076" name="Tests" fullname="Spotlight.Tests" runstate="Runnable" testcasecount="29" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.002264" total="29" passed="29" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1077" name="Core" fullname="Spotlight.Tests.Core" runstate="Runnable" testcasecount="29" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.002184" total="29" passed="29" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1041" name="AdvancedEffectCatalogTests" fullname="Spotlight.Tests.Core.AdvancedEffectCatalogTests" classname="Spotlight.Tests.Core.AdvancedEffectCatalogTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000536" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1044" name="AreaCannotRecursivelySpawnOrFeedReactionInput" fullname="Spotlight.Tests.Core.AdvancedEffectCatalogTests.AreaCannotRecursivelySpawnOrFeedReactionInput" methodname="AreaCannotRecursivelySpawnOrFeedReactionInput" classname="Spotlight.Tests.Core.AdvancedEffectCatalogTests" runstate="Runnable" seed="1359043902" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.018701" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1043" name="AreaRejectsNonFiniteTimingAndTicksBelowLogicInterval" fullname="Spotlight.Tests.Core.AdvancedEffectCatalogTests.AreaRejectsNonFiniteTimingAndTicksBelowLogicInterval" methodname="AreaRejectsNonFiniteTimingAndTicksBelowLogicInterval" classname="Spotlight.Tests.Core.AdvancedEffectCatalogTests" runstate="Runnable" seed="345129925" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.001316" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1047" name="CatalogReturnsDetachedNestedEffects" fullname="Spotlight.Tests.Core.AdvancedEffectCatalogTests.CatalogReturnsDetachedNestedEffects" methodname="CatalogReturnsDetachedNestedEffects" classname="Spotlight.Tests.Core.AdvancedEffectCatalogTests" runstate="Runnable" seed="1788892506" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.001096" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1045" name="ChainRequiresKnownFiltersAndBoundedHitBudget" fullname="Spotlight.Tests.Core.AdvancedEffectCatalogTests.ChainRequiresKnownFiltersAndBoundedHitBudget" methodname="ChainRequiresKnownFiltersAndBoundedHitBudget" classname="Spotlight.Tests.Core.AdvancedEffectCatalogTests" runstate="Runnable" seed="126784408" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.000892" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1042" name="LegacyDefinitionsKeepOneHitAndFullDamageDefaults" fullname="Spotlight.Tests.Core.AdvancedEffectCatalogTests.LegacyDefinitionsKeepOneHitAndFullDamageDefaults" methodname="LegacyDefinitionsKeepOneHitAndFullDamageDefaults" classname="Spotlight.Tests.Core.AdvancedEffectCatalogTests" runstate="Runnable" seed="1524418776" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.000513" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1046" name="PiercingIsProjectileOnlyAndGaugeOutputIsAllowedInEnemyDomain" fullname="Spotlight.Tests.Core.AdvancedEffectCatalogTests.PiercingIsProjectileOnlyAndGaugeOutputIsAllowedInEnemyDomain" methodname="PiercingIsProjectileOnlyAndGaugeOutputIsAllowedInEnemyDomain" classname="Spotlight.Tests.Core.AdvancedEffectCatalogTests" runstate="Runnable" seed="1362442322" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.000889" asserts="0">
+                <properties />
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1048" name="FoundationTests" fullname="Spotlight.Tests.Core.FoundationTests" classname="Spotlight.Tests.Core.FoundationTests" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000545" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1050" name="CornerTouchDoesNotCreateExtraSweptCells" fullname="Spotlight.Tests.Core.FoundationTests.CornerTouchDoesNotCreateExtraSweptCells" methodname="CornerTouchDoesNotCreateExtraSweptCells" classname="Spotlight.Tests.Core.FoundationTests" runstate="Runnable" seed="861308680" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.018511" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1055" name="CorruptRestorePreservesCurrentRun" fullname="Spotlight.Tests.Core.FoundationTests.CorruptRestorePreservesCurrentRun" methodname="CorruptRestorePreservesCurrentRun" classname="Spotlight.Tests.Core.FoundationTests" runstate="Runnable" seed="669452951" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.006927" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1054" name="DetachedSnapshotsAndCursorsCannotMutateLiveState" fullname="Spotlight.Tests.Core.FoundationTests.DetachedSnapshotsAndCursorsCannotMutateLiveState" methodname="DetachedSnapshotsAndCursorsCannotMutateLiveState" classname="Spotlight.Tests.Core.FoundationTests" runstate="Runnable" seed="1778741673" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.001991" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1057" name="EventSubscriberCannotReenterBusinessTransaction" fullname="Spotlight.Tests.Core.FoundationTests.EventSubscriberCannotReenterBusinessTransaction" methodname="EventSubscriberCannotReenterBusinessTransaction" classname="Spotlight.Tests.Core.FoundationTests" runstate="Runnable" seed="1272305018" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.007437" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1052" name="FailedBatchLeavesResourcesRandomAndBoardUntouched" fullname="Spotlight.Tests.Core.FoundationTests.FailedBatchLeavesResourcesRandomAndBoardUntouched" methodname="FailedBatchLeavesResourcesRandomAndBoardUntouched" classname="Spotlight.Tests.Core.FoundationTests" runstate="Runnable" seed="2008922785" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.001959" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1053" name="IdempotencyReturnsOriginalRevisionAndRejectsAlteredBatch" fullname="Spotlight.Tests.Core.FoundationTests.IdempotencyReturnsOriginalRevisionAndRejectsAlteredBatch" methodname="IdempotencyReturnsOriginalRevisionAndRejectsAlteredBatch" classname="Spotlight.Tests.Core.FoundationTests" runstate="Runnable" seed="1627785478" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.001772" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1049" name="NegativeWorldCoordinatesUseFloorAndNeighborsRespectRectangularBoard" fullname="Spotlight.Tests.Core.FoundationTests.NegativeWorldCoordinatesUseFloorAndNeighborsRespectRectangularBoard" methodname="NegativeWorldCoordinatesUseFloorAndNeighborsRespectRectangularBoard" classname="Spotlight.Tests.Core.FoundationTests" runstate="Runnable" seed="2086987078" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.001474" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1058" name="PublicLevelCopyCannotChangeWorldConversion" fullname="Spotlight.Tests.Core.FoundationTests.PublicLevelCopyCannotChangeWorldConversion" methodname="PublicLevelCopyCannotChangeWorldConversion" classname="Spotlight.Tests.Core.FoundationTests" runstate="Runnable" seed="2089299613" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.001078" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1056" name="SavedCommandHistoryRestoresExactReceiptAndRejectsDifferentBody" fullname="Spotlight.Tests.Core.FoundationTests.SavedCommandHistoryRestoresExactReceiptAndRejectsDifferentBody" methodname="SavedCommandHistoryRestoresExactReceiptAndRejectsDifferentBody" classname="Spotlight.Tests.Core.FoundationTests" runstate="Runnable" seed="1498390945" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.006905" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1051" name="SwapMovesTowerProjectionAndPreservesHealth" fullname="Spotlight.Tests.Core.FoundationTests.SwapMovesTowerProjectionAndPreservesHealth" methodname="SwapMovesTowerProjectionAndPreservesHealth" classname="Spotlight.Tests.Core.FoundationTests" runstate="Runnable" seed="1268204041" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.006710" asserts="0">
+                <properties />
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1059" name="SaveTests" fullname="Spotlight.Tests.Core.SaveTests" classname="Spotlight.Tests.Core.SaveTests" runstate="Runnable" testcasecount="13" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000746" total="13" passed="13" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1064" name="CorruptPrimaryFallsBackAndNextSavePreservesValidBackup" fullname="Spotlight.Tests.Core.SaveTests.CorruptPrimaryFallsBackAndNextSavePreservesValidBackup" methodname="CorruptPrimaryFallsBackAndNextSavePreservesValidBackup" classname="Spotlight.Tests.Core.SaveTests" runstate="Runnable" seed="1175652465" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.077084" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1067" name="LegacyContractReadPreservesFileStateAndExactCommandHistoryWithoutRewards" fullname="Spotlight.Tests.Core.SaveTests.LegacyContractReadPreservesFileStateAndExactCommandHistoryWithoutRewards" methodname="LegacyContractReadPreservesFileStateAndExactCommandHistoryWithoutRewards" classname="Spotlight.Tests.Core.SaveTests" runstate="Runnable" seed="1319915548" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.032232" asserts="0">
+                <properties />
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1072" name="LegacyMigrationRejectsUnlistedContractOrSaveVersions" fullname="Spotlight.Tests.Core.SaveTests.LegacyMigrationRejectsUnlistedContractOrSaveVersions" classname="Spotlight.Tests.Core.SaveTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000180" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1068" name="LegacyMigrationRejectsUnlistedContractOrSaveVersions(&quot;2.0.0&quot;,1)" fullname="Spotlight.Tests.Core.SaveTests.LegacyMigrationRejectsUnlistedContractOrSaveVersions(&quot;2.0.0&quot;,1)" methodname="LegacyMigrationRejectsUnlistedContractOrSaveVersions" classname="Spotlight.Tests.Core.SaveTests" runstate="Runnable" seed="882564467" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.012333" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1069" name="LegacyMigrationRejectsUnlistedContractOrSaveVersions(&quot;2.3.0&quot;,1)" fullname="Spotlight.Tests.Core.SaveTests.LegacyMigrationRejectsUnlistedContractOrSaveVersions(&quot;2.3.0&quot;,1)" methodname="LegacyMigrationRejectsUnlistedContractOrSaveVersions" classname="Spotlight.Tests.Core.SaveTests" runstate="Runnable" seed="708032" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.010714" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1070" name="LegacyMigrationRejectsUnlistedContractOrSaveVersions(&quot;unknown&quot;,1)" fullname="Spotlight.Tests.Core.SaveTests.LegacyMigrationRejectsUnlistedContractOrSaveVersions(&quot;unknown&quot;,1)" methodname="LegacyMigrationRejectsUnlistedContractOrSaveVersions" classname="Spotlight.Tests.Core.SaveTests" runstate="Runnable" seed="146734364" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.010593" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1071" name="LegacyMigrationRejectsUnlistedContractOrSaveVersions(&quot;2.1.0&quot;,99)" fullname="Spotlight.Tests.Core.SaveTests.LegacyMigrationRejectsUnlistedContractOrSaveVersions(&quot;2.1.0&quot;,99)" methodname="LegacyMigrationRejectsUnlistedContractOrSaveVersions" classname="Spotlight.Tests.Core.SaveTests" runstate="Runnable" seed="1688663049" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.009744" asserts="0">
+                  <properties />
+                </test-case>
+              </test-suite>
+              <test-case id="1073" name="LegacyMigrationRetainsConfigurationAndCorruptionChecks" fullname="Spotlight.Tests.Core.SaveTests.LegacyMigrationRetainsConfigurationAndCorruptionChecks" methodname="LegacyMigrationRetainsConfigurationAndCorruptionChecks" classname="Spotlight.Tests.Core.SaveTests" runstate="Runnable" seed="399278389" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.011086" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1061" name="NativeJsonUtilityPreservesAbsentAndPresentDayEvent" fullname="Spotlight.Tests.Core.SaveTests.NativeJsonUtilityPreservesAbsentAndPresentDayEvent" methodname="NativeJsonUtilityPreservesAbsentAndPresentDayEvent" classname="Spotlight.Tests.Core.SaveTests" runstate="Runnable" seed="1489900995" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.001762" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1062" name="SavedHistoryRestoresExactRetryAndRejectsDifferentBody" fullname="Spotlight.Tests.Core.SaveTests.SavedHistoryRestoresExactRetryAndRejectsDifferentBody" methodname="SavedHistoryRestoresExactRetryAndRejectsDifferentBody" classname="Spotlight.Tests.Core.SaveTests" runstate="Runnable" seed="320424213" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.014345" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1060" name="SavedReadonlyValuesAndCommandIdsRoundTripWithoutRestoringLiveStore" fullname="Spotlight.Tests.Core.SaveTests.SavedReadonlyValuesAndCommandIdsRoundTripWithoutRestoringLiveStore" methodname="SavedReadonlyValuesAndCommandIdsRoundTripWithoutRestoringLiveStore" classname="Spotlight.Tests.Core.SaveTests" runstate="Runnable" seed="1952311725" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.015682" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1063" name="SaveReceiptPersistsAndRejectsDifferentReasonOrTransactionId" fullname="Spotlight.Tests.Core.SaveTests.SaveReceiptPersistsAndRejectsDifferentReasonOrTransactionId" methodname="SaveReceiptPersistsAndRejectsDifferentReasonOrTransactionId" classname="Spotlight.Tests.Core.SaveTests" runstate="Runnable" seed="757315046" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.015927" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1066" name="UnsupportedVersionAndNegativeResourceReportDistinctErrors" fullname="Spotlight.Tests.Core.SaveTests.UnsupportedVersionAndNegativeResourceReportDistinctErrors" methodname="UnsupportedVersionAndNegativeResourceReportDistinctErrors" classname="Spotlight.Tests.Core.SaveTests" runstate="Runnable" seed="895123619" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.018947" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1065" name="WriteFailureLeavesPreviousCheckpointUsable" fullname="Spotlight.Tests.Core.SaveTests.WriteFailureLeavesPreviousCheckpointUsable" methodname="WriteFailureLeavesPreviousCheckpointUsable" classname="Spotlight.Tests.Core.SaveTests" runstate="Runnable" seed="1044164013" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.018934" asserts="0">
+                <properties />
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+    <test-suite type="Assembly" id="1086" name="Spotlight.Elements.Tests.dll" fullname="E:/PersonalProgram/2026GameJam/Library/ScriptAssemblies/Spotlight.Elements.Tests.dll" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000594" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="43112" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+      </properties>
+      <test-suite type="TestSuite" id="1087" name="Spotlight" fullname="Spotlight" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000558" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1088" name="Tests" fullname="Spotlight.Tests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000532" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1089" name="Elements" fullname="Spotlight.Tests.Elements" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000482" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1079" name="AdvancedEffectConfigTests" fullname="Spotlight.Tests.Elements.AdvancedEffectConfigTests" classname="Spotlight.Tests.Elements.AdvancedEffectConfigTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000406" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1081" name="AreaConversionProducesDetachedNestedDefinitions" fullname="Spotlight.Tests.Elements.AdvancedEffectConfigTests.AreaConversionProducesDetachedNestedDefinitions" methodname="AreaConversionProducesDetachedNestedDefinitions" classname="Spotlight.Tests.Elements.AdvancedEffectConfigTests" runstate="Runnable" seed="1268145452" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.001723" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1082" name="AreaLeafRejectsUnsupportedEffectKinds" fullname="Spotlight.Tests.Elements.AdvancedEffectConfigTests.AreaLeafRejectsUnsupportedEffectKinds" methodname="AreaLeafRejectsUnsupportedEffectKinds" classname="Spotlight.Tests.Elements.AdvancedEffectConfigTests" runstate="Runnable" seed="604133436" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.001272" asserts="0">
+                <properties />
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1085" name="ResolverMatchesAdvancedOutputsAndDetachesNestedDefinitions" fullname="Spotlight.Tests.Elements.AdvancedEffectConfigTests.ResolverMatchesAdvancedOutputsAndDetachesNestedDefinitions" classname="Spotlight.Tests.Elements.AdvancedEffectConfigTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000119" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1083" name="ResolverMatchesAdvancedOutputsAndDetachesNestedDefinitions(EnemyStatus)" fullname="Spotlight.Tests.Elements.AdvancedEffectConfigTests.ResolverMatchesAdvancedOutputsAndDetachesNestedDefinitions(EnemyStatus)" methodname="ResolverMatchesAdvancedOutputsAndDetachesNestedDefinitions" classname="Spotlight.Tests.Elements.AdvancedEffectConfigTests" runstate="Runnable" seed="1569214107" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.001301" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1084" name="ResolverMatchesAdvancedOutputsAndDetachesNestedDefinitions(Projectile)" fullname="Spotlight.Tests.Elements.AdvancedEffectConfigTests.ResolverMatchesAdvancedOutputsAndDetachesNestedDefinitions(Projectile)" methodname="ResolverMatchesAdvancedOutputsAndDetachesNestedDefinitions" classname="Spotlight.Tests.Elements.AdvancedEffectConfigTests" runstate="Runnable" seed="376174228" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.000166" asserts="0">
+                  <properties />
+                </test-case>
+              </test-suite>
+              <test-case id="1080" name="SerializedDefaultsRemainCompatibleWithSingleHitAssets" fullname="Spotlight.Tests.Elements.AdvancedEffectConfigTests.SerializedDefaultsRemainCompatibleWithSingleHitAssets" methodname="SerializedDefaultsRemainCompatibleWithSingleHitAssets" classname="Spotlight.Tests.Elements.AdvancedEffectConfigTests" runstate="Runnable" seed="363679711" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.000222" asserts="0">
+                <properties />
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+    <test-suite type="Assembly" id="1093" name="Spotlight.Enemies.Tests.dll" fullname="E:/PersonalProgram/2026GameJam/Library/ScriptAssemblies/Spotlight.Enemies.Tests.dll" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000320" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="43112" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+      </properties>
+      <test-suite type="TestSuite" id="1094" name="Spotlight" fullname="Spotlight" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000297" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1095" name="Tests" fullname="Spotlight.Tests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000272" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1096" name="Enemies" fullname="Spotlight.Tests.Enemies" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000225" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1090" name="EndlessWaveProviderTests" fullname="Spotlight.Tests.Enemies.EndlessWaveProviderTests" classname="Spotlight.Tests.Enemies.EndlessWaveProviderTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000160" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1092" name="MissingTemplatesDoNotInventWave" fullname="Spotlight.Tests.Enemies.EndlessWaveProviderTests.MissingTemplatesDoNotInventWave" methodname="MissingTemplatesDoNotInventWave" classname="Spotlight.Tests.Enemies.EndlessWaveProviderTests" runstate="Runnable" seed="86233697" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.001084" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1091" name="Night51ResolvesTemplateAndGrowthOnceWithoutMutatingTemplate" fullname="Spotlight.Tests.Enemies.EndlessWaveProviderTests.Night51ResolvesTemplateAndGrowthOnceWithoutMutatingTemplate" methodname="Night51ResolvesTemplateAndGrowthOnceWithoutMutatingTemplate" classname="Spotlight.Tests.Enemies.EndlessWaveProviderTests" runstate="Runnable" seed="1685249119" result="Passed" start-time="2026-10-14 14:05:30Z" end-time="2026-10-14 14:05:30Z" duration="0.001039" asserts="0">
+                <properties />
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+    <test-suite type="Assembly" id="1100" name="Spotlight.Gameplay.Tests.dll" fullname="E:/PersonalProgram/2026GameJam/Library/ScriptAssemblies/Spotlight.Gameplay.Tests.dll" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000313" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="43112" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+      </properties>
+      <test-suite type="TestSuite" id="1101" name="Spotlight" fullname="Spotlight" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000288" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1102" name="Tests" fullname="Spotlight.Tests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000264" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1103" name="Gameplay" fullname="Spotlight.Tests.Gameplay" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000217" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1097" name="ItemServiceTests" fullname="Spotlight.Tests.Gameplay.ItemServiceTests" classname="Spotlight.Tests.Gameplay.ItemServiceTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000148" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1099" name="InsufficientInventoryRejectsBeforeEffectExecution" fullname="Spotlight.Tests.Gameplay.ItemServiceTests.InsufficientInventoryRejectsBeforeEffectExecution" methodname="InsufficientInventoryRejectsBeforeEffectExecution" classname="Spotlight.Tests.Gameplay.ItemServiceTests" runstate="Runnable" seed="1850543037" result="Passed" start-time="2026-10-14 14:05:31Z" end-time="2026-10-14 14:05:31Z" duration="0.004138" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1098" name="NightPendingBlocksSameGroupAndSameCommandDoesNotQueueTwice" fullname="Spotlight.Tests.Gameplay.ItemServiceTests.NightPendingBlocksSameGroupAndSameCommandDoesNotQueueTwice" methodname="NightPendingBlocksSameGroupAndSameCommandDoesNotQueueTwice" classname="Spotlight.Tests.Gameplay.ItemServiceTests" runstate="Runnable" seed="2034499812" result="Passed" start-time="2026-10-14 14:05:31Z" end-time="2026-10-14 14:05:31Z" duration="0.002306" asserts="0">
+                <properties />
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+    <test-suite type="Assembly" id="1332" name="Spotlight.Integration.Tests.dll" fullname="E:/PersonalProgram/2026GameJam/Library/ScriptAssemblies/Spotlight.Integration.Tests.dll" runstate="Runnable" testcasecount="182" result="Failed" site="Child" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:36Z" duration="7.008667" total="182" passed="176" failed="6" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="43112" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1333" name="Spotlight" fullname="Spotlight" runstate="Runnable" testcasecount="182" result="Failed" site="Child" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:36Z" duration="7.006447" total="182" passed="176" failed="6" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1336" name="Integration" fullname="Spotlight.Integration" runstate="Runnable" testcasecount="32" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.002773" total="32" passed="32" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1337" name="Tests" fullname="Spotlight.Integration.Tests" runstate="Runnable" testcasecount="32" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.002682" total="32" passed="32" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1294" name="AdvancedEffectAuthoringTests" fullname="Spotlight.Integration.Tests.AdvancedEffectAuthoringTests" classname="Spotlight.Integration.Tests.AdvancedEffectAuthoringTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000243" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1297" name="FormalCatalogCanBeValidatedWithoutMutation" fullname="Spotlight.Integration.Tests.AdvancedEffectAuthoringTests.FormalCatalogCanBeValidatedWithoutMutation" methodname="FormalCatalogCanBeValidatedWithoutMutation" classname="Spotlight.Integration.Tests.AdvancedEffectAuthoringTests" runstate="Runnable" seed="1457002963" result="Passed" start-time="2026-10-14 14:05:31Z" end-time="2026-10-14 14:05:31Z" duration="0.300300" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1296" name="FormalCatalogEffectCollectionIsIdempotentAndPreservesExistingConfiguration" fullname="Spotlight.Integration.Tests.AdvancedEffectAuthoringTests.FormalCatalogEffectCollectionIsIdempotentAndPreservesExistingConfiguration" methodname="FormalCatalogEffectCollectionIsIdempotentAndPreservesExistingConfiguration" classname="Spotlight.Integration.Tests.AdvancedEffectAuthoringTests" runstate="Runnable" seed="287897529" result="Passed" start-time="2026-10-14 14:05:31Z" end-time="2026-10-14 14:05:31Z" duration="0.019473" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1295" name="SetupRepeatedlyPreservesConfiguredFormalAssets" fullname="Spotlight.Integration.Tests.AdvancedEffectAuthoringTests.SetupRepeatedlyPreservesConfiguredFormalAssets" methodname="SetupRepeatedlyPreservesConfiguredFormalAssets" classname="Spotlight.Integration.Tests.AdvancedEffectAuthoringTests" runstate="Runnable" seed="1367219312" result="Passed" start-time="2026-10-14 14:05:31Z" end-time="2026-10-14 14:05:31Z" duration="0.361846" asserts="0">
+                <properties />
+                <output><![CDATA[21种组合配置已补齐。新增数值为实验基线；已填写配置保持不变。仅原样旧风风模板升级正式穿透。战斗与生产请在组合试验台分别检查。
+21种组合配置已补齐。新增数值为实验基线；已填写配置保持不变。仅原样旧风风模板升级正式穿透。战斗与生产请在组合试验台分别检查。
+]]></output>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1298" name="AdvancedEffectVisualLifecycleTests" fullname="Spotlight.Integration.Tests.AdvancedEffectVisualLifecycleTests" classname="Spotlight.Integration.Tests.AdvancedEffectVisualLifecycleTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000487" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-suite type="ParameterizedMethod" id="1304" name="LeavingNightHidesTransientAndAreaVisualsWithoutClockAdvancing" fullname="Spotlight.Integration.Tests.AdvancedEffectVisualLifecycleTests.LeavingNightHidesTransientAndAreaVisualsWithoutClockAdvancing" classname="Spotlight.Integration.Tests.AdvancedEffectVisualLifecycleTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000304" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1299" name="LeavingNightHidesTransientAndAreaVisualsWithoutClockAdvancing(NightResult)" fullname="Spotlight.Integration.Tests.AdvancedEffectVisualLifecycleTests.LeavingNightHidesTransientAndAreaVisualsWithoutClockAdvancing(NightResult)" methodname="LeavingNightHidesTransientAndAreaVisualsWithoutClockAdvancing" classname="Spotlight.Integration.Tests.AdvancedEffectVisualLifecycleTests" runstate="Runnable" seed="316585005" result="Passed" start-time="2026-10-14 14:05:31Z" end-time="2026-10-14 14:05:31Z" duration="0.009041" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1300" name="LeavingNightHidesTransientAndAreaVisualsWithoutClockAdvancing(Ending)" fullname="Spotlight.Integration.Tests.AdvancedEffectVisualLifecycleTests.LeavingNightHidesTransientAndAreaVisualsWithoutClockAdvancing(Ending)" methodname="LeavingNightHidesTransientAndAreaVisualsWithoutClockAdvancing" classname="Spotlight.Integration.Tests.AdvancedEffectVisualLifecycleTests" runstate="Runnable" seed="1633570610" result="Passed" start-time="2026-10-14 14:05:31Z" end-time="2026-10-14 14:05:31Z" duration="0.000404" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1301" name="LeavingNightHidesTransientAndAreaVisualsWithoutClockAdvancing(GameOver)" fullname="Spotlight.Integration.Tests.AdvancedEffectVisualLifecycleTests.LeavingNightHidesTransientAndAreaVisualsWithoutClockAdvancing(GameOver)" methodname="LeavingNightHidesTransientAndAreaVisualsWithoutClockAdvancing" classname="Spotlight.Integration.Tests.AdvancedEffectVisualLifecycleTests" runstate="Runnable" seed="263865591" result="Passed" start-time="2026-10-14 14:05:31Z" end-time="2026-10-14 14:05:31Z" duration="0.000296" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1302" name="LeavingNightHidesTransientAndAreaVisualsWithoutClockAdvancing(Build)" fullname="Spotlight.Integration.Tests.AdvancedEffectVisualLifecycleTests.LeavingNightHidesTransientAndAreaVisualsWithoutClockAdvancing(Build)" methodname="LeavingNightHidesTransientAndAreaVisualsWithoutClockAdvancing" classname="Spotlight.Integration.Tests.AdvancedEffectVisualLifecycleTests" runstate="Runnable" seed="945597374" result="Passed" start-time="2026-10-14 14:05:31Z" end-time="2026-10-14 14:05:31Z" duration="0.000313" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1303" name="LeavingNightHidesTransientAndAreaVisualsWithoutClockAdvancing(Menu)" fullname="Spotlight.Integration.Tests.AdvancedEffectVisualLifecycleTests.LeavingNightHidesTransientAndAreaVisualsWithoutClockAdvancing(Menu)" methodname="LeavingNightHidesTransientAndAreaVisualsWithoutClockAdvancing" classname="Spotlight.Integration.Tests.AdvancedEffectVisualLifecycleTests" runstate="Runnable" seed="431961640" result="Passed" start-time="2026-10-14 14:05:31Z" end-time="2026-10-14 14:05:31Z" duration="0.000331" asserts="0">
+                  <properties />
+                </test-case>
+              </test-suite>
+            </test-suite>
+            <test-suite type="TestFixture" id="1305" name="ElementCombinationAuthoringTests" fullname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests" classname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests" runstate="Runnable" testcasecount="24" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.001688" total="24" passed="24" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1306" name="FormalCombinationsValidateAndRepeatedCompletionPreservesEveryAuthoredValue" fullname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests.FormalCombinationsValidateAndRepeatedCompletionPreservesEveryAuthoredValue" methodname="FormalCombinationsValidateAndRepeatedCompletionPreservesEveryAuthoredValue" classname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests" runstate="Runnable" seed="848965063" result="Passed" start-time="2026-10-14 14:05:31Z" end-time="2026-10-14 14:05:31Z" duration="0.237419" asserts="0">
+                <properties />
+                <output><![CDATA[21种组合配置已补齐。新增数值为实验基线；已填写配置保持不变。仅原样旧风风模板升级正式穿透。战斗与生产请在组合试验台分别检查。
+21种组合配置已补齐。新增数值为实验基线；已填写配置保持不变。仅原样旧风风模板升级正式穿透。战斗与生产请在组合试验台分别检查。
+]]></output>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1328" name="FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges" fullname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests.FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges" classname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests" runstate="Runnable" testcasecount="19" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.001026" total="19" passed="19" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1309" name="FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges(&quot;reaction.Projectile.Wind.Wind&quot;)" fullname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests.FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges(&quot;reaction.Projectile.Wind.Wind&quot;)" methodname="FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges" classname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests" runstate="Runnable" seed="1013190147" result="Passed" start-time="2026-10-14 14:05:31Z" end-time="2026-10-14 14:05:32Z" duration="0.554622" asserts="0">
+                  <properties />
+                  <output><![CDATA[21种组合配置已补齐。新增数值为实验基线；已填写配置保持不变。仅原样旧风风模板升级正式穿透。战斗与生产请在组合试验台分别检查。
+]]></output>
+                </test-case>
+                <test-case id="1310" name="FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges(&quot;reaction.Projectile.Fire.Fire&quot;)" fullname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests.FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges(&quot;reaction.Projectile.Fire.Fire&quot;)" methodname="FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges" classname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests" runstate="Runnable" seed="796409996" result="Passed" start-time="2026-10-14 14:05:32Z" end-time="2026-10-14 14:05:32Z" duration="0.405138" asserts="0">
+                  <properties />
+                  <output><![CDATA[21种组合配置已补齐。新增数值为实验基线；已填写配置保持不变。仅原样旧风风模板升级正式穿透。战斗与生产请在组合试验台分别检查。
+]]></output>
+                </test-case>
+                <test-case id="1311" name="FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges(&quot;reaction.Projectile.Fire.Wood&quot;)" fullname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests.FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges(&quot;reaction.Projectile.Fire.Wood&quot;)" methodname="FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges" classname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests" runstate="Runnable" seed="724030549" result="Passed" start-time="2026-10-14 14:05:32Z" end-time="2026-10-14 14:05:33Z" duration="0.436945" asserts="0">
+                  <properties />
+                  <output><![CDATA[21种组合配置已补齐。新增数值为实验基线；已填写配置保持不变。仅原样旧风风模板升级正式穿透。战斗与生产请在组合试验台分别检查。
+]]></output>
+                </test-case>
+                <test-case id="1312" name="FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges(&quot;reaction.EnemyStatus.Wood.Wood&quot;)" fullname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests.FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges(&quot;reaction.EnemyStatus.Wood.Wood&quot;)" methodname="FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges" classname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests" runstate="Runnable" seed="621159740" result="Passed" start-time="2026-10-14 14:05:33Z" end-time="2026-10-14 14:05:34Z" duration="0.671326" asserts="0">
+                  <properties />
+                  <output><![CDATA[21种组合配置已补齐。新增数值为实验基线；已填写配置保持不变。仅原样旧风风模板升级正式穿透。战斗与生产请在组合试验台分别检查。
+]]></output>
+                </test-case>
+                <test-case id="1313" name="FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges(&quot;reaction.EnemyStatus.Earth.Thunder&quot;)" fullname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests.FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges(&quot;reaction.EnemyStatus.Earth.Thunder&quot;)" methodname="FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges" classname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests" runstate="Runnable" seed="1210603143" result="Passed" start-time="2026-10-14 14:05:34Z" end-time="2026-10-14 14:05:34Z" duration="0.429786" asserts="0">
+                  <properties />
+                  <output><![CDATA[21种组合配置已补齐。新增数值为实验基线；已填写配置保持不变。仅原样旧风风模板升级正式穿透。战斗与生产请在组合试验台分别检查。
+]]></output>
+                </test-case>
+                <test-case id="1314" name="FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges(&quot;reaction.EnemyStatus.Water.Water&quot;)" fullname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests.FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges(&quot;reaction.EnemyStatus.Water.Water&quot;)" methodname="FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges" classname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests" runstate="Runnable" seed="556497498" result="Passed" start-time="2026-10-14 14:05:34Z" end-time="2026-10-14 14:05:34Z" duration="0.336905" asserts="0">
+                  <properties />
+                  <output><![CDATA[21种组合配置已补齐。新增数值为实验基线；已填写配置保持不变。仅原样旧风风模板升级正式穿透。战斗与生产请在组合试验台分别检查。
+]]></output>
+                </test-case>
+                <test-case id="1315" name="FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges(&quot;reaction.EnemyStatus.Water.Fire&quot;)" fullname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests.FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges(&quot;reaction.EnemyStatus.Water.Fire&quot;)" methodname="FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges" classname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests" runstate="Runnable" seed="729548441" result="Passed" start-time="2026-10-14 14:05:34Z" end-time="2026-10-14 14:05:35Z" duration="0.471369" asserts="0">
+                  <properties />
+                  <output><![CDATA[21种组合配置已补齐。新增数值为实验基线；已填写配置保持不变。仅原样旧风风模板升级正式穿透。战斗与生产请在组合试验台分别检查。
+]]></output>
+                </test-case>
+                <test-case id="1316" name="FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges(&quot;reaction.EnemyStatus.Water.Earth&quot;)" fullname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests.FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges(&quot;reaction.EnemyStatus.Water.Earth&quot;)" methodname="FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges" classname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests" runstate="Runnable" seed="1140340256" result="Passed" start-time="2026-10-14 14:05:35Z" end-time="2026-10-14 14:05:35Z" duration="0.457017" asserts="0">
+                  <properties />
+                  <output><![CDATA[21种组合配置已补齐。新增数值为实验基线；已填写配置保持不变。仅原样旧风风模板升级正式穿透。战斗与生产请在组合试验台分别检查。
+]]></output>
+                </test-case>
+                <test-case id="1317" name="FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges(&quot;reaction.EnemyStatus.Water.Wood&quot;)" fullname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests.FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges(&quot;reaction.EnemyStatus.Water.Wood&quot;)" methodname="FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges" classname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests" runstate="Runnable" seed="296908428" result="Passed" start-time="2026-10-14 14:05:35Z" end-time="2026-10-14 14:05:36Z" duration="0.422115" asserts="0">
+                  <properties />
+                  <output><![CDATA[21种组合配置已补齐。新增数值为实验基线；已填写配置保持不变。仅原样旧风风模板升级正式穿透。战斗与生产请在组合试验台分别检查。
+]]></output>
+                </test-case>
+                <test-case id="1318" name="FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges(&quot;reaction.EnemyStatus.Water.Wind&quot;)" fullname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests.FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges(&quot;reaction.EnemyStatus.Water.Wind&quot;)" methodname="FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges" classname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests" runstate="Runnable" seed="2062487578" result="Passed" start-time="2026-10-14 14:05:36Z" end-time="2026-10-14 14:05:36Z" duration="0.450143" asserts="0">
+                  <properties />
+                  <output><![CDATA[21种组合配置已补齐。新增数值为实验基线；已填写配置保持不变。仅原样旧风风模板升级正式穿透。战斗与生产请在组合试验台分别检查。
+]]></output>
+                </test-case>
+                <test-case id="1319" name="FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges(&quot;reaction.EnemyStatus.Water.Thunder&quot;)" fullname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests.FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges(&quot;reaction.EnemyStatus.Water.Thunder&quot;)" methodname="FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges" classname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests" runstate="Runnable" seed="1929190930" result="Passed" start-time="2026-10-14 14:05:36Z" end-time="2026-10-14 14:05:37Z" duration="0.406988" asserts="0">
+                  <properties />
+                  <output><![CDATA[21种组合配置已补齐。新增数值为实验基线；已填写配置保持不变。仅原样旧风风模板升级正式穿透。战斗与生产请在组合试验台分别检查。
+]]></output>
+                </test-case>
+                <test-case id="1320" name="FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges(&quot;reaction.EnemyStatus.Fire.Earth&quot;)" fullname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests.FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges(&quot;reaction.EnemyStatus.Fire.Earth&quot;)" methodname="FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges" classname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests" runstate="Runnable" seed="806717368" result="Passed" start-time="2026-10-14 14:05:37Z" end-time="2026-10-14 14:05:37Z" duration="0.553550" asserts="0">
+                  <properties />
+                  <output><![CDATA[21种组合配置已补齐。新增数值为实验基线；已填写配置保持不变。仅原样旧风风模板升级正式穿透。战斗与生产请在组合试验台分别检查。
+]]></output>
+                </test-case>
+                <test-case id="1321" name="FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges(&quot;reaction.EnemyStatus.Fire.Wind&quot;)" fullname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests.FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges(&quot;reaction.EnemyStatus.Fire.Wind&quot;)" methodname="FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges" classname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests" runstate="Runnable" seed="1463020905" result="Passed" start-time="2026-10-14 14:05:37Z" end-time="2026-10-14 14:05:38Z" duration="0.555643" asserts="0">
+                  <properties />
+                  <output><![CDATA[21种组合配置已补齐。新增数值为实验基线；已填写配置保持不变。仅原样旧风风模板升级正式穿透。战斗与生产请在组合试验台分别检查。
+]]></output>
+                </test-case>
+                <test-case id="1322" name="FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges(&quot;reaction.EnemyStatus.Fire.Thunder&quot;)" fullname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests.FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges(&quot;reaction.EnemyStatus.Fire.Thunder&quot;)" methodname="FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges" classname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests" runstate="Runnable" seed="1780911648" result="Passed" start-time="2026-10-14 14:05:38Z" end-time="2026-10-14 14:05:38Z" duration="0.443673" asserts="0">
+                  <properties />
+                  <output><![CDATA[21种组合配置已补齐。新增数值为实验基线；已填写配置保持不变。仅原样旧风风模板升级正式穿透。战斗与生产请在组合试验台分别检查。
+]]></output>
+                </test-case>
+                <test-case id="1323" name="FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges(&quot;reaction.EnemyStatus.Earth.Wind&quot;)" fullname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests.FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges(&quot;reaction.EnemyStatus.Earth.Wind&quot;)" methodname="FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges" classname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests" runstate="Runnable" seed="1345208625" result="Passed" start-time="2026-10-14 14:05:38Z" end-time="2026-10-14 14:05:39Z" duration="0.453457" asserts="0">
+                  <properties />
+                  <output><![CDATA[21种组合配置已补齐。新增数值为实验基线；已填写配置保持不变。仅原样旧风风模板升级正式穿透。战斗与生产请在组合试验台分别检查。
+]]></output>
+                </test-case>
+                <test-case id="1324" name="FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges(&quot;reaction.EnemyStatus.Wood.Wind&quot;)" fullname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests.FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges(&quot;reaction.EnemyStatus.Wood.Wind&quot;)" methodname="FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges" classname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests" runstate="Runnable" seed="980639004" result="Passed" start-time="2026-10-14 14:05:39Z" end-time="2026-10-14 14:05:39Z" duration="0.338385" asserts="0">
+                  <properties />
+                  <output><![CDATA[21种组合配置已补齐。新增数值为实验基线；已填写配置保持不变。仅原样旧风风模板升级正式穿透。战斗与生产请在组合试验台分别检查。
+]]></output>
+                </test-case>
+                <test-case id="1325" name="FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges(&quot;reaction.EnemyStatus.Wood.Thunder&quot;)" fullname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests.FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges(&quot;reaction.EnemyStatus.Wood.Thunder&quot;)" methodname="FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges" classname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests" runstate="Runnable" seed="889512703" result="Passed" start-time="2026-10-14 14:05:39Z" end-time="2026-10-14 14:05:39Z" duration="0.368404" asserts="0">
+                  <properties />
+                  <output><![CDATA[21种组合配置已补齐。新增数值为实验基线；已填写配置保持不变。仅原样旧风风模板升级正式穿透。战斗与生产请在组合试验台分别检查。
+]]></output>
+                </test-case>
+                <test-case id="1326" name="FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges(&quot;reaction.EnemyStatus.Wind.Thunder&quot;)" fullname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests.FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges(&quot;reaction.EnemyStatus.Wind.Thunder&quot;)" methodname="FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges" classname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests" runstate="Runnable" seed="167832426" result="Passed" start-time="2026-10-14 14:05:39Z" end-time="2026-10-14 14:05:40Z" duration="0.356294" asserts="0">
+                  <properties />
+                  <output><![CDATA[21种组合配置已补齐。新增数值为实验基线；已填写配置保持不变。仅原样旧风风模板升级正式穿透。战斗与生产请在组合试验台分别检查。
+]]></output>
+                </test-case>
+                <test-case id="1327" name="FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges(&quot;reaction.EnemyStatus.Thunder.Thunder&quot;)" fullname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests.FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges(&quot;reaction.EnemyStatus.Thunder.Thunder&quot;)" methodname="FormalReactionExecutesInIsolatedCompositionWithoutAssetChanges" classname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests" runstate="Runnable" seed="82240964" result="Passed" start-time="2026-10-14 14:05:40Z" end-time="2026-10-14 14:05:40Z" duration="0.432134" asserts="0">
+                  <properties />
+                  <output><![CDATA[21种组合配置已补齐。新增数值为实验基线；已填写配置保持不变。仅原样旧风风模板升级正式穿透。战斗与生产请在组合试验台分别检查。
+]]></output>
+                </test-case>
+              </test-suite>
+              <test-case id="1307" name="FormalWindWindIsEnabledAndEarthEarthRemainsDisabled" fullname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests.FormalWindWindIsEnabledAndEarthEarthRemainsDisabled" methodname="FormalWindWindIsEnabledAndEarthEarthRemainsDisabled" classname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests" runstate="Runnable" seed="1924165898" result="Passed" start-time="2026-10-14 14:05:40Z" end-time="2026-10-14 14:05:40Z" duration="0.121214" asserts="0">
+                <properties />
+                <output><![CDATA[21种组合配置已补齐。新增数值为实验基线；已填写配置保持不变。仅原样旧风风模板升级正式穿透。战斗与生产请在组合试验台分别检查。
+]]></output>
+              </test-case>
+              <test-case id="1308" name="LegacyTemplateRecognitionRejectsDesignerAdjustments" fullname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests.LegacyTemplateRecognitionRejectsDesignerAdjustments" methodname="LegacyTemplateRecognitionRejectsDesignerAdjustments" classname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests" runstate="Runnable" seed="1201142481" result="Passed" start-time="2026-10-14 14:05:40Z" end-time="2026-10-14 14:05:40Z" duration="0.000990" asserts="0">
+                <properties />
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1331" name="WoodWoodProductionUsesFourNeighborsAndKeepsExistingSingleBlockRewards" fullname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests.WoodWoodProductionUsesFourNeighborsAndKeepsExistingSingleBlockRewards" classname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000110" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1329" name="WoodWoodProductionUsesFourNeighborsAndKeepsExistingSingleBlockRewards(False,3)" fullname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests.WoodWoodProductionUsesFourNeighborsAndKeepsExistingSingleBlockRewards(False,3)" methodname="WoodWoodProductionUsesFourNeighborsAndKeepsExistingSingleBlockRewards" classname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests" runstate="Runnable" seed="2021058736" result="Passed" start-time="2026-10-14 14:05:40Z" end-time="2026-10-14 14:05:40Z" duration="0.125872" asserts="0">
+                  <properties />
+                  <output><![CDATA[21种组合配置已补齐。新增数值为实验基线；已填写配置保持不变。仅原样旧风风模板升级正式穿透。战斗与生产请在组合试验台分别检查。
+]]></output>
+                </test-case>
+                <test-case id="1330" name="WoodWoodProductionUsesFourNeighborsAndKeepsExistingSingleBlockRewards(True,2)" fullname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests.WoodWoodProductionUsesFourNeighborsAndKeepsExistingSingleBlockRewards(True,2)" methodname="WoodWoodProductionUsesFourNeighborsAndKeepsExistingSingleBlockRewards" classname="Spotlight.Integration.Tests.ElementCombinationAuthoringTests" runstate="Runnable" seed="330866544" result="Passed" start-time="2026-10-14 14:05:40Z" end-time="2026-10-14 14:05:40Z" duration="0.118045" asserts="0">
+                  <properties />
+                  <output><![CDATA[21种组合配置已补齐。新增数值为实验基线；已填写配置保持不变。仅原样旧风风模板升级正式穿透。战斗与生产请在组合试验台分别检查。
+]]></output>
+                </test-case>
+              </test-suite>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+        <test-suite type="TestSuite" id="1334" name="Tests" fullname="Spotlight.Tests" runstate="Runnable" testcasecount="150" result="Failed" site="Child" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:36Z" duration="7.002190" total="150" passed="144" failed="6" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestSuite" id="1335" name="Integration" fullname="Spotlight.Tests.Integration" runstate="Runnable" testcasecount="145" result="Failed" site="Child" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:36Z" duration="6.962249" total="145" passed="139" failed="6" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-suite type="TestFixture" id="1111" name="FlowIntegrationTests" fullname="Spotlight.Tests.Integration.FlowIntegrationTests" classname="Spotlight.Tests.Integration.FlowIntegrationTests" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000578" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1117" name="BossAndSpringDeathSameTickLosesAndPendingDamagePreventsWin" fullname="Spotlight.Tests.Integration.FlowIntegrationTests.BossAndSpringDeathSameTickLosesAndPendingDamagePreventsWin" methodname="BossAndSpringDeathSameTickLosesAndPendingDamagePreventsWin" classname="Spotlight.Tests.Integration.FlowIntegrationTests" runstate="Runnable" seed="1691807627" result="Passed" start-time="2026-10-14 14:05:40Z" end-time="2026-10-14 14:05:40Z" duration="0.009966" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1116" name="DaytimeDeathImmediatelyPreventsNight" fullname="Spotlight.Tests.Integration.FlowIntegrationTests.DaytimeDeathImmediatelyPreventsNight" methodname="DaytimeDeathImmediatelyPreventsNight" classname="Spotlight.Tests.Integration.FlowIntegrationTests" runstate="Runnable" seed="920458203" result="Passed" start-time="2026-10-14 14:05:40Z" end-time="2026-10-14 14:05:40Z" duration="0.001234" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1118" name="Endless50Continues51AndGrantsMilestoneOnce" fullname="Spotlight.Tests.Integration.FlowIntegrationTests.Endless50Continues51AndGrantsMilestoneOnce" methodname="Endless50Continues51AndGrantsMilestoneOnce" classname="Spotlight.Tests.Integration.FlowIntegrationTests" runstate="Runnable" seed="983810429" result="Passed" start-time="2026-10-14 14:05:40Z" end-time="2026-10-14 14:05:40Z" duration="0.004478" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1113" name="FailedProductionLeavesNightResultDayResourcesAndRandomUntouched" fullname="Spotlight.Tests.Integration.FlowIntegrationTests.FailedProductionLeavesNightResultDayResourcesAndRandomUntouched" methodname="FailedProductionLeavesNightResultDayResourcesAndRandomUntouched" classname="Spotlight.Tests.Integration.FlowIntegrationTests" runstate="Runnable" seed="1832462382" result="Passed" start-time="2026-10-14 14:05:40Z" end-time="2026-10-14 14:05:40Z" duration="0.002066" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1112" name="FirstDayDoesNotProduceAndRepeatedConfirmProducesExactlyOnce" fullname="Spotlight.Tests.Integration.FlowIntegrationTests.FirstDayDoesNotProduceAndRepeatedConfirmProducesExactlyOnce" methodname="FirstDayDoesNotProduceAndRepeatedConfirmProducesExactlyOnce" classname="Spotlight.Tests.Integration.FlowIntegrationTests" runstate="Runnable" seed="2068193640" result="Passed" start-time="2026-10-14 14:05:40Z" end-time="2026-10-14 14:05:40Z" duration="0.001751" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1115" name="FlowCommandIdCannotReuseAnExistingTransactionBody" fullname="Spotlight.Tests.Integration.FlowIntegrationTests.FlowCommandIdCannotReuseAnExistingTransactionBody" methodname="FlowCommandIdCannotReuseAnExistingTransactionBody" classname="Spotlight.Tests.Integration.FlowIntegrationTests" runstate="Runnable" seed="1825453199" result="Passed" start-time="2026-10-14 14:05:40Z" end-time="2026-10-14 14:05:40Z" duration="0.001268" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1119" name="LoadDoesNotDrawEventOrProduceAndNightSaveFailureKeepsBuild" fullname="Spotlight.Tests.Integration.FlowIntegrationTests.LoadDoesNotDrawEventOrProduceAndNightSaveFailureKeepsBuild" methodname="LoadDoesNotDrawEventOrProduceAndNightSaveFailureKeepsBuild" classname="Spotlight.Tests.Integration.FlowIntegrationTests" runstate="Runnable" seed="1090143501" result="Passed" start-time="2026-10-14 14:05:40Z" end-time="2026-10-14 14:05:40Z" duration="0.001428" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1114" name="NightRejectsFreshNewAndLoadButOriginalSuccessfulCommandRetryIsSafe" fullname="Spotlight.Tests.Integration.FlowIntegrationTests.NightRejectsFreshNewAndLoadButOriginalSuccessfulCommandRetryIsSafe" methodname="NightRejectsFreshNewAndLoadButOriginalSuccessfulCommandRetryIsSafe" classname="Spotlight.Tests.Integration.FlowIntegrationTests" runstate="Runnable" seed="619413549" result="Passed" start-time="2026-10-14 14:05:40Z" end-time="2026-10-14 14:05:40Z" duration="0.001168" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1120" name="SessionModulesEndInReverseOrder" fullname="Spotlight.Tests.Integration.FlowIntegrationTests.SessionModulesEndInReverseOrder" methodname="SessionModulesEndInReverseOrder" classname="Spotlight.Tests.Integration.FlowIntegrationTests" runstate="Runnable" seed="91184548" result="Passed" start-time="2026-10-14 14:05:40Z" end-time="2026-10-14 14:05:40Z" duration="0.001328" asserts="0">
+                <properties />
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1130" name="FormalUiBootstrapTests" fullname="Spotlight.Tests.Integration.FormalUiBootstrapTests" classname="Spotlight.Tests.Integration.FormalUiBootstrapTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.001148" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1131" name="BootstrapUsesFormalPrefabAndRendersRealDeploymentHud" fullname="Spotlight.Tests.Integration.FormalUiBootstrapTests.BootstrapUsesFormalPrefabAndRendersRealDeploymentHud" methodname="BootstrapUsesFormalPrefabAndRendersRealDeploymentHud" classname="Spotlight.Tests.Integration.FormalUiBootstrapTests" runstate="Runnable" seed="1428890720" result="Passed" start-time="2026-10-14 14:05:40Z" end-time="2026-10-14 14:05:46Z" duration="5.219798" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1121" name="FormalUiIntegrationTests" fullname="Spotlight.Tests.Integration.FormalUiIntegrationTests" classname="Spotlight.Tests.Integration.FormalUiIntegrationTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000513" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1122" name="FormalPrefabProvidesOneCanvasAndOneControllerAcrossRepeatedBinding" fullname="Spotlight.Tests.Integration.FormalUiIntegrationTests.FormalPrefabProvidesOneCanvasAndOneControllerAcrossRepeatedBinding" methodname="FormalPrefabProvidesOneCanvasAndOneControllerAcrossRepeatedBinding" classname="Spotlight.Tests.Integration.FormalUiIntegrationTests" runstate="Runnable" seed="973527904" result="Passed" start-time="2026-10-14 14:05:46Z" end-time="2026-10-14 14:05:46Z" duration="0.020768" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1124" name="HealthBarFillGeometryMatchesZeroHalfAndFullOfActualSlot" fullname="Spotlight.Tests.Integration.FormalUiIntegrationTests.HealthBarFillGeometryMatchesZeroHalfAndFullOfActualSlot" methodname="HealthBarFillGeometryMatchesZeroHalfAndFullOfActualSlot" classname="Spotlight.Tests.Integration.FormalUiIntegrationTests" runstate="Runnable" seed="1011893807" result="Passed" start-time="2026-10-14 14:05:46Z" end-time="2026-10-14 14:05:46Z" duration="0.018721" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1128" name="InvalidRequiredReferenceReportsFieldAndLeavesNoBoundCanvasOrPause" fullname="Spotlight.Tests.Integration.FormalUiIntegrationTests.InvalidRequiredReferenceReportsFieldAndLeavesNoBoundCanvasOrPause" methodname="InvalidRequiredReferenceReportsFieldAndLeavesNoBoundCanvasOrPause" classname="Spotlight.Tests.Integration.FormalUiIntegrationTests" runstate="Runnable" seed="972150724" result="Passed" start-time="2026-10-14 14:05:46Z" end-time="2026-10-14 14:05:46Z" duration="0.018297" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1127" name="PhaseRefreshReleasesOnlyViewPauseWithoutMutatingTransactionalState" fullname="Spotlight.Tests.Integration.FormalUiIntegrationTests.PhaseRefreshReleasesOnlyViewPauseWithoutMutatingTransactionalState" methodname="PhaseRefreshReleasesOnlyViewPauseWithoutMutatingTransactionalState" classname="Spotlight.Tests.Integration.FormalUiIntegrationTests" runstate="Runnable" seed="727270408" result="Passed" start-time="2026-10-14 14:05:46Z" end-time="2026-10-14 14:05:46Z" duration="0.104498" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1126" name="RebindKeepsExternalListenerAndOnlyOneBusinessListenerThenUnbindReleasesOwnership" fullname="Spotlight.Tests.Integration.FormalUiIntegrationTests.RebindKeepsExternalListenerAndOnlyOneBusinessListenerThenUnbindReleasesOwnership" methodname="RebindKeepsExternalListenerAndOnlyOneBusinessListenerThenUnbindReleasesOwnership" classname="Spotlight.Tests.Integration.FormalUiIntegrationTests" runstate="Runnable" seed="1248250403" result="Passed" start-time="2026-10-14 14:05:46Z" end-time="2026-10-14 14:05:46Z" duration="0.084971" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1129" name="RepeatedBindUnbindAndDestroyDoNotLeakOwnedEventSystemsOrDestroyExternalSystem" fullname="Spotlight.Tests.Integration.FormalUiIntegrationTests.RepeatedBindUnbindAndDestroyDoNotLeakOwnedEventSystemsOrDestroyExternalSystem" methodname="RepeatedBindUnbindAndDestroyDoNotLeakOwnedEventSystemsOrDestroyExternalSystem" classname="Spotlight.Tests.Integration.FormalUiIntegrationTests" runstate="Runnable" seed="1770455964" result="Passed" start-time="2026-10-14 14:05:46Z" end-time="2026-10-14 14:05:46Z" duration="0.035286" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1125" name="StaticPauseAndSpeedButtonsUseRealClockWithoutReleasingExternalPause" fullname="Spotlight.Tests.Integration.FormalUiIntegrationTests.StaticPauseAndSpeedButtonsUseRealClockWithoutReleasingExternalPause" methodname="StaticPauseAndSpeedButtonsUseRealClockWithoutReleasingExternalPause" classname="Spotlight.Tests.Integration.FormalUiIntegrationTests" runstate="Runnable" seed="1216583371" result="Passed" start-time="2026-10-14 14:05:46Z" end-time="2026-10-14 14:05:46Z" duration="0.083909" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1123" name="UiDeploymentAndCommittedHealthChangesRefreshActualFormalWidgets" fullname="Spotlight.Tests.Integration.FormalUiIntegrationTests.UiDeploymentAndCommittedHealthChangesRefreshActualFormalWidgets" methodname="UiDeploymentAndCommittedHealthChangesRefreshActualFormalWidgets" classname="Spotlight.Tests.Integration.FormalUiIntegrationTests" runstate="Runnable" seed="431454086" result="Passed" start-time="2026-10-14 14:05:46Z" end-time="2026-10-14 14:05:46Z" duration="0.126636" asserts="0">
+                <properties />
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1132" name="HitFlashIntegrationTests" fullname="Spotlight.Tests.Integration.HitFlashIntegrationTests" classname="Spotlight.Tests.Integration.HitFlashIntegrationTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000191" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1134" name="RealDamageBeforeFirstRentFreezesWithPauseAndExpiresAtDoubleSpeed" fullname="Spotlight.Tests.Integration.HitFlashIntegrationTests.RealDamageBeforeFirstRentFreezesWithPauseAndExpiresAtDoubleSpeed" methodname="RealDamageBeforeFirstRentFreezesWithPauseAndExpiresAtDoubleSpeed" classname="Spotlight.Tests.Integration.HitFlashIntegrationTests" runstate="Runnable" seed="1205481191" result="Passed" start-time="2026-10-14 14:05:46Z" end-time="2026-10-14 14:05:50Z" duration="4.293954" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                </properties>
+              </test-case>
+              <test-case id="1133" name="ZeroTimeLateBodyBindingInvalidInputsAndRepeatedHitsRestoreExactColor" fullname="Spotlight.Tests.Integration.HitFlashIntegrationTests.ZeroTimeLateBodyBindingInvalidInputsAndRepeatedHitsRestoreExactColor" methodname="ZeroTimeLateBodyBindingInvalidInputsAndRepeatedHitsRestoreExactColor" classname="Spotlight.Tests.Integration.HitFlashIntegrationTests" runstate="Runnable" seed="58594177" result="Passed" start-time="2026-10-14 14:05:50Z" end-time="2026-10-14 14:05:50Z" duration="0.001990" asserts="0">
+                <properties />
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1135" name="PBootstrapSmokeTests" fullname="Spotlight.Tests.Integration.PBootstrapSmokeTests" classname="Spotlight.Tests.Integration.PBootstrapSmokeTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000127" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1136" name="NativeAwakeBuildsUiSpritesAndCapturesPreview" fullname="Spotlight.Tests.Integration.PBootstrapSmokeTests.NativeAwakeBuildsUiSpritesAndCapturesPreview" methodname="NativeAwakeBuildsUiSpritesAndCapturesPreview" classname="Spotlight.Tests.Integration.PBootstrapSmokeTests" runstate="Runnable" seed="1468159942" result="Passed" start-time="2026-10-14 14:05:50Z" end-time="2026-10-14 14:05:55Z" duration="4.796264" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1137" name="PR16EventIntegrationTests" fullname="Spotlight.Tests.Integration.PR16EventIntegrationTests" classname="Spotlight.Tests.Integration.PR16EventIntegrationTests" runstate="Runnable" testcasecount="14" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.001328" total="14" passed="14" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-suite type="ParameterizedMethod" id="1156" name="BlessingActuallyHealsSpringAndClampsToMaximum" fullname="Spotlight.Tests.Integration.PR16EventIntegrationTests.BlessingActuallyHealsSpringAndClampsToMaximum" classname="Spotlight.Tests.Integration.PR16EventIntegrationTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000265" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1153" name="BlessingActuallyHealsSpringAndClampsToMaximum(60.0f,75.0f)" fullname="Spotlight.Tests.Integration.PR16EventIntegrationTests.BlessingActuallyHealsSpringAndClampsToMaximum(60.0f,75.0f)" methodname="BlessingActuallyHealsSpringAndClampsToMaximum" classname="Spotlight.Tests.Integration.PR16EventIntegrationTests" runstate="Runnable" seed="1944446565" result="Passed" start-time="2026-10-14 14:05:55Z" end-time="2026-10-14 14:05:55Z" duration="0.016467" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1154" name="BlessingActuallyHealsSpringAndClampsToMaximum(95.0f,100.0f)" fullname="Spotlight.Tests.Integration.PR16EventIntegrationTests.BlessingActuallyHealsSpringAndClampsToMaximum(95.0f,100.0f)" methodname="BlessingActuallyHealsSpringAndClampsToMaximum" classname="Spotlight.Tests.Integration.PR16EventIntegrationTests" runstate="Runnable" seed="660254951" result="Passed" start-time="2026-10-14 14:05:55Z" end-time="2026-10-14 14:05:55Z" duration="0.010970" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1155" name="BlessingActuallyHealsSpringAndClampsToMaximum(100.0f,100.0f)" fullname="Spotlight.Tests.Integration.PR16EventIntegrationTests.BlessingActuallyHealsSpringAndClampsToMaximum(100.0f,100.0f)" methodname="BlessingActuallyHealsSpringAndClampsToMaximum" classname="Spotlight.Tests.Integration.PR16EventIntegrationTests" runstate="Runnable" seed="547851579" result="Passed" start-time="2026-10-14 14:05:55Z" end-time="2026-10-14 14:05:55Z" duration="0.010748" asserts="0">
+                  <properties />
+                </test-case>
+              </test-suite>
+              <test-suite type="ParameterizedMethod" id="1152" name="InsufficientGoldKeepsEventUnresolvedAndAllowsFreeLeave" fullname="Spotlight.Tests.Integration.PR16EventIntegrationTests.InsufficientGoldKeepsEventUnresolvedAndAllowsFreeLeave" classname="Spotlight.Tests.Integration.PR16EventIntegrationTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000226" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1149" name="InsufficientGoldKeepsEventUnresolvedAndAllowsFreeLeave(&quot;event.element_trade&quot;,&quot;buy_wood&quot;,&quot;elm.wood&quot;,Hand,9)" fullname="Spotlight.Tests.Integration.PR16EventIntegrationTests.InsufficientGoldKeepsEventUnresolvedAndAllowsFreeLeave(&quot;event.element_trade&quot;,&quot;buy_wood&quot;,&quot;elm.wood&quot;,Hand,9)" methodname="InsufficientGoldKeepsEventUnresolvedAndAllowsFreeLeave" classname="Spotlight.Tests.Integration.PR16EventIntegrationTests" runstate="Runnable" seed="2021418288" result="Passed" start-time="2026-10-14 14:05:55Z" end-time="2026-10-14 14:05:55Z" duration="0.038231" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1150" name="InsufficientGoldKeepsEventUnresolvedAndAllowsFreeLeave(&quot;event.supply_merchant&quot;,&quot;buy_heal&quot;,&quot;item.heal&quot;,Inventory,19)" fullname="Spotlight.Tests.Integration.PR16EventIntegrationTests.InsufficientGoldKeepsEventUnresolvedAndAllowsFreeLeave(&quot;event.supply_merchant&quot;,&quot;buy_heal&quot;,&quot;item.heal&quot;,Inventory,19)" methodname="InsufficientGoldKeepsEventUnresolvedAndAllowsFreeLeave" classname="Spotlight.Tests.Integration.PR16EventIntegrationTests" runstate="Runnable" seed="176855061" result="Passed" start-time="2026-10-14 14:05:55Z" end-time="2026-10-14 14:05:55Z" duration="0.039305" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1151" name="InsufficientGoldKeepsEventUnresolvedAndAllowsFreeLeave(&quot;event.supply_merchant&quot;,&quot;buy_stack&quot;,&quot;item.tower_stack&quot;,Inventory,19)" fullname="Spotlight.Tests.Integration.PR16EventIntegrationTests.InsufficientGoldKeepsEventUnresolvedAndAllowsFreeLeave(&quot;event.supply_merchant&quot;,&quot;buy_stack&quot;,&quot;item.tower_stack&quot;,Inventory,19)" methodname="InsufficientGoldKeepsEventUnresolvedAndAllowsFreeLeave" classname="Spotlight.Tests.Integration.PR16EventIntegrationTests" runstate="Runnable" seed="1464705033" result="Passed" start-time="2026-10-14 14:05:55Z" end-time="2026-10-14 14:05:55Z" duration="0.039911" asserts="0">
+                  <properties />
+                </test-case>
+              </test-suite>
+              <test-suite type="ParameterizedMethod" id="1140" name="ProductionCatalogStartsWithQuietMorningAndRegistersThreeEligibleEvents" fullname="Spotlight.Tests.Integration.PR16EventIntegrationTests.ProductionCatalogStartsWithQuietMorningAndRegistersThreeEligibleEvents" classname="Spotlight.Tests.Integration.PR16EventIntegrationTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000112" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1138" name="ProductionCatalogStartsWithQuietMorningAndRegistersThreeEligibleEvents(Story)" fullname="Spotlight.Tests.Integration.PR16EventIntegrationTests.ProductionCatalogStartsWithQuietMorningAndRegistersThreeEligibleEvents(Story)" methodname="ProductionCatalogStartsWithQuietMorningAndRegistersThreeEligibleEvents" classname="Spotlight.Tests.Integration.PR16EventIntegrationTests" runstate="Runnable" seed="916722851" result="Passed" start-time="2026-10-14 14:05:55Z" end-time="2026-10-14 14:05:55Z" duration="0.036447" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1139" name="ProductionCatalogStartsWithQuietMorningAndRegistersThreeEligibleEvents(Endless)" fullname="Spotlight.Tests.Integration.PR16EventIntegrationTests.ProductionCatalogStartsWithQuietMorningAndRegistersThreeEligibleEvents(Endless)" methodname="ProductionCatalogStartsWithQuietMorningAndRegistersThreeEligibleEvents" classname="Spotlight.Tests.Integration.PR16EventIntegrationTests" runstate="Runnable" seed="1295155572" result="Passed" start-time="2026-10-14 14:05:55Z" end-time="2026-10-14 14:05:55Z" duration="0.039137" asserts="0">
+                  <properties />
+                </test-case>
+              </test-suite>
+              <test-suite type="ParameterizedMethod" id="1148" name="RealEventDrawCanSelectEveryRegisteredEventAndRepeatedEnsureDoesNotRedraw" fullname="Spotlight.Tests.Integration.PR16EventIntegrationTests.RealEventDrawCanSelectEveryRegisteredEventAndRepeatedEnsureDoesNotRedraw" classname="Spotlight.Tests.Integration.PR16EventIntegrationTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000108" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1146" name="RealEventDrawCanSelectEveryRegisteredEventAndRepeatedEnsureDoesNotRedraw(Story)" fullname="Spotlight.Tests.Integration.PR16EventIntegrationTests.RealEventDrawCanSelectEveryRegisteredEventAndRepeatedEnsureDoesNotRedraw(Story)" methodname="RealEventDrawCanSelectEveryRegisteredEventAndRepeatedEnsureDoesNotRedraw" classname="Spotlight.Tests.Integration.PR16EventIntegrationTests" runstate="Runnable" seed="929347543" result="Passed" start-time="2026-10-14 14:05:55Z" end-time="2026-10-14 14:05:56Z" duration="0.023420" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1147" name="RealEventDrawCanSelectEveryRegisteredEventAndRepeatedEnsureDoesNotRedraw(Endless)" fullname="Spotlight.Tests.Integration.PR16EventIntegrationTests.RealEventDrawCanSelectEveryRegisteredEventAndRepeatedEnsureDoesNotRedraw(Endless)" methodname="RealEventDrawCanSelectEveryRegisteredEventAndRepeatedEnsureDoesNotRedraw" classname="Spotlight.Tests.Integration.PR16EventIntegrationTests" runstate="Runnable" seed="1444924908" result="Passed" start-time="2026-10-14 14:05:56Z" end-time="2026-10-14 14:05:56Z" duration="0.022861" asserts="0">
+                  <properties />
+                </test-case>
+              </test-suite>
+              <test-suite type="ParameterizedMethod" id="1145" name="RealOptionChargesCostAndGrantsRewardExactlyOnce" fullname="Spotlight.Tests.Integration.PR16EventIntegrationTests.RealOptionChargesCostAndGrantsRewardExactlyOnce" classname="Spotlight.Tests.Integration.PR16EventIntegrationTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000201" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1141" name="RealOptionChargesCostAndGrantsRewardExactlyOnce(&quot;event.element_trade&quot;,&quot;buy_wood&quot;,&quot;elm.wood&quot;,Hand,10,2)" fullname="Spotlight.Tests.Integration.PR16EventIntegrationTests.RealOptionChargesCostAndGrantsRewardExactlyOnce(&quot;event.element_trade&quot;,&quot;buy_wood&quot;,&quot;elm.wood&quot;,Hand,10,2)" methodname="RealOptionChargesCostAndGrantsRewardExactlyOnce" classname="Spotlight.Tests.Integration.PR16EventIntegrationTests" runstate="Runnable" seed="1127984029" result="Passed" start-time="2026-10-14 14:05:56Z" end-time="2026-10-14 14:05:56Z" duration="0.087758" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1142" name="RealOptionChargesCostAndGrantsRewardExactlyOnce(&quot;event.supply_merchant&quot;,&quot;buy_heal&quot;,&quot;item.heal&quot;,Inventory,20,1)" fullname="Spotlight.Tests.Integration.PR16EventIntegrationTests.RealOptionChargesCostAndGrantsRewardExactlyOnce(&quot;event.supply_merchant&quot;,&quot;buy_heal&quot;,&quot;item.heal&quot;,Inventory,20,1)" methodname="RealOptionChargesCostAndGrantsRewardExactlyOnce" classname="Spotlight.Tests.Integration.PR16EventIntegrationTests" runstate="Runnable" seed="1922468639" result="Passed" start-time="2026-10-14 14:05:56Z" end-time="2026-10-14 14:05:56Z" duration="0.087947" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1143" name="RealOptionChargesCostAndGrantsRewardExactlyOnce(&quot;event.supply_merchant&quot;,&quot;buy_stack&quot;,&quot;item.tower_stack&quot;,Inventory,20,1)" fullname="Spotlight.Tests.Integration.PR16EventIntegrationTests.RealOptionChargesCostAndGrantsRewardExactlyOnce(&quot;event.supply_merchant&quot;,&quot;buy_stack&quot;,&quot;item.tower_stack&quot;,Inventory,20,1)" methodname="RealOptionChargesCostAndGrantsRewardExactlyOnce" classname="Spotlight.Tests.Integration.PR16EventIntegrationTests" runstate="Runnable" seed="615578542" result="Passed" start-time="2026-10-14 14:05:56Z" end-time="2026-10-14 14:05:56Z" duration="0.088673" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1144" name="RealOptionChargesCostAndGrantsRewardExactlyOnce(&quot;event.spring_blessing&quot;,&quot;take_water&quot;,&quot;elm.water&quot;,Hand,0,1)" fullname="Spotlight.Tests.Integration.PR16EventIntegrationTests.RealOptionChargesCostAndGrantsRewardExactlyOnce(&quot;event.spring_blessing&quot;,&quot;take_water&quot;,&quot;elm.water&quot;,Hand,0,1)" methodname="RealOptionChargesCostAndGrantsRewardExactlyOnce" classname="Spotlight.Tests.Integration.PR16EventIntegrationTests" runstate="Runnable" seed="1308200797" result="Passed" start-time="2026-10-14 14:05:56Z" end-time="2026-10-14 14:05:56Z" duration="0.092512" asserts="0">
+                  <properties />
+                </test-case>
+              </test-suite>
+            </test-suite>
+            <test-suite type="TestFixture" id="1157" name="PR16UiIntegrationTests" fullname="Spotlight.Tests.Integration.PR16UiIntegrationTests" classname="Spotlight.Tests.Integration.PR16UiIntegrationTests" runstate="Runnable" testcasecount="18" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.001409" total="18" passed="18" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1164" name="CorruptCheckpointDisablesRetryWithoutStartingAnotherRun" fullname="Spotlight.Tests.Integration.PR16UiIntegrationTests.CorruptCheckpointDisablesRetryWithoutStartingAnotherRun" methodname="CorruptCheckpointDisablesRetryWithoutStartingAnotherRun" classname="Spotlight.Tests.Integration.PR16UiIntegrationTests" runstate="Runnable" seed="1756797476" result="Passed" start-time="2026-10-14 14:05:56Z" end-time="2026-10-14 14:05:56Z" duration="0.209932" asserts="0">
+                <properties />
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1177" name="FormalOutcomeCanvasRendersReadableControls" fullname="Spotlight.Tests.Integration.PR16UiIntegrationTests.FormalOutcomeCanvasRendersReadableControls" classname="Spotlight.Tests.Integration.PR16UiIntegrationTests" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000450" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1168" name="FormalOutcomeCanvasRendersReadableControls(NightResult,1280,720)" fullname="Spotlight.Tests.Integration.PR16UiIntegrationTests.FormalOutcomeCanvasRendersReadableControls(NightResult,1280,720)" methodname="FormalOutcomeCanvasRendersReadableControls" classname="Spotlight.Tests.Integration.PR16UiIntegrationTests" runstate="Runnable" seed="1375700947" result="Passed" start-time="2026-10-14 14:05:56Z" end-time="2026-10-14 14:05:56Z" duration="0.174349" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1169" name="FormalOutcomeCanvasRendersReadableControls(NightResult,960,540)" fullname="Spotlight.Tests.Integration.PR16UiIntegrationTests.FormalOutcomeCanvasRendersReadableControls(NightResult,960,540)" methodname="FormalOutcomeCanvasRendersReadableControls" classname="Spotlight.Tests.Integration.PR16UiIntegrationTests" runstate="Runnable" seed="2002409251" result="Passed" start-time="2026-10-14 14:05:56Z" end-time="2026-10-14 14:05:56Z" duration="0.170443" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1170" name="FormalOutcomeCanvasRendersReadableControls(NightResult,1920,1080)" fullname="Spotlight.Tests.Integration.PR16UiIntegrationTests.FormalOutcomeCanvasRendersReadableControls(NightResult,1920,1080)" methodname="FormalOutcomeCanvasRendersReadableControls" classname="Spotlight.Tests.Integration.PR16UiIntegrationTests" runstate="Runnable" seed="446330764" result="Passed" start-time="2026-10-14 14:05:56Z" end-time="2026-10-14 14:05:57Z" duration="0.218620" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1171" name="FormalOutcomeCanvasRendersReadableControls(GameOver,1280,720)" fullname="Spotlight.Tests.Integration.PR16UiIntegrationTests.FormalOutcomeCanvasRendersReadableControls(GameOver,1280,720)" methodname="FormalOutcomeCanvasRendersReadableControls" classname="Spotlight.Tests.Integration.PR16UiIntegrationTests" runstate="Runnable" seed="1093315355" result="Passed" start-time="2026-10-14 14:05:57Z" end-time="2026-10-14 14:05:57Z" duration="0.150052" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1172" name="FormalOutcomeCanvasRendersReadableControls(GameOver,960,540)" fullname="Spotlight.Tests.Integration.PR16UiIntegrationTests.FormalOutcomeCanvasRendersReadableControls(GameOver,960,540)" methodname="FormalOutcomeCanvasRendersReadableControls" classname="Spotlight.Tests.Integration.PR16UiIntegrationTests" runstate="Runnable" seed="901001525" result="Passed" start-time="2026-10-14 14:05:57Z" end-time="2026-10-14 14:05:57Z" duration="0.128642" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1173" name="FormalOutcomeCanvasRendersReadableControls(GameOver,1920,1080)" fullname="Spotlight.Tests.Integration.PR16UiIntegrationTests.FormalOutcomeCanvasRendersReadableControls(GameOver,1920,1080)" methodname="FormalOutcomeCanvasRendersReadableControls" classname="Spotlight.Tests.Integration.PR16UiIntegrationTests" runstate="Runnable" seed="875651552" result="Passed" start-time="2026-10-14 14:05:57Z" end-time="2026-10-14 14:05:57Z" duration="0.173852" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1174" name="FormalOutcomeCanvasRendersReadableControls(Ending,1280,720)" fullname="Spotlight.Tests.Integration.PR16UiIntegrationTests.FormalOutcomeCanvasRendersReadableControls(Ending,1280,720)" methodname="FormalOutcomeCanvasRendersReadableControls" classname="Spotlight.Tests.Integration.PR16UiIntegrationTests" runstate="Runnable" seed="2048062344" result="Passed" start-time="2026-10-14 14:05:57Z" end-time="2026-10-14 14:05:57Z" duration="0.153681" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1175" name="FormalOutcomeCanvasRendersReadableControls(Ending,960,540)" fullname="Spotlight.Tests.Integration.PR16UiIntegrationTests.FormalOutcomeCanvasRendersReadableControls(Ending,960,540)" methodname="FormalOutcomeCanvasRendersReadableControls" classname="Spotlight.Tests.Integration.PR16UiIntegrationTests" runstate="Runnable" seed="220016890" result="Passed" start-time="2026-10-14 14:05:57Z" end-time="2026-10-14 14:05:57Z" duration="0.162046" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1176" name="FormalOutcomeCanvasRendersReadableControls(Ending,1920,1080)" fullname="Spotlight.Tests.Integration.PR16UiIntegrationTests.FormalOutcomeCanvasRendersReadableControls(Ending,1920,1080)" methodname="FormalOutcomeCanvasRendersReadableControls" classname="Spotlight.Tests.Integration.PR16UiIntegrationTests" runstate="Runnable" seed="969811918" result="Passed" start-time="2026-10-14 14:05:57Z" end-time="2026-10-14 14:05:58Z" duration="0.191675" asserts="0">
+                  <properties />
+                </test-case>
+              </test-suite>
+              <test-case id="1165" name="FormalPanelAssetsValidateBeforeAwakeAndRejectNestedCanvas" fullname="Spotlight.Tests.Integration.PR16UiIntegrationTests.FormalPanelAssetsValidateBeforeAwakeAndRejectNestedCanvas" methodname="FormalPanelAssetsValidateBeforeAwakeAndRejectNestedCanvas" classname="Spotlight.Tests.Integration.PR16UiIntegrationTests" runstate="Runnable" seed="1169217294" result="Passed" start-time="2026-10-14 14:05:58Z" end-time="2026-10-14 14:05:58Z" duration="0.011465" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1161" name="GameOverRetriesRealCheckpointAndMenuClosesPanel" fullname="Spotlight.Tests.Integration.PR16UiIntegrationTests.GameOverRetriesRealCheckpointAndMenuClosesPanel" methodname="GameOverRetriesRealCheckpointAndMenuClosesPanel" classname="Spotlight.Tests.Integration.PR16UiIntegrationTests" runstate="Runnable" seed="1546815640" result="Passed" start-time="2026-10-14 14:05:58Z" end-time="2026-10-14 14:05:58Z" duration="0.167196" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1166" name="HandIconsPreserveShapeAndDoNotOverlapQuantityText" fullname="Spotlight.Tests.Integration.PR16UiIntegrationTests.HandIconsPreserveShapeAndDoNotOverlapQuantityText" methodname="HandIconsPreserveShapeAndDoNotOverlapQuantityText" classname="Spotlight.Tests.Integration.PR16UiIntegrationTests" runstate="Runnable" seed="195362272" result="Passed" start-time="2026-10-14 14:05:58Z" end-time="2026-10-14 14:05:58Z" duration="0.011959" asserts="0">
+                <properties />
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1160" name="NightResultExecutesRealDawnOnceAndClosesOwnedListeners" fullname="Spotlight.Tests.Integration.PR16UiIntegrationTests.NightResultExecutesRealDawnOnceAndClosesOwnedListeners" classname="Spotlight.Tests.Integration.PR16UiIntegrationTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000261" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1158" name="NightResultExecutesRealDawnOnceAndClosesOwnedListeners(Story)" fullname="Spotlight.Tests.Integration.PR16UiIntegrationTests.NightResultExecutesRealDawnOnceAndClosesOwnedListeners(Story)" methodname="NightResultExecutesRealDawnOnceAndClosesOwnedListeners" classname="Spotlight.Tests.Integration.PR16UiIntegrationTests" runstate="Runnable" seed="570101093" result="Passed" start-time="2026-10-14 14:05:58Z" end-time="2026-10-14 14:05:58Z" duration="0.109337" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1159" name="NightResultExecutesRealDawnOnceAndClosesOwnedListeners(Endless)" fullname="Spotlight.Tests.Integration.PR16UiIntegrationTests.NightResultExecutesRealDawnOnceAndClosesOwnedListeners(Endless)" methodname="NightResultExecutesRealDawnOnceAndClosesOwnedListeners" classname="Spotlight.Tests.Integration.PR16UiIntegrationTests" runstate="Runnable" seed="1983882014" result="Passed" start-time="2026-10-14 14:05:58Z" end-time="2026-10-14 14:05:58Z" duration="0.108058" asserts="0">
+                  <properties />
+                </test-case>
+              </test-suite>
+              <test-case id="1167" name="OptionalResultPrefabsUseLegacyActions" fullname="Spotlight.Tests.Integration.PR16UiIntegrationTests.OptionalResultPrefabsUseLegacyActions" methodname="OptionalResultPrefabsUseLegacyActions" classname="Spotlight.Tests.Integration.PR16UiIntegrationTests" runstate="Runnable" seed="309988926" result="Passed" start-time="2026-10-14 14:05:58Z" end-time="2026-10-14 14:05:58Z" duration="0.111507" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1163" name="RemovedCheckpointDisablesRetryAndExplainsFailure" fullname="Spotlight.Tests.Integration.PR16UiIntegrationTests.RemovedCheckpointDisablesRetryAndExplainsFailure" methodname="RemovedCheckpointDisablesRetryAndExplainsFailure" classname="Spotlight.Tests.Integration.PR16UiIntegrationTests" runstate="Runnable" seed="98832907" result="Passed" start-time="2026-10-14 14:05:58Z" end-time="2026-10-14 14:05:58Z" duration="0.111008" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1162" name="StoryEndingShowsOnlyReturnAndPreservesActualFlow" fullname="Spotlight.Tests.Integration.PR16UiIntegrationTests.StoryEndingShowsOnlyReturnAndPreservesActualFlow" methodname="StoryEndingShowsOnlyReturnAndPreservesActualFlow" classname="Spotlight.Tests.Integration.PR16UiIntegrationTests" runstate="Runnable" seed="428807437" result="Passed" start-time="2026-10-14 14:05:58Z" end-time="2026-10-14 14:05:58Z" duration="0.128573" asserts="0">
+                <properties />
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1178" name="ProjectileVisualClockTests" fullname="Spotlight.Tests.Integration.ProjectileVisualClockTests" classname="Spotlight.Tests.Integration.ProjectileVisualClockTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000794" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1182" name="OverlayRemainsAvailableWithoutParticleSlots" fullname="Spotlight.Tests.Integration.ProjectileVisualClockTests.OverlayRemainsAvailableWithoutParticleSlots" methodname="OverlayRemainsAvailableWithoutParticleSlots" classname="Spotlight.Tests.Integration.ProjectileVisualClockTests" runstate="Runnable" seed="565465556" result="Passed" start-time="2026-10-14 14:05:58Z" end-time="2026-10-14 14:05:58Z" duration="0.003453" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1183" name="ParticlesFollowGameClockAndClearOnSwitchAndPoolReturn" fullname="Spotlight.Tests.Integration.ProjectileVisualClockTests.ParticlesFollowGameClockAndClearOnSwitchAndPoolReturn" methodname="ParticlesFollowGameClockAndClearOnSwitchAndPoolReturn" classname="Spotlight.Tests.Integration.ProjectileVisualClockTests" runstate="Runnable" seed="789693318" result="Passed" start-time="2026-10-14 14:05:58Z" end-time="2026-10-14 14:06:02Z" duration="4.023815" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                </properties>
+              </test-case>
+              <test-case id="1181" name="ProjectilePrefabsHaveSixUnlitEffectsBehindTheOverlay" fullname="Spotlight.Tests.Integration.ProjectileVisualClockTests.ProjectilePrefabsHaveSixUnlitEffectsBehindTheOverlay" methodname="ProjectilePrefabsHaveSixUnlitEffectsBehindTheOverlay" classname="Spotlight.Tests.Integration.ProjectileVisualClockTests" runstate="Runnable" seed="2139392009" result="Passed" start-time="2026-10-14 14:06:02Z" end-time="2026-10-14 14:06:02Z" duration="0.019555" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1179" name="RenderOfficialSpritesAndSixElementTrailsForVisualAcceptance" fullname="Spotlight.Tests.Integration.ProjectileVisualClockTests.RenderOfficialSpritesAndSixElementTrailsForVisualAcceptance" methodname="RenderOfficialSpritesAndSixElementTrailsForVisualAcceptance" classname="Spotlight.Tests.Integration.ProjectileVisualClockTests" runstate="Runnable" seed="1777848744" result="Passed" start-time="2026-10-14 14:06:02Z" end-time="2026-10-14 14:06:07Z" duration="4.378733" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                </properties>
+              </test-case>
+              <test-case id="1180" name="TowerAndSpringUseTheirOriginalSpritesWithinOneGridCell" fullname="Spotlight.Tests.Integration.ProjectileVisualClockTests.TowerAndSpringUseTheirOriginalSpritesWithinOneGridCell" methodname="TowerAndSpringUseTheirOriginalSpritesWithinOneGridCell" classname="Spotlight.Tests.Integration.ProjectileVisualClockTests" runstate="Runnable" seed="905773101" result="Passed" start-time="2026-10-14 14:06:07Z" end-time="2026-10-14 14:06:07Z" duration="0.011693" asserts="0">
+                <properties />
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1184" name="R3BBossSkillTests" fullname="Spotlight.Tests.Integration.R3BBossSkillTests" classname="Spotlight.Tests.Integration.R3BBossSkillTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000260" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1186" name="ActualBossProjectileHitsSpringForFifteen" fullname="Spotlight.Tests.Integration.R3BBossSkillTests.ActualBossProjectileHitsSpringForFifteen" methodname="ActualBossProjectileHitsSpringForFifteen" classname="Spotlight.Tests.Integration.R3BBossSkillTests" runstate="Runnable" seed="1730710239" result="Passed" start-time="2026-10-14 14:06:07Z" end-time="2026-10-14 14:06:07Z" duration="0.290811" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1187" name="PauseAndBossCleanupStopSkillsAndPendingSummons" fullname="Spotlight.Tests.Integration.R3BBossSkillTests.PauseAndBossCleanupStopSkillsAndPendingSummons" methodname="PauseAndBossCleanupStopSkillsAndPendingSummons" classname="Spotlight.Tests.Integration.R3BBossSkillTests" runstate="Runnable" seed="895087628" result="Passed" start-time="2026-10-14 14:06:07Z" end-time="2026-10-14 14:06:07Z" duration="0.019005" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1185" name="ThreeSkillsKeepExistingPeriodsDamageAndFixedSummons" fullname="Spotlight.Tests.Integration.R3BBossSkillTests.ThreeSkillsKeepExistingPeriodsDamageAndFixedSummons" methodname="ThreeSkillsKeepExistingPeriodsDamageAndFixedSummons" classname="Spotlight.Tests.Integration.R3BBossSkillTests" runstate="Runnable" seed="1819707713" result="Passed" start-time="2026-10-14 14:06:07Z" end-time="2026-10-14 14:06:07Z" duration="0.067411" asserts="0">
+                <properties />
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1188" name="R3BCatalogIntegrationTests" fullname="Spotlight.Tests.Integration.R3BCatalogIntegrationTests" classname="Spotlight.Tests.Integration.R3BCatalogIntegrationTests" runstate="Runnable" testcasecount="11" result="Failed" site="Child" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000919" total="11" passed="10" failed="1" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-case id="1190" name="EveryFormalWaveGroupUsesAnExistingPrefabAndCompatibleRoute" fullname="Spotlight.Tests.Integration.R3BCatalogIntegrationTests.EveryFormalWaveGroupUsesAnExistingPrefabAndCompatibleRoute" methodname="EveryFormalWaveGroupUsesAnExistingPrefabAndCompatibleRoute" classname="Spotlight.Tests.Integration.R3BCatalogIntegrationTests" runstate="Runnable" seed="1721933239" result="Passed" start-time="2026-10-14 14:06:07Z" end-time="2026-10-14 14:06:07Z" duration="0.005960" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1195" name="ExistingPrototypeOneCheckpointRestoresAndDifferentConfigStillRejects" fullname="Spotlight.Tests.Integration.R3BCatalogIntegrationTests.ExistingPrototypeOneCheckpointRestoresAndDifferentConfigStillRejects" methodname="ExistingPrototypeOneCheckpointRestoresAndDifferentConfigStillRejects" classname="Spotlight.Tests.Integration.R3BCatalogIntegrationTests" runstate="Runnable" seed="681111390" result="Passed" start-time="2026-10-14 14:06:07Z" end-time="2026-10-14 14:06:07Z" duration="0.026990" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1189" name="FormalCatalogResolvesAllRegisteredReferences" fullname="Spotlight.Tests.Integration.R3BCatalogIntegrationTests.FormalCatalogResolvesAllRegisteredReferences" methodname="FormalCatalogResolvesAllRegisteredReferences" classname="Spotlight.Tests.Integration.R3BCatalogIntegrationTests" runstate="Runnable" seed="1757849756" result="Failed" start-time="2026-10-14 14:06:07Z" end-time="2026-10-14 14:06:07Z" duration="0.009250" asserts="0">
+                <properties />
+                <failure>
+                  <message><![CDATA[  Expected: 9
+  But was:  10
+]]></message>
+                  <stack-trace><![CDATA[at Spotlight.Tests.Integration.R3BCatalogIntegrationTests.FormalCatalogResolvesAllRegisteredReferences () [0x00020] in E:\PersonalProgram\2026GameJam\Assets\_Game\Tests\Integration\R3BCatalogIntegrationTests.cs:36
+]]></stack-trace>
+                </failure>
+              </test-case>
+              <test-case id="1201" name="FormalFalconCrossesLegallyDeployedWoodWhileProjectedGroundObstacleStopsGroundEnemy" fullname="Spotlight.Tests.Integration.R3BCatalogIntegrationTests.FormalFalconCrossesLegallyDeployedWoodWhileProjectedGroundObstacleStopsGroundEnemy" methodname="FormalFalconCrossesLegallyDeployedWoodWhileProjectedGroundObstacleStopsGroundEnemy" classname="Spotlight.Tests.Integration.R3BCatalogIntegrationTests" runstate="Runnable" seed="62488060" result="Passed" start-time="2026-10-14 14:06:07Z" end-time="2026-10-14 14:06:07Z" duration="0.010862" asserts="0">
+                <properties />
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1194" name="FormalWoodRulesRequireCardinalAdjacencyAndOnlyConversionConsumesWood" fullname="Spotlight.Tests.Integration.R3BCatalogIntegrationTests.FormalWoodRulesRequireCardinalAdjacencyAndOnlyConversionConsumesWood" classname="Spotlight.Tests.Integration.R3BCatalogIntegrationTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000173" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1191" name="FormalWoodRulesRequireCardinalAdjacencyAndOnlyConversionConsumesWood(&quot;elm.water&quot;,&quot;production.wood_water_bonus&quot;,&quot;elm.wood&quot;,False)" fullname="Spotlight.Tests.Integration.R3BCatalogIntegrationTests.FormalWoodRulesRequireCardinalAdjacencyAndOnlyConversionConsumesWood(&quot;elm.water&quot;,&quot;production.wood_water_bonus&quot;,&quot;elm.wood&quot;,False)" methodname="FormalWoodRulesRequireCardinalAdjacencyAndOnlyConversionConsumesWood" classname="Spotlight.Tests.Integration.R3BCatalogIntegrationTests" runstate="Runnable" seed="583144953" result="Passed" start-time="2026-10-14 14:06:07Z" end-time="2026-10-14 14:06:07Z" duration="0.012645" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1192" name="FormalWoodRulesRequireCardinalAdjacencyAndOnlyConversionConsumesWood(&quot;elm.earth&quot;,&quot;production.wood_earth_bonus&quot;,&quot;elm.wood&quot;,False)" fullname="Spotlight.Tests.Integration.R3BCatalogIntegrationTests.FormalWoodRulesRequireCardinalAdjacencyAndOnlyConversionConsumesWood(&quot;elm.earth&quot;,&quot;production.wood_earth_bonus&quot;,&quot;elm.wood&quot;,False)" methodname="FormalWoodRulesRequireCardinalAdjacencyAndOnlyConversionConsumesWood" classname="Spotlight.Tests.Integration.R3BCatalogIntegrationTests" runstate="Runnable" seed="1944990762" result="Passed" start-time="2026-10-14 14:06:07Z" end-time="2026-10-14 14:06:07Z" duration="0.007341" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1193" name="FormalWoodRulesRequireCardinalAdjacencyAndOnlyConversionConsumesWood(&quot;elm.fire&quot;,&quot;production.wood_fire_convert&quot;,&quot;elm.fire&quot;,True)" fullname="Spotlight.Tests.Integration.R3BCatalogIntegrationTests.FormalWoodRulesRequireCardinalAdjacencyAndOnlyConversionConsumesWood(&quot;elm.fire&quot;,&quot;production.wood_fire_convert&quot;,&quot;elm.fire&quot;,True)" methodname="FormalWoodRulesRequireCardinalAdjacencyAndOnlyConversionConsumesWood" classname="Spotlight.Tests.Integration.R3BCatalogIntegrationTests" runstate="Runnable" seed="281098240" result="Passed" start-time="2026-10-14 14:06:07Z" end-time="2026-10-14 14:06:07Z" duration="0.009843" asserts="0">
+                  <properties />
+                </test-case>
+              </test-suite>
+              <test-suite type="ParameterizedMethod" id="1200" name="MixedFormalProductionAwardsBonusesBeforeConversionAndReusesFire" fullname="Spotlight.Tests.Integration.R3BCatalogIntegrationTests.MixedFormalProductionAwardsBonusesBeforeConversionAndReusesFire" classname="Spotlight.Tests.Integration.R3BCatalogIntegrationTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000218" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1196" name="MixedFormalProductionAwardsBonusesBeforeConversionAndReusesFire(&quot;water-earth&quot;,3,1,1,0,0)" fullname="Spotlight.Tests.Integration.R3BCatalogIntegrationTests.MixedFormalProductionAwardsBonusesBeforeConversionAndReusesFire(&quot;water-earth&quot;,3,1,1,0,0)" methodname="MixedFormalProductionAwardsBonusesBeforeConversionAndReusesFire" classname="Spotlight.Tests.Integration.R3BCatalogIntegrationTests" runstate="Runnable" seed="1454559446" result="Passed" start-time="2026-10-14 14:06:07Z" end-time="2026-10-14 14:06:07Z" duration="0.011935" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1197" name="MixedFormalProductionAwardsBonusesBeforeConversionAndReusesFire(&quot;water-fire&quot;,2,1,0,2,1)" fullname="Spotlight.Tests.Integration.R3BCatalogIntegrationTests.MixedFormalProductionAwardsBonusesBeforeConversionAndReusesFire(&quot;water-fire&quot;,2,1,0,2,1)" methodname="MixedFormalProductionAwardsBonusesBeforeConversionAndReusesFire" classname="Spotlight.Tests.Integration.R3BCatalogIntegrationTests" runstate="Runnable" seed="390784963" result="Passed" start-time="2026-10-14 14:06:07Z" end-time="2026-10-14 14:06:07Z" duration="0.006579" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1198" name="MixedFormalProductionAwardsBonusesBeforeConversionAndReusesFire(&quot;one-wood-two-fire&quot;,1,0,0,3,1)" fullname="Spotlight.Tests.Integration.R3BCatalogIntegrationTests.MixedFormalProductionAwardsBonusesBeforeConversionAndReusesFire(&quot;one-wood-two-fire&quot;,1,0,0,3,1)" methodname="MixedFormalProductionAwardsBonusesBeforeConversionAndReusesFire" classname="Spotlight.Tests.Integration.R3BCatalogIntegrationTests" runstate="Runnable" seed="153909081" result="Passed" start-time="2026-10-14 14:06:07Z" end-time="2026-10-14 14:06:07Z" duration="0.005826" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1199" name="MixedFormalProductionAwardsBonusesBeforeConversionAndReusesFire(&quot;two-wood-one-fire&quot;,2,0,0,3,2)" fullname="Spotlight.Tests.Integration.R3BCatalogIntegrationTests.MixedFormalProductionAwardsBonusesBeforeConversionAndReusesFire(&quot;two-wood-one-fire&quot;,2,0,0,3,2)" methodname="MixedFormalProductionAwardsBonusesBeforeConversionAndReusesFire" classname="Spotlight.Tests.Integration.R3BCatalogIntegrationTests" runstate="Runnable" seed="849055594" result="Passed" start-time="2026-10-14 14:06:07Z" end-time="2026-10-14 14:06:07Z" duration="0.004994" asserts="0">
+                  <properties />
+                </test-case>
+              </test-suite>
+            </test-suite>
+            <test-suite type="TestFixture" id="1202" name="R3BCombatIntegrationTests" fullname="Spotlight.Tests.Integration.R3BCombatIntegrationTests" classname="Spotlight.Tests.Integration.R3BCombatIntegrationTests" runstate="Runnable" testcasecount="13" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.001197" total="13" passed="13" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-suite type="ParameterizedMethod" id="1205" name="CatalogContactRunsOnceThenTicksOrExpires" fullname="Spotlight.Tests.Integration.R3BCombatIntegrationTests.CatalogContactRunsOnceThenTicksOrExpires" classname="Spotlight.Tests.Integration.R3BCombatIntegrationTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000142" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1203" name="CatalogContactRunsOnceThenTicksOrExpires(&quot;elm.fire&quot;,&quot;status.contact.burn&quot;,10.0f,1.0f)" fullname="Spotlight.Tests.Integration.R3BCombatIntegrationTests.CatalogContactRunsOnceThenTicksOrExpires(&quot;elm.fire&quot;,&quot;status.contact.burn&quot;,10.0f,1.0f)" methodname="CatalogContactRunsOnceThenTicksOrExpires" classname="Spotlight.Tests.Integration.R3BCombatIntegrationTests" runstate="Runnable" seed="1804526217" result="Passed" start-time="2026-10-14 14:06:07Z" end-time="2026-10-14 14:06:07Z" duration="0.021834" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1204" name="CatalogContactRunsOnceThenTicksOrExpires(&quot;elm.water&quot;,&quot;status.contact.water_slow&quot;,0.0f,0.85f)" fullname="Spotlight.Tests.Integration.R3BCombatIntegrationTests.CatalogContactRunsOnceThenTicksOrExpires(&quot;elm.water&quot;,&quot;status.contact.water_slow&quot;,0.0f,0.85f)" methodname="CatalogContactRunsOnceThenTicksOrExpires" classname="Spotlight.Tests.Integration.R3BCombatIntegrationTests" runstate="Runnable" seed="1902607858" result="Passed" start-time="2026-10-14 14:06:07Z" end-time="2026-10-14 14:06:07Z" duration="0.007311" asserts="0">
+                  <properties />
+                </test-case>
+              </test-suite>
+              <test-case id="1210" name="CurseDurationUsesPausedAndDoubleSpeedGameClock" fullname="Spotlight.Tests.Integration.R3BCombatIntegrationTests.CurseDurationUsesPausedAndDoubleSpeedGameClock" methodname="CurseDurationUsesPausedAndDoubleSpeedGameClock" classname="Spotlight.Tests.Integration.R3BCombatIntegrationTests" runstate="Runnable" seed="1380582641" result="Passed" start-time="2026-10-14 14:06:07Z" end-time="2026-10-14 14:06:07Z" duration="0.090082" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1209" name="CurseTargetsEveryTowerAndClearsOnExpiryRemovalAndSessionEnd" fullname="Spotlight.Tests.Integration.R3BCombatIntegrationTests.CurseTargetsEveryTowerAndClearsOnExpiryRemovalAndSessionEnd" methodname="CurseTargetsEveryTowerAndClearsOnExpiryRemovalAndSessionEnd" classname="Spotlight.Tests.Integration.R3BCombatIntegrationTests" runstate="Runnable" seed="2142284316" result="Passed" start-time="2026-10-14 14:06:07Z" end-time="2026-10-14 14:06:07Z" duration="0.009905" asserts="0">
+                <properties />
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1217" name="SlimeAttackUsesElementResistanceAndNeverAttachesToSpring" fullname="Spotlight.Tests.Integration.R3BCombatIntegrationTests.SlimeAttackUsesElementResistanceAndNeverAttachesToSpring" classname="Spotlight.Tests.Integration.R3BCombatIntegrationTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000361" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1211" name="SlimeAttackUsesElementResistanceAndNeverAttachesToSpring(&quot;enemy.slime.water&quot;,Water,False)" fullname="Spotlight.Tests.Integration.R3BCombatIntegrationTests.SlimeAttackUsesElementResistanceAndNeverAttachesToSpring(&quot;enemy.slime.water&quot;,Water,False)" methodname="SlimeAttackUsesElementResistanceAndNeverAttachesToSpring" classname="Spotlight.Tests.Integration.R3BCombatIntegrationTests" runstate="Runnable" seed="927276525" result="Passed" start-time="2026-10-14 14:06:07Z" end-time="2026-10-14 14:06:08Z" duration="0.007276" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1212" name="SlimeAttackUsesElementResistanceAndNeverAttachesToSpring(&quot;enemy.slime.fire&quot;,Fire,False)" fullname="Spotlight.Tests.Integration.R3BCombatIntegrationTests.SlimeAttackUsesElementResistanceAndNeverAttachesToSpring(&quot;enemy.slime.fire&quot;,Fire,False)" methodname="SlimeAttackUsesElementResistanceAndNeverAttachesToSpring" classname="Spotlight.Tests.Integration.R3BCombatIntegrationTests" runstate="Runnable" seed="684050231" result="Passed" start-time="2026-10-14 14:06:08Z" end-time="2026-10-14 14:06:08Z" duration="0.005023" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1213" name="SlimeAttackUsesElementResistanceAndNeverAttachesToSpring(&quot;enemy.slime.thunder&quot;,Thunder,False)" fullname="Spotlight.Tests.Integration.R3BCombatIntegrationTests.SlimeAttackUsesElementResistanceAndNeverAttachesToSpring(&quot;enemy.slime.thunder&quot;,Thunder,False)" methodname="SlimeAttackUsesElementResistanceAndNeverAttachesToSpring" classname="Spotlight.Tests.Integration.R3BCombatIntegrationTests" runstate="Runnable" seed="404298102" result="Passed" start-time="2026-10-14 14:06:08Z" end-time="2026-10-14 14:06:08Z" duration="0.004717" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1214" name="SlimeAttackUsesElementResistanceAndNeverAttachesToSpring(&quot;enemy.slime.water&quot;,Water,True)" fullname="Spotlight.Tests.Integration.R3BCombatIntegrationTests.SlimeAttackUsesElementResistanceAndNeverAttachesToSpring(&quot;enemy.slime.water&quot;,Water,True)" methodname="SlimeAttackUsesElementResistanceAndNeverAttachesToSpring" classname="Spotlight.Tests.Integration.R3BCombatIntegrationTests" runstate="Runnable" seed="934145332" result="Passed" start-time="2026-10-14 14:06:08Z" end-time="2026-10-14 14:06:08Z" duration="0.007245" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1215" name="SlimeAttackUsesElementResistanceAndNeverAttachesToSpring(&quot;enemy.slime.fire&quot;,Fire,True)" fullname="Spotlight.Tests.Integration.R3BCombatIntegrationTests.SlimeAttackUsesElementResistanceAndNeverAttachesToSpring(&quot;enemy.slime.fire&quot;,Fire,True)" methodname="SlimeAttackUsesElementResistanceAndNeverAttachesToSpring" classname="Spotlight.Tests.Integration.R3BCombatIntegrationTests" runstate="Runnable" seed="1449852537" result="Passed" start-time="2026-10-14 14:06:08Z" end-time="2026-10-14 14:06:08Z" duration="0.007533" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1216" name="SlimeAttackUsesElementResistanceAndNeverAttachesToSpring(&quot;enemy.slime.thunder&quot;,Thunder,True)" fullname="Spotlight.Tests.Integration.R3BCombatIntegrationTests.SlimeAttackUsesElementResistanceAndNeverAttachesToSpring(&quot;enemy.slime.thunder&quot;,Thunder,True)" methodname="SlimeAttackUsesElementResistanceAndNeverAttachesToSpring" classname="Spotlight.Tests.Integration.R3BCombatIntegrationTests" runstate="Runnable" seed="811158689" result="Passed" start-time="2026-10-14 14:06:08Z" end-time="2026-10-14 14:06:08Z" duration="0.008654" asserts="0">
+                  <properties />
+                </test-case>
+              </test-suite>
+              <test-case id="1206" name="StationaryFireContactRepeatsOnIntervalWithoutDoublingOrContactOnEmptyCell" fullname="Spotlight.Tests.Integration.R3BCombatIntegrationTests.StationaryFireContactRepeatsOnIntervalWithoutDoublingOrContactOnEmptyCell" methodname="StationaryFireContactRepeatsOnIntervalWithoutDoublingOrContactOnEmptyCell" classname="Spotlight.Tests.Integration.R3BCombatIntegrationTests" runstate="Runnable" seed="707091279" result="Passed" start-time="2026-10-14 14:06:08Z" end-time="2026-10-14 14:06:08Z" duration="0.015039" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1207" name="StationaryWaterContactRefreshesUntilLeavingThenExpires" fullname="Spotlight.Tests.Integration.R3BCombatIntegrationTests.StationaryWaterContactRefreshesUntilLeavingThenExpires" methodname="StationaryWaterContactRefreshesUntilLeavingThenExpires" classname="Spotlight.Tests.Integration.R3BCombatIntegrationTests" runstate="Runnable" seed="1918358603" result="Passed" start-time="2026-10-14 14:06:08Z" end-time="2026-10-14 14:06:08Z" duration="0.014533" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1208" name="ThreeColdWaveReactionsStackThenExpireTogether" fullname="Spotlight.Tests.Integration.R3BCombatIntegrationTests.ThreeColdWaveReactionsStackThenExpireTogether" methodname="ThreeColdWaveReactionsStackThenExpireTogether" classname="Spotlight.Tests.Integration.R3BCombatIntegrationTests" runstate="Runnable" seed="1295171651" result="Passed" start-time="2026-10-14 14:06:08Z" end-time="2026-10-14 14:06:08Z" duration="0.019243" asserts="0">
+                <properties />
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1218" name="R3BEnemyPrefabTests" fullname="Spotlight.Tests.Integration.R3BEnemyPrefabTests" classname="Spotlight.Tests.Integration.R3BEnemyPrefabTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000141" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1219" name="SevenEnemiesRenderRealHealthAndResetOnReuse" fullname="Spotlight.Tests.Integration.R3BEnemyPrefabTests.SevenEnemiesRenderRealHealthAndResetOnReuse" methodname="SevenEnemiesRenderRealHealthAndResetOnReuse" classname="Spotlight.Tests.Integration.R3BEnemyPrefabTests" runstate="Runnable" seed="1614157751" result="Passed" start-time="2026-10-14 14:06:08Z" end-time="2026-10-14 14:06:12Z" duration="4.252626" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1220" name="R3BLootTests" fullname="Spotlight.Tests.Integration.R3BLootTests" classname="Spotlight.Tests.Integration.R3BLootTests" runstate="Runnable" testcasecount="17" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.001514" total="17" passed="17" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-suite type="ParameterizedMethod" id="1234" name="CleanupDoesNotReward" fullname="Spotlight.Tests.Integration.R3BLootTests.CleanupDoesNotReward" classname="Spotlight.Tests.Integration.R3BLootTests" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000539" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1225" name="CleanupDoesNotReward(&quot;water&quot;,SessionReset)" fullname="Spotlight.Tests.Integration.R3BLootTests.CleanupDoesNotReward(&quot;water&quot;,SessionReset)" methodname="CleanupDoesNotReward" classname="Spotlight.Tests.Integration.R3BLootTests" runstate="Runnable" seed="65873977" result="Passed" start-time="2026-10-14 14:06:12Z" end-time="2026-10-14 14:06:12Z" duration="0.405818" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1226" name="CleanupDoesNotReward(&quot;fire&quot;,SessionReset)" fullname="Spotlight.Tests.Integration.R3BLootTests.CleanupDoesNotReward(&quot;fire&quot;,SessionReset)" methodname="CleanupDoesNotReward" classname="Spotlight.Tests.Integration.R3BLootTests" runstate="Runnable" seed="1923262932" result="Passed" start-time="2026-10-14 14:06:12Z" end-time="2026-10-14 14:06:12Z" duration="0.073767" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1227" name="CleanupDoesNotReward(&quot;thunder&quot;,SessionReset)" fullname="Spotlight.Tests.Integration.R3BLootTests.CleanupDoesNotReward(&quot;thunder&quot;,SessionReset)" methodname="CleanupDoesNotReward" classname="Spotlight.Tests.Integration.R3BLootTests" runstate="Runnable" seed="426953859" result="Passed" start-time="2026-10-14 14:06:12Z" end-time="2026-10-14 14:06:12Z" duration="0.074303" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1228" name="CleanupDoesNotReward(&quot;water&quot;,VictoryCleanup)" fullname="Spotlight.Tests.Integration.R3BLootTests.CleanupDoesNotReward(&quot;water&quot;,VictoryCleanup)" methodname="CleanupDoesNotReward" classname="Spotlight.Tests.Integration.R3BLootTests" runstate="Runnable" seed="328339061" result="Passed" start-time="2026-10-14 14:06:12Z" end-time="2026-10-14 14:06:12Z" duration="0.069954" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1229" name="CleanupDoesNotReward(&quot;fire&quot;,VictoryCleanup)" fullname="Spotlight.Tests.Integration.R3BLootTests.CleanupDoesNotReward(&quot;fire&quot;,VictoryCleanup)" methodname="CleanupDoesNotReward" classname="Spotlight.Tests.Integration.R3BLootTests" runstate="Runnable" seed="806531122" result="Passed" start-time="2026-10-14 14:06:12Z" end-time="2026-10-14 14:06:13Z" duration="0.064757" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1230" name="CleanupDoesNotReward(&quot;thunder&quot;,VictoryCleanup)" fullname="Spotlight.Tests.Integration.R3BLootTests.CleanupDoesNotReward(&quot;thunder&quot;,VictoryCleanup)" methodname="CleanupDoesNotReward" classname="Spotlight.Tests.Integration.R3BLootTests" runstate="Runnable" seed="224381896" result="Passed" start-time="2026-10-14 14:06:13Z" end-time="2026-10-14 14:06:13Z" duration="0.072340" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1231" name="CleanupDoesNotReward(&quot;water&quot;,ScriptedExit)" fullname="Spotlight.Tests.Integration.R3BLootTests.CleanupDoesNotReward(&quot;water&quot;,ScriptedExit)" methodname="CleanupDoesNotReward" classname="Spotlight.Tests.Integration.R3BLootTests" runstate="Runnable" seed="220281876" result="Passed" start-time="2026-10-14 14:06:13Z" end-time="2026-10-14 14:06:13Z" duration="0.072795" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1232" name="CleanupDoesNotReward(&quot;fire&quot;,ScriptedExit)" fullname="Spotlight.Tests.Integration.R3BLootTests.CleanupDoesNotReward(&quot;fire&quot;,ScriptedExit)" methodname="CleanupDoesNotReward" classname="Spotlight.Tests.Integration.R3BLootTests" runstate="Runnable" seed="1260833338" result="Passed" start-time="2026-10-14 14:06:13Z" end-time="2026-10-14 14:06:13Z" duration="0.067544" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1233" name="CleanupDoesNotReward(&quot;thunder&quot;,ScriptedExit)" fullname="Spotlight.Tests.Integration.R3BLootTests.CleanupDoesNotReward(&quot;thunder&quot;,ScriptedExit)" methodname="CleanupDoesNotReward" classname="Spotlight.Tests.Integration.R3BLootTests" runstate="Runnable" seed="251171482" result="Passed" start-time="2026-10-14 14:06:13Z" end-time="2026-10-14 14:06:13Z" duration="0.069169" asserts="0">
+                  <properties />
+                </test-case>
+              </test-suite>
+              <test-case id="1236" name="DisposingRuntimeWithLiveSlimesDoesNotReward" fullname="Spotlight.Tests.Integration.R3BLootTests.DisposingRuntimeWithLiveSlimesDoesNotReward" methodname="DisposingRuntimeWithLiveSlimesDoesNotReward" classname="Spotlight.Tests.Integration.R3BLootTests" runstate="Runnable" seed="1675003090" result="Passed" start-time="2026-10-14 14:06:13Z" end-time="2026-10-14 14:06:13Z" duration="0.067694" asserts="0">
+                <properties />
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1224" name="RealKillAwardsOneHandOnceAndDawnProductionIsSeparate" fullname="Spotlight.Tests.Integration.R3BLootTests.RealKillAwardsOneHandOnceAndDawnProductionIsSeparate" classname="Spotlight.Tests.Integration.R3BLootTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000168" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1221" name="RealKillAwardsOneHandOnceAndDawnProductionIsSeparate(&quot;water&quot;,&quot;Water&quot;)" fullname="Spotlight.Tests.Integration.R3BLootTests.RealKillAwardsOneHandOnceAndDawnProductionIsSeparate(&quot;water&quot;,&quot;Water&quot;)" methodname="RealKillAwardsOneHandOnceAndDawnProductionIsSeparate" classname="Spotlight.Tests.Integration.R3BLootTests" runstate="Runnable" seed="244711467" result="Passed" start-time="2026-10-14 14:06:13Z" end-time="2026-10-14 14:06:13Z" duration="0.297761" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1222" name="RealKillAwardsOneHandOnceAndDawnProductionIsSeparate(&quot;fire&quot;,&quot;Fire&quot;)" fullname="Spotlight.Tests.Integration.R3BLootTests.RealKillAwardsOneHandOnceAndDawnProductionIsSeparate(&quot;fire&quot;,&quot;Fire&quot;)" methodname="RealKillAwardsOneHandOnceAndDawnProductionIsSeparate" classname="Spotlight.Tests.Integration.R3BLootTests" runstate="Runnable" seed="565879011" result="Passed" start-time="2026-10-14 14:06:13Z" end-time="2026-10-14 14:06:13Z" duration="0.295514" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1223" name="RealKillAwardsOneHandOnceAndDawnProductionIsSeparate(&quot;thunder&quot;,&quot;Thunder&quot;)" fullname="Spotlight.Tests.Integration.R3BLootTests.RealKillAwardsOneHandOnceAndDawnProductionIsSeparate(&quot;thunder&quot;,&quot;Thunder&quot;)" methodname="RealKillAwardsOneHandOnceAndDawnProductionIsSeparate" classname="Spotlight.Tests.Integration.R3BLootTests" runstate="Runnable" seed="324825726" result="Passed" start-time="2026-10-14 14:06:13Z" end-time="2026-10-14 14:06:14Z" duration="0.334348" asserts="0">
+                  <properties />
+                </test-case>
+              </test-suite>
+              <test-suite type="ParameterizedMethod" id="1240" name="RepeatedDeathAfterRemovalFailureDoesNotAwardTwice" fullname="Spotlight.Tests.Integration.R3BLootTests.RepeatedDeathAfterRemovalFailureDoesNotAwardTwice" classname="Spotlight.Tests.Integration.R3BLootTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000164" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1237" name="RepeatedDeathAfterRemovalFailureDoesNotAwardTwice(&quot;water&quot;)" fullname="Spotlight.Tests.Integration.R3BLootTests.RepeatedDeathAfterRemovalFailureDoesNotAwardTwice(&quot;water&quot;)" methodname="RepeatedDeathAfterRemovalFailureDoesNotAwardTwice" classname="Spotlight.Tests.Integration.R3BLootTests" runstate="Runnable" seed="224689222" result="Passed" start-time="2026-10-14 14:06:14Z" end-time="2026-10-14 14:06:14Z" duration="0.098895" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1238" name="RepeatedDeathAfterRemovalFailureDoesNotAwardTwice(&quot;fire&quot;)" fullname="Spotlight.Tests.Integration.R3BLootTests.RepeatedDeathAfterRemovalFailureDoesNotAwardTwice(&quot;fire&quot;)" methodname="RepeatedDeathAfterRemovalFailureDoesNotAwardTwice" classname="Spotlight.Tests.Integration.R3BLootTests" runstate="Runnable" seed="694807081" result="Passed" start-time="2026-10-14 14:06:14Z" end-time="2026-10-14 14:06:14Z" duration="0.119970" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1239" name="RepeatedDeathAfterRemovalFailureDoesNotAwardTwice(&quot;thunder&quot;)" fullname="Spotlight.Tests.Integration.R3BLootTests.RepeatedDeathAfterRemovalFailureDoesNotAwardTwice(&quot;thunder&quot;)" methodname="RepeatedDeathAfterRemovalFailureDoesNotAwardTwice" classname="Spotlight.Tests.Integration.R3BLootTests" runstate="Runnable" seed="1481059101" result="Passed" start-time="2026-10-14 14:06:14Z" end-time="2026-10-14 14:06:14Z" duration="0.083783" asserts="0">
+                  <properties />
+                </test-case>
+              </test-suite>
+              <test-case id="1235" name="ReturningToMenuWithLiveSlimesDoesNotGrantLoot" fullname="Spotlight.Tests.Integration.R3BLootTests.ReturningToMenuWithLiveSlimesDoesNotGrantLoot" methodname="ReturningToMenuWithLiveSlimesDoesNotGrantLoot" classname="Spotlight.Tests.Integration.R3BLootTests" runstate="Runnable" seed="1820923315" result="Passed" start-time="2026-10-14 14:06:14Z" end-time="2026-10-14 14:06:14Z" duration="0.092889" asserts="0">
+                <properties />
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1241" name="R3BMenuIntegrationTests" fullname="Spotlight.Tests.Integration.R3BMenuIntegrationTests" classname="Spotlight.Tests.Integration.R3BMenuIntegrationTests" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.001006" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1250" name="BuildSummaryRendersApartFromActualHint" fullname="Spotlight.Tests.Integration.R3BMenuIntegrationTests.BuildSummaryRendersApartFromActualHint" methodname="BuildSummaryRendersApartFromActualHint" classname="Spotlight.Tests.Integration.R3BMenuIntegrationTests" runstate="Runnable" seed="1680340949" result="Passed" start-time="2026-10-14 14:06:14Z" end-time="2026-10-14 14:06:14Z" duration="0.270836" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1248" name="ContinueReadsRealCheckpointAndDoesNotInventSummaryHistory" fullname="Spotlight.Tests.Integration.R3BMenuIntegrationTests.ContinueReadsRealCheckpointAndDoesNotInventSummaryHistory" methodname="ContinueReadsRealCheckpointAndDoesNotInventSummaryHistory" classname="Spotlight.Tests.Integration.R3BMenuIntegrationTests" runstate="Runnable" seed="1229570489" result="Passed" start-time="2026-10-14 14:06:14Z" end-time="2026-10-14 14:06:15Z" duration="0.114760" asserts="0">
+                <properties />
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1253" name="FormalCanvasRendersMenuAtReferenceAndSmallWindowSizes" fullname="Spotlight.Tests.Integration.R3BMenuIntegrationTests.FormalCanvasRendersMenuAtReferenceAndSmallWindowSizes" classname="Spotlight.Tests.Integration.R3BMenuIntegrationTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000124" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1251" name="FormalCanvasRendersMenuAtReferenceAndSmallWindowSizes(1280,720)" fullname="Spotlight.Tests.Integration.R3BMenuIntegrationTests.FormalCanvasRendersMenuAtReferenceAndSmallWindowSizes(1280,720)" methodname="FormalCanvasRendersMenuAtReferenceAndSmallWindowSizes" classname="Spotlight.Tests.Integration.R3BMenuIntegrationTests" runstate="Runnable" seed="1232907540" result="Passed" start-time="2026-10-14 14:06:15Z" end-time="2026-10-14 14:06:15Z" duration="0.044492" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1252" name="FormalCanvasRendersMenuAtReferenceAndSmallWindowSizes(960,540)" fullname="Spotlight.Tests.Integration.R3BMenuIntegrationTests.FormalCanvasRendersMenuAtReferenceAndSmallWindowSizes(960,540)" methodname="FormalCanvasRendersMenuAtReferenceAndSmallWindowSizes" classname="Spotlight.Tests.Integration.R3BMenuIntegrationTests" runstate="Runnable" seed="610792954" result="Passed" start-time="2026-10-14 14:06:15Z" end-time="2026-10-14 14:06:15Z" duration="0.037081" asserts="0">
+                  <properties />
+                </test-case>
+              </test-suite>
+              <test-case id="1242" name="FormalMenuHasReadableDistinctControlsAndDisablesContinueWithoutCheckpoint" fullname="Spotlight.Tests.Integration.R3BMenuIntegrationTests.FormalMenuHasReadableDistinctControlsAndDisablesContinueWithoutCheckpoint" methodname="FormalMenuHasReadableDistinctControlsAndDisablesContinueWithoutCheckpoint" classname="Spotlight.Tests.Integration.R3BMenuIntegrationTests" runstate="Runnable" seed="282492784" result="Passed" start-time="2026-10-14 14:06:15Z" end-time="2026-10-14 14:06:15Z" duration="0.010366" asserts="0">
+                <properties />
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1245" name="MenuStartsRealModeAndClosedMenuDetachesOwnedListeners" fullname="Spotlight.Tests.Integration.R3BMenuIntegrationTests.MenuStartsRealModeAndClosedMenuDetachesOwnedListeners" classname="Spotlight.Tests.Integration.R3BMenuIntegrationTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000134" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1243" name="MenuStartsRealModeAndClosedMenuDetachesOwnedListeners(Story)" fullname="Spotlight.Tests.Integration.R3BMenuIntegrationTests.MenuStartsRealModeAndClosedMenuDetachesOwnedListeners(Story)" methodname="MenuStartsRealModeAndClosedMenuDetachesOwnedListeners" classname="Spotlight.Tests.Integration.R3BMenuIntegrationTests" runstate="Runnable" seed="1543740504" result="Passed" start-time="2026-10-14 14:06:15Z" end-time="2026-10-14 14:06:15Z" duration="0.022244" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1244" name="MenuStartsRealModeAndClosedMenuDetachesOwnedListeners(Endless)" fullname="Spotlight.Tests.Integration.R3BMenuIntegrationTests.MenuStartsRealModeAndClosedMenuDetachesOwnedListeners(Endless)" methodname="MenuStartsRealModeAndClosedMenuDetachesOwnedListeners" classname="Spotlight.Tests.Integration.R3BMenuIntegrationTests" runstate="Runnable" seed="1820606117" result="Passed" start-time="2026-10-14 14:06:15Z" end-time="2026-10-14 14:06:15Z" duration="0.016498" asserts="0">
+                  <properties />
+                </test-case>
+              </test-suite>
+              <test-case id="1249" name="OptionalMenuAndSummaryRemainCompatibleWithLegacyPrefab" fullname="Spotlight.Tests.Integration.R3BMenuIntegrationTests.OptionalMenuAndSummaryRemainCompatibleWithLegacyPrefab" methodname="OptionalMenuAndSummaryRemainCompatibleWithLegacyPrefab" classname="Spotlight.Tests.Integration.R3BMenuIntegrationTests" runstate="Runnable" seed="1016915255" result="Passed" start-time="2026-10-14 14:06:15Z" end-time="2026-10-14 14:06:15Z" duration="0.027093" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1254" name="PanelValidationRejectsCanvasAndDuplicateReferences" fullname="Spotlight.Tests.Integration.R3BMenuIntegrationTests.PanelValidationRejectsCanvasAndDuplicateReferences" methodname="PanelValidationRejectsCanvasAndDuplicateReferences" classname="Spotlight.Tests.Integration.R3BMenuIntegrationTests" runstate="Runnable" seed="461618552" result="Passed" start-time="2026-10-14 14:06:15Z" end-time="2026-10-14 14:06:15Z" duration="0.008124" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1246" name="RepeatBindingAndUnbindDetachMenuWithoutRemovingExternalListener" fullname="Spotlight.Tests.Integration.R3BMenuIntegrationTests.RepeatBindingAndUnbindDetachMenuWithoutRemovingExternalListener" methodname="RepeatBindingAndUnbindDetachMenuWithoutRemovingExternalListener" classname="Spotlight.Tests.Integration.R3BMenuIntegrationTests" runstate="Runnable" seed="522238736" result="Passed" start-time="2026-10-14 14:06:15Z" end-time="2026-10-14 14:06:15Z" duration="0.017109" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1247" name="SummaryUsesDawnRewardsThenClearsAtMenuAndNewRun" fullname="Spotlight.Tests.Integration.R3BMenuIntegrationTests.SummaryUsesDawnRewardsThenClearsAtMenuAndNewRun" methodname="SummaryUsesDawnRewardsThenClearsAtMenuAndNewRun" classname="Spotlight.Tests.Integration.R3BMenuIntegrationTests" runstate="Runnable" seed="685114313" result="Passed" start-time="2026-10-14 14:06:15Z" end-time="2026-10-14 14:06:15Z" duration="0.025548" asserts="0">
+                <properties />
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1255" name="R3BStoryWaveTests" fullname="Spotlight.Tests.Integration.R3BStoryWaveTests" classname="Spotlight.Tests.Integration.R3BStoryWaveTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000444" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-suite type="ParameterizedMethod" id="1261" name="ConfiguredNightSpawnsExactTypesOnIndependentTimers" fullname="Spotlight.Tests.Integration.R3BStoryWaveTests.ConfiguredNightSpawnsExactTypesOnIndependentTimers" classname="Spotlight.Tests.Integration.R3BStoryWaveTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000311" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1256" name="ConfiguredNightSpawnsExactTypesOnIndependentTimers(3,10)" fullname="Spotlight.Tests.Integration.R3BStoryWaveTests.ConfiguredNightSpawnsExactTypesOnIndependentTimers(3,10)" methodname="ConfiguredNightSpawnsExactTypesOnIndependentTimers" classname="Spotlight.Tests.Integration.R3BStoryWaveTests" runstate="Runnable" seed="692824222" result="Passed" start-time="2026-10-14 14:06:15Z" end-time="2026-10-14 14:06:15Z" duration="0.028230" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1257" name="ConfiguredNightSpawnsExactTypesOnIndependentTimers(4,14)" fullname="Spotlight.Tests.Integration.R3BStoryWaveTests.ConfiguredNightSpawnsExactTypesOnIndependentTimers(4,14)" methodname="ConfiguredNightSpawnsExactTypesOnIndependentTimers" classname="Spotlight.Tests.Integration.R3BStoryWaveTests" runstate="Runnable" seed="68102970" result="Passed" start-time="2026-10-14 14:06:15Z" end-time="2026-10-14 14:06:15Z" duration="0.029470" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1258" name="ConfiguredNightSpawnsExactTypesOnIndependentTimers(5,18)" fullname="Spotlight.Tests.Integration.R3BStoryWaveTests.ConfiguredNightSpawnsExactTypesOnIndependentTimers(5,18)" methodname="ConfiguredNightSpawnsExactTypesOnIndependentTimers" classname="Spotlight.Tests.Integration.R3BStoryWaveTests" runstate="Runnable" seed="2076271416" result="Passed" start-time="2026-10-14 14:06:15Z" end-time="2026-10-14 14:06:15Z" duration="0.031651" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1259" name="ConfiguredNightSpawnsExactTypesOnIndependentTimers(6,24)" fullname="Spotlight.Tests.Integration.R3BStoryWaveTests.ConfiguredNightSpawnsExactTypesOnIndependentTimers(6,24)" methodname="ConfiguredNightSpawnsExactTypesOnIndependentTimers" classname="Spotlight.Tests.Integration.R3BStoryWaveTests" runstate="Runnable" seed="1357075561" result="Passed" start-time="2026-10-14 14:06:15Z" end-time="2026-10-14 14:06:15Z" duration="0.046046" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1260" name="ConfiguredNightSpawnsExactTypesOnIndependentTimers(7,30)" fullname="Spotlight.Tests.Integration.R3BStoryWaveTests.ConfiguredNightSpawnsExactTypesOnIndependentTimers(7,30)" methodname="ConfiguredNightSpawnsExactTypesOnIndependentTimers" classname="Spotlight.Tests.Integration.R3BStoryWaveTests" runstate="Runnable" seed="1109499932" result="Passed" start-time="2026-10-14 14:06:15Z" end-time="2026-10-14 14:06:15Z" duration="0.077779" asserts="0">
+                  <properties />
+                </test-case>
+              </test-suite>
+            </test-suite>
+            <test-suite type="TestFixture" id="1262" name="RuntimeLoopTests" fullname="Spotlight.Tests.Integration.RuntimeLoopTests" classname="Spotlight.Tests.Integration.RuntimeLoopTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.000310" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1265" name="ActualSpringLethalPacketImmediatelyProducesGameOver" fullname="Spotlight.Tests.Integration.RuntimeLoopTests.ActualSpringLethalPacketImmediatelyProducesGameOver" methodname="ActualSpringLethalPacketImmediatelyProducesGameOver" classname="Spotlight.Tests.Integration.RuntimeLoopTests" runstate="Runnable" seed="592366234" result="Passed" start-time="2026-10-14 14:06:15Z" end-time="2026-10-14 14:06:15Z" duration="0.059624" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1264" name="AssetBackedNightQueuesItemsSimulatesProjectilesSettlesOnceAndRestoresCheckpoint" fullname="Spotlight.Tests.Integration.RuntimeLoopTests.AssetBackedNightQueuesItemsSimulatesProjectilesSettlesOnceAndRestoresCheckpoint" methodname="AssetBackedNightQueuesItemsSimulatesProjectilesSettlesOnceAndRestoresCheckpoint" classname="Spotlight.Tests.Integration.RuntimeLoopTests" runstate="Runnable" seed="137688690" result="Passed" start-time="2026-10-14 14:06:15Z" end-time="2026-10-14 14:06:15Z" duration="0.358769" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1263" name="DeploymentAdvanceAutomaticallyPersistsBoardAndResourceCosts" fullname="Spotlight.Tests.Integration.RuntimeLoopTests.DeploymentAdvanceAutomaticallyPersistsBoardAndResourceCosts" methodname="DeploymentAdvanceAutomaticallyPersistsBoardAndResourceCosts" classname="Spotlight.Tests.Integration.RuntimeLoopTests" runstate="Runnable" seed="1231053695" result="Passed" start-time="2026-10-14 14:06:15Z" end-time="2026-10-14 14:06:16Z" duration="0.052812" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1266" name="RealStoryReachesEndingOnSeventhNight" fullname="Spotlight.Tests.Integration.RuntimeLoopTests.RealStoryReachesEndingOnSeventhNight" methodname="RealStoryReachesEndingOnSeventhNight" classname="Spotlight.Tests.Integration.RuntimeLoopTests" runstate="Runnable" seed="1055688390" result="Passed" start-time="2026-10-14 14:06:16Z" end-time="2026-10-14 14:06:22Z" duration="6.637826" asserts="0">
+                <properties />
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1267" name="ThirdRoundPresentationTests" fullname="Spotlight.Tests.Integration.ThirdRoundPresentationTests" classname="Spotlight.Tests.Integration.ThirdRoundPresentationTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:29Z" duration="0.719347" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1269" name="PooledProjectilesAndEnemyBodiesResetBeforeAnyDisplayUpdate" fullname="Spotlight.Tests.Integration.ThirdRoundPresentationTests.PooledProjectilesAndEnemyBodiesResetBeforeAnyDisplayUpdate" methodname="PooledProjectilesAndEnemyBodiesResetBeforeAnyDisplayUpdate" classname="Spotlight.Tests.Integration.ThirdRoundPresentationTests" runstate="Runnable" seed="875602277" result="Passed" start-time="2026-10-14 14:06:22Z" end-time="2026-10-14 14:06:26Z" duration="3.397515" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                </properties>
+              </test-case>
+              <test-case id="1268" name="ProjectileDirectionsAndOverlaysAreUnlitAndHaveDistinctSorting" fullname="Spotlight.Tests.Integration.ThirdRoundPresentationTests.ProjectileDirectionsAndOverlaysAreUnlitAndHaveDistinctSorting" methodname="ProjectileDirectionsAndOverlaysAreUnlitAndHaveDistinctSorting" classname="Spotlight.Tests.Integration.ThirdRoundPresentationTests" runstate="Runnable" seed="1512000467" result="Passed" start-time="2026-10-14 14:06:26Z" end-time="2026-10-14 14:06:26Z" duration="0.018348" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1270" name="RendererUsesRealSnapshotsClockMotionAndClearsLeasesAcrossRunsAndRebind" fullname="Spotlight.Tests.Integration.ThirdRoundPresentationTests.RendererUsesRealSnapshotsClockMotionAndClearsLeasesAcrossRunsAndRebind" methodname="RendererUsesRealSnapshotsClockMotionAndClearsLeasesAcrossRunsAndRebind" classname="Spotlight.Tests.Integration.ThirdRoundPresentationTests" runstate="Runnable" seed="609180790" result="Passed" start-time="2026-10-14 14:06:26Z" end-time="2026-10-14 14:06:29Z" duration="3.755974" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1271" name="ThirdRoundScenarioTests" fullname="Spotlight.Tests.Integration.ThirdRoundScenarioTests" classname="Spotlight.Tests.Integration.ThirdRoundScenarioTests" runstate="Runnable" testcasecount="14" result="Failed" site="Child" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:35Z" duration="5.839534" total="14" passed="9" failed="5" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-suite type="ParameterizedMethod" id="1287" name="ActualConfiguredProductionChecksCardinalAndDiagonalLayouts" fullname="Spotlight.Tests.Integration.ThirdRoundScenarioTests.ActualConfiguredProductionChecksCardinalAndDiagonalLayouts" classname="Spotlight.Tests.Integration.ThirdRoundScenarioTests" runstate="Runnable" testcasecount="5" result="Failed" site="Child" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:30Z" duration="0.587418" total="5" passed="0" failed="5" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <failure>
+                  <message><![CDATA[One or more child tests had errors]]></message>
+                </failure>
+                <test-case id="1282" name="ActualConfiguredProductionChecksCardinalAndDiagonalLayouts(0,1)" fullname="Spotlight.Tests.Integration.ThirdRoundScenarioTests.ActualConfiguredProductionChecksCardinalAndDiagonalLayouts(0,1)" methodname="ActualConfiguredProductionChecksCardinalAndDiagonalLayouts" classname="Spotlight.Tests.Integration.ThirdRoundScenarioTests" runstate="Runnable" seed="1736814696" result="Failed" start-time="2026-10-14 14:06:29Z" end-time="2026-10-14 14:06:30Z" duration="0.259239" asserts="0">
+                  <properties />
+                  <failure>
+                    <message><![CDATA[  Expected: 9
+  But was:  10
+]]></message>
+                    <stack-trace><![CDATA[at Spotlight.Tests.Integration.ThirdRoundScenarioTests.ActualConfiguredProductionChecksCardinalAndDiagonalLayouts (System.Int32 dx, System.Int32 dy) [0x0007f] in E:\PersonalProgram\2026GameJam\Assets\_Game\Tests\Integration\ThirdRoundScenarioTests.cs:177
+]]></stack-trace>
+                  </failure>
+                </test-case>
+                <test-case id="1283" name="ActualConfiguredProductionChecksCardinalAndDiagonalLayouts(1,0)" fullname="Spotlight.Tests.Integration.ThirdRoundScenarioTests.ActualConfiguredProductionChecksCardinalAndDiagonalLayouts(1,0)" methodname="ActualConfiguredProductionChecksCardinalAndDiagonalLayouts" classname="Spotlight.Tests.Integration.ThirdRoundScenarioTests" runstate="Runnable" seed="1044735785" result="Failed" start-time="2026-10-14 14:06:30Z" end-time="2026-10-14 14:06:30Z" duration="0.081010" asserts="0">
+                  <properties />
+                  <failure>
+                    <message><![CDATA[  Expected: 9
+  But was:  10
+]]></message>
+                    <stack-trace><![CDATA[at Spotlight.Tests.Integration.ThirdRoundScenarioTests.ActualConfiguredProductionChecksCardinalAndDiagonalLayouts (System.Int32 dx, System.Int32 dy) [0x0007f] in E:\PersonalProgram\2026GameJam\Assets\_Game\Tests\Integration\ThirdRoundScenarioTests.cs:177
+]]></stack-trace>
+                  </failure>
+                </test-case>
+                <test-case id="1284" name="ActualConfiguredProductionChecksCardinalAndDiagonalLayouts(0,-1)" fullname="Spotlight.Tests.Integration.ThirdRoundScenarioTests.ActualConfiguredProductionChecksCardinalAndDiagonalLayouts(0,-1)" methodname="ActualConfiguredProductionChecksCardinalAndDiagonalLayouts" classname="Spotlight.Tests.Integration.ThirdRoundScenarioTests" runstate="Runnable" seed="1767583852" result="Failed" start-time="2026-10-14 14:06:30Z" end-time="2026-10-14 14:06:30Z" duration="0.089950" asserts="0">
+                  <properties />
+                  <failure>
+                    <message><![CDATA[  Expected: 9
+  But was:  10
+]]></message>
+                    <stack-trace><![CDATA[at Spotlight.Tests.Integration.ThirdRoundScenarioTests.ActualConfiguredProductionChecksCardinalAndDiagonalLayouts (System.Int32 dx, System.Int32 dy) [0x0007f] in E:\PersonalProgram\2026GameJam\Assets\_Game\Tests\Integration\ThirdRoundScenarioTests.cs:177
+]]></stack-trace>
+                  </failure>
+                </test-case>
+                <test-case id="1285" name="ActualConfiguredProductionChecksCardinalAndDiagonalLayouts(-1,0)" fullname="Spotlight.Tests.Integration.ThirdRoundScenarioTests.ActualConfiguredProductionChecksCardinalAndDiagonalLayouts(-1,0)" methodname="ActualConfiguredProductionChecksCardinalAndDiagonalLayouts" classname="Spotlight.Tests.Integration.ThirdRoundScenarioTests" runstate="Runnable" seed="509213631" result="Failed" start-time="2026-10-14 14:06:30Z" end-time="2026-10-14 14:06:30Z" duration="0.073529" asserts="0">
+                  <properties />
+                  <failure>
+                    <message><![CDATA[  Expected: 9
+  But was:  10
+]]></message>
+                    <stack-trace><![CDATA[at Spotlight.Tests.Integration.ThirdRoundScenarioTests.ActualConfiguredProductionChecksCardinalAndDiagonalLayouts (System.Int32 dx, System.Int32 dy) [0x0007f] in E:\PersonalProgram\2026GameJam\Assets\_Game\Tests\Integration\ThirdRoundScenarioTests.cs:177
+]]></stack-trace>
+                  </failure>
+                </test-case>
+                <test-case id="1286" name="ActualConfiguredProductionChecksCardinalAndDiagonalLayouts(1,1)" fullname="Spotlight.Tests.Integration.ThirdRoundScenarioTests.ActualConfiguredProductionChecksCardinalAndDiagonalLayouts(1,1)" methodname="ActualConfiguredProductionChecksCardinalAndDiagonalLayouts" classname="Spotlight.Tests.Integration.ThirdRoundScenarioTests" runstate="Runnable" seed="410544314" result="Failed" start-time="2026-10-14 14:06:30Z" end-time="2026-10-14 14:06:30Z" duration="0.081351" asserts="0">
+                  <properties />
+                  <failure>
+                    <message><![CDATA[  Expected: 9
+  But was:  10
+]]></message>
+                    <stack-trace><![CDATA[at Spotlight.Tests.Integration.ThirdRoundScenarioTests.ActualConfiguredProductionChecksCardinalAndDiagonalLayouts (System.Int32 dx, System.Int32 dy) [0x0007f] in E:\PersonalProgram\2026GameJam\Assets\_Game\Tests\Integration\ThirdRoundScenarioTests.cs:177
+]]></stack-trace>
+                  </failure>
+                </test-case>
+              </test-suite>
+              <test-suite type="ParameterizedMethod" id="1281" name="ActualSingleProductionDoesNotMutateBoardOrResources" fullname="Spotlight.Tests.Integration.ThirdRoundScenarioTests.ActualSingleProductionDoesNotMutateBoardOrResources" classname="Spotlight.Tests.Integration.ThirdRoundScenarioTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-14 14:06:30Z" end-time="2026-10-14 14:06:30Z" duration="0.401831" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1275" name="ActualSingleProductionDoesNotMutateBoardOrResources(&quot;elm.water&quot;)" fullname="Spotlight.Tests.Integration.ThirdRoundScenarioTests.ActualSingleProductionDoesNotMutateBoardOrResources(&quot;elm.water&quot;)" methodname="ActualSingleProductionDoesNotMutateBoardOrResources" classname="Spotlight.Tests.Integration.ThirdRoundScenarioTests" runstate="Runnable" seed="1568092231" result="Passed" start-time="2026-10-14 14:06:30Z" end-time="2026-10-14 14:06:30Z" duration="0.067991" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1276" name="ActualSingleProductionDoesNotMutateBoardOrResources(&quot;elm.fire&quot;)" fullname="Spotlight.Tests.Integration.ThirdRoundScenarioTests.ActualSingleProductionDoesNotMutateBoardOrResources(&quot;elm.fire&quot;)" methodname="ActualSingleProductionDoesNotMutateBoardOrResources" classname="Spotlight.Tests.Integration.ThirdRoundScenarioTests" runstate="Runnable" seed="291338464" result="Passed" start-time="2026-10-14 14:06:30Z" end-time="2026-10-14 14:06:30Z" duration="0.062047" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1277" name="ActualSingleProductionDoesNotMutateBoardOrResources(&quot;elm.earth&quot;)" fullname="Spotlight.Tests.Integration.ThirdRoundScenarioTests.ActualSingleProductionDoesNotMutateBoardOrResources(&quot;elm.earth&quot;)" methodname="ActualSingleProductionDoesNotMutateBoardOrResources" classname="Spotlight.Tests.Integration.ThirdRoundScenarioTests" runstate="Runnable" seed="505072548" result="Passed" start-time="2026-10-14 14:06:30Z" end-time="2026-10-14 14:06:30Z" duration="0.063636" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1278" name="ActualSingleProductionDoesNotMutateBoardOrResources(&quot;elm.wood&quot;)" fullname="Spotlight.Tests.Integration.ThirdRoundScenarioTests.ActualSingleProductionDoesNotMutateBoardOrResources(&quot;elm.wood&quot;)" methodname="ActualSingleProductionDoesNotMutateBoardOrResources" classname="Spotlight.Tests.Integration.ThirdRoundScenarioTests" runstate="Runnable" seed="1186039359" result="Passed" start-time="2026-10-14 14:06:30Z" end-time="2026-10-14 14:06:30Z" duration="0.059362" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1279" name="ActualSingleProductionDoesNotMutateBoardOrResources(&quot;elm.wind&quot;)" fullname="Spotlight.Tests.Integration.ThirdRoundScenarioTests.ActualSingleProductionDoesNotMutateBoardOrResources(&quot;elm.wind&quot;)" methodname="ActualSingleProductionDoesNotMutateBoardOrResources" classname="Spotlight.Tests.Integration.ThirdRoundScenarioTests" runstate="Runnable" seed="500086614" result="Passed" start-time="2026-10-14 14:06:30Z" end-time="2026-10-14 14:06:30Z" duration="0.083994" asserts="0">
+                  <properties />
+                </test-case>
+                <test-case id="1280" name="ActualSingleProductionDoesNotMutateBoardOrResources(&quot;elm.thunder&quot;)" fullname="Spotlight.Tests.Integration.ThirdRoundScenarioTests.ActualSingleProductionDoesNotMutateBoardOrResources(&quot;elm.thunder&quot;)" methodname="ActualSingleProductionDoesNotMutateBoardOrResources" classname="Spotlight.Tests.Integration.ThirdRoundScenarioTests" runstate="Runnable" seed="169637074" result="Passed" start-time="2026-10-14 14:06:30Z" end-time="2026-10-14 14:06:30Z" duration="0.061078" asserts="0">
+                  <properties />
+                </test-case>
+              </test-suite>
+              <test-case id="1272" name="ExploreTwoLegalLayoutsWithoutChangingCatalogOrHp" fullname="Spotlight.Tests.Integration.ThirdRoundScenarioTests.ExploreTwoLegalLayoutsWithoutChangingCatalogOrHp" methodname="ExploreTwoLegalLayoutsWithoutChangingCatalogOrHp" classname="Spotlight.Tests.Integration.ThirdRoundScenarioTests" runstate="Runnable" seed="1232619876" result="Passed" start-time="2026-10-14 14:06:30Z" end-time="2026-10-14 14:06:34Z" duration="3.238192" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1274" name="RealUnmodifiedCatalogTwoNightsObserverProductionSaveContinueAndRestart" fullname="Spotlight.Tests.Integration.ThirdRoundScenarioTests.RealUnmodifiedCatalogTwoNightsObserverProductionSaveContinueAndRestart" methodname="RealUnmodifiedCatalogTwoNightsObserverProductionSaveContinueAndRestart" classname="Spotlight.Tests.Integration.ThirdRoundScenarioTests" runstate="Runnable" seed="636214837" result="Passed" start-time="2026-10-14 14:06:34Z" end-time="2026-10-14 14:06:35Z" duration="1.482851" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1273" name="RecorderDistinguishesPreboundNewRunFromLateAttachmentAndReadsSpeed" fullname="Spotlight.Tests.Integration.ThirdRoundScenarioTests.RecorderDistinguishesPreboundNewRunFromLateAttachmentAndReadsSpeed" methodname="RecorderDistinguishesPreboundNewRunFromLateAttachmentAndReadsSpeed" classname="Spotlight.Tests.Integration.ThirdRoundScenarioTests" runstate="Runnable" seed="1248064624" result="Passed" start-time="2026-10-14 14:06:35Z" end-time="2026-10-14 14:06:35Z" duration="0.127025" asserts="0">
+                <properties />
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1288" name="ThirdRoundUiIntegrationTests" fullname="Spotlight.Tests.Integration.ThirdRoundUiIntegrationTests" classname="Spotlight.Tests.Integration.ThirdRoundUiIntegrationTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-14 14:06:35Z" end-time="2026-10-14 14:06:36Z" duration="0.385314" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1291" name="LongTextAndSevenOptionsHaveScrollableContentAndReadableRows" fullname="Spotlight.Tests.Integration.ThirdRoundUiIntegrationTests.LongTextAndSevenOptionsHaveScrollableContentAndReadableRows" methodname="LongTextAndSevenOptionsHaveScrollableContentAndReadableRows" classname="Spotlight.Tests.Integration.ThirdRoundUiIntegrationTests" runstate="Runnable" seed="173814243" result="Passed" start-time="2026-10-14 14:06:35Z" end-time="2026-10-14 14:06:35Z" duration="0.127081" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1293" name="NullOptionalPrefabsUseDynamicScrollableFallbackAndRealOperations" fullname="Spotlight.Tests.Integration.ThirdRoundUiIntegrationTests.NullOptionalPrefabsUseDynamicScrollableFallbackAndRealOperations" methodname="NullOptionalPrefabsUseDynamicScrollableFallbackAndRealOperations" classname="Spotlight.Tests.Integration.ThirdRoundUiIntegrationTests" runstate="Runnable" seed="919341904" result="Passed" start-time="2026-10-14 14:06:35Z" end-time="2026-10-14 14:06:35Z" duration="0.090271" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1292" name="QueuedChoiceBlocksDoubleClickAndFailurePreservesMandatoryPanelAndBoardBlock" fullname="Spotlight.Tests.Integration.ThirdRoundUiIntegrationTests.QueuedChoiceBlocksDoubleClickAndFailurePreservesMandatoryPanelAndBoardBlock" methodname="QueuedChoiceBlocksDoubleClickAndFailurePreservesMandatoryPanelAndBoardBlock" classname="Spotlight.Tests.Integration.ThirdRoundUiIntegrationTests" runstate="Runnable" seed="640330867" result="Passed" start-time="2026-10-14 14:06:35Z" end-time="2026-10-14 14:06:35Z" duration="0.044764" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1289" name="RealSnapshotsPopulatePanelAndRefreshDoesNotRecreateOrMultiplyListeners" fullname="Spotlight.Tests.Integration.ThirdRoundUiIntegrationTests.RealSnapshotsPopulatePanelAndRefreshDoesNotRecreateOrMultiplyListeners" methodname="RealSnapshotsPopulatePanelAndRefreshDoesNotRecreateOrMultiplyListeners" classname="Spotlight.Tests.Integration.ThirdRoundUiIntegrationTests" runstate="Runnable" seed="786920120" result="Passed" start-time="2026-10-14 14:06:35Z" end-time="2026-10-14 14:06:35Z" duration="0.043268" asserts="0">
+                <properties />
+              </test-case>
+              <test-case id="1290" name="RepeatBindingAndRealConfirmationKeepOneCanvasAndWidePausedText" fullname="Spotlight.Tests.Integration.ThirdRoundUiIntegrationTests.RepeatBindingAndRealConfirmationKeepOneCanvasAndWidePausedText" methodname="RepeatBindingAndRealConfirmationKeepOneCanvasAndWidePausedText" classname="Spotlight.Tests.Integration.ThirdRoundUiIntegrationTests" runstate="Runnable" seed="826158642" result="Passed" start-time="2026-10-14 14:06:35Z" end-time="2026-10-14 14:06:36Z" duration="0.075258" asserts="0">
+                <properties />
+              </test-case>
+            </test-suite>
+          </test-suite>
+          <test-suite type="TestFixture" id="1104" name="PBoundaryNUnitTests" fullname="Spotlight.Tests.PBoundaryNUnitTests" classname="Spotlight.Tests.PBoundaryNUnitTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-14 14:06:36Z" end-time="2026-10-14 14:06:36Z" duration="0.019020" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1105" name="CombatTransactionalAndDeferredBoundaries" fullname="Spotlight.Tests.PBoundaryNUnitTests.CombatTransactionalAndDeferredBoundaries" methodname="CombatTransactionalAndDeferredBoundaries" classname="Spotlight.Tests.PBoundaryNUnitTests" runstate="Runnable" seed="960176548" result="Passed" start-time="2026-10-14 14:06:36Z" end-time="2026-10-14 14:06:36Z" duration="0.012630" asserts="0">
+              <properties />
+            </test-case>
+            <test-case id="1106" name="ElementPlannerBoundaries" fullname="Spotlight.Tests.PBoundaryNUnitTests.ElementPlannerBoundaries" methodname="ElementPlannerBoundaries" classname="Spotlight.Tests.PBoundaryNUnitTests" runstate="Runnable" seed="613059996" result="Passed" start-time="2026-10-14 14:06:36Z" end-time="2026-10-14 14:06:36Z" duration="0.001249" asserts="0">
+              <properties />
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1107" name="PPresentationTests" fullname="Spotlight.Tests.PPresentationTests" classname="Spotlight.Tests.PPresentationTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-14 14:06:36Z" end-time="2026-10-14 14:06:36Z" duration="0.019036" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1110" name="ItemCancellationReleasesOnlyItsOwnPauseHandle" fullname="Spotlight.Tests.PPresentationTests.ItemCancellationReleasesOnlyItsOwnPauseHandle" methodname="ItemCancellationReleasesOnlyItsOwnPauseHandle" classname="Spotlight.Tests.PPresentationTests" runstate="Runnable" seed="853105603" result="Passed" start-time="2026-10-14 14:06:36Z" end-time="2026-10-14 14:06:36Z" duration="0.008403" asserts="0">
+              <properties />
+            </test-case>
+            <test-case id="1108" name="PoolReturnsIndependentLeaseAndResetsPresentationTransform" fullname="Spotlight.Tests.PPresentationTests.PoolReturnsIndependentLeaseAndResetsPresentationTransform" methodname="PoolReturnsIndependentLeaseAndResetsPresentationTransform" classname="Spotlight.Tests.PPresentationTests" runstate="Runnable" seed="486218333" result="Passed" start-time="2026-10-14 14:06:36Z" end-time="2026-10-14 14:06:36Z" duration="0.001262" asserts="0">
+              <properties />
+            </test-case>
+            <test-case id="1109" name="PreviewWidgetsUseReferenceResolutionAndLeaveBusinessUnbound" fullname="Spotlight.Tests.PPresentationTests.PreviewWidgetsUseReferenceResolutionAndLeaveBusinessUnbound" methodname="PreviewWidgetsUseReferenceResolutionAndLeaveBusinessUnbound" classname="Spotlight.Tests.PPresentationTests" runstate="Runnable" seed="1457617002" result="Passed" start-time="2026-10-14 14:06:36Z" end-time="2026-10-14 14:06:36Z" duration="0.005649" asserts="0">
+              <properties />
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

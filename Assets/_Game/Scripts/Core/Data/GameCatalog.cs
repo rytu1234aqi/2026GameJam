@@ -311,16 +311,55 @@ namespace Spotlight.Core.Data
                     errors.Add(owner+": null effect");
                     continue;
                 }
-                Check(errors,Enum.IsDefined(typeof(EffectKind),f.Kind)&&Enum.IsDefined(typeof(EffectTargetPolicy),f.TargetPolicy)&&Nonneg(f.PhysicalDamage)&&Amounts(f.ElementDamage,false)&&Amounts(f.Gauge,false)&&Nonneg(f.Amount)&&Nonneg(f.DurationOverride)&&Pos(f.DamageMultiplier)&&Pos(f.SpeedMultiplier),owner+": invalid effect");
+                Check(errors,Enum.IsDefined(typeof(EffectKind),f.Kind)&&Enum.IsDefined(typeof(EffectTargetPolicy),f.TargetPolicy)&&Nonneg(f.PhysicalDamage)&&Amounts(f.ElementDamage,false)&&Amounts(f.Gauge,false)&&Nonneg(f.Probability)&&f.Probability<=1&&(f.Kind==EffectKind.ApplyStatus||f.Probability==1)&&Nonneg(f.Amount)&&Nonneg(f.DurationOverride)&&Pos(f.DamageMultiplier)&&Pos(f.SpeedMultiplier)&&Nonneg(f.RadiusInCells)&&Nonneg(f.DurationSeconds)&&Nonneg(f.TickIntervalSeconds)&&Nonneg(f.LingeringSeconds)&&Nonneg(f.RetainedDamageMultiplier),owner+": invalid effect");
+                Check(errors,f.TargetPolicy!=EffectTargetPolicy.SourceActor||f.Kind==EffectKind.ApplyStatus,owner+": source actor only supports status");
+                if(f.TargetPolicy==EffectTargetPolicy.SourceActor&&f.ReferenceId!=null&&statuses.ContainsKey(f.ReferenceId))Check(errors,!statuses[f.ReferenceId].IsReactionInput,owner+": source buff must not feed reactions");
                 if(f.Kind==EffectKind.ApplyStatus)Check(errors,f.ReferenceId!=null&&statuses.ContainsKey(f.ReferenceId)&&f.Stacks>0,owner+": invalid status reference/stacks");
                 if(f.Kind==EffectKind.AddResource)Check(errors,f.ResourceAmount>=0&&Resource(f.ResourceBucket,f.ReferenceId),owner+": invalid reward");
                 if(f.Kind==EffectKind.AddTowerStacks)Check(errors,f.Stacks>0,owner+": invalid tower stacks");
+                Check(errors,string.IsNullOrEmpty(f.RequiredStatusId)||statuses.ContainsKey(f.RequiredStatusId),owner+": unknown required status");
+                if(f.Kind==EffectKind.AreaDamage||f.Kind==EffectKind.ChainDamage||f.Kind==EffectKind.CreateArea)
+                    Check(errors,f.TargetPolicy==EffectTargetPolicy.SelectedActor,owner+": advanced effect requires selected actor");
+                if(f.Kind==EffectKind.ConfigurePiercing)
+                    Check(errors,f.TargetPolicy==EffectTargetPolicy.CurrentProjectile,owner+": piercing requires current projectile");
+                if(f.Kind==EffectKind.AreaDamage)
+                    Check(errors,Pos(f.RadiusInCells)&&Zero(f.Gauge)&&string.IsNullOrEmpty(f.ReferenceId)&&f.Stacks==0&&f.DurationOverride==0,owner+": invalid area damage");
+                if(f.Kind==EffectKind.ChainDamage)
+                {
+                    Check(errors,Pos(f.RadiusInCells)&&Zero(f.Gauge)&&f.MaxHits>=1&&f.MaxHits<=64&&f.RetainedDamageMultiplier<=1,owner+": invalid chain radius/hits/retention");
+                    if(!string.IsNullOrEmpty(f.ReferenceId))
+                    {
+                        StatusDefinition output;
+                        Check(errors,statuses.TryGetValue(f.ReferenceId,out output)&&f.Stacks>0,owner+": invalid chain status reference/stacks");
+                        if(output!=null)Check(errors,!output.IsReactionInput,owner+": reaction output must not feed input");
+                    }
+                    else Check(errors,f.Stacks==0&&f.DurationOverride==0,owner+": chain status parameters require reference");
+                }
+                if(f.Kind==EffectKind.CreateArea)
+                {
+                    float tick=data.Settings!=null&&data.Settings.LogicTicksPerGameSecond>0?1f/data.Settings.LogicTicksPerGameSecond:1f/30;
+                    Check(errors,Pos(f.RadiusInCells)&&Pos(f.DurationSeconds)&&f.TickIntervalSeconds>=tick,owner+": invalid area timing/radius");
+                    Check(errors,f.AreaEffects!=null&&f.AreaEffects.Count>0,owner+": missing area effects");
+                    if(f.AreaEffects!=null)foreach(EffectSpec nested in f.AreaEffects)
+                    {
+                        if(nested==null){errors.Add(owner+": null area effect");continue;}
+                        Check(errors,((nested.Kind==EffectKind.Damage||nested.Kind==EffectKind.ApplyStatus)&&nested.TargetPolicy==EffectTargetPolicy.SelectedActor)||(nested.Kind==EffectKind.Heal&&(nested.TargetPolicy==EffectTargetPolicy.AllTowers||nested.TargetPolicy==EffectTargetPolicy.Spring)),owner+": area effects require selected actor damage/status");
+                        Check(errors,nested.AreaEffects==null||nested.AreaEffects.Count==0,owner+": nested areas are forbidden");
+                        if(nested.Kind==EffectKind.Damage||nested.Kind==EffectKind.ApplyStatus||nested.Kind==EffectKind.Heal)
+                            Effects(errors,new EffectSpec[]{nested},owner+" area",nested.Kind==EffectKind.Heal?(ReactionContext?)null:ReactionContext.EnemyStatus);
+                    }
+                }
+                else Check(errors,f.AreaEffects==null||f.AreaEffects.Count==0,owner+": area effects require CreateArea");
+                if(f.Kind==EffectKind.ConfigurePiercing)
+                    Check(errors,context.HasValue&&context.Value==ReactionContext.Projectile&&f.MaxHits>=1&&f.MaxHits<=64&&f.RetainedDamageMultiplier<=1,owner+": invalid piercing domain/hits/retention");
                 if(context.HasValue)
                 {
-                    if(context.Value==ReactionContext.Projectile)Check(errors,f.Kind==EffectKind.ModifyProjectile,owner+": projectile reaction requires ModifyProjectile");
+                    StatusDefinition reactionOutput;
+                    if(f.Kind==EffectKind.ApplyStatus&&f.ReferenceId!=null&&statuses.TryGetValue(f.ReferenceId,out reactionOutput))Check(errors,!reactionOutput.IsReactionInput,owner+": reaction output must not feed input");
+                    if(context.Value==ReactionContext.Projectile)Check(errors,f.Kind==EffectKind.ModifyProjectile||f.Kind==EffectKind.ConfigurePiercing||f.Kind==EffectKind.AreaDamage||f.Kind==EffectKind.ChainDamage||f.Kind==EffectKind.CreateArea||f.Kind==EffectKind.AddGauge||f.Kind==EffectKind.ApplyStatus,owner+": invalid projectile reaction output");
                     else
                     {
-                        Check(errors,f.Kind==EffectKind.Damage||f.Kind==EffectKind.ApplyStatus,owner+": enemy reaction output must damage/status");
+                        Check(errors,f.Kind==EffectKind.Damage||f.Kind==EffectKind.ApplyStatus||f.Kind==EffectKind.AreaDamage||f.Kind==EffectKind.ChainDamage||f.Kind==EffectKind.CreateArea||f.Kind==EffectKind.AddGauge,owner+": invalid enemy reaction output");
                         if(f.Kind==EffectKind.Damage)Check(errors,Zero(f.Gauge),owner+": reaction damage cannot supply gauge");
                         StatusDefinition status;
                         if(f.Kind==EffectKind.ApplyStatus&&f.ReferenceId!=null&&statuses.TryGetValue(f.ReferenceId,out status))Check(errors,!status.IsReactionInput,owner+": reaction output must not feed input");
@@ -378,7 +417,7 @@ namespace Spotlight.Core.Data
                 Check(e,d.ProjectileId!=null&&projectiles.ContainsKey(d.ProjectileId),d.Id+": unknown projectile");
                 Costs(e,d.BuildCost,d.Id);
             }
-            foreach(ProjectileDefinition d in projectiles.Values)Check(e,Pos(d.SpeedInCellsPerSecond)&&Pos(d.LifetimeSeconds)&&Nonneg(d.CollisionRadiusInCells),d.Id+": invalid projectile values");
+            foreach(ProjectileDefinition d in projectiles.Values)Check(e,Pos(d.SpeedInCellsPerSecond)&&Pos(d.LifetimeSeconds)&&Nonneg(d.CollisionRadiusInCells)&&d.MaxHits>=1&&d.MaxHits<=64&&Nonneg(d.RetainedDamageMultiplier)&&d.RetainedDamageMultiplier<=1,d.Id+": invalid projectile values");
             HashSet<ElementType> gauges=new HashSet<ElementType>();
             if(data.Gauges==null)e.Add("Missing gauges");
             else foreach(GaugeDefinition g in data.Gauges)
@@ -390,7 +429,7 @@ namespace Spotlight.Core.Data
                 }
                 Check(e,g.Element!=ElementType.None&&Enum.IsDefined(typeof(ElementType),g.Element)&&gauges.Add(g.Element)&&Pos(g.MaxValue)&&Pos(g.Threshold)&&g.Threshold<=g.MaxValue&&Nonneg(g.DecayPerSecond)&&Nonneg(g.DecayDelaySeconds)&&Pos(g.IncomingMultiplier),"Invalid/duplicate gauge "+g.Element);
             }
-            foreach(StatusDefinition d in statuses.Values)Check(e,Pos(d.DurationSeconds)&&Finite(d.TickIntervalSeconds)&&d.TickIntervalSeconds>=step&&d.MaxStacks>=1&&Nonneg(d.MoveSlowPerStack)&&Nonneg(d.AttackSlowPerStack)&&Nonneg(d.ArmorBreakPerStack)&&Amounts(d.ResistanceBreakPerStack,false)&&Nonneg(d.DotPhysicalPerStack)&&Amounts(d.DotElementPerStack,false)&&Enum.IsDefined(typeof(StatusRefreshPolicy),d.RefreshPolicy),d.Id+": invalid status values");
+            foreach(StatusDefinition d in statuses.Values)Check(e,Pos(d.DurationSeconds)&&Finite(d.TickIntervalSeconds)&&d.TickIntervalSeconds>=step&&d.MaxStacks>=1&&Nonneg(d.MoveSlowPerStack)&&Nonneg(d.AttackSlowPerStack)&&Nonneg(d.AttackHastePerStack)&&Amounts(d.OutgoingElementDamageBonusPerStack,false)&&Amounts(d.OutgoingGaugeBonusPerStack,false)&&Amounts(d.IncomingGaugeBonusPerStack,false)&&Nonneg(d.AccuracyReductionPerStack)&&d.AccuracyReductionPerStack<=1&&Nonneg(d.HealPerTick)&&Nonneg(d.ArmorBreakPerStack)&&Amounts(d.ResistanceBreakPerStack,false)&&Nonneg(d.DotPhysicalPerStack)&&Amounts(d.DotElementPerStack,false)&&Enum.IsDefined(typeof(StatusRefreshPolicy),d.RefreshPolicy),d.Id+": invalid status values");
             foreach(SpecialSkillDefinition d in skills.Values)Check(e,d.UsesPerNight>0&&Pos(d.DurationSeconds)&&Pos(d.ReactionDamageMultiplier),d.Id+": invalid skill values");
             int bosses=0;
             foreach(EnemyDefinition d in enemies.Values)

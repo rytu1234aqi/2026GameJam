@@ -1,0 +1,85 @@
+{
+  "verifiedUtc": "2026-10-13T05:08:04.1783501Z",
+  "sourcePR": {
+    "number": 17,
+    "url": "https://github.com/rytu1234aqi/2026GameJam/pull/17",
+    "base": "f61c6f2750938af53a0e1a8455de4c219dbebb77",
+    "head": "9883b887c57a2a139a32ef29f66c4cfd8b96e6e7"
+  },
+  "localIntegration": {
+    "branch": "main",
+    "method": "fast-forward",
+    "conflicts": 0,
+    "fixesCommitted": false,
+    "remoteMerged": false,
+    "pushed": false
+  },
+  "editmode": {
+    "result": "Passed",
+    "total": 171,
+    "passed": 171,
+    "failed": 0,
+    "skipped": 0,
+    "graphics": true,
+    "newCases": [
+      {
+        "name": "Spotlight.Tests.Integration.ProjectileVisualClockTests.OverlayRemainsAvailableWithoutParticleSlots",
+        "result": "Passed",
+        "durationSeconds": 0.003561
+      },
+      {
+        "name": "Spotlight.Tests.Integration.ProjectileVisualClockTests.ParticlesFollowGameClockAndClearOnSwitchAndPoolReturn",
+        "result": "Passed",
+        "durationSeconds": 3.911099
+      },
+      {
+        "name": "Spotlight.Tests.Integration.ProjectileVisualClockTests.ProjectilePrefabsHaveSixUnlitEffectsBehindTheOverlay",
+        "result": "Passed",
+        "durationSeconds": 0.016645
+      },
+      {
+        "name": "Spotlight.Tests.Integration.ProjectileVisualClockTests.RenderOfficialSpritesAndSixElementTrailsForVisualAcceptance",
+        "result": "Passed",
+        "durationSeconds": 3.689571
+      },
+      {
+        "name": "Spotlight.Tests.Integration.ProjectileVisualClockTests.TowerAndSpringUseTheirOriginalSpritesWithinOneGridCell",
+        "result": "Passed",
+        "durationSeconds": 0.010493
+      }
+    ]
+  },
+  "build": {
+    "succeeded": true,
+    "errors": 0,
+    "warnings": 1,
+    "output": "E:\\PersonalProgram\\2026GameJam\\Builds\\WindowsPR17\\Spotlight.exe",
+    "warningNote": "Headless build cannot update ambient/reflection probes."
+  },
+  "visual": {
+    "preview": "QA/R3B/PR17/Screenshots/asset-preview.png",
+    "previewReviewed": true,
+    "rows": "tower and spring; water/fire/earth/wood/wind/thunder",
+    "sixSlotsEmitRealParticles": true,
+    "opaqueBackgrounds": 2,
+    "note": "Earth/wind/thunder trails need improved visibility; isolated preview is not full-level visual acceptance."
+  },
+  "evidence": {
+    "originalCsvs": "QA/R3B/PR17/P3-submitted",
+    "originalCsvsMatchPRBlob": true,
+    "encoding": "UTF-8 canonical CSVs; original mixed UTF-8/GBK bytes preserved",
+    "submittedSceneCases": "Pending",
+    "historicalEvidence": "New regression outputs copied under PR17; original older QA reports/screenshots restored."
+  },
+  "attempts": [
+    "Initial -nographics run crashed in Unity camera rendering; retained in ignored Docs/Verification.",
+    "First graphics run: 168/169 passed; particle prewarm bug found.",
+    "Final graphics run: all tests passed after prewarm fix; original failure assertion retained."
+  ],
+  "limitations": [
+    "Two static PNGs have opaque white backgrounds and remain temporary art.",
+    "Only the first known element is displayed; no mixed-element VFX or new damage behavior.",
+    "No normal-balance seven-night or fifty-night playthrough claimed.",
+    "Windows executable was built; no new standalone player smoke experiment in this task."
+  ]
+}

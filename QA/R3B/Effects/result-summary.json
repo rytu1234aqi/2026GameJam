@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-14",
+  "contractVersion": "2.2.0",
+  "scope": [
+    "AreaDamage",
+    "ChainDamage",
+    "ConfigurePiercing",
+    "CreateArea"
+  ],
+  "enabledEnemyStatusRecipes": [
+    "Water.Fire",
+    "Fire.Thunder",
+    "Thunder.Thunder",
+    "Water.Thunder",
+    "Water.Earth",
+    "Fire.Earth"
+  ],
+  "waterChainTargetRule": "Active status.water; gauge alone is not eligible",
+  "tests": {
+    "total": 205,
+    "fullRunPassed": 204,
+    "fullRunFailed": 1,
+    "fullRunFailureReason": "Existing UI screenshot write temporarily failed with Win32 IO 1224; no effect or save test failed",
+    "retryTotal": 9,
+    "retryPassed": 9,
+    "retryFailed": 0,
+    "allCasesHavePassingEvidence": true,
+    "unresolvedFailures": 0,
+    "reports": [
+      "editmode-tests.xml",
+      "ui-retry-tests.xml"
+    ]
+  },
+  "build": {
+    "succeeded": true,
+    "errors": 0,
+    "warnings": 1,
+    "warning": "Headless editor cannot generate ambient/reflection probes",
+    "output": "E:\\PersonalProgram\\2026GameJam\\Builds\\WindowsEffects\\Spotlight.exe"
+  },
+  "playerSmoke": {
+    "succeeded": true,
+    "seed": 456,
+    "nights": 2,
+    "pauseAndDoubleSpeed": true,
+    "isolatedSaveAndContinue": true,
+    "report": "player-smoke.json",
+    "limitation": "Real original-flow regression, not proof of seven-night completion or every advanced recipe during normal gameplay"
+  },
+  "legacySave": {
+    "acceptedLegacyContract": "2.1.0",
+    "saveVersion": 1,
+    "matchingConfigRequired": true,
+    "inMemoryOnly": true,
+    "sourceFileUnchanged": true,
+    "noRewardsOnRead": true,
+    "unknownVersionsRejected": true
+  },
+  "prototypeParameters": {
+    "aoeDamageType": "Physical, subject to design confirmation",
+    "chainRadiusCells": 2,
+    "retainedDamageMultiplier": 0.8,
+    "areaRadiusCells": 1,
+    "areaIntervalSeconds": 1,
+    "areaLingeringSeconds": 1.5
+  },
+  "limitations": [
+    "Wind.Wind projectile recipe is a disabled authoring template; direct projectile piercing configuration works",
+    "Other original recipes and final numerical balancing are not completed by this effect-library patch",
+    "Area and chain graphics are prototype hints"
+  ],
+  "git": {
+    "branch": "main",
+    "committed": false,
+    "pushed": false,
+    "existingPR17FixesPreserved": true
+  },
+  "metaGuidDuplicates": 0,
+  "serializationDepthWarningsResolved": true
+}

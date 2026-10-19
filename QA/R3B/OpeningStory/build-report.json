@@ -1,0 +1,14 @@
+{
+    "output": "E:\\PersonalProgram\\2026GameJam\\Builds\\WindowsOpeningStory\\Spotlight.exe",
+    "result": "Succeeded",
+    "utc": "2026-10-14T15:22:45.6681030Z",
+    "succeeded": true,
+    "warnings": 0,
+    "errors": 0,
+    "scenes": [
+        "Assets/_Game/Scenes/00_Bootstrap.unity"
+    ],
+    "messages": [
+        "Log: Including Unity Splash Screen logo because 'Show Unity Logo' is enabled."
+    ]
+}

@@ -6,6 +6,8 @@ namespace Spotlight.Contracts
 {
     public sealed class StatusLayerSnapshot
     {
+        public string ScopeId;
+
         public long LayerId;
         public EntityId Source;
         public string ReactionId;

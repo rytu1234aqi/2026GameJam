@@ -11,13 +11,47 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbdbef7af1b5ff3419db50b31953d227, type: 3}
   m_Name: Reaction_EnemyStatus_Water_Thunder
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Id: reaction.EnemyStatus.Water.Thunder
-  Enabled: 0
+  Enabled: 1
   Context: 1
   A: 1
   B: 6
   ConsumeA: 1
   ConsumeB: 1
   Priority: 100
-  Effects: []
+  Effects:
+  - Id: effect.chain_damage
+    Kind: 8
+    TargetPolicy: 0
+    ReferenceId: status.effect.paralysis
+    ResourceBucket: 0
+    ResourceAmount: 0
+    PhysicalDamage: 0
+    ElementDamage:
+      Water: 0
+      Fire: 0
+      Earth: 0
+      Wood: 0
+      Wind: 0
+      Thunder: 20
+    Gauge:
+      Water: 0
+      Fire: 0
+      Earth: 0
+      Wood: 0
+      Wind: 0
+      Thunder: 0
+    Amount: 0
+    Stacks: 1
+    DurationOverride: 1
+    DamageMultiplier: 1
+    SpeedMultiplier: 1
+    RadiusInCells: 2
+    MaxHits: 2
+    RetainedDamageMultiplier: 0.8
+    DurationSeconds: 0
+    TickIntervalSeconds: 0
+    LingeringSeconds: 0
+    RequiredStatusId: status.water
+    AreaEffects: []

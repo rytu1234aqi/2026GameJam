@@ -16,6 +16,13 @@ namespace Spotlight.Contracts
         public StatusRefreshPolicy RefreshPolicy;
         public float MoveSlowPerStack;
         public float AttackSlowPerStack;
+        public float AttackHastePerStack;
+        public ElementAmounts OutgoingElementDamageBonusPerStack;
+        public ElementAmounts OutgoingGaugeBonusPerStack;
+        public ElementAmounts IncomingGaugeBonusPerStack;
+        public float AccuracyReductionPerStack;
+        public float HealPerTick;
+
         public float ArmorBreakPerStack;
         public ElementAmounts ResistanceBreakPerStack;
         public bool PreventMovement;

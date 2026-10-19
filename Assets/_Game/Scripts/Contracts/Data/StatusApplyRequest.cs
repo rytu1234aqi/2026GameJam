@@ -6,6 +6,8 @@ namespace Spotlight.Contracts
 {
     public sealed class StatusApplyRequest
     {
+        public string ScopeId;
+
         public EntityId Source;
         public EntityId Target;
         public string StatusId;

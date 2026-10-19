@@ -1,0 +1,15 @@
+{
+    "output": "E:\\PersonalProgram\\2026GameJam\\Builds\\WindowsEffects\\Spotlight.exe",
+    "result": "Succeeded",
+    "utc": "2026-10-14T05:43:09.3674966Z",
+    "succeeded": true,
+    "warnings": 1,
+    "errors": 0,
+    "scenes": [
+        "Assets/_Game/Scenes/00_Bootstrap.unity"
+    ],
+    "messages": [
+        "Log: Including Unity Splash Screen logo because 'Show Unity Logo' is enabled.",
+        "Warning: GfxDevice renderer is null. Unity cannot update the Ambient Probe and Reflection Probes that the SkyManager generates. Run the Editor without the -nographics argument or generate lighting for your scene."
+    ]
+}

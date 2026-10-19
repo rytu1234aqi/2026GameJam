@@ -78,7 +78,7 @@ namespace Spotlight.Tests.Integration
                         Assert.That(health.Fill.localScale.x, Is.EqualTo(fillScale.x * .25f).Within(.0001f), name);
                         Assert.That(health.Fill.localPosition.x - health.Fill.localScale.x*.5f, Is.EqualTo(leftEdge).Within(.0001f), name);
                         facing.SetDirection(new WorldPoint(-1,0));
-                        Assert.IsTrue(facing.BodyRenderer.flipX, name);
+                        Assert.AreEqual(facing.DefaultFacingRight, facing.BodyRenderer.flipX, name);
                         facing.BodyRenderer.color = Color.red; // Same renderer a body-only damage flash must target.
                         for(int i=0;i<barSprites.Length;i++)
                         {
